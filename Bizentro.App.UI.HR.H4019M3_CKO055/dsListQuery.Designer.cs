@@ -12,8 +12,6 @@
 
 namespace Bizentro.App.UI.HR.H4019M3_CKO055
 {
-
-
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>
