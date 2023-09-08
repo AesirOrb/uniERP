@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsListQuery" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsListQuery" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsListQuery" msprop:Generator_UserDSName="dsListQuery">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="A_LIST_QUERY_UNIGRID1"
+          msprop:Generator_TableClassName="A_LIST_QUERY_UNIGRID1DataTable"
+          msprop:Generator_TableVarName="tableA_LIST_QUERY_UNIGRID1"
+          msprop:Generator_RowChangedName="A_LIST_QUERY_UNIGRID1RowChanged"
+          msprop:Generator_TablePropName="A_LIST_QUERY_UNIGRID1"
+          msprop:Generator_RowDeletingName="A_LIST_QUERY_UNIGRID1RowDeleting"
+          msprop:Generator_RowChangingName="A_LIST_QUERY_UNIGRID1RowChanging"
+          msprop:Generator_RowEvHandlerName="A_LIST_QUERY_UNIGRID1RowChangeEventHandler"
+          msprop:Generator_RowDeletedName="A_LIST_QUERY_UNIGRID1RowDeleted"
+          msprop:Generator_RowClassName="A_LIST_QUERY_UNIGRID1Row"
+          msprop:Generator_UserTableName="A_LIST_QUERY_UNIGRID1"
+          msprop:Generator_RowEvArgName="A_LIST_QUERY_UNIGRID1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEPT_CD" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DEPT_CD" msprop:Generator_ColumnVarNameInTable="columnDEPT_CD" msprop:Generator_ColumnPropNameInTable="DEPT_CDColumn" msprop:Generator_UserColumnName="DEPT_CD" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="DEPT_NM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DEPT_NM" msprop:Generator_ColumnVarNameInTable="columnDEPT_NM" msprop:Generator_ColumnPropNameInTable="DEPT_NMColumn" msprop:Generator_UserColumnName="DEPT_NM" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="BIZ_AREA_CD" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="BIZ_AREA_CD" msprop:Generator_ColumnVarNameInTable="columnBIZ_AREA_CD" msprop:Generator_ColumnPropNameInTable="BIZ_AREA_CDColumn" msprop:Generator_UserColumnName="BIZ_AREA_CD" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="BIZ_AREA_NM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="BIZ_AREA_NM" msprop:Generator_ColumnVarNameInTable="columnBIZ_AREA_NM" msprop:Generator_ColumnPropNameInTable="BIZ_AREA_NMColumn" msprop:Generator_UserColumnName="BIZ_AREA_NM" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="EMP_NO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="EMP_NO" msprop:Generator_ColumnVarNameInTable="columnEMP_NO" msprop:Generator_ColumnPropNameInTable="EMP_NOColumn" msprop:Generator_UserColumnName="EMP_NO" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="NAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="ENTR_DT" msprop:Generator_ColumnVarNameInTable="columnENTR_DT" msprop:Generator_ColumnPropNameInRow="ENTR_DT" msprop:Generator_ColumnPropNameInTable="ENTR_DTColumn" msprop:Generator_UserColumnName="ENTR_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RETIRE_DT" msprop:Generator_ColumnVarNameInTable="columnRETIRE_DT" msprop:Generator_ColumnPropNameInRow="RETIRE_DT" msprop:Generator_ColumnPropNameInTable="RETIRE_DTColumn" msprop:Generator_UserColumnName="RETIRE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ENTR_DT_1_YEAR" msprop:Generator_ColumnVarNameInTable="columnENTR_DT_1_YEAR" msprop:Generator_ColumnPropNameInRow="ENTR_DT_1_YEAR" msprop:Generator_ColumnPropNameInTable="ENTR_DT_1_YEARColumn" msprop:Generator_UserColumnName="ENTR_DT_1_YEAR" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YEAR_SAVE_TOT_1" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YEAR_SAVE_TOT_1" msprop:Generator_ColumnVarNameInTable="columnYEAR_SAVE_TOT_1" msprop:Generator_ColumnPropNameInTable="YEAR_SAVE_TOT_1Column" msprop:Generator_UserColumnName="YEAR_SAVE_TOT_1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="YEAR_MONTH_1" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YEAR_MONTH_1" msprop:Generator_ColumnVarNameInTable="columnYEAR_MONTH_1" msprop:Generator_ColumnPropNameInTable="YEAR_MONTH_1Column" msprop:Generator_UserColumnName="YEAR_MONTH_1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="EXT1_TXT" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="EXT1_TXT" msprop:Generator_ColumnVarNameInTable="columnEXT1_TXT" msprop:Generator_ColumnPropNameInTable="EXT1_TXTColumn" msprop:Generator_UserColumnName="EXT1_TXT" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="USE_STRT_DT" msprop:Generator_ColumnVarNameInTable="columnUSE_STRT_DT" msprop:Generator_ColumnPropNameInRow="USE_STRT_DT" msprop:Generator_ColumnPropNameInTable="USE_STRT_DTColumn" msprop:Generator_UserColumnName="USE_STRT_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YEAR_SAVE_TOT_2" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YEAR_SAVE_TOT_2" msprop:Generator_ColumnVarNameInTable="columnYEAR_SAVE_TOT_2" msprop:Generator_ColumnPropNameInTable="YEAR_SAVE_TOT_2Column" msprop:Generator_UserColumnName="YEAR_SAVE_TOT_2" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="YEAR_MONTH" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YEAR_MONTH" msprop:Generator_ColumnVarNameInTable="columnYEAR_MONTH" msprop:Generator_ColumnPropNameInTable="YEAR_MONTHColumn" msprop:Generator_UserColumnName="YEAR_MONTH" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="EXT2_TXT" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="EXT2_TXT" msprop:Generator_ColumnVarNameInTable="columnEXT2_TXT" msprop:Generator_ColumnPropNameInTable="EXT2_TXTColumn" msprop:Generator_UserColumnName="EXT2_TXT" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="YEAR_SAVE_TOT_3" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YEAR_SAVE_TOT_3" msprop:Generator_ColumnVarNameInTable="columnYEAR_SAVE_TOT_3" msprop:Generator_ColumnPropNameInTable="YEAR_SAVE_TOT_3Column" msprop:Generator_UserColumnName="YEAR_SAVE_TOT_3" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="CNT" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="CNT" msprop:Generator_ColumnVarNameInTable="columnCNT" msprop:Generator_ColumnPropNameInTable="CNTColumn" msprop:Generator_UserColumnName="CNT" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TEMP_1" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="TEMP_1" msprop:Generator_ColumnVarNameInTable="columnTEMP_1" msprop:Generator_ColumnPropNameInTable="TEMP_1Column" msprop:Generator_UserColumnName="TEMP_1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TEMP_2" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="TEMP_2" msprop:Generator_ColumnVarNameInTable="columnTEMP_2" msprop:Generator_ColumnPropNameInTable="TEMP_2Column" msprop:Generator_UserColumnName="TEMP_2" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="YEAR_YYMM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YEAR_YYMM" msprop:Generator_ColumnVarNameInTable="columnYEAR_YYMM" msprop:Generator_ColumnPropNameInTable="YEAR_YYMMColumn" msprop:Generator_UserColumnName="YEAR_YYMM" type="xs:string" minOccurs="0" />
+              <xs:element name="YEAR_YY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YEAR_YY" msprop:Generator_ColumnVarNameInTable="columnYEAR_YY" msprop:Generator_ColumnPropNameInTable="YEAR_YYColumn" msprop:Generator_UserColumnName="YEAR_YY" type="xs:string" minOccurs="0" />
+              <xs:element name="SELECTED_CHAR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="SELECTED_CHAR" msprop:Generator_ColumnVarNameInTable="columnSELECTED_CHAR" msprop:Generator_ColumnPropNameInTable="SELECTED_CHARColumn" msprop:Generator_UserColumnName="SELECTED_CHAR" type="xs:string" minOccurs="0" />
+              <xs:element name="ROW_NUM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ROW_NUM" msprop:Generator_ColumnVarNameInTable="columnROW_NUM" msprop:Generator_ColumnPropNameInTable="ROW_NUMColumn" msprop:Generator_UserColumnName="ROW_NUM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="A_MANAGER_SAVE_UNIGRID1" msprop:Generator_TableClassName="A_MANAGER_SAVE_UNIGRID1DataTable" msprop:Generator_TableVarName="tableA_MANAGER_SAVE_UNIGRID1" msprop:Generator_TablePropName="A_MANAGER_SAVE_UNIGRID1" msprop:Generator_RowDeletingName="A_MANAGER_SAVE_UNIGRID1RowDeleting" msprop:Generator_RowChangingName="A_MANAGER_SAVE_UNIGRID1RowChanging" msprop:Generator_RowEvHandlerName="A_MANAGER_SAVE_UNIGRID1RowChangeEventHandler" msprop:Generator_RowDeletedName="A_MANAGER_SAVE_UNIGRID1RowDeleted" msprop:Generator_UserTableName="A_MANAGER_SAVE_UNIGRID1" msprop:Generator_RowChangedName="A_MANAGER_SAVE_UNIGRID1RowChanged" msprop:Generator_RowEvArgName="A_MANAGER_SAVE_UNIGRID1RowChangeEvent" msprop:Generator_RowClassName="A_MANAGER_SAVE_UNIGRID1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YEAR_YYMM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YEAR_YYMM" msprop:Generator_ColumnVarNameInTable="columnYEAR_YYMM" msprop:Generator_ColumnPropNameInTable="YEAR_YYMMColumn" msprop:Generator_UserColumnName="YEAR_YYMM" type="xs:string" minOccurs="0" />
+              <xs:element name="YEAR_YY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YEAR_YY" msprop:Generator_ColumnVarNameInTable="columnYEAR_YY" msprop:Generator_ColumnPropNameInTable="YEAR_YYColumn" msprop:Generator_UserColumnName="YEAR_YY" type="xs:string" minOccurs="0" />
+              <xs:element name="EMP_NO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="EMP_NO" msprop:Generator_ColumnVarNameInTable="columnEMP_NO" msprop:Generator_ColumnPropNameInTable="EMP_NOColumn" msprop:Generator_UserColumnName="EMP_NO" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="EXT1_TXT" msprop:Generator_ColumnVarNameInTable="columnEXT1_TXT" msprop:Generator_ColumnPropNameInRow="EXT1_TXT" msprop:Generator_ColumnPropNameInTable="EXT1_TXTColumn" msprop:Generator_UserColumnName="EXT1_TXT" type="xs:string" minOccurs="0" />
+              <xs:element name="EXT2_TXT" msprop:Generator_ColumnVarNameInTable="columnEXT2_TXT" msprop:Generator_ColumnPropNameInRow="EXT2_TXT" msprop:Generator_ColumnPropNameInTable="EXT2_TXTColumn" msprop:Generator_UserColumnName="EXT2_TXT" type="xs:string" minOccurs="0" />
+              <xs:element name="SELECTED_CHAR" msprop:Generator_ColumnVarNameInTable="columnSELECTED_CHAR" msprop:Generator_ColumnPropNameInRow="SELECTED_CHAR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="SELECTED_CHARColumn" msprop:Generator_UserColumnName="SELECTED_CHAR" type="xs:string" minOccurs="0" />
+              <xs:element name="ROW_NUM" msprop:Generator_ColumnVarNameInTable="columnROW_NUM" msprop:Generator_ColumnPropNameInRow="ROW_NUM" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="ROW_NUMColumn" msprop:Generator_UserColumnName="ROW_NUM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
