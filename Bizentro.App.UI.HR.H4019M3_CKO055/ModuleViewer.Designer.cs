@@ -1,4 +1,4 @@
-﻿using Bizentro.AppFramework.UI.Module;
+using Bizentro.AppFramework.UI.Module;
 using Microsoft.Practices.CompositeUI;
 using Microsoft.Practices.ObjectBuilder;
 

@@ -1,4 +1,4 @@
-﻿#region ● Namespace declaration
+#region ● Namespace declaration
 
 using System;
 using System.ComponentModel;
