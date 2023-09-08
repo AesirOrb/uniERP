@@ -1,13 +1,24 @@
-﻿#region ● Namespace declaration
+#region ● Namespace declaration
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
+using System.Web.Services.Protocols;
 
 using Microsoft.Practices.CompositeUI.SmartParts;
+
+using Infragistics.Shared;
+using Infragistics.Win;
 using Infragistics.Win.UltraWinGrid;
+
+using Bizentro.AppFramework.UI.Common;
+using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
