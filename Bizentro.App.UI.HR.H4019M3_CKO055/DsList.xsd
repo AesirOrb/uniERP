@@ -25,17 +25,17 @@
     msprop:Generator_UserDSName="DsList">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="E_H4016Q1_KO" msprop:Generator_TableClassName="E_H4016Q1_KODataTable"
-          msprop:Generator_TableVarName="tableE_H4016Q1_KO"
-          msprop:Generator_TablePropName="E_H4016Q1_KO"
-          msprop:Generator_RowDeletingName="E_H4016Q1_KORowDeleting"
-          msprop:Generator_RowChangingName="E_H4016Q1_KORowChanging"
-          msprop:Generator_RowEvHandlerName="E_H4016Q1_KORowChangeEventHandler"
-          msprop:Generator_RowDeletedName="E_H4016Q1_KORowDeleted"
-          msprop:Generator_UserTableName="E_H4016Q1_KO"
-          msprop:Generator_RowChangedName="E_H4016Q1_KORowChanged"
-          msprop:Generator_RowEvArgName="E_H4016Q1_KORowChangeEvent"
-          msprop:Generator_RowClassName="E_H4016Q1_KORow">
+        <xs:element name="E_H4019M3_KO" msprop:Generator_TableClassName="E_H4019M3_KODataTable"
+          msprop:Generator_TableVarName="tableE_H4019M3_KO"
+          msprop:Generator_TablePropName="E_H4019M3_KO"
+          msprop:Generator_RowDeletingName="E_H4019M3_KORowDeleting"
+          msprop:Generator_RowChangingName="E_H4019M3_KORowChanging"
+          msprop:Generator_RowEvHandlerName="E_H4019M3_KORowChangeEventHandler"
+          msprop:Generator_RowDeletedName="E_H4019M3_KORowDeleted"
+          msprop:Generator_UserTableName="E_H4019M3_KO"
+          msprop:Generator_RowChangedName="E_H4019M3_KORowChanged"
+          msprop:Generator_RowEvArgName="E_H4019M3_KORowChangeEvent"
+          msprop:Generator_RowClassName="E_H4019M3_KORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EMP_NO" msprop:Generator_ColumnVarNameInTable="columnEMP_NO"

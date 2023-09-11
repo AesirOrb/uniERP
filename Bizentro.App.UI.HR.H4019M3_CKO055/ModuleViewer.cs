@@ -1,21 +1,24 @@
-#region ● Namespace declaration
+﻿#region ● Namespace declaration
 
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Data;
-using System.Text;
 using System.Windows.Forms;
 
-using Bizentro.AppFramework.DataBridge;
-using Bizentro.AppFramework.UI.Common.Exceptions;
+using Microsoft.Practices.CompositeUI.SmartParts;
+
+using Infragistics.Win;
+using Infragistics.Win.UltraWinGrid;
+
+using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
-using Microsoft.Practices.CompositeUI.SmartParts;
-using Infragistics.Win.UltraWinGrid;
+using Bizentro.AppFramework.UI.Common.Exceptions;
 
 #endregion
 
-namespace Bizentro.App.UI.HR.H4019M3_CKO055
+namespace Bizentro.App.UI.HR.H4019M3_KO000
 {
     [SmartPart]
     public partial class ModuleViewer : ViewBase
@@ -58,12 +61,13 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
 
         #region ■ 1.4 Class global constants (grid)
 
+
         #endregion
 
         #region ■ 1.5 Class global variables (grid)
 
-        private dsListQuery cqtdsQuery = new dsListQuery();
-        private string strInternalCd = "";
+        // change your code
+        private DsList cqtdsList = new DsList();
 
         #endregion
 
@@ -84,19 +88,16 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
 
         protected override void Form_Load()
         {
-            //uniBase.UData.SetWorkingDataSet(this.cstdsTypedDataSet);
+            uniBase.UData.SetWorkingDataSet(cqtdsList);
             uniBase.UCommon.SetViewType(enumDef.ViewType.T02_Multi);
-
-            uniBase.UCommon.LoadInfTB19029(enumDef.FormType.Input, enumDef.ModuleInformation.Common);  // Load company numeric format. I: Input Program, *: All Module
+            uniBase.UCommon.LoadInfTB19029(enumDef.FormType.Query, enumDef.ModuleInformation.PersonnelPayRollManagement);
             LoadCustomInfTB19029();                                                   // Load custoqm numeric format
         }
 
         protected override void Form_Load_Completed()
         {
-            dtConYear.Value = uniBase.UDate.GetDBServerDateTime();
-
-            uniBase.UCommon.SetToolBarMultiAll(false);
-            uniBase.UCommon.SetToolBarMulti(enumDef.ToolBitMulti.Cancel, true);
+            dtYearMonth.Focus();
+            //uniBase.UCommon.SetToolBarMulti(enumDef.ToolBitMulti.DeleteRow, false);
         }
 
         #endregion
@@ -106,7 +107,7 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         protected override void InitLocalVariables()
         {
             // init Dataset Row : change your code
-            //dsAnyName.Clear();
+            cqtdsList.Clear();
         }
 
         #endregion
@@ -116,6 +117,31 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         protected override void SetLocalDefaultValue()
         {
             // Assign default value to controls
+            uniDateTime date = dtYearMonth;
+            DateTime dBServerDateTime = uniBase.UDate.GetDBServerDateTime();
+            date.Value = dBServerDateTime.Date;
+            cboPayCd.SelectedIndex = 0;
+            uniOpenPopup _uniOpenPopup = popDeptCd;
+            uniOpenPopup _uniOpenPopup1 = popDeptCd;
+            uniTextBox _uniTextBox = txtInternalCd;
+            string empty = string.Empty;
+            string str = empty;
+            _uniTextBox.Text = empty;
+            string str1 = str;
+            str = str1;
+            _uniOpenPopup1.CodeName = str1;
+            _uniOpenPopup.CodeValue = str;
+            uniOpenPopup _uniOpenPopup2 = popEmpNo;
+            uniOpenPopup _uniOpenPopup3 = popEmpNo;
+            string empty1 = string.Empty;
+            str = empty1;
+            _uniOpenPopup3.CodeName = empty1;
+            _uniOpenPopup2.CodeValue = str;
+            cboWkType.SelectedIndex = 0;
+            cboBizAreaCd.SelectedIndex = 0;
+            SetDayOfWeek();
+            dtYearMonth.Focus();
+
             return;
         }
 
@@ -125,27 +151,29 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
 
         protected override void GatheringComboData()
         {
-            // Example: Set ComboBox List (Column Name, Select, From, Where)
-            //uniBase.UData.ComboMajorAdd("TaxPolicy", "B0004");
-            //uniBase.UData.ComboCustomAdd("MSG_TYPE", "MINOR_CD , MINOR_NM ", "B_MINOR", "MAJOR_CD='A1001'");
+            uniBase.UData.ComboMajorAdd(cboPayCd.Name, "H0005");
+            uniBase.UData.ComboMajorAdd(cboWkType.Name, "H0047");
+            uniBase.UData.ComboCustomAdd(cboBizAreaCd.Name, " B_BIZ_AREA.BIZ_AREA_CD CODE, B_BIZ_AREA.BIZ_AREA_NM NAME ", string.Format("B_BIZ_AREA INNER JOIN dbo.ufn_AuthBizAreaCD_byUsrID('{0}') AUTH ON B_BIZ_AREA.BIZ_AREA_CD = AUTH.BIZ_AREA_CD", CommonVariable.gUsrID), "1=1");
         }
+
         #endregion
 
         #region ■ 2.6 Define user defined numeric info
 
         public void LoadCustomInfTB19029()
         {
+
             #region User Define Numeric Format Data Setting  ☆
-            viewTB19029.ggUserDefined6.DecPoint = 1;
+            //base.viewTB19029.ggUserDefined6.DecPoint = 0;
             //base.viewTB19029.ggUserDefined6.Integeral = 15;
             #endregion
         }
 
         #endregion
 
-        #region ▶ 3. Grid method part
-
         #endregion
+
+        #region ▶ 3. Grid method part
 
         #region ■ 3.1 Initialize Grid (InitSpreadSheet)
 
@@ -153,67 +181,112 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         {
             #region ■■ 3.1.1 Pre-setting grid information
 
-            dsListQuery.A_LIST_QUERY_UNIGRID1DataTable uniGridTB1 = cqtdsQuery.A_LIST_QUERY_UNIGRID1;
-
-            uniGrid1.SSSetEdit(uniGridTB1.DEPT_NMColumn.ColumnName, "부서", 133, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Left);
-            uniGrid1.SSSetEdit(uniGridTB1.BIZ_AREA_NMColumn.ColumnName, "사업장", 108, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Left);
-            uniGrid1.SSSetEdit(uniGridTB1.NAMEColumn.ColumnName, "성명", 103, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Left);
-            uniGrid1.SSSetEdit(uniGridTB1.EMP_NOColumn.ColumnName, "사번", 122, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, true, enumDef.HAlign.Left);
-            uniGrid1.SSSetDate(uniGridTB1.ENTR_DTColumn.ColumnName, "입사일", 131, enumDef.FieldType.ReadOnly, CommonVariable.CDT_YYYY_MM_DD, enumDef.HAlign.Center);
-            uniGrid1.SSSetDate(uniGridTB1.RETIRE_DTColumn.ColumnName, "최종근무일", 131, enumDef.FieldType.ReadOnly, CommonVariable.CDT_YYYY_MM_DD, enumDef.HAlign.Center);
-            uniGrid1.SSSetDate(uniGridTB1.ENTR_DT_1_YEARColumn.ColumnName, "입사1년 채우는날", 159, enumDef.FieldType.ReadOnly, CommonVariable.CDT_YYYY_MM_DD, enumDef.HAlign.Center);
-            uniGrid1.SSSetFloat(uniGridTB1.YEAR_SAVE_TOT_1Column.ColumnName, "발생", 91, viewTB19029.ggAmtOfMoney, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.YEAR_MONTH_1Column.ColumnName, "전기발생신입연차", 160, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.EXT1_TXTColumn.ColumnName, "전기(이월) 차감/사용연차", 100, viewTB19029.ggAmtOfMoney, enumDef.FieldType.Default, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetDate(uniGridTB1.USE_STRT_DTColumn.ColumnName, "부여일자", 131, enumDef.FieldType.ReadOnly, CommonVariable.CDT_YYYY_MM_DD, enumDef.HAlign.Center);
-            uniGrid1.SSSetFloat(uniGridTB1.YEAR_SAVE_TOT_2Column.ColumnName, "수량", 91, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.YEAR_MONTHColumn.ColumnName, "당기발생신입연차", 160, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.EXT2_TXTColumn.ColumnName, "당기발생차감수량", 100, viewTB19029.ggAmtOfMoney, enumDef.FieldType.Default, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.YEAR_SAVE_TOT_3Column.ColumnName, "사용가능연차", 135, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.CNTColumn.ColumnName, "사용누계", 110, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.TEMP_1Column.ColumnName, "사용가능잔여연차", 160, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
-            uniGrid1.SSSetFloat(uniGridTB1.TEMP_2Column.ColumnName, "당회기말사용만료잔여연차", 211, viewTB19029.ggUserDefined6, enumDef.FieldType.ReadOnly, enumDef.HAlign.Right, true, enumDef.PosZero.Default, int.MinValue, int.MaxValue, false);
+            int i;
+            int num;
+            DsList.E_H4019M3_KODataTable eH4019M3KO = cqtdsList.E_H4019M3_KO;
+            uniGrid1.SSSetEdit(eH4019M3KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.TYPEColumn.ColumnName, "Day", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_16Column.ColumnName, "Data 16", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_17Column.ColumnName, "Data 17", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_18Column.ColumnName, "Data 18", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_19Column.ColumnName, "Data 19", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_20Column.ColumnName, "Data 20", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_21Column.ColumnName, "Data 21", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_22Column.ColumnName, "Data 22", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_23Column.ColumnName, "Data 23", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_24Column.ColumnName, "Data 24", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_25Column.ColumnName, "Data 25", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_26Column.ColumnName, "Data 26", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_27Column.ColumnName, "Data 27", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_28Column.ColumnName, "Data 28", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_29Column.ColumnName, "Data 29", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_30Column.ColumnName, "Data 30", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_31Column.ColumnName, "Data 31", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_01Column.ColumnName, "Data 1", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_02Column.ColumnName, "Data 2", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_03Column.ColumnName, "Data 3", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_04Column.ColumnName, "Data 4", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_05Column.ColumnName, "Data 5", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_06Column.ColumnName, "Data 6", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_07Column.ColumnName, "Data 7", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_08Column.ColumnName, "Data 8", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_09Column.ColumnName, "Data 9", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_10Column.ColumnName, "Data 10", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_11Column.ColumnName, "Data 11", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_12Column.ColumnName, "Data 12", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_13Column.ColumnName, "Data 13", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_14Column.ColumnName, "Data 14", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.DATA_15Column.ColumnName, "Data 15", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019M3KO.TOTALColumn.ColumnName, "Total", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
             #endregion
 
             #region ■■ 3.1.2 Formatting grid information
 
-            uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.No);
-            uniGrid1.flagInformation("SELECTED_CHAR", "ROW_NUM");
+            uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.Yes);
+            uniGrid1.DisplayLayout.Override.HeaderClickAction = HeaderClickAction.Select;
 
             #endregion
 
             #region ■■ 3.1.3 Setting etc grid
 
-            uniGrid1.SetMerge("DEPT_NM", 0, 0, 1, 3);
-            uniGrid1.SetMerge("BIZ_AREA_NM", 1, 0, 1, 3);
-            uniGrid1.SetMerge("NAME", 2, 0, 1, 3);
-            uniGrid1.SetMerge("EMP_NO", 3, 0, 1, 3);
-            uniGrid1.SetMerge("ENTR_DT", 4, 0, 1, 3);
-            uniGrid1.SetMerge("RETIRE_DT", 5, 0, 1, 3);
-            uniGrid1.SetMerge("ENTR_DT_1_YEAR", 6, 0, 1, 3);
-            uniGrid1.DisplayLayout.Bands[0].Columns.Add("ICE_DEV_TEMP_COL1", "입사기준 최종연차");
-            uniGrid1.DisplayLayout.Bands[0].Columns["ICE_DEV_TEMP_COL1"].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
-            uniGrid1.SetMerge("ICE_DEV_TEMP_COL1", 7, 0, 1, 1);
-            uniGrid1.DisplayLayout.Bands[0].Columns.Add("ICE_DEV_TEMP_COL2", "현재 유효 연차 휴가 현황");
-            uniGrid1.DisplayLayout.Bands[0].Columns["ICE_DEV_TEMP_COL2"].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
-            uniGrid1.SetMerge("ICE_DEV_TEMP_COL2", 8, 0, 7, 1);
-            uniGrid1.SetMerge("CNT", 15, 0, 1, 3);
-            uniGrid1.SetMerge("TEMP_1", 16, 0, 1, 3);
-            uniGrid1.SetMerge("TEMP_2", 17, 0, 1, 3);
-            uniGrid1.SetMerge("YEAR_SAVE_TOT_1", 7, 1, 1, 2);
-            uniGrid1.SetMerge("YEAR_MONTH_1", 8, 1, 1, 2);
-            uniGrid1.SetMerge("EXT1_TXT", 9, 1, 1, 2);
-            uniGrid1.DisplayLayout.Bands[0].Columns.Add("ICE_DEV_TEMP_COL3", "당기초발생 회계연차");
-            uniGrid1.DisplayLayout.Bands[0].Columns["ICE_DEV_TEMP_COL3"].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
-            uniGrid1.SetMerge("ICE_DEV_TEMP_COL3", 10, 1, 2, 1);
-            uniGrid1.SetMerge("YEAR_MONTH", 12, 1, 1, 2);
-            uniGrid1.SetMerge("EXT2_TXT", 13, 1, 1, 2);
-            uniGrid1.SetMerge("YEAR_SAVE_TOT_3", 14, 1, 1, 2);
-            uniGrid1.SetMerge("USE_STRT_DT", 10, 2, 1, 1);
-            uniGrid1.SetMerge("YEAR_SAVE_TOT_2", 11, 2, 1, 1);
-
-            uniGrid1.DisplayLayout.Override.DefaultRowHeight = 23;
+            AddLabelColumn(uniGrid1, "grpEmpNo", "Employee ID");
+            AddLabelColumn(uniGrid1, "grpName", "Name");
+            AddLabelColumn(uniGrid1, "grpDept", "Department");
+            AddLabelColumn(uniGrid1, "grpPayCd", "Payroll ID");
+            AddLabelColumn(uniGrid1, "grpAttendance", "Attendance Details");
+            AddLabelColumn(uniGrid1, "grpDate", "Date");
+            for (i = 15; i < 31; i++)
+            {
+                uniGrid _uniGrid = uniGrid1;
+                num = i + 1;
+                string str = string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0")));
+                num = i + 1;
+                AddLabelColumn(_uniGrid, str, num.ToString());
+            }
+            for (i = 0; i < 15; i++)
+            {
+                uniGrid _uniGrid1 = uniGrid1;
+                num = i + 1;
+                string str1 = string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0")));
+                num = i + 1;
+                AddLabelColumn(_uniGrid1, str1, num.ToString());
+            }
+            int num1 = 0;
+            num1++;
+            uniGrid1.SetMerge("grpEmpNo", num1, 0, 1, 1);
+            uniGrid1.SetMerge("grpDept", num1, 1, 1, 1);
+            uniGrid1.SetMerge(eH4019M3KO.TEXT_01Column.ColumnName, num1, 2, 1, 1);
+            num1++;
+            uniGrid1.SetMerge("grpName", num1, 0, 1, 1);
+            uniGrid1.SetMerge("grpPayCd", num1, 1, 1, 1);
+            uniGrid1.SetMerge(eH4019M3KO.TEXT_02Column.ColumnName, num1, 2, 1, 1);
+            num1++;
+            uniGrid1.SetMerge("grpAttendance", num1, 0, 32, 1);
+            uniGrid1.SetMerge("grpDate", num1, 1, 1, 1);
+            uniGrid1.SetMerge(eH4019M3KO.TYPEColumn.ColumnName, num1, 2, 1, 1);
+            for (i = 15; i < 31; i++)
+            {
+                num1++;
+                num = i + 1;
+                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 1, 1, 1);
+                num = i + 1;
+                uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
+            }
+            for (i = 0; i < 15; i++)
+            {
+                num1++;
+                num = i + 1;
+                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 1, 1, 1);
+                num = i + 1;
+                uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
+            }
+            num1++;
+            uniGrid1.SetMerge(eH4019M3KO.TOTALColumn.ColumnName, num1, 0, 1, 3);
+            uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
+            uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
+            uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
 
             #endregion
         }
@@ -243,8 +316,8 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         protected override void InitControlBinding()
         {
             // Grid binding with global dataset variable.
-            this.InitSpreadSheet();
-            uniGrid1.uniGridSetDataBinding(cqtdsQuery.A_LIST_QUERY_UNIGRID1);
+            InitSpreadSheet();
+            uniGrid1.uniGridSetDataBinding(cqtdsList.E_H4019M3_KO);
         }
         #endregion
 
@@ -390,38 +463,53 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         {
             try
             {
-                StringBuilder sbSQL = new StringBuilder();
-                DataSet ResultRs = new DataSet();
-                uniCommand iuniCommand = null;
-
-                iuniCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.USP_H9201M1_CKO055_UNIGRID1");
-                iuniCommand.CommandType = CommandType.StoredProcedure;
-
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@YEAR", SqlDbType.NVarChar, dtConYear.uniValue.ToString("yyyy"));
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, uniBase.UCommon.FilterVariable(cboConBizAreaCd.Value.ToString(), "%", enumDef.FilterVarType.NoBraceButReplSingleWithDoubleQuotation, true));
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@PAY_CD", SqlDbType.NVarChar, uniBase.UCommon.FilterVariable(cboConPayCd.Value.ToString(), "%", enumDef.FilterVarType.NoBraceButReplSingleWithDoubleQuotation, true));
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@DEPT_CD", SqlDbType.NVarChar, uniBase.UCommon.FilterVariable(popConDeptCd, "%", enumDef.FilterVarType.NoBraceButReplSingleWithDoubleQuotation, true));
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@EMP_NO", SqlDbType.NVarChar, uniBase.UCommon.FilterVariable(popConEmpNo, "%", enumDef.FilterVarType.NoBraceButReplSingleWithDoubleQuotation, true));
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@RETIRE_FLAG", SqlDbType.NVarChar, uniBase.UCommon.FilterVariable((chkConRetireFlag.Checked ? "Y" : "N"), "%", enumDef.FilterVarType.NoBraceButReplSingleWithDoubleQuotation, true));
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@USER_ID", SqlDbType.NVarChar, uniBase.UCommon.FilterVariable(CommonVariable.gUsrID, "%", enumDef.FilterVarType.NoBraceButReplSingleWithDoubleQuotation, true));
-                uniBase.UDatabase.AddOutParameter(iuniCommand, "@MSG_CD", SqlDbType.NVarChar, 100);
-                uniBase.UDatabase.AddOutParameter(iuniCommand, "@MSG_TEXT", SqlDbType.NVarChar, 255);
-
-                uniBase.UDatabase.AddReturnParameter(iuniCommand, "@return", SqlDbType.VarChar, 4);
-
-                ResultRs = uniBase.UDatabase.ExecuteDataSet(iuniCommand);
-
-                int iReturnValue = (int)uniBase.UDatabase.GetParameterValue(iuniCommand, "@return");
-
-                string strMSG_CD = uniBase.UDatabase.GetParameterValue(iuniCommand, "@MSG_CD").ToString();
-                string strMSG_TEXT = uniBase.UDatabase.GetParameterValue(iuniCommand, "@MSG_TEXT").ToString();
-
-                if (ResultRs == null || ResultRs.Tables[0].Rows.Count == 0)
+                using (AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand(chkQuery.Checked ? "dbo.usp_H_H4017Q2_KO" : "dbo.usp_H_H4019M3_KO"))
                 {
-                    uniBase.UMessage.DisplayMessageBox(strMSG_CD, MessageBoxButtons.OK, strMSG_TEXT);
-                    return false;
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYMM", SqlDbType.NVarChar, 6, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@PAY_CD", SqlDbType.NVarChar, 1, cboPayCd.SelectedItem == null ? string.Empty : cboPayCd.SelectedItem.DataValue.ToString());
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 30, txtInternalCd.Text);
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 13, popEmpNo.CodeValue);
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
+                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 13, CommonVariable.gUsrID);
+
+                    using (DataSet dataSet = uniBase.UDatabase.ExecuteDataSet(storedProcCommand))
+                    {
+                        if (dataSet.Tables[0].Rows.Count < 0)
+                        {
+                            uniBase.UMessage.DisplayMessageBox("900014", MessageBoxButtons.OK);
+                            dtYearMonth.Focus();
+                            return false;
+                        }
+
+                        cqtdsList.E_H4019M3_KO.Merge(dataSet.Tables[0], false, MissingSchemaAction.Ignore);
+
+                        int num = 0;
+                        string sCurrEmpNo = string.Empty;
+                        string sPrevEmpNo = string.Empty;
+
+                        uniGrid1.BeginUpdate();
+
+                        for (int i = 0; i < uniGrid1.Rows.Count; i++)
+                        {
+                            sCurrEmpNo = uniGrid1.Rows[i].Cells["EMP_NO"].Value as string;
+
+                            if (sPrevEmpNo == string.Empty)
+                                sPrevEmpNo = sCurrEmpNo;
+
+                            if (sPrevEmpNo != sCurrEmpNo)
+                                num++;
+
+                            uniGrid1.Rows[i].Appearance.BackColor = num % 2 == 0 ? Color.White : Color.FromArgb(255, 242, 245, 254);
+
+                            sPrevEmpNo = sCurrEmpNo;
+                        }
+
+                        uniGrid1.EndUpdate();
+
+                        SetDayOfWeek();
+                    }
                 }
-                cqtdsQuery.A_LIST_QUERY_UNIGRID1.Merge(ResultRs.Tables[0], false, MissingSchemaAction.Ignore);
             }
             catch (Exception ex)
             {
@@ -429,11 +517,6 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
                 if (reThrow)
                     throw;
                 return false;
-            }
-            finally
-            {
-                //if (iqtdsTypedDataSet != null) iqtdsTypedDataSet.Dispose();
-                //if (iqtdsICondition != null) iqtdsICondition.Dispose();
             }
 
             return true;
@@ -463,36 +546,14 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
 
             try
             {
-                StringBuilder sbSQL = new StringBuilder();
-                DataSet ResultRs = new DataSet();
-                uniCommand iuniCommand = null;
+                //wsMyBizFL.TypedDataSet.IESaveDTDataTable igettdtTypedDataSet =
+                //    (wsMyBizFL.TypedDataSet.IESaveDTDataTable)this.cstdsTypedDataSet.IESaveDT.GetChanges();
 
-                iuniCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.USP_H9201M1_CKO055_CUD");
-                iuniCommand.CommandType = CommandType.StoredProcedure;
-
-                dsListQuery.A_MANAGER_SAVE_UNIGRID1DataTable SendTB = new dsListQuery.A_MANAGER_SAVE_UNIGRID1DataTable();
-
-                SendTB.Merge(cqtdsQuery.A_LIST_QUERY_UNIGRID1.GetChanges(), false, MissingSchemaAction.Ignore);
-
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@MAIN_TB", SqlDbType.Structured, SendTB.DefaultView.ToTable());
-                uniBase.UDatabase.AddInParameter(iuniCommand, "@USER_ID", SqlDbType.NVarChar, CommonVariable.gUsrID);
-                uniBase.UDatabase.AddOutParameter(iuniCommand, "@MSG_CD", SqlDbType.NVarChar, 100);
-                uniBase.UDatabase.AddOutParameter(iuniCommand, "@MSG_TEXT", SqlDbType.NVarChar, 255);
-
-                uniBase.UDatabase.AddReturnParameter(iuniCommand, "@return", SqlDbType.VarChar, 4);
-
-                uniBase.UDatabase.ExecuteNonQuery(iuniCommand, false);
-
-                int iReturnValue = (int)uniBase.UDatabase.GetParameterValue(iuniCommand, "@return");
-
-                string strMSG_CD = uniBase.UDatabase.GetParameterValue(iuniCommand, "@MSG_CD").ToString();
-                string strMSG_TEXT = uniBase.UDatabase.GetParameterValue(iuniCommand, "@MSG_TEXT").ToString();
-
-                if (iReturnValue != 1)
-                {
-                    uniBase.UMessage.DisplayMessageBox(strMSG_CD, MessageBoxButtons.OK, strMSG_TEXT);
-                    return false;
-                }
+                //using (wsMyBizFL.Service iwsMyBizFL = (wsMyBizFL.Service)uniBase.UConfig.SetWebServiceProxyEnv(new wsMyBizFL.Service()))
+                //{
+                //    isettdsTypedDataSet.IESaveDT.Merge(igettdtTypedDataSet, false, MissingSchemaAction.Ignore);
+                //    iwsMyBizFL.SaveWebMethod(CommonVariable.gStrGlobalCollection, isettdsTypedDataSet);
+                //}
             }
             catch (Exception ex)
             {
@@ -520,6 +581,27 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         #region ▶ 5. Event method part
 
         #region ■ 5.1 Single control event implementation group
+
+        private void popEmpNo_OnExitEditCode(object sender, EventArgs e)
+        {
+            if (popEmpNo.CodeValue == string.Empty)
+            {
+                popEmpNo.CodeName = string.Empty;
+            }
+        }
+
+        private void popDeptCd_OnExitEditCode(object sender, EventArgs e)
+        {
+            if (popDeptCd.CodeValue == string.Empty)
+            {
+                uniOpenPopup _uniOpenPopup = popDeptCd;
+                uniTextBox _uniTextBox = txtInternalCd;
+                string empty = string.Empty;
+                string str = empty;
+                _uniTextBox.Text = empty;
+                _uniOpenPopup.CodeName = str;
+            }
+        }
 
         #endregion
 
@@ -628,41 +710,89 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
 
         #region ■ 6.2 User-defined popup implementation group
 
-        private void OpenNumberingType(string iWhere)
+        private void popDeptCd_BeforePopupOpen(object sender, AppFramework.UI.Controls.Popup.BeforePopupOpenEventArgs e)
         {
-            #region ▶▶▶ 10.1.2.1 Popup Constructors
-            //CommonPopup cp = new CommonUtil.CommonPopup(PopupType.AutoNumbering);
-
-            //string[] arrRet = cp.showModalDialog(InputParam1);
-
-            #endregion
-
-            #region ▶▶▶ 10.1.2.2 Setting Returned Data
-
-            //if (iWhere) 
-            //{
-            //    txtMinor.value = arrRet[0];
-            //    txtMinorNm.value = arrRet[1];
-            //}
-            //else
-            //{
-            //    uniGrid1.Rows[uniGrid1.ActiveRow][gridCol.NumberingCd].value = arrRet[0];
-            //    uniGrid1.Rows[uniGrid1.ActiveRow][gridCol.NumberingNm].value = arrRet[1];
-
-            //    if (arrRet[2].Length > 0) 
-            //        uniGrid1.Rows[uniGrid1.ActiveRow][gridCol.MaxLen].value = arrRet[2];
-            //    else
-            //        uniGrid1.Rows[uniGrid1.ActiveRow][gridCol.MaxLen].value = "18";
-
-            //    uniGrid1.Rows[uniGrid1.ActiveRow][gridCol.PrefixCd].value = arrRet[0];
-
-            //}
-
-            #endregion
-
-            //CommonVariable.lgBlnFlgChgValue = true;  // 사용자 액션 발생 알림
+            string[] codeValue = new string[] { popDeptCd.CodeValue, popDeptCd.CodeName, null, null };
+            UDateClass uDate = uniBase.UDate;
+            DateTime firstDay = dtYearMonth.uniValue;
+            firstDay = uDate.GetFirstDay(firstDay.Date);
+            firstDay = firstDay.Date;
+            codeValue[2] = firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD);
+            codeValue[3] = string.Empty;
+            string[] strArrays = codeValue;
+            e.PopupPassData.CalledPopupID = "Bizentro.App.UI.Popup.HDeptPopup";
+            e.PopupPassData.PopupWinTitle = "Department Popup";
+            e.PopupPassData.PopupWinWidth = 800;
+            e.PopupPassData.PopupWinHeight = 700;
+            AppFramework.UI.Controls.Popup.PopupPassData popupPassData = e.PopupPassData;
+            codeValue = new string[4];
+            UCommonClass uCommon = uniBase.UCommon;
+            firstDay = uniBase.UDate.GetDBServerDateTime();
+            firstDay = firstDay.Date;
+            codeValue[0] = uCommon.FilterVariable(firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD), "'1900-01-01'", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            codeValue[1] = uniBase.UCommon.FilterVariable(CommonVariable.gUsrID, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            UCommonClass uCommonClass = uniBase.UCommon;
+            firstDay = uniBase.UDate.GetDBServerDateTime();
+            firstDay = firstDay.Date;
+            codeValue[2] = uCommonClass.FilterVariable(firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD), "'1900-01-01'", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            codeValue[3] = uniBase.UCommon.FilterVariable(popDeptCd, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            popupPassData.UserParameters = codeValue;
+            e.PopupPassData.Data = strArrays;
         }
 
+        private void popDeptCd_AfterPopupClosed(object sender, AppFramework.UI.Controls.Popup.AfterPopupCloseEventArgs e)
+        {
+            DataSet dataSet = new DataSet();
+            if (e.ResultData.Data != null)
+            {
+                dataSet = (DataSet)e.ResultData.Data;
+                popDeptCd.CodeValue = dataSet.Tables[0].Rows[0]["dept_cd"].ToString();
+                popDeptCd.CodeName = dataSet.Tables[0].Rows[0]["dept_nm"].ToString();
+                txtInternalCd.Text = dataSet.Tables[0].Rows[0]["internal_cd"].ToString();
+            }
+        }
+
+        private void popEmpNo_BeforePopupOpen(object sender, AppFramework.UI.Controls.Popup.BeforePopupOpenEventArgs e)
+        {
+            string[] codeValue = new string[] { popEmpNo.CodeValue, popEmpNo.CodeName, null, null, null, null, null, null };
+            UDateClass uDate = uniBase.UDate;
+            DateTime firstDay = dtYearMonth.uniValue;
+            firstDay = uDate.GetFirstDay(firstDay.Date);
+            firstDay = firstDay.Date;
+            codeValue[2] = firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD);
+            codeValue[3] = "1";
+            codeValue[4] = cboBizAreaCd.SelectedItem != null ? cboBizAreaCd.SelectedItem.DataValue.ToString() : string.Empty;
+            codeValue[5] = "";
+            codeValue[6] = txtInternalCd.Text;
+            codeValue[7] = txtInternalCd.Text;
+            string[] strArrays = codeValue;
+            e.PopupPassData.CalledPopupID = "Bizentro.App.UI.Popup.EmpPopup";
+            e.PopupPassData.PopupWinTitle = "Name/Employee No. Query Popup";
+            e.PopupPassData.PopupWinWidth = 800;
+            e.PopupPassData.PopupWinHeight = 700;
+            AppFramework.UI.Controls.Popup.PopupPassData popupPassData = e.PopupPassData;
+            codeValue = new string[] { uniBase.UCommon.FilterVariable(CommonVariable.gUsrID, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true), null, null, null, null };
+            UCommonClass uCommon = uniBase.UCommon;
+            firstDay = uniBase.UDate.GetDBServerDateTime();
+            firstDay = firstDay.Date;
+            codeValue[1] = uCommon.FilterVariable(firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD), "'1900-01-01'", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            codeValue[2] = uniBase.UCommon.FilterVariable(popEmpNo.CodeValue, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            codeValue[3] = uniBase.UCommon.FilterVariable(popEmpNo.CodeValue, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
+            codeValue[4] = cboBizAreaCd.SelectedItem == null ? string.Empty : string.Format("AND HAA010T.BIZ_AREA_CD = '{0}'", cboBizAreaCd.SelectedItem.DataValue.ToString());
+            popupPassData.UserParameters = codeValue;
+            e.PopupPassData.Data = strArrays;
+        }
+
+        private void popEmpNo_AfterPopupClosed(object sender, AppFramework.UI.Controls.Popup.AfterPopupCloseEventArgs e)
+        {
+            DataSet dataSet = new DataSet();
+            if (e.ResultData.Data != null)
+            {
+                dataSet = (DataSet)e.ResultData.Data;
+                popEmpNo.CodeValue = dataSet.Tables[0].Rows[0]["emp_no"].ToString();
+                popEmpNo.CodeName = dataSet.Tables[0].Rows[0]["name"].ToString();
+            }
+        }
 
         #endregion
 
@@ -672,180 +802,79 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
 
         #region ■ 7.1 User-defined function group
 
+        private void AddLabelColumn(uniGrid grid, string sColumn, string sCaption)
+        {
+            grid.DisplayLayout.Bands[0].Columns.Add(sColumn, sCaption);
+            grid.DisplayLayout.Bands[0].Columns[sColumn].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
+        }
+
+        private void SetDayOfWeek()
+        {
+            uniGrid1.SSSetColHidden("DATA_29", false);
+            uniGrid1.SSSetColHidden("DATA_30", false);
+            uniGrid1.SSSetColHidden("DATA_31", false);
+
+            for (int i = 1; i <= 31; i++)
+            {
+                DayOfWeek _dayOfWeek = Convert.ToDateTime(string.Concat(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-"), i.ToString().PadLeft(2, '0'))).DayOfWeek;
+                string sDayOfWeek = string.Empty;
+
+                switch (_dayOfWeek)
+                {
+                    case DayOfWeek.Sunday:
+                        sDayOfWeek = "일";
+                        break;
+                    case DayOfWeek.Monday:
+                        sDayOfWeek = "월";
+                        break;
+                    case DayOfWeek.Tuesday:
+                        sDayOfWeek = "화";
+                        break;
+                    case DayOfWeek.Wednesday:
+                        sDayOfWeek = "수";
+                        break;
+                    case DayOfWeek.Thursday:
+                        sDayOfWeek = "목";
+                        break;
+                    case DayOfWeek.Friday:
+                        sDayOfWeek = "금";
+                        break;
+                    case DayOfWeek.Saturday:
+                        sDayOfWeek = "토";
+                        break;
+                }
+
+                uniGrid1.setColumnHeader(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
+            }
+
+            switch (dtYearMonth.uniValue.AddMonths(-1).Month)
+            {
+                case 2:
+                    if (!DateTime.IsLeapYear(dtYearMonth.uniValue.Year))
+                    {
+                        uniGrid1.SSSetColHidden("DATA_29", true);
+                        uniGrid1.SSSetColHidden("DATA_30", true);
+                        uniGrid1.SSSetColHidden("DATA_31", true);
+                    }
+                    else
+                    {
+                        uniGrid1.SSSetColHidden("DATA_30", true);
+                        uniGrid1.SSSetColHidden("DATA_31", true);
+                    }
+                    return;
+
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    uniGrid1.SSSetColHidden("DATA_31", true);
+                    return;
+            }
+        }
+
         #endregion
 
         #endregion
 
-        private void popConDeptCd_BeforePopupOpen(object sender, AppFramework.UI.Controls.Popup.BeforePopupOpenEventArgs e)
-        {
-            string[] param_array = new string[] { popConDeptCd.CodeValue, popConDeptCd.CodeName, "", cboConBizAreaCd.Value.ToString() };
-            e.PopupPassData.CalledPopupID = "Bizentro.App.UI.Popup.HDeptPopup";
-            e.PopupPassData.PopupWinTitle = "부서";
-            e.PopupPassData.PopupWinWidth = 800;
-            e.PopupPassData.PopupWinHeight = 700;
-            e.PopupPassData.Data = param_array;
-        }
-
-        private void popConDeptCd_AfterPopupClosed(object sender, AppFramework.UI.Controls.Popup.AfterPopupCloseEventArgs e)
-        {
-            DataSet iDataSet = new DataSet();
-
-            if (e.ResultData.Data == null)
-                return;
-
-            iDataSet = (DataSet)e.ResultData.Data;
-
-            popConDeptCd.CodeValue = iDataSet.Tables[0].Rows[0]["dept_cd"].ToString();
-            popConDeptCd.CodeName = iDataSet.Tables[0].Rows[0]["dept_nm"].ToString();
-            strInternalCd = iDataSet.Tables[0].Rows[0]["internal_cd"].ToString();
-        }
-
-        private void popConDeptCd_OnChange(object sender, EventArgs e)
-        {
-            if (popConDeptCd.CodeValue == "")
-            {
-                popConDeptCd.CodeName = "";
-                strInternalCd = "";
-                return;
-            }
-
-            string[] UNISqlId = new string[] { "ZN_HR_DEPT_NM" };
-            string[][] UNIValue = new string[1][];
-            UNIValue[0] = new string[5];
-
-            // 0: DATE(IF '' DEFAULT GETDATE)
-            // 1: USER ID
-            // 2: DEPT CODE
-            // 3: BIZ AREA CODE
-            // 4: ADDITIONAL CONDITION
-
-            UNIValue[0][0] = "''";
-            UNIValue[0][1] = uniBase.UCommon.FilterVariable(CommonVariable.gUsrID, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
-            UNIValue[0][2] = "'" + popConDeptCd.CodeValue + "'";
-            UNIValue[0][3] = "'" + cboConBizAreaCd.Value.ToString() + "%'";
-            UNIValue[0][4] = "";
-
-            DataSet pDataSet = null;
-
-            try
-            {
-                pDataSet = uniBase.UDataAccess.DBAgentQryRS(UNISqlId, UNIValue);
-
-                if (pDataSet == null || pDataSet.Tables[0].Rows.Count == 0)
-                {
-                    strInternalCd = "";
-                    popConDeptCd.CodeValue = "";
-                    popConDeptCd.CodeName = "";
-                    popConDeptCd.uniButton_Click(null, null);
-                    popConDeptCd.Focus();
-                    return;
-                }
-                popConDeptCd.CodeValue = pDataSet.Tables[0].Rows[0]["dept_cd"].ToString();
-                popConDeptCd.CodeName = pDataSet.Tables[0].Rows[0]["dept_nm"].ToString();
-                strInternalCd = pDataSet.Tables[0].Rows[0]["internal_cd"].ToString();
-
-            }
-            catch (Exception ex)
-            {
-                bool reThrow = uniBase.UExceptionController.AutoProcessException(ex);
-                if (reThrow)
-                    throw;
-                return;
-            }
-        }
-
-        private void popConEmpNo_BeforePopupOpen(object sender, AppFramework.UI.Controls.Popup.BeforePopupOpenEventArgs e)
-        {
-            string[] param_array = new string[] { popConEmpNo.CodeValue, popConEmpNo.CodeName, "", "", this.cboConBizAreaCd.Value.ToString() };
-            e.PopupPassData.CalledPopupID = "Bizentro.App.UI.Popup.EmpPopup";
-            e.PopupPassData.PopupWinTitle = "사번";
-            e.PopupPassData.PopupWinWidth = 800;
-            e.PopupPassData.PopupWinHeight = 700;
-            e.PopupPassData.Data = param_array;
-        }
-
-        private void popConEmpNo_AfterPopupClosed(object sender, AppFramework.UI.Controls.Popup.AfterPopupCloseEventArgs e)
-        {
-            DataSet iDataSet = new DataSet();
-
-            if (e.ResultData.Data == null)
-                return;
-
-            iDataSet = (DataSet)e.ResultData.Data;
-
-            popConEmpNo.CodeValue = iDataSet.Tables[0].Rows[0]["emp_no"].ToString();
-            popConEmpNo.CodeName = iDataSet.Tables[0].Rows[0]["name"].ToString();
-        }
-
-        private void popConEmpNo_OnChange(object sender, EventArgs e)
-        {
-            if (popConEmpNo.CodeValue == "")
-            {
-                popConEmpNo.CodeName = "";
-                return;
-            }
-
-            string[] UNISqlId = new string[] { "ZN_HR_EMP_NM2" };
-            string[][] UNIValue = new string[1][];
-            UNIValue[0] = new string[5];
-
-
-            // 0: USER ID
-            // 1: DATE(IF '' DEFAULT GETDATE)
-            // 2: EMP NO
-            // 3: ADDITIONAL CONDITION
-            // string dt = dtPayDt.uniValue.ToString(CommonVariable.CDT_YYYYMMDD);
-            UNIValue[0][0] = uniBase.UCommon.FilterVariable(CommonVariable.gUsrID, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
-            //UNIValue[0][1] = uniBase.UCommon.FilterVariable(dt, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);// "''";
-            UNIValue[0][1] = "''";
-            UNIValue[0][2] = uniBase.UCommon.FilterVariable(popConEmpNo.CodeValue, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
-            UNIValue[0][3] = uniBase.UCommon.FilterVariable(popConEmpNo.CodeValue, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
-            UNIValue[0][4] = " and dept.biz_area_cd like  '" + cboConBizAreaCd.Value.ToString() + "'";
-
-            DataSet pDataSet = null;
-
-            try
-            {
-                pDataSet = uniBase.UDataAccess.DBAgentQryRS(UNISqlId, UNIValue);
-
-                if (pDataSet == null || pDataSet.Tables[0].Rows.Count == 0)
-                {
-                    popConEmpNo.CodeValue = "";
-                    popConEmpNo.CodeName = "";
-                    popConEmpNo.uniButton_Click(null, null);
-                    popConEmpNo.Focus();
-                    return;
-
-                }
-                popConEmpNo.CodeValue = pDataSet.Tables[0].Rows[0]["emp_no"].ToString();
-                popConEmpNo.CodeName = pDataSet.Tables[0].Rows[0]["name"].ToString();
-            }
-            catch (Exception ex)
-            {
-                bool reThrow = uniBase.UExceptionController.AutoProcessException(ex);
-                if (reThrow)
-                    throw;
-                return;
-            }
-        }
-
-        private void uniGrid1_AfterExitEditMode_1(object sender, EventArgs e)
-        {
-            switch (uniGrid1.ActiveCell.Column.Key.ToUpper())
-            {
-                case "EXT1_TXT":
-                case "EXT2_TXT":
-                    if (uniGrid1.ActiveCell.Value.ToString() == "") uniGrid1.ActiveCell.Value = 0;
-
-                    decimal dYearSaveTot = Convert.ToDecimal(uniGrid1.ActiveRow.Cells["YEAR_SAVE_TOT_1"].Value);
-                    decimal dExt1Txt = Convert.ToDecimal(uniGrid1.ActiveRow.Cells["EXT1_TXT"].Value);
-                    decimal dExt2Txt = Convert.ToDecimal(uniGrid1.ActiveRow.Cells["EXT2_TXT"].Value);
-                    decimal dCnt = Convert.ToDecimal(uniGrid1.ActiveRow.Cells["CNT"].Value);
-
-                    uniGrid1.ActiveRow.Cells["TEMP_1"].Value = dYearSaveTot - dExt1Txt - dExt2Txt - dCnt;
-                    uniGrid1.ActiveRow.Cells["TEMP_2"].Value = dYearSaveTot - dExt1Txt - dExt2Txt - dCnt;
-                    break;
-            }
-        }
     }
 }
