@@ -186,7 +186,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             DsList.E_H4019Q2_KODataTable eH4019Q2KO = cqtdsList.E_H4019Q2_KO;
             uniGrid1.SSSetEdit(eH4019Q2KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q2KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.TYPEColumn.ColumnName, "Day", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q2KO.TYPEColumn.ColumnName, "Day", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q2KO.DATA_16Column.ColumnName, "Data 16", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q2KO.DATA_17Column.ColumnName, "Data 17", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q2KO.DATA_18Column.ColumnName, "Data 18", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
@@ -283,6 +283,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
             }
             num1++;
+            uniGrid1.SetCellMerge("TEXT_01", enumDef.VAlign.Middle);
+            uniGrid1.SetCellMerge("TEXT_02", enumDef.VAlign.Middle);
             uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, num1, 0, 1, 3);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
@@ -484,19 +486,11 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
                         cqtdsList.E_H4019Q2_KO.Merge(dataSet.Tables[0], false, MissingSchemaAction.Ignore);
 
-                        int num = 0;
-                        string sCurrEmpNo = string.Empty;
-                        string sPrevEmpNo = string.Empty;
-
                         uniGrid1.BeginUpdate();
 
                         for (int i = 0; i < uniGrid1.Rows.Count; i++)
                         {
-                            sCurrEmpNo = uniGrid1.Rows[i].Cells["EMP_NO"].Value as string;
-                            if (sPrevEmpNo == string.Empty) sPrevEmpNo = sCurrEmpNo;
-                            if (sPrevEmpNo != sCurrEmpNo) num++;
                             uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 248, 248, 248);
-                            sPrevEmpNo = sCurrEmpNo;
                         }
 
                         uniGrid1.EndUpdate();
@@ -791,6 +785,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 {
                     case DayOfWeek.Sunday:
                         sDayOfWeek = "일";
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
                         break;
                     case DayOfWeek.Monday:
                         sDayOfWeek = "월";
@@ -809,6 +804,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         break;
                     case DayOfWeek.Saturday:
                         sDayOfWeek = "토";
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         break;
                 }
 
