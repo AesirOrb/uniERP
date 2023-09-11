@@ -352,7 +352,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         protected override bool OnFncQuery()
         {
             //TO-DO : code business oriented logic
-
             return DBQuery();
         }
 
@@ -363,7 +362,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         protected override bool OnFncSave()
         {
             //TO-DO : code business oriented logic
-
             return DBSave();
         }
 
@@ -377,9 +375,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         protected override bool OnFncNew()
         {
-
             //TO-DO : code business oriented logic
-
             return true;
         }
 
@@ -493,16 +489,16 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 13, CommonVariable.gUsrID);
 
-                DataSet dataSet = uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
+                DataSet ds = uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
 
-                if (dataSet.Tables[0].Rows.Count < 0)
+                if (ds.Tables[0].Rows.Count < 0)
                 {
                     uniBase.UMessage.DisplayMessageBox("900014", MessageBoxButtons.OK);
                     dtYearMonth.Focus();
                     return false;
                 }
 
-                cqtdsList.E_H4019Q2_KO.Merge(dataSet.Tables[0], false, MissingSchemaAction.Ignore);
+                cqtdsList.E_H4019Q2_KO.Merge(ds.Tables[0], false, MissingSchemaAction.Ignore);
 
                 uniGrid1.BeginUpdate();
 
@@ -610,6 +606,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         /// <param name="e"></param>
         private void uniGrid1_ClickCellButton(object sender, CellEventArgs e)
         {
+
         }
         #endregion ■■ ButtonClicked >>> ClickCellButton
 
@@ -621,6 +618,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         /// <param name="e"></param>
         private void uniGrid1_BeforeExitEditMode(object sender, Infragistics.Win.UltraWinGrid.BeforeExitEditModeEventArgs e)
         {
+
         }
 
         private void uniGrid1_AfterExitEditMode(object sender, EventArgs e)
@@ -632,14 +630,17 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         #region ■■ 5.2.3 Click >>> AfterCellActivate | AfterRowActivate | AfterSelectChange
         private void uniGrid1_AfterSelectChange(object sender, AfterSelectChangeEventArgs e)
         {
+
         }
 
         private void uniGrid1_AfterCellActivate(object sender, EventArgs e)
         {
+
         }
 
         private void uniGrid1_AfterRowActivate(object sender, EventArgs e)
         {
+
         }
         #endregion ■■ Click >>> AfterSelectChange
 
@@ -647,6 +648,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void uniGrid1_CellListSelect(object sender, CellEventArgs e)
         {
+
         }
         #endregion ■■ ComboSelChange >>> CellListSelect
 
@@ -654,6 +656,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void uniGrid1_DoubleClickCell(object sender, DoubleClickCellEventArgs e)
         {
+
         }
         #endregion ■■ DblClick >>> DoubleClickCell
 
@@ -661,6 +664,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void uniGrid1_MouseDown(object sender, MouseEventArgs e)
         {
+
         }
         #endregion ■■ MouseDown >>> MouseDown
 
@@ -668,6 +672,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void uniGrid1_BeforeCellDeactivate(object sender, CancelEventArgs e)
         {
+            
         }
         #endregion ■■ ScriptLeaveCell >>> BeforeCellDeactivate
 
@@ -719,10 +724,9 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void popDeptCd_AfterPopupClosed(object sender, AppFramework.UI.Controls.Popup.AfterPopupCloseEventArgs e)
         {
-            DataSet dataSet = new DataSet();
             if (e.ResultData.Data != null)
             {
-                dataSet = (DataSet)e.ResultData.Data;
+                DataSet dataSet = (DataSet)e.ResultData.Data;
                 popDeptCd.CodeValue = dataSet.Tables[0].Rows[0]["dept_cd"].ToString();
                 popDeptCd.CodeName = dataSet.Tables[0].Rows[0]["dept_nm"].ToString();
                 txtInternalCd.Text = dataSet.Tables[0].Rows[0]["internal_cd"].ToString();
@@ -762,10 +766,9 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void popEmpNo_AfterPopupClosed(object sender, AppFramework.UI.Controls.Popup.AfterPopupCloseEventArgs e)
         {
-            DataSet dataSet = new DataSet();
             if (e.ResultData.Data != null)
             {
-                dataSet = (DataSet)e.ResultData.Data;
+                DataSet dataSet = (DataSet)e.ResultData.Data;
                 popEmpNo.CodeValue = dataSet.Tables[0].Rows[0]["emp_no"].ToString();
                 popEmpNo.CodeName = dataSet.Tables[0].Rows[0]["name"].ToString();
             }
@@ -840,14 +843,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         uniGrid1.SSSetColHidden("DATA_30", true);
                         uniGrid1.SSSetColHidden("DATA_31", true);
                     }
-                    return;
-
+                    break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
                     uniGrid1.SSSetColHidden("DATA_31", true);
-                    return;
+                    break;
             }
         }
 
