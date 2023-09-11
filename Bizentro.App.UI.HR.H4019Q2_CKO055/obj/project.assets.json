@@ -1,0 +1,47 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\syc222499\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "c:\\Users\\syc222499\\.vscode\\repository\\uniERP\\Bizentro.App.UI.HR.H4019Q2_CKO055\\Bizentro.App.UI.HR.H4019Q2_CKO055.csproj",
+      "projectName": "Bizentro.App.UI.HR.H4019Q2_CKO055",
+      "projectPath": "c:\\Users\\syc222499\\.vscode\\repository\\uniERP\\Bizentro.App.UI.HR.H4019Q2_CKO055\\Bizentro.App.UI.HR.H4019Q2_CKO055.csproj",
+      "packagesPath": "C:\\Users\\syc222499\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\syc222499\\.vscode\\repository\\uniERP\\Bizentro.App.UI.HR.H4019Q2_CKO055\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\syc222499\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net40": {
+        "targetAlias": "net7.0",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
