@@ -34,8 +34,6 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <StartAction>Program</StartAction>
-    <StartProgram>C:\Program Files\Bizentro.NET\BizWebSmart\UI\MainShell\Bizentro.App.MAIN.Shell(x86).exe</StartProgram>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
