@@ -6,13 +6,12 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-using Microsoft.Practices.CompositeUI.SmartParts;
-using Infragistics.Win.UltraWinGrid;
+using Bizentro.AppFramework.DataBridge;
+using Bizentro.AppFramework.UI.Common.Exceptions;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
-using Bizentro.AppFramework.UI.Common.Exceptions;
-
-using Bizentro.AppFramework.DataBridge;
+using Microsoft.Practices.CompositeUI.SmartParts;
+using Infragistics.Win.UltraWinGrid;
 
 #endregion
 
