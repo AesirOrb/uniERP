@@ -1,0 +1,1239 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<dsInfraResc>
+  <xs:schema id="dsInfraResc" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="dsInfraResc" msdata:IsDataSet="true" msdata:MainDataTable="InfraRescDD" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="InfraRescDD">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="type" type="xs:string" minOccurs="0" />
+                <xs:element name="key" type="xs:string" minOccurs="0" />
+                <xs:element name="EN" type="xs:string" minOccurs="0" />
+                <xs:element name="KO" type="xs:string" minOccurs="0" />
+                <xs:element name="CN" type="xs:string" minOccurs="0" />
+                <xs:element name="JP" type="xs:string" minOccurs="0" />
+                <xs:element name="VN" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <InfraRescDD>
+    <type>Common</type>
+    <key>TabManagerScrollPrevious</key>
+    <EN>Prev</EN>
+    <KO>이전</KO>
+    <CN></CN>
+    <JP>戻る</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>Common</type>
+    <key>TabManagerScrollNext</key>
+    <EN>Next</EN>
+    <KO>다음</KO>
+    <CN></CN>
+    <JP>次へ</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>Common</type>
+    <key>TabManagerCloseButton</key>
+    <EN></EN>
+    <KO>닫기</KO>
+    <CN></CN>
+    <JP>閉じる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>Common</type>
+    <key>LE_Exception_53</key>
+    <EN>Value in the editor is not valid.</EN>
+    <KO>입력한 값이 유효하지 않습니다.</KO>
+    <CN></CN>
+    <JP>入力した値が有効ではありません。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>ContextMenuDockable</key>
+    <EN>Dock</EN>
+    <KO>결합</KO>
+    <CN></CN>
+    <JP>結合</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>ContextMenuHide</key>
+    <EN>Hide</EN>
+    <KO>숨기기</KO>
+    <CN></CN>
+    <JP>非表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>ContextMenuFloating</key>
+    <EN>Floating</EN>
+    <KO>띄우기</KO>
+    <CN></CN>
+    <JP>表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>ContextMenuAutoHide</key>
+    <EN>Auto Hide</EN>
+    <KO>자동 숨기기</KO>
+    <CN></CN>
+    <JP>自動非表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>PaneButtonToolTipPin</key>
+    <EN>Auto Hide</EN>
+    <KO>자동 숨기기</KO>
+    <CN></CN>
+    <JP>自動非表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>PaneButtonToolTipUnpin</key>
+    <EN>Auto Hide</EN>
+    <KO>자동 숨기기</KO>
+    <CN></CN>
+    <JP>自動非表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinDock</type>
+    <key>PaneButtonToolTipClose</key>
+    <EN>Close</EN>
+    <KO>닫기</KO>
+    <CN></CN>
+    <JP>閉じる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationQuickCustomizeMenu_ShowMoreButtons</key>
+    <EN>Show More Module</EN>
+    <KO>모듈 더보기</KO>
+    <CN></CN>
+    <JP>モジュール拡張表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationQuickCustomizeMenu_ShowFewerButtons</key>
+    <EN>Show Fewer Module</EN>
+    <KO>모듈 숨기기</KO>
+    <CN></CN>
+    <JP>モジュール非表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationQuickCustomizeMenu_NavigationPaneOptions</key>
+    <EN>Module Options...</EN>
+    <KO>모듈 설정...</KO>
+    <CN></CN>
+    <JP>モジュール設定…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationQuickCustomizeMenu_AddOrRemoveButtons</key>
+    <EN>Add Or Remove Module</EN>
+    <KO>모듈 추가·제거</KO>
+    <CN></CN>
+    <JP>モジュール追加・削除</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationQuickCustomizeButton_Tooltip</key>
+    <EN>Configure Module</EN>
+    <KO>모듈 구성</KO>
+    <CN></CN>
+    <JP>モジュール構成</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationContextMenu_NavigationPaneOptions</key>
+    <EN>Module Options...</EN>
+    <KO>모듈 설정...</KO>
+    <CN></CN>
+    <JP>モジュール設定…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationContextMenu_OpenInNewWindow</key>
+    <EN>Open In New Window</EN>
+    <KO>새 창에서 열기</KO>
+    <CN></CN>
+    <JP>新しいウィンドウで開く</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationPaneOptionsDialog_Caption</key>
+    <EN>Module Options</EN>
+    <KO>모듈 설정</KO>
+    <CN></CN>
+    <JP>モジュール設定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationPaneOptionsDialog_Label</key>
+    <EN>Display module in this order</EN>
+    <KO>모듈 보이기/숨기기</KO>
+    <CN></CN>
+    <JP>モジュール表示/非表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationPaneOptionsDialog_OKButton</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN></CN>
+    <JP>確認</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinExplorerBar</type>
+    <key>NavigationPaneOptionsDialog_CancelButton</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN></CN>
+    <JP>取消し</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinTabbedMdi</type>
+    <key>MenuItemNewHorizontalGroup</key>
+    <EN>New Horizontal Tab Group</EN>
+    <KO>수평으로 나누기</KO>
+    <CN></CN>
+    <JP>水平に割る</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinTabbedMdi</type>
+    <key>MenuItemNewVerticalGroup</key>
+    <EN>New Vertical Tab Group</EN>
+    <KO>수직으로 나누기</KO>
+    <CN></CN>
+    <JP>垂直に割る</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinTabbedMdi</type>
+    <key>MenuItemClose</key>
+    <EN>Close</EN>
+    <KO>닫기</KO>
+    <CN></CN>
+    <JP>閉じる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>QuickCustomizeToolTipXP</key>
+    <EN>Toolbar Options</EN>
+    <KO>도구 모음 설정</KO>
+    <CN></CN>
+    <JP>ツールバー設定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>AddRemoveButtons</key>
+    <EN>Add or Remove Buttons</EN>
+    <KO>단추 추가·제거</KO>
+    <CN></CN>
+    <JP>ボタン追加・削除</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>Customize</key>
+    <EN>Customize...</EN>
+    <KO>사용자 지정...</KO>
+    <CN></CN>
+    <JP>ユーザー指定…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>DesigntimeVerbCustomize</key>
+    <EN>Customize...</EN>
+    <KO>사용자 지정...</KO>
+    <CN></CN>
+    <JP>ユーザー指定…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_CustomizeMain</key>
+    <EN>Customize</EN>
+    <KO>사용자 지정</KO>
+    <CN></CN>
+    <JP>ユーザー指定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>ResetToolbar</key>
+    <EN>Reset Toolbar</EN>
+    <KO>도구모음 재설정</KO>
+    <CN></CN>
+    <JP>ツールバー再設定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_Options</key>
+    <EN>Options</EN>
+    <KO>옵션</KO>
+    <CN></CN>
+    <JP>オプション</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_Toolbars</key>
+    <EN>Toolbars</EN>
+    <KO>도구모음</KO>
+    <CN></CN>
+    <JP>ツールバー</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_Commands</key>
+    <EN>Commands</EN>
+    <KO>명령어</KO>
+    <CN></CN>
+    <JP>Command</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ToolbarsList</key>
+    <EN>Toolbars:</EN>
+    <KO>도구모음:</KO>
+    <CN></CN>
+    <JP>ツールバー:</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_New</key>
+    <EN>New...</EN>
+    <KO>신규...</KO>
+    <CN></CN>
+    <JP>新規…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_RenameAmp</key>
+    <EN>Rename...</EN>
+    <KO>이름변경...</KO>
+    <CN></CN>
+    <JP>名前変更…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_Delete</key>
+    <EN>Delete...</EN>
+    <KO>삭제...</KO>
+    <CN></CN>
+    <JP>削除…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ResetAmp</key>
+    <EN>Reset...</EN>
+    <KO>재설정...</KO>
+    <CN></CN>
+    <JP>再設定…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_KeyboardBeginAmp</key>
+    <EN>Keyboard...</EN>
+    <KO>키보드...</KO>
+    <CN></CN>
+    <JP>Keyboard…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_CategoriesMidAmp</key>
+    <EN>Categories:</EN>
+    <KO>구분:</KO>
+    <CN></CN>
+    <JP>区分:</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_CommandsEndAmp</key>
+    <EN>Commands</EN>
+    <KO>명령어</KO>
+    <CN></CN>
+    <JP>Command</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ModifySelection</key>
+    <EN>Modify Selection</EN>
+    <KO>선택 수정</KO>
+    <CN></CN>
+    <JP>選択修正</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_RearrangeCommands</key>
+    <EN>Rearrange Commands...</EN>
+    <KO>명령어 다시 정렬...</KO>
+    <CN></CN>
+    <JP>Command再整列…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_AlwaysShowFullMenus</key>
+    <EN>Always show full menus</EN>
+    <KO>전체 메뉴 항상 표시</KO>
+    <CN></CN>
+    <JP>全体メニュー常に表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ShowFullMenusAfterAShortDelay</key>
+    <EN>Show full menus after a short delay</EN>
+    <KO>잠시후 전체 메뉴 보기</KO>
+    <CN></CN>
+    <JP>後程全体メニュー表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ResetMyUsageData</key>
+    <EN>Reset my usage data</EN>
+    <KO>사용 데이터 재설정</KO>
+    <CN></CN>
+    <JP>使用データ再設定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_LargeIconsOnMenus</key>
+    <EN>Large Icons on Menus</EN>
+    <KO>큰 메뉴 아이콘</KO>
+    <CN></CN>
+    <JP>大メニューアイコン</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_LargeIconsOnToolbars</key>
+    <EN>Large Icons on Toolbars</EN>
+    <KO>큰 툴바 아이콘</KO>
+    <CN></CN>
+    <JP>大ツールバーアイコン</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ListFontNamesInTheirFont</key>
+    <EN>List font names in their font</EN>
+    <KO>글꼴 목록 이름</KO>
+    <CN></CN>
+    <JP>フォント目録名</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ShowScreenTipsOnToolbars</key>
+    <EN>Show Screentips on toolbars</EN>
+    <KO>도구 모음에 스크린 팁 표시</KO>
+    <CN></CN>
+    <JP>ツールバーにScreen Tip表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_ShowShortcutKeysInScreenTips</key>
+    <EN>Show shortcut keys in ScreenTips</EN>
+    <KO>스크린 팁에 바로 가기 키 표시</KO>
+    <CN></CN>
+    <JP>Screen Tipにショートカットキー表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_MenuAnimations</key>
+    <EN>Menu Animations:</EN>
+    <KO>메뉴 애니메이션:</KO>
+    <CN></CN>
+    <JP>メニューAnimation:</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_FloatingToolbarFadeDelay</key>
+    <EN>Floating Toolbar Fade Delay</EN>
+    <KO>도구 모음 페이드 지연 띄우기</KO>
+    <CN></CN>
+    <JP>ツールバーFade遅延表示</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_Other</key>
+    <EN>Other</EN>
+    <KO>그 외</KO>
+    <CN></CN>
+    <JP>以外</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_PersonalizedMenusAndToolbars</key>
+    <EN>Personalized Menus and Toolbars</EN>
+    <KO>개인 메뉴 및 도구 모음</KO>
+    <CN></CN>
+    <JP>個人メニューおよびツールバー</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_Milliseconds</key>
+    <EN>milliseconds</EN>
+    <KO>밀리초</KO>
+    <CN></CN>
+    <JP>ミリ秒 (ms)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>ExistingToolDlg_Close</key>
+    <EN>Close</EN>
+    <KO>닫기</KO>
+    <CN></CN>
+    <JP>閉じる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDialog_CloseNoAmp</key>
+    <EN>Close</EN>
+    <KO>닫기</KO>
+    <CN></CN>
+    <JP>閉じる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeLoadSaveCloseButton</key>
+    <EN>Close</EN>
+    <KO>닫기</KO>
+    <CN></CN>
+    <JP>閉じる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeKeyboardTitle</key>
+    <EN>Customize Keyboard</EN>
+    <KO>키보드 사용자 지정</KO>
+    <CN></CN>
+    <JP>Keyboardユーザー指定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgRearrangeCommands_Toolbar</key>
+    <EN>Toolbars:</EN>
+    <KO>도구모음:</KO>
+    <CN></CN>
+    <JP>ツールバー:</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdCat</key>
+    <EN>Categories:</EN>
+    <KO>구분:</KO>
+    <CN></CN>
+    <JP>区分:</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdCmd</key>
+    <EN>Commands:</EN>
+    <KO>명령어:</KO>
+    <CN></CN>
+    <JP>Command:</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdSpecCmd</key>
+    <EN>Specify a Command</EN>
+    <KO>명령어 지정</KO>
+    <CN></CN>
+    <JP>Command指定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdSpecShrtcut</key>
+    <EN>Specify a Shortcut</EN>
+    <KO>단축키 지정</KO>
+    <CN></CN>
+    <JP>ショートカットキー指定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdDesc</key>
+    <EN>Description</EN>
+    <KO>서술</KO>
+    <CN></CN>
+    <JP>叙述</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdAssign</key>
+    <EN>Assign</EN>
+    <KO>할당</KO>
+    <CN></CN>
+    <JP>割当</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdRemove&amp;Remove</key>
+    <EN>Remove</EN>
+    <KO>제거</KO>
+    <CN></CN>
+    <JP>除去</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeDlgKbdResetAll</key>
+    <EN>Reset All...</EN>
+    <KO>모두 재설정...</KO>
+    <CN></CN>
+    <JP>全て再設定…</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeConfirmShortcutRemoval</key>
+    <EN>Are you sure you want to reset all shortcut customizations?</EN>
+    <KO>모든 사용자 정의 단축키를 재설정 하시겠습니까?</KO>
+    <CN></CN>
+    <JP>全ユーザー定義のショートカットキーを再設定しますか？</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinToolbars</type>
+    <key>CustomizeConfirmShortcutRemovalTitle</key>
+    <EN>Reset Shortcut Customizations</EN>
+    <KO>사용자 정의 단축키 재설정</KO>
+    <CN></CN>
+    <JP>ユーザー定義ショートカットキー再設定</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>ColumnChooserButtonToolTip</key>
+    <EN>Click here to show Field Chooser.</EN>
+    <KO>열 선택창을 표시하려면 여기를 클릭하세요.</KO>
+    <CN></CN>
+    <JP>列選択ウインドウを表示するにはここをクリックしてください。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>ColumnChooserDialogCaption</key>
+    <EN>Field Chooser</EN>
+    <KO>열 선택</KO>
+    <CN></CN>
+    <JP>列選択</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>GroupByBoxDefaultPrompt</key>
+    <EN>Drag a column header here to group by that column.</EN>
+    <KO>열 머리글을 끌어 여기로 이동</KO>
+    <CN>按该列拖到此处列标题进行分组。</CN>
+    <JP>列のヘッダーを引いてここへ移動</JP>
+    <VN>Kéo một tiêu đề cột vào đây để nhóm theo cột đó</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDialogDBNullItem</key>
+    <EN>(DBNull)</EN>
+    <KO>(Null값)</KO>
+    <CN></CN>
+    <JP>(NULL値)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDialogBlanksItem</key>
+    <EN>(Blanks)</EN>
+    <KO>(공백)</KO>
+    <CN></CN>
+    <JP>(空白)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDialogEmptyTextItem</key>
+    <EN>(Empty Text)</EN>
+    <KO>(빈값)</KO>
+    <CN></CN>
+    <JP>(空値)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownAllItem</key>
+    <EN>(All)</EN>
+    <KO>(전체)</KO>
+    <CN></CN>
+    <JP>(全体)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownBlanksItem</key>
+    <EN>(Blanks)</EN>
+    <KO>(공백)</KO>
+    <CN></CN>
+    <JP>(空白)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownCustomItem</key>
+    <EN>(Custom)</EN>
+    <KO>(사용자 정의)</KO>
+    <CN></CN>
+    <JP>(ユーザー定義)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownEquals</key>
+    <EN>Equals</EN>
+    <KO>같음</KO>
+    <CN></CN>
+    <JP>一致</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownErrorsItem</key>
+    <EN>(Errors)</EN>
+    <KO>(에러)</KO>
+    <CN></CN>
+    <JP>(エラー)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownGreaterThan</key>
+    <EN>Greater than</EN>
+    <KO>~보다 큰</KO>
+    <CN></CN>
+    <JP>~より大きい</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownGreaterThanOrEqualTo</key>
+    <EN>Greater than or equal to</EN>
+    <KO>~보다 크거나 같은</KO>
+    <CN></CN>
+    <JP>~より大きいか、同じ</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownLessThan</key>
+    <EN>Less than</EN>
+    <KO>~보다 작은</KO>
+    <CN></CN>
+    <JP>~より小さい</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownLessThanOrEqualTo</key>
+    <EN>Less than or equal to</EN>
+    <KO>~보다 작거나 같은</KO>
+    <CN></CN>
+    <JP>~より小さいか、同じ</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownLike</key>
+    <EN>Like</EN>
+    <KO>~처럼(Like)</KO>
+    <CN></CN>
+    <JP>~を含む(Like)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownMatch</key>
+    <EN>Matches Regular Expression</EN>
+    <KO>정규 표현식 일치</KO>
+    <CN></CN>
+    <JP>正規表現式一致</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownNonBlanksItem</key>
+    <EN>(NonBlanks)</EN>
+    <KO>(공백 제외)</KO>
+    <CN></CN>
+    <JP>(空白除外)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownNonErrorsItem</key>
+    <EN>(NonErrors)</EN>
+    <KO>(에러 제외)</KO>
+    <CN></CN>
+    <JP>(エラー除外)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDownNotEquals</key>
+    <EN>Does not equal</EN>
+    <KO>같지 않음</KO>
+    <CN></CN>
+    <JP>不一致</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterLogicalOperator_And</key>
+    <EN>AND</EN>
+    <KO>그리고</KO>
+    <CN></CN>
+    <JP>AND</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterLogicalOperator_Or</key>
+    <EN>OR</EN>
+    <KO>또는</KO>
+    <CN></CN>
+    <JP>OR</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterPatternCaption</key>
+    <EN>Invalid search pattern</EN>
+    <KO>잘못된 검색 패턴</KO>
+    <CN></CN>
+    <JP>正しくない検索パターン</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterPatternError</key>
+    <EN>Error parsing pattern {0}. Please enter a valid search pattern.</EN>
+    <KO>오류 분석 패턴 {0}. 유효한 검색 패턴을 입력하십시오.</KO>
+    <CN></CN>
+    <JP>エラー分析パターン{0}。有効な分析パターンを入力してください。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterPatternException</key>
+    <EN>Invalid search pattern {0}.</EN>
+    <KO>잘못된 검색 패턴 {0}.</KO>
+    <CN></CN>
+    <JP>正しくない検索パターン{0}。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterRegexError</key>
+    <EN>Error parsing regular expression {0}. Please enter a valid regular expression.</EN>
+    <KO>오류 정규 표현식을 구문 분석 {0}. 유효한 정규 표현식을 입력하십시오.</KO>
+    <CN></CN>
+    <JP>エラー正規表現式を構文分析{0}。有効な正規表現式を入力してください。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterRegexErrorCaption</key>
+    <EN>Invalid regular expression</EN>
+    <KO>잘못된 정규 표현식</KO>
+    <CN></CN>
+    <JP>正しくない正規表現式</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterRegexException</key>
+    <EN>Invalid regular expression {0}.</EN>
+    <KO>잘못된 정규 표현식 {0}.</KO>
+    <CN></CN>
+    <JP>正しくない正規表現式{0}.</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_Contains</key>
+    <EN>Contains</EN>
+    <KO>포함</KO>
+    <CN></CN>
+    <JP>含む</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_DoesNotContain</key>
+    <EN>Does not contain</EN>
+    <KO>포함하지 않음</KO>
+    <CN></CN>
+    <JP>含まない</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_DoesNotEndWith</key>
+    <EN>Does not end with</EN>
+    <KO>~로 끝나지 않는</KO>
+    <CN></CN>
+    <JP>~で終わらない</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_DoesNotMatch</key>
+    <EN>Does not match</EN>
+    <KO>일치하지 않음</KO>
+    <CN></CN>
+    <JP>一致しない</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_DoesNotStartWith</key>
+    <EN>Does not start with</EN>
+    <KO>~로 시작하지 않는</KO>
+    <CN></CN>
+    <JP>~で始まらない</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_EndsWith</key>
+    <EN>Ends with</EN>
+    <KO>~로 끝</KO>
+    <CN></CN>
+    <JP>~で終わる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_Like</key>
+    <EN>Like</EN>
+    <KO>~처럼(Like)</KO>
+    <CN></CN>
+    <JP>~を含む(Like)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_Match</key>
+    <EN>Match</EN>
+    <KO>일치</KO>
+    <CN></CN>
+    <JP>一致</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_NotLike</key>
+    <EN>Not Like</EN>
+    <KO>~처럼을 제외(Not Like)</KO>
+    <CN></CN>
+    <JP>~を含まない(NotLike)</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDropDown_Operator_StartsWith</key>
+    <EN>Starts with</EN>
+    <KO>~로 시작</KO>
+    <CN></CN>
+    <JP>~で始まる</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDialogTitlePrefix</key>
+    <EN>Enter filter criteria for</EN>
+    <KO>다음 열 기준 -</KO>
+    <CN></CN>
+    <JP>次の列基準-</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogAndRadioText</key>
+    <EN>And conditions</EN>
+    <KO>그리고 조건</KO>
+    <CN></CN>
+    <JP>AND 条件</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogOrRadioText</key>
+    <EN>Or conditions</EN>
+    <KO>또는 조건</KO>
+    <CN></CN>
+    <JP>OR 条件</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogAddConditionButtonText</key>
+    <EN>Add a condition</EN>
+    <KO>조건 추가</KO>
+    <CN></CN>
+    <JP>条件追加</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogDeleteButtonText</key>
+    <EN>Delete Condition</EN>
+    <KO>조건 삭제</KO>
+    <CN></CN>
+    <JP>条件削除</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDialogOperandHeaderCaption</key>
+    <EN>Operand</EN>
+    <KO>피연산자</KO>
+    <CN></CN>
+    <JP>被演算子</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>RowFilterDialogOperatorHeaderCaption</key>
+    <EN>Operator</EN>
+    <KO>연산자</KO>
+    <CN></CN>
+    <JP>演算子</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogCancelButtonText</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN></CN>
+    <JP>取消し</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogOkButtonText</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN></CN>
+    <JP>確認</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>FilterDialogOkButtonNoFiltersText</key>
+    <EN>No Filters</EN>
+    <KO>필터 없음</KO>
+    <CN></CN>
+    <JP>フィルター無し</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>DataErrorCellUpdateUnableToUpdateValue</key>
+    <EN>Unable to update the data value: {0}</EN>
+    <KO>데이터 값을 갱신 할 수 없습니다. 이유 : {0}</KO>
+    <CN></CN>
+    <JP>データ値を更新できません。理由:{0}</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>DataErrorMessageTitle</key>
+    <EN>Data Error</EN>
+    <KO>데이터 오류</KO>
+    <CN></CN>
+    <JP>データエラー</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinGrid</type>
+    <key>ErrMSgEditorValNotValid</key>
+    <EN>Value in the editor is not valid.</EN>
+    <KO>입력한 값이 유효하지 않습니다.</KO>
+    <CN></CN>
+    <JP>入力した値が有効ではありません。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinSpreadsheet</type>
+    <key>Error_InvalidProtectedWorksheetChange_Message</key>
+    <EN>The cell you're trying to change is on a protected sheet.</EN>
+    <KO>변경하려는 셀은 보호 된 시트에 있습니다.</KO>
+    <CN></CN>
+    <JP>変更しようとしているセルは保護されたシートにあります。</JP>
+    <VN></VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>DropAreaText_Row</key>
+    <EN>Row</EN>
+    <KO>행</KO>
+    <CN>Row</CN>
+    <JP>Row</JP>
+    <VN>Row</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>DropAreaText_Column</key>
+    <EN>Column</EN>
+    <KO>열</KO>
+    <CN>Column</CN>
+    <JP>Column</JP>
+    <VN>Column</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>DropAreaText_Filter</key>
+    <EN>Filter</EN>
+    <KO>필터</KO>
+    <CN>Filter</CN>
+    <JP>Filter</JP>
+    <VN>Filter</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>DropAreaText_Measure</key>
+    <EN>Measure</EN>
+    <KO>값</KO>
+    <CN>Measure</CN>
+    <JP>Measure</JP>
+    <VN>Measure</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>FilterSelectorButton_OK</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>OK</CN>
+    <JP>OK</JP>
+    <VN>OK</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>FilterSelectorButton_Cancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>Cancel</CN>
+    <JP>Cancel</JP>
+    <VN>Cancel</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>Tooltip_Expand</key>
+    <EN>Expand</EN>
+    <KO>확장</KO>
+    <CN>Expand</CN>
+    <JP>Expand</JP>
+    <VN>Expand</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>Tooltip_Collapse</key>
+    <EN>Collapse</EN>
+    <KO>축소</KO>
+    <CN>Collapse</CN>
+    <JP>Collapse</JP>
+    <VN>Collapse</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>Tooltip_Filter</key>
+    <EN>Filter</EN>
+    <KO>필터</KO>
+    <CN>Filter</CN>
+    <JP>Filter</JP>
+    <VN>Filter</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>Tooltip_Remove</key>
+    <EN>Remove</EN>
+    <KO>제거</KO>
+    <CN>Remove</CN>
+    <JP>Remove</JP>
+    <VN>Remove</VN>
+  </InfraRescDD>
+  <InfraRescDD>
+    <type>UltraWinPivotGrid</type>
+    <key>Tooltip_Sort</key>
+    <EN>Sort</EN>
+    <KO>정렬</KO>
+    <CN>Sort</CN>
+    <JP>Sort</JP>
+    <VN>Sort</VN>
+  </InfraRescDD>
+</dsInfraResc>
