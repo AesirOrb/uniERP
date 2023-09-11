@@ -237,6 +237,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             AddLabelColumn(uniGrid1, "grpPayCd", "Payroll ID");
             AddLabelColumn(uniGrid1, "grpAttendance", "Attendance Details");
             AddLabelColumn(uniGrid1, "grpDate", "Date");
+            /*
             for (i = 15; i < 31; i++)
             {
                 uniGrid _uniGrid = uniGrid1;
@@ -253,19 +254,26 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 AddLabelColumn(_uniGrid1, str1, num.ToString());
             }
-            int num1 = 0;
-            num1++;
-            uniGrid1.SetMerge("grpEmpNo", num1, 0, 1, 1);
-            uniGrid1.SetMerge("grpDept", num1, 1, 1, 1);
-            uniGrid1.SetMerge(eH4019Q2KO.TEXT_01Column.ColumnName, num1, 2, 1, 1);
-            num1++;
-            uniGrid1.SetMerge("grpName", num1, 0, 1, 1);
-            uniGrid1.SetMerge("grpPayCd", num1, 1, 1, 1);
-            uniGrid1.SetMerge(eH4019Q2KO.TEXT_02Column.ColumnName, num1, 2, 1, 1);
-            num1++;
-            uniGrid1.SetMerge("grpAttendance", num1, 0, 32, 1);
-            uniGrid1.SetMerge("grpDate", num1, 1, 1, 1);
-            uniGrid1.SetMerge(eH4019Q2KO.TYPEColumn.ColumnName, num1, 2, 1, 1);
+            */
+            for (i = 0; i < 31; i++)
+            {
+                uniGrid targetGrid = uniGrid1;
+                num = i + 1;
+                string labelName = string.Format("grpDate{0}", num.ToString().PadLeft(2, '0'));
+                AddLabelColumn(targetGrid, labelName, num.ToString());
+            }
+
+            uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
+            uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
+            uniGrid1.SetMerge(eH4019Q2KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
+            uniGrid1.SetMerge("grpName", 2, 0, 1, 1);
+            uniGrid1.SetMerge("grpPayCd", 2, 1, 1, 1);
+            uniGrid1.SetMerge(eH4019Q2KO.TEXT_02Column.ColumnName, 2, 2, 1, 1);
+            uniGrid1.SetMerge("grpAttendance", 3, 0, 32, 1);
+            uniGrid1.SetMerge("grpDate", 3, 1, 1, 1);
+            uniGrid1.SetMerge(eH4019Q2KO.TYPEColumn.ColumnName, 3, 2, 1, 1);
+
+            /*
             for (i = 15; i < 31; i++)
             {
                 num1++;
@@ -282,10 +290,20 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
             }
-            num1++;
+            */
+            for (i = 0; i < 31; i++)
+            {
+                num = i + 1;
+                string groupName = string.Format("grpDate{0}", num.ToString().PadLeft(2, '0'));
+                string dataName = string.Format("DATA_{0}", num.ToString().PadLeft(2, '0'));
+
+                uniGrid1.SetMerge(groupName, 4, 1, 1, 1);
+                uniGrid1.SetMerge(dataName, 4, 2, 1, 1);
+            }
+
             uniGrid1.SetCellMerge("TEXT_01", enumDef.VAlign.Middle);
             uniGrid1.SetCellMerge("TEXT_02", enumDef.VAlign.Middle);
-            uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, num1, 0, 1, 3);
+            uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, 5, 0, 1, 3);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
@@ -465,39 +483,35 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         {
             try
             {
-                using (AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055"))
+                AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055");
+
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYMM", SqlDbType.NVarChar, 6, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@PAY_CD", SqlDbType.NVarChar, 1, cboPayCd.SelectedItem == null ? string.Empty : cboPayCd.SelectedItem.DataValue.ToString());
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 30, txtInternalCd.Text);
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 13, popEmpNo.CodeValue);
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 13, CommonVariable.gUsrID);
+
+                DataSet dataSet = uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
+
+                if (dataSet.Tables[0].Rows.Count < 0)
                 {
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYMM", SqlDbType.NVarChar, 6, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@PAY_CD", SqlDbType.NVarChar, 1, cboPayCd.SelectedItem == null ? string.Empty : cboPayCd.SelectedItem.DataValue.ToString());
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 30, txtInternalCd.Text);
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 13, popEmpNo.CodeValue);
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
-                    uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 13, CommonVariable.gUsrID);
-
-                    using (DataSet dataSet = uniBase.UDatabase.ExecuteDataSet(storedProcCommand))
-                    {
-                        if (dataSet.Tables[0].Rows.Count < 0)
-                        {
-                            uniBase.UMessage.DisplayMessageBox("900014", MessageBoxButtons.OK);
-                            dtYearMonth.Focus();
-                            return false;
-                        }
-
-                        cqtdsList.E_H4019Q2_KO.Merge(dataSet.Tables[0], false, MissingSchemaAction.Ignore);
-
-                        uniGrid1.BeginUpdate();
-
-                        for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                        {
-                            uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 248, 248, 248);
-                        }
-
-                        uniGrid1.EndUpdate();
-
-                        SetDayOfWeek();
-                    }
+                    uniBase.UMessage.DisplayMessageBox("900014", MessageBoxButtons.OK);
+                    dtYearMonth.Focus();
+                    return false;
                 }
+
+                cqtdsList.E_H4019Q2_KO.Merge(dataSet.Tables[0], false, MissingSchemaAction.Ignore);
+
+                uniGrid1.BeginUpdate();
+
+                for (int i = 0; i < uniGrid1.Rows.Count; i++)
+                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 248, 248, 248);
+
+                uniGrid1.EndUpdate();
+
+                SetDayOfWeek();
             }
             catch (Exception ex)
             {
@@ -660,6 +674,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         #endregion
 
         #region ■ 5.3 TAB    control event implementation group
+
         #endregion
 
         #endregion
@@ -778,7 +793,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             for (int i = 1; i <= 31; i++)
             {
-                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-01")).AddDays(i-1).DayOfWeek;
+                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
                 string sDayOfWeek = string.Empty;
 
                 switch (_dayOfWeek)
