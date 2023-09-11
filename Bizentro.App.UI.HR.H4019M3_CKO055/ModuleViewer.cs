@@ -457,7 +457,7 @@ namespace Bizentro.App.UI.HR.H4019M3_CKO055
         private bool DBSave()
         {
             //TO-DO : code business oriented logic
-            this.uniGrid1.UpdateData();
+            uniGrid1.UpdateData();
 
             //wsMyBizFL.TypedDataSet isettdsTypedDataSet = new wsMyBizFL.TypedDataSet();
 

@@ -29,15 +29,8 @@
         <xs:element name="A_LIST_QUERY_UNIGRID1"
           msprop:Generator_TableClassName="A_LIST_QUERY_UNIGRID1DataTable"
           msprop:Generator_TableVarName="tableA_LIST_QUERY_UNIGRID1"
-          msprop:Generator_RowChangedName="A_LIST_QUERY_UNIGRID1RowChanged"
           msprop:Generator_TablePropName="A_LIST_QUERY_UNIGRID1"
-          msprop:Generator_RowDeletingName="A_LIST_QUERY_UNIGRID1RowDeleting"
-          msprop:Generator_RowChangingName="A_LIST_QUERY_UNIGRID1RowChanging"
-          msprop:Generator_RowEvHandlerName="A_LIST_QUERY_UNIGRID1RowChangeEventHandler"
-          msprop:Generator_RowDeletedName="A_LIST_QUERY_UNIGRID1RowDeleted"
-          msprop:Generator_RowClassName="A_LIST_QUERY_UNIGRID1Row"
-          msprop:Generator_UserTableName="A_LIST_QUERY_UNIGRID1"
-          msprop:Generator_RowEvArgName="A_LIST_QUERY_UNIGRID1RowChangeEvent">
+          msprop:Generator_UserTableName="A_LIST_QUERY_UNIGRID1">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DEPT_CD"
