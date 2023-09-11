@@ -15,7 +15,8 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -51,47 +52,37 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bizentro.AppFramework.DataBridge">
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.DataBridge.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.DataBridge.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics.Documents.Excel, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Olap.Core, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Olap.DataProvider.Adomd, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Olap.DataSource, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Olap.DataSource.Flat, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Olap.DataSource.Mdx, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Olap.DataSource.Xmla, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Shared, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.Misc, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinCalcManager, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinChart, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinEditors, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinExplorerBar, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinGrid.ExcelExport, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinGrid, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinMaskedEdit, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinPivotGrid, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinSchedule, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinTabbedMdi, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinTabControl, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinToolbars, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win.UltraWinTree, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics.Win, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Shared, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win.Misc, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinEditors, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.UltraWinEditors.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinGrid, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.UltraWinGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.CompositeUI, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.CompositeUI.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.CompositeUI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.CompositeUI.WinForms, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.CompositeUI.WinForms.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.CompositeUI.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.ObjectBuilder.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
@@ -100,35 +91,35 @@
     <Reference Include="System.Xml" />
     <Reference Include="Bizentro.AppFramework.UI.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Common.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Common.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.Controls, Version=18.1.20181.177, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Controls.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.InfragisticsCAB.WinForms, Version=1.0.20071.40, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.InfragisticsCAB.WinForms.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.InfragisticsCAB.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Interface.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Interface.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Library.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Library.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Module.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Module.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.Providers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Providers.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Providers.dll</HintPath>
     </Reference>
     <Reference Include="Bizentro.AppFramework.UI.Variables, Version=1.0.2765.20204, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Variables.dll</HintPath>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Variables.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
