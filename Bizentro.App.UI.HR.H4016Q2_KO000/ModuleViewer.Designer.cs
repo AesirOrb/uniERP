@@ -1,5 +1,4 @@
-﻿using Bizentro.AppFramework.UI.Module;
-using Microsoft.Practices.CompositeUI;
+﻿using Microsoft.Practices.CompositeUI;
 using Microsoft.Practices.ObjectBuilder;
 
 namespace Bizentro.App.UI.HR.H4016Q2_KO000
