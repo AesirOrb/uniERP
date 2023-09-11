@@ -6,8 +6,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
     public class ModuleInitializer : Bizentro.AppFramework.UI.Module.Module
     {
         [InjectionConstructor]
-        public ModuleInitializer([ServiceDependency] WorkItem rootWorkItem)
-            : base(rootWorkItem) { }
+        public ModuleInitializer([ServiceDependency] WorkItem rootWorkItem) : base(rootWorkItem) { }
 
         protected override void RegisterModureViewer()
         {
@@ -28,10 +27,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
@@ -554,7 +550,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.cboWkType.StyleSetName = "Default";
             this.cboWkType.TabIndex = 9;
             this.cboWkType.uniALT = "Work Group";
-            this.cboBizAreaCd.AddEmptyRow = false;
+            this.cboBizAreaCd.AddEmptyRow = true;
             this.cboBizAreaCd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.cboBizAreaCd.ComboFrom = "";
             this.cboBizAreaCd.ComboMajorCd = "";
@@ -563,7 +559,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.cboBizAreaCd.ComboWhere = "";
             this.cboBizAreaCd.DropDownListWidth = -1;
             this.cboBizAreaCd.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList;
-            this.cboBizAreaCd.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.NotNull;
+            this.cboBizAreaCd.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.Default;
             this.cboBizAreaCd.Location = new System.Drawing.Point(0, 0);
             this.cboBizAreaCd.LockedField = false;
             this.cboBizAreaCd.Margin = new System.Windows.Forms.Padding(0);
@@ -700,7 +696,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTableLayoutPanel2.ResumeLayout(false);
             this.uniTableLayoutPanel2.PerformLayout();
             base.ResumeLayout(false);
-
         }
 
         #endregion
@@ -727,6 +722,5 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         private Bizentro.AppFramework.UI.Controls.uniCombo cboBizAreaCd;
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel2;
         private Bizentro.AppFramework.UI.Controls.uniCheckBox chkQuery;
-
     }
 }

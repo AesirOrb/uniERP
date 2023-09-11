@@ -463,7 +463,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         {
             try
             {
-                using (AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand(chkQuery.Checked ? "dbo.usp_H_H4017Q2_KO" : "dbo.usp_H_H4019Q2_KO"))
+                using (AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055"))
                 {
                     uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYMM", SqlDbType.NVarChar, 6, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
                     uniBase.UDatabase.AddInParameter(storedProcCommand, "@PAY_CD", SqlDbType.NVarChar, 1, cboPayCd.SelectedItem == null ? string.Empty : cboPayCd.SelectedItem.DataValue.ToString());
@@ -493,15 +493,9 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         for (int i = 0; i < uniGrid1.Rows.Count; i++)
                         {
                             sCurrEmpNo = uniGrid1.Rows[i].Cells["EMP_NO"].Value as string;
-
-                            if (sPrevEmpNo == string.Empty)
-                                sPrevEmpNo = sCurrEmpNo;
-
-                            if (sPrevEmpNo != sCurrEmpNo)
-                                num++;
-
-                            uniGrid1.Rows[i].Appearance.BackColor = num % 2 == 0 ? Color.White : Color.FromArgb(255, 242, 245, 254);
-
+                            if (sPrevEmpNo == string.Empty) sPrevEmpNo = sCurrEmpNo;
+                            if (sPrevEmpNo != sCurrEmpNo) num++;
+                            uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 248, 248, 248);
                             sPrevEmpNo = sCurrEmpNo;
                         }
 
@@ -513,9 +507,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             }
             catch (Exception ex)
             {
-                bool reThrow = ExceptionControler.AutoProcessException(ex);
-                if (reThrow)
-                    throw;
+                if (ExceptionControler.AutoProcessException(ex)) throw;
+
                 return false;
             }
 
@@ -557,16 +550,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             }
             catch (Exception ex)
             {
-                bool reThrow = ExceptionControler.AutoProcessException(ex);
-                if (reThrow)
-                    throw;
+                if (ExceptionControler.AutoProcessException(ex)) throw;
                 return false;
             }
             finally
             {
                 //if (isettdsTypedDataSet != null) isettdsTypedDataSet.Dispose();
             }
-
 
             return true;
 
@@ -584,10 +574,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void popEmpNo_OnExitEditCode(object sender, EventArgs e)
         {
-            if (popEmpNo.CodeValue == string.Empty)
-            {
-                popEmpNo.CodeName = string.Empty;
-            }
+            if (popEmpNo.CodeValue == string.Empty) popEmpNo.CodeName = string.Empty;
         }
 
         private void popDeptCd_OnExitEditCode(object sender, EventArgs e)
@@ -649,47 +636,28 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         #endregion ■■ Click >>> AfterSelectChange
 
         #region ■■ 5.2.4 ComboSelChange >>> CellListSelect
-        /// <summary>
-        /// Cell 내의 콤보박스의 Item을 선택 변경했을때 이벤트가 발생합니다.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void uniGrid1_CellListSelect(object sender, CellEventArgs e)
         {
         }
         #endregion ■■ ComboSelChange >>> CellListSelect
 
         #region ■■ 5.2.5 DblClick >>> DoubleClickCell
-        /// <summary>
-        /// fpSpread의 DblClick이벤트는 UltraGrid의 DoubleClickCell이벤트로 변경 하실 수 있습니다.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void uniGrid1_DoubleClickCell(object sender, DoubleClickCellEventArgs e)
         {
         }
         #endregion ■■ DblClick >>> DoubleClickCell
 
         #region ■■ 5.2.6 MouseDown >>> MouseDown
-        /// <summary>
-        /// 마우스 우측 버튼 클릭시 Context메뉴를 보여주는 일련의 작업들을 이 이벤트에서 수행합니다.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void uniGrid1_MouseDown(object sender, MouseEventArgs e)
         {
         }
         #endregion ■■ MouseDown >>> MouseDown
 
         #region ■■ 5.2.7 ScriptLeaveCell >>> BeforeCellDeactivate
-        /// <summary>
-        /// fpSpread의 ScripLeaveCell 이벤트는 UltraGrid의 
-        /// BeforeCellDeactivate 이벤트와 AfterCellActivate 이벤트를 겸해서 사용합니다.
-        /// BeforeCellDeactivate    : 기존Cell에서 새로운 Cell로 이동하기 전에 기존Cell위치에서 처리 할 일련의 작업들을 기술합니다.
-        /// AfterCellActivate       : 새로운 Cell로 이동해서 처리할 일련의 작업들을 기술합니다.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void uniGrid1_BeforeCellDeactivate(object sender, CancelEventArgs e)
         {
         }
@@ -816,7 +784,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             for (int i = 1; i <= 31; i++)
             {
-                DayOfWeek _dayOfWeek = Convert.ToDateTime(string.Concat(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-"), i.ToString().PadLeft(2, '0'))).DayOfWeek;
+                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-01")).AddDays(i-1).DayOfWeek;
                 string sDayOfWeek = string.Empty;
 
                 switch (_dayOfWeek)
