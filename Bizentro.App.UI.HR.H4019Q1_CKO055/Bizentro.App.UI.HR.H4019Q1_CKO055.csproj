@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProjectGuid>{5FC653D3-5A08-4BC3-8381-BB7751061812}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bizentro.App.UI.HR.H4019Q1_CKO055</RootNamespace>
+    <AssemblyName>Bizentro.App.UI.HR.H4019Q1_CKO055</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Infragistics.Shared, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win.Misc, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinEditors, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.UltraWinEditors.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinGrid, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.UltraWinGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Win, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\BizWebSmart\UI\Frameworks\Infragistics\Infragistics.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeUI, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.CompositeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeUI.WinForms, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.CompositeUI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\EnterpriseLibrary\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.DataBridge">
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.DataBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Controls, Version=18.1.20181.177, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.InfragisticsCAB.WinForms, Version=1.0.20071.40, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.InfragisticsCAB.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Providers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Bizentro.AppFramework.UI.Variables, Version=1.0.2765.20204, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BizWebSmart\UI\Frameworks\AppFrameworks.iv18.1.177\Bizentro.AppFramework.UI.Variables.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DsList.Designer.cs">
+      <DependentUpon>DsList.xsd</DependentUpon>
+    </None>
+    <None Include="DsList.xsc">
+      <DependentUpon>DsList.xsd</DependentUpon>
+    </None>
+    <None Include="DsList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsList.xss">
+      <DependentUpon>DsList.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+</Project>
