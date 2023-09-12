@@ -237,7 +237,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             AddLabelColumn(uniGrid1, "grpPayCd", "Payroll ID");
             AddLabelColumn(uniGrid1, "grpAttendance", "Attendance Details");
             AddLabelColumn(uniGrid1, "grpDate", "Date");
-            /*
+            
             for (i = 15; i < 31; i++)
             {
                 uniGrid _uniGrid = uniGrid1;
@@ -246,6 +246,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 AddLabelColumn(_uniGrid, str, num.ToString());
             }
+            
             for (i = 0; i < 15; i++)
             {
                 uniGrid _uniGrid1 = uniGrid1;
@@ -254,15 +255,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 AddLabelColumn(_uniGrid1, str1, num.ToString());
             }
-            */
-            for (i = 0; i < 31; i++)
-            {
-                uniGrid targetGrid = uniGrid1;
-                num = i + 1;
-                string labelName = string.Format("grpDate{0}", num.ToString().PadLeft(2, '0'));
-                AddLabelColumn(targetGrid, labelName, num.ToString());
-            }
-
+            
             uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
             uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
             uniGrid1.SetMerge(eH4019Q2KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
@@ -273,37 +266,26 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             uniGrid1.SetMerge("grpDate", 3, 1, 1, 1);
             uniGrid1.SetMerge(eH4019Q2KO.TYPEColumn.ColumnName, 3, 2, 1, 1);
 
-            /*
+            int num1 = 3;
+
             for (i = 15; i < 31; i++)
             {
-                num1++;
                 num = i + 1;
-                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), ++num1, 1, 1, 1);
                 num = i + 1;
                 uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
             }
             for (i = 0; i < 15; i++)
             {
-                num1++;
                 num = i + 1;
-                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), ++num1, 1, 1, 1);
                 num = i + 1;
                 uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
             }
-            */
-            for (i = 0; i < 31; i++)
-            {
-                num = i + 1;
-                string groupName = string.Format("grpDate{0}", num.ToString().PadLeft(2, '0'));
-                string dataName = string.Format("DATA_{0}", num.ToString().PadLeft(2, '0'));
-
-                uniGrid1.SetMerge(groupName, 4, 1, 1, 1);
-                uniGrid1.SetMerge(dataName, 4, 2, 1, 1);
-            }
-
+            
             uniGrid1.SetCellMerge("TEXT_01", enumDef.VAlign.Middle);
             uniGrid1.SetCellMerge("TEXT_02", enumDef.VAlign.Middle);
-            uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, 5, 0, 1, 3);
+            uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, ++num1, 0, 1, 3);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
