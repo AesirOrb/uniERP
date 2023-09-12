@@ -187,6 +187,21 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
             uniGrid1.SSSetEdit(eH4019Q1KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.TYPEColumn.ColumnName, "Day", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_01Column.ColumnName, "Data 1", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_02Column.ColumnName, "Data 2", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_03Column.ColumnName, "Data 3", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_04Column.ColumnName, "Data 4", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_05Column.ColumnName, "Data 5", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_06Column.ColumnName, "Data 6", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_07Column.ColumnName, "Data 7", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_08Column.ColumnName, "Data 8", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_09Column.ColumnName, "Data 9", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_10Column.ColumnName, "Data 10", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_11Column.ColumnName, "Data 11", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_12Column.ColumnName, "Data 12", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_13Column.ColumnName, "Data 13", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_14Column.ColumnName, "Data 14", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_15Column.ColumnName, "Data 15", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.DATA_16Column.ColumnName, "Data 16", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.DATA_17Column.ColumnName, "Data 17", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.DATA_18Column.ColumnName, "Data 18", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
@@ -203,21 +218,6 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
             uniGrid1.SSSetEdit(eH4019Q1KO.DATA_29Column.ColumnName, "Data 29", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.DATA_30Column.ColumnName, "Data 30", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.DATA_31Column.ColumnName, "Data 31", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_01Column.ColumnName, "Data 1", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_02Column.ColumnName, "Data 2", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_03Column.ColumnName, "Data 3", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_04Column.ColumnName, "Data 4", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_05Column.ColumnName, "Data 5", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_06Column.ColumnName, "Data 6", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_07Column.ColumnName, "Data 7", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_08Column.ColumnName, "Data 8", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_09Column.ColumnName, "Data 9", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_10Column.ColumnName, "Data 10", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_11Column.ColumnName, "Data 11", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_12Column.ColumnName, "Data 12", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_13Column.ColumnName, "Data 13", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_14Column.ColumnName, "Data 14", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_15Column.ColumnName, "Data 15", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q1KO.TOTALColumn.ColumnName, "Total", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
             #endregion
@@ -237,8 +237,8 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
             AddLabelColumn(uniGrid1, "grpPayCd", "Payroll ID");
             AddLabelColumn(uniGrid1, "grpAttendance", "Attendance Details");
             AddLabelColumn(uniGrid1, "grpDate", "Date");
-            
-            for (i = 15; i < 31; i++)
+
+            for (i = 0; i < 31; i++)
             {
                 uniGrid _uniGrid = uniGrid1;
                 num = i + 1;
@@ -246,16 +246,7 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
                 num = i + 1;
                 AddLabelColumn(_uniGrid, str, num.ToString());
             }
-            
-            for (i = 0; i < 15; i++)
-            {
-                uniGrid _uniGrid1 = uniGrid1;
-                num = i + 1;
-                string str1 = string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0")));
-                num = i + 1;
-                AddLabelColumn(_uniGrid1, str1, num.ToString());
-            }
-            
+
             uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
             uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
             uniGrid1.SetMerge(eH4019Q1KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
@@ -268,21 +259,14 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
 
             int num1 = 3;
 
-            for (i = 15; i < 31; i++)
+            for (i = 0; i < 31; i++)
             {
                 num = i + 1;
                 uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), ++num1, 1, 1, 1);
                 num = i + 1;
                 uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
             }
-            for (i = 0; i < 15; i++)
-            {
-                num = i + 1;
-                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), ++num1, 1, 1, 1);
-                num = i + 1;
-                uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
-            }
-            
+
             uniGrid1.SetCellMerge("TEXT_01", enumDef.VAlign.Middle);
             uniGrid1.SetCellMerge("TEXT_02", enumDef.VAlign.Middle);
             uniGrid1.SetMerge(eH4019Q1KO.TOTALColumn.ColumnName, ++num1, 0, 1, 3);
@@ -464,11 +448,11 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
                 AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q1_CKO055");
 
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYMM", SqlDbType.NVarChar, 6, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@PAY_CD", SqlDbType.NVarChar, 1, cboPayCd.SelectedItem == null ? string.Empty : cboPayCd.SelectedItem.DataValue.ToString());
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 30, txtInternalCd.Text);
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 13, popEmpNo.CodeValue);
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@DEPT_CD", SqlDbType.NVarChar, 10, popDeptCd.CodeValue);
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 10, txtInternalCd.Text);
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 13, popEmpNo.CodeValue); 
+                uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 13, CommonVariable.gUsrID);
 
                 DataSet ds = uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
@@ -485,7 +469,7 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
                 uniGrid1.BeginUpdate();
 
                 for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 248, 248, 248);
+                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 240, 240, 240);
 
                 uniGrid1.EndUpdate();
 
@@ -654,7 +638,7 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
 
         private void uniGrid1_BeforeCellDeactivate(object sender, CancelEventArgs e)
         {
-            
+
         }
         #endregion ■■ ScriptLeaveCell >>> BeforeCellDeactivate
 
@@ -778,14 +762,16 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
 
             for (int i = 1; i <= 31; i++)
             {
+                grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
                 grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
-                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
+                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
                 string sDayOfWeek = string.Empty;
 
                 switch (_dayOfWeek)
                 {
                     case DayOfWeek.Sunday:
                         sDayOfWeek = "일";
+                        grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
                         grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
                         break;
                     case DayOfWeek.Monday:
@@ -805,6 +791,7 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
                         break;
                     case DayOfWeek.Saturday:
                         sDayOfWeek = "토";
+                        grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         break;
                 }
@@ -812,7 +799,7 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
                 grid.setColumnHeader(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
             }
 
-            switch (dtYearMonth.uniValue.AddMonths(-1).Month)
+            switch (dtYearMonth.uniValue.Month)
             {
                 case 2:
                     if (!DateTime.IsLeapYear(dtYearMonth.uniValue.Year))
