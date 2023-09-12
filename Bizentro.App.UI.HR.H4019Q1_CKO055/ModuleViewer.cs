@@ -18,7 +18,7 @@ using Bizentro.AppFramework.UI.Common.Exceptions;
 
 #endregion
 
-namespace Bizentro.App.UI.HR.H4019Q2_CKO055
+namespace Bizentro.App.UI.HR.H4019Q1_CKO055
 {
     [SmartPart]
     public partial class ModuleViewer : ViewBase
@@ -183,42 +183,42 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             int i;
             int num;
-            DsList.E_H4019Q2_KODataTable eH4019Q2KO = cqtdsList.E_H4019Q2_KO;
-            uniGrid1.SSSetEdit(eH4019Q2KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.TYPEColumn.ColumnName, "Day", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_16Column.ColumnName, "Data 16", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_17Column.ColumnName, "Data 17", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_18Column.ColumnName, "Data 18", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_19Column.ColumnName, "Data 19", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_20Column.ColumnName, "Data 20", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_21Column.ColumnName, "Data 21", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_22Column.ColumnName, "Data 22", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_23Column.ColumnName, "Data 23", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_24Column.ColumnName, "Data 24", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_25Column.ColumnName, "Data 25", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_26Column.ColumnName, "Data 26", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_27Column.ColumnName, "Data 27", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_28Column.ColumnName, "Data 28", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_29Column.ColumnName, "Data 29", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_30Column.ColumnName, "Data 30", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_31Column.ColumnName, "Data 31", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_01Column.ColumnName, "Data 1", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_02Column.ColumnName, "Data 2", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_03Column.ColumnName, "Data 3", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_04Column.ColumnName, "Data 4", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_05Column.ColumnName, "Data 5", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_06Column.ColumnName, "Data 6", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_07Column.ColumnName, "Data 7", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_08Column.ColumnName, "Data 8", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_09Column.ColumnName, "Data 9", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_10Column.ColumnName, "Data 10", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_11Column.ColumnName, "Data 11", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_12Column.ColumnName, "Data 12", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_13Column.ColumnName, "Data 13", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_14Column.ColumnName, "Data 14", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.DATA_15Column.ColumnName, "Data 15", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4019Q2KO.TOTALColumn.ColumnName, "Total", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            DsList.E_H4019Q1_KODataTable eH4019Q1KO = cqtdsList.E_H4019Q1_KO;
+            uniGrid1.SSSetEdit(eH4019Q1KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.TYPEColumn.ColumnName, "Day", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_16Column.ColumnName, "Data 16", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_17Column.ColumnName, "Data 17", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_18Column.ColumnName, "Data 18", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_19Column.ColumnName, "Data 19", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_20Column.ColumnName, "Data 20", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_21Column.ColumnName, "Data 21", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_22Column.ColumnName, "Data 22", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_23Column.ColumnName, "Data 23", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_24Column.ColumnName, "Data 24", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_25Column.ColumnName, "Data 25", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_26Column.ColumnName, "Data 26", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_27Column.ColumnName, "Data 27", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_28Column.ColumnName, "Data 28", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_29Column.ColumnName, "Data 29", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_30Column.ColumnName, "Data 30", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_31Column.ColumnName, "Data 31", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_01Column.ColumnName, "Data 1", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_02Column.ColumnName, "Data 2", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_03Column.ColumnName, "Data 3", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_04Column.ColumnName, "Data 4", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_05Column.ColumnName, "Data 5", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_06Column.ColumnName, "Data 6", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_07Column.ColumnName, "Data 7", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_08Column.ColumnName, "Data 8", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_09Column.ColumnName, "Data 9", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_10Column.ColumnName, "Data 10", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_11Column.ColumnName, "Data 11", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_12Column.ColumnName, "Data 12", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_13Column.ColumnName, "Data 13", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_14Column.ColumnName, "Data 14", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.DATA_15Column.ColumnName, "Data 15", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4019Q1KO.TOTALColumn.ColumnName, "Total", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
             #endregion
 
@@ -258,13 +258,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             
             uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
             uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
-            uniGrid1.SetMerge(eH4019Q2KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
+            uniGrid1.SetMerge(eH4019Q1KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
             uniGrid1.SetMerge("grpName", 2, 0, 1, 1);
             uniGrid1.SetMerge("grpPayCd", 2, 1, 1, 1);
-            uniGrid1.SetMerge(eH4019Q2KO.TEXT_02Column.ColumnName, 2, 2, 1, 1);
+            uniGrid1.SetMerge(eH4019Q1KO.TEXT_02Column.ColumnName, 2, 2, 1, 1);
             uniGrid1.SetMerge("grpAttendance", 3, 0, 32, 1);
             uniGrid1.SetMerge("grpDate", 3, 1, 1, 1);
-            uniGrid1.SetMerge(eH4019Q2KO.TYPEColumn.ColumnName, 3, 2, 1, 1);
+            uniGrid1.SetMerge(eH4019Q1KO.TYPEColumn.ColumnName, 3, 2, 1, 1);
 
             int num1 = 3;
 
@@ -285,7 +285,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             
             uniGrid1.SetCellMerge("TEXT_01", enumDef.VAlign.Middle);
             uniGrid1.SetCellMerge("TEXT_02", enumDef.VAlign.Middle);
-            uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, ++num1, 0, 1, 3);
+            uniGrid1.SetMerge(eH4019Q1KO.TOTALColumn.ColumnName, ++num1, 0, 1, 3);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
@@ -319,7 +319,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         {
             // Grid binding with global dataset variable.
             InitSpreadSheet();
-            uniGrid1.uniGridSetDataBinding(cqtdsList.E_H4019Q2_KO);
+            uniGrid1.uniGridSetDataBinding(cqtdsList.E_H4019Q1_KO);
         }
         #endregion
 
@@ -461,7 +461,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         {
             try
             {
-                AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055");
+                AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q1_CKO055");
 
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYMM", SqlDbType.NVarChar, 6, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
                 uniBase.UDatabase.AddInParameter(storedProcCommand, "@PAY_CD", SqlDbType.NVarChar, 1, cboPayCd.SelectedItem == null ? string.Empty : cboPayCd.SelectedItem.DataValue.ToString());
@@ -480,7 +480,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                     return false;
                 }
 
-                cqtdsList.E_H4019Q2_KO.Merge(ds.Tables[0], false, MissingSchemaAction.Ignore);
+                cqtdsList.E_H4019Q1_KO.Merge(ds.Tables[0], false, MissingSchemaAction.Ignore);
 
                 uniGrid1.BeginUpdate();
 
