@@ -237,7 +237,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             AddLabelColumn(uniGrid1, "grpPayCd", "Payroll ID");
             AddLabelColumn(uniGrid1, "grpAttendance", "Attendance Details");
             AddLabelColumn(uniGrid1, "grpDate", "Date");
-            
+
             for (i = 15; i < 31; i++)
             {
                 uniGrid _uniGrid = uniGrid1;
@@ -246,7 +246,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 AddLabelColumn(_uniGrid, str, num.ToString());
             }
-            
+
             for (i = 0; i < 15; i++)
             {
                 uniGrid _uniGrid1 = uniGrid1;
@@ -255,7 +255,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 AddLabelColumn(_uniGrid1, str1, num.ToString());
             }
-            
+
             uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
             uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
             uniGrid1.SetMerge(eH4019Q2KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
@@ -282,7 +282,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 num = i + 1;
                 uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
             }
-            
+
             uniGrid1.SetCellMerge("TEXT_01", enumDef.VAlign.Middle);
             uniGrid1.SetCellMerge("TEXT_02", enumDef.VAlign.Middle);
             uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, ++num1, 0, 1, 3);
@@ -485,7 +485,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 uniGrid1.BeginUpdate();
 
                 for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 248, 248, 248);
+                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 240, 240, 240);
 
                 uniGrid1.EndUpdate();
 
@@ -654,7 +654,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void uniGrid1_BeforeCellDeactivate(object sender, CancelEventArgs e)
         {
-            
+
         }
         #endregion ■■ ScriptLeaveCell >>> BeforeCellDeactivate
 
@@ -778,6 +778,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             for (int i = 1; i <= 31; i++)
             {
+                grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
                 grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
                 DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
                 string sDayOfWeek = string.Empty;
@@ -786,6 +787,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 {
                     case DayOfWeek.Sunday:
                         sDayOfWeek = "일";
+                        grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
                         grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
                         break;
                     case DayOfWeek.Monday:
@@ -805,6 +807,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         break;
                     case DayOfWeek.Saturday:
                         sDayOfWeek = "토";
+                        grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         break;
                 }
