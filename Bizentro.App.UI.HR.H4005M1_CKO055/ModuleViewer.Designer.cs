@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.CompositeUI;
+﻿using System;
+using Microsoft.Practices.CompositeUI;
 using Microsoft.Practices.ObjectBuilder;
 
 namespace Bizentro.App.UI.HR.H4005M1_CKO055
@@ -240,6 +241,8 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             this.uniGrid1.TabIndex = 0;
             this.uniGrid1.Text = "uniGrid1";
             this.uniGrid1.UseDynamicFormat = false;
+            this.uniGrid1.AfterExitEditMode += new System.EventHandler(this.uniGrid1_AfterExitEditMode);
+            this.uniGrid1.ClickCell += new Infragistics.Win.UltraWinGrid.ClickCellEventHandler(this.uniGrid1_ClickCell);
 
             this.uniTBL_MainCondition.AutoFit = false;
             this.uniTBL_MainCondition.AutoFitColumnCount = 4;
@@ -726,14 +729,14 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         private Bizentro.AppFramework.UI.Controls.uniLabel lblWkType;
         private Bizentro.AppFramework.UI.Controls.uniLabel lblBizAreaCd;
         private Bizentro.AppFramework.UI.Controls.uniDateTime dtYearMonth;
+        private Bizentro.AppFramework.UI.Controls.uniCheckBox chkQuery;
         private Bizentro.AppFramework.UI.Controls.uniCombo cboPayCd;
-        private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel1;
-        private Bizentro.AppFramework.UI.Controls.uniOpenPopup popDeptCd;
-        private Bizentro.AppFramework.UI.Controls.uniTextBox txtInternalCd;
-        private Bizentro.AppFramework.UI.Controls.uniOpenPopup popEmpNo;
         private Bizentro.AppFramework.UI.Controls.uniCombo cboWkType;
         private Bizentro.AppFramework.UI.Controls.uniCombo cboBizAreaCd;
+        private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel1;
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel2;
-        private Bizentro.AppFramework.UI.Controls.uniCheckBox chkQuery;
+        private Bizentro.AppFramework.UI.Controls.uniOpenPopup popDeptCd;
+        private Bizentro.AppFramework.UI.Controls.uniOpenPopup popEmpNo;
+        private Bizentro.AppFramework.UI.Controls.uniTextBox txtInternalCd;
     }
 }

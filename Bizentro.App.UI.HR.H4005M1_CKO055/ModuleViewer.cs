@@ -27,27 +27,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         #region ▶ 1. Declaration part
 
         #region ■ 1.1 Program information
-        /// <TemplateVersion>0.0.1.0</TemplateVersion>
-        /// <NameSpace>①namespace</NameSpace>
-        /// <Module>②module name</Module>
-        /// <Class>③class name</Class>
-        /// <Desc>④
-        ///   This part describe the summary information about class 
-        /// </Desc>
-        /// <History>⑤
-        ///   <FirstCreated>
-        ///     <history name="creator" Date="created date">Make …</history>
-        ///   </FirstCreated>
-        ///   <Lastmodified>
-        ///     <history name="modifier"  Date="modified date"> contents </history>
-        ///     <history name="modifier"  Date="modified date"> contents </history>
-        ///     <history name="modifier"  Date="modified date"> contents </history>
-        ///   </Lastmodified>
-        /// </History>
-        /// <Remarks>⑥
-        ///   <remark name="modifier"  Date="modified date">… </remark>
-        ///   <remark name="modifier"  Date="modified date">… </remark>
-        /// </Remarks>
 
         #endregion
 
@@ -61,12 +40,10 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
         #region ■ 1.4 Class global constants (grid)
 
-
         #endregion
 
         #region ■ 1.5 Class global variables (grid)
 
-        // change your code
         private DsList cqtdsList = new DsList();
 
         #endregion
@@ -77,10 +54,7 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
         #region ■ 2.1 Constructor(common)
 
-        public ModuleViewer()
-        {
-            InitializeComponent();
-        }
+        public ModuleViewer() => InitializeComponent();
 
         #endregion
 
@@ -91,24 +65,17 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             uniBase.UData.SetWorkingDataSet(cqtdsList);
             uniBase.UCommon.SetViewType(enumDef.ViewType.T02_Multi);
             uniBase.UCommon.LoadInfTB19029(enumDef.FormType.Input, enumDef.ModuleInformation.PersonnelPayRollManagement);
-            LoadCustomInfTB19029();                                                   // Load custoqm numeric format
+            LoadCustomInfTB19029();
         }
 
-        protected override void Form_Load_Completed()
-        {
-            dtYearMonth.Focus();
-            //uniBase.UCommon.SetToolBarMulti(enumDef.ToolBitMulti.DeleteRow, false);
-        }
+        protected override void Form_Load_Completed() => dtYearMonth.Focus();
+        //uniBase.UCommon.SetToolBarMulti(enumDef.ToolBitMulti.DeleteRow, false);
 
         #endregion
 
         #region ■ 2.3 Initializatize local global variables
 
-        protected override void InitLocalVariables()
-        {
-            // init Dataset Row : change your code
-            cqtdsList.Clear();
-        }
+        protected override void InitLocalVariables() => cqtdsList.Clear();
 
         #endregion
 
@@ -116,30 +83,21 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
         protected override void SetLocalDefaultValue()
         {
-            // Assign default value to controls
-            uniDateTime date = dtYearMonth;
-            DateTime dBServerDateTime = uniBase.UDate.GetDBServerDateTime();
-            date.Value = dBServerDateTime.Date;
+            dtYearMonth.Value = uniBase.UDate.GetDBServerDateTime();
             cboPayCd.SelectedIndex = 0;
-            uniOpenPopup _uniOpenPopup = popDeptCd;
-            uniOpenPopup _uniOpenPopup1 = popDeptCd;
-            uniTextBox _uniTextBox = txtInternalCd;
-            string empty = string.Empty;
-            string str = empty;
-            _uniTextBox.Text = empty;
-            string str1 = str;
-            str = str1;
-            _uniOpenPopup1.CodeName = str1;
-            _uniOpenPopup.CodeValue = str;
-            uniOpenPopup _uniOpenPopup2 = popEmpNo;
-            uniOpenPopup _uniOpenPopup3 = popEmpNo;
-            string empty1 = string.Empty;
-            str = empty1;
-            _uniOpenPopup3.CodeName = empty1;
-            _uniOpenPopup2.CodeValue = str;
             cboWkType.SelectedIndex = 0;
             cboBizAreaCd.SelectedIndex = 0;
-            SetDayOfWeek(uniGrid1);
+            uniOpenPopup _uniOpenPopup = popDeptCd;
+            uniOpenPopup _uniOpenPopup1 = popDeptCd;
+            uniOpenPopup _uniOpenPopup2 = popEmpNo;
+            uniOpenPopup _uniOpenPopup3 = popEmpNo;
+            uniTextBox _uniTextBox = txtInternalCd;
+            _uniOpenPopup.CodeValue = string.Empty;
+            _uniOpenPopup1.CodeName = string.Empty;
+            _uniOpenPopup2.CodeValue = string.Empty;
+            _uniOpenPopup3.CodeName = string.Empty;
+            _uniTextBox.Text = string.Empty;
+            SetDayOfWeek();
             dtYearMonth.Focus();
 
             return;
@@ -162,7 +120,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
         public void LoadCustomInfTB19029()
         {
-
             #region User Define Numeric Format Data Setting  ☆
             //base.viewTB19029.ggUserDefined6.DecPoint = 0;
             //base.viewTB19029.ggUserDefined6.Integeral = 15;
@@ -181,44 +138,18 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         {
             #region ■■ 3.1.1 Pre-setting grid information
 
-            int i;
-            int num;
             DsList.E_H4005M1_KODataTable eH4005M1KO = cqtdsList.E_H4005M1_KO;
+
             uniGrid1.SSSetEdit(eH4005M1KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4005M1KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4005M1KO.TYPEColumn.ColumnName, "Day", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_01Column.ColumnName, "Data 1", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_02Column.ColumnName, "Data 2", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_03Column.ColumnName, "Data 3", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_04Column.ColumnName, "Data 4", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_05Column.ColumnName, "Data 5", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_06Column.ColumnName, "Data 6", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_07Column.ColumnName, "Data 7", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_08Column.ColumnName, "Data 8", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_09Column.ColumnName, "Data 9", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_10Column.ColumnName, "Data 10", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_11Column.ColumnName, "Data 11", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_12Column.ColumnName, "Data 12", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_13Column.ColumnName, "Data 13", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_14Column.ColumnName, "Data 14", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_15Column.ColumnName, "Data 15", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_16Column.ColumnName, "Data 16", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_17Column.ColumnName, "Data 17", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_18Column.ColumnName, "Data 18", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_19Column.ColumnName, "Data 19", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_20Column.ColumnName, "Data 20", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_21Column.ColumnName, "Data 21", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_22Column.ColumnName, "Data 22", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_23Column.ColumnName, "Data 23", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_24Column.ColumnName, "Data 24", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_25Column.ColumnName, "Data 25", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_26Column.ColumnName, "Data 26", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_27Column.ColumnName, "Data 27", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_28Column.ColumnName, "Data 28", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_29Column.ColumnName, "Data 29", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_30Column.ColumnName, "Data 30", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.DATA_31Column.ColumnName, "Data 31", 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4005M1KO.TOTALColumn.ColumnName, "Total", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+
+            for (var i = 1; i <= 31; i++)
+            {
+                string sColumnKey = eH4005M1KO.Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].ColumnName;
+                uniGrid1.SSSetEdit(sColumnKey, string.Format("Data {0}", i), 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            }
 
             #endregion
 
@@ -231,21 +162,15 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
             #region ■■ 3.1.3 Setting etc grid
 
-            AddLabelColumn(uniGrid1, "grpEmpNo", "Employee ID");
-            AddLabelColumn(uniGrid1, "grpName", "Name");
-            AddLabelColumn(uniGrid1, "grpDept", "Department");
-            AddLabelColumn(uniGrid1, "grpPayCd", "Payroll ID");
-            AddLabelColumn(uniGrid1, "grpAttendance", "Attendance Details");
-            AddLabelColumn(uniGrid1, "grpDate", "Date");
+            AddLabelColumn("grpEmpNo", "Employee ID");
+            AddLabelColumn("grpName", "Name");
+            AddLabelColumn("grpDept", "Department");
+            AddLabelColumn("grpPayCd", "Payroll ID");
+            AddLabelColumn("grpAttendance", "Attendance Details");
+            AddLabelColumn("grpDate", "Date");
 
-            for (i = 0; i < 31; i++)
-            {
-                uniGrid _uniGrid = uniGrid1;
-                num = i + 1;
-                string str = string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0")));
-                num = i + 1;
-                AddLabelColumn(_uniGrid, str, num.ToString());
-            }
+            for (var i = 1; i <= 31; i++)
+                AddLabelColumn(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), i.ToString());
 
             uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
             uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
@@ -257,17 +182,13 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             uniGrid1.SetMerge("grpDate", 3, 1, 1, 1);
             uniGrid1.SetMerge(eH4005M1KO.TYPEColumn.ColumnName, 3, 2, 1, 1);
 
-            int num1 = 3;
-
-            for (i = 0; i < 31; i++)
+            for (var i = 1; i <= 31; i++)
             {
-                num = i + 1;
-                uniGrid1.SetMerge(string.Format("grpDate{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), ++num1, 1, 1, 1);
-                num = i + 1;
-                uniGrid1.SetMerge(string.Format("DATA_{0}", num.ToString().PadLeft(2, Convert.ToChar("0"))), num1, 2, 1, 1);
+                uniGrid1.SetMerge(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), i + 3, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), i + 3, 2, 1, 1);
             }
 
-            uniGrid1.SetMerge(eH4005M1KO.TOTALColumn.ColumnName, ++num1, 0, 1, 3);
+            uniGrid1.SetMerge(eH4005M1KO.TOTALColumn.ColumnName, 35, 0, 1, 3);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
@@ -422,12 +343,9 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
                 uniGrid1.BeginUpdate();
 
-                for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 240, 240, 240);
-
                 uniGrid1.EndUpdate();
 
-                SetDayOfWeek(uniGrid1);
+                SetDayOfWeek();
             }
             catch (Exception ex)
             {
@@ -567,7 +485,33 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         }
         #endregion ■■ ComboSelChange >>> CellListSelect
 
-        #region ■■ 5.2.5 DblClick >>> DoubleClickCell
+        #region ■■ 5.2.5.1 Click >>> ClickCell
+
+        private void uniGrid1_ClickCell(object sender, ClickCellEventArgs e)
+        {
+            if (uniGrid1.ActiveCell.Column.Index > 3)
+            {
+                switch (uniGrid1.ActiveCell.Value)
+                {
+                    default:
+                        uniGrid1.ActiveCell.Value = "1";
+                        break;
+                    case "1":
+                        uniGrid1.ActiveCell.Value = "2";
+                        break;
+                    case "2":
+                        uniGrid1.ActiveCell.Value = "3";
+                        break;
+                    case "3":
+                        uniGrid1.ActiveCell.Value = "";
+                        break;
+                }
+                //uniBase.UMessage.DisplayMessageBox("900014", MessageBoxButtons.OK);
+            }
+        }
+        #endregion ■■ Click >>> ClickCell
+
+        #region ■■ 5.2.5.2 DblClick >>> DoubleClickCell
 
         private void uniGrid1_DoubleClickCell(object sender, DoubleClickCellEventArgs e)
         {
@@ -624,13 +568,10 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             AppFramework.UI.Controls.Popup.PopupPassData popupPassData = e.PopupPassData;
             codeValue = new string[4];
             UCommonClass uCommon = uniBase.UCommon;
-            firstDay = uniBase.UDate.GetDBServerDateTime();
-            firstDay = firstDay.Date;
+            UCommonClass uCommonClass = uniBase.UCommon;
+            firstDay = uniBase.UDate.GetDBServerDateTime().Date;
             codeValue[0] = uCommon.FilterVariable(firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD), "'1900-01-01'", enumDef.FilterVarType.BraceWithSingleQuotation, true);
             codeValue[1] = uniBase.UCommon.FilterVariable(CommonVariable.gUsrID, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
-            UCommonClass uCommonClass = uniBase.UCommon;
-            firstDay = uniBase.UDate.GetDBServerDateTime();
-            firstDay = firstDay.Date;
             codeValue[2] = uCommonClass.FilterVariable(firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD), "'1900-01-01'", enumDef.FilterVarType.BraceWithSingleQuotation, true);
             codeValue[3] = uniBase.UCommon.FilterVariable(popDeptCd, "''", enumDef.FilterVarType.BraceWithSingleQuotation, true);
             popupPassData.UserParameters = codeValue;
@@ -641,10 +582,10 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         {
             if (e.ResultData.Data != null)
             {
-                DataSet dataSet = (DataSet)e.ResultData.Data;
-                popDeptCd.CodeValue = dataSet.Tables[0].Rows[0]["dept_cd"].ToString();
-                popDeptCd.CodeName = dataSet.Tables[0].Rows[0]["dept_nm"].ToString();
-                txtInternalCd.Text = dataSet.Tables[0].Rows[0]["internal_cd"].ToString();
+                DataSet ds = (DataSet)e.ResultData.Data;
+                popDeptCd.CodeValue = ds.Tables[0].Rows[0]["dept_cd"].ToString();
+                popDeptCd.CodeName = ds.Tables[0].Rows[0]["dept_nm"].ToString();
+                txtInternalCd.Text = ds.Tables[0].Rows[0]["internal_cd"].ToString();
             }
         }
 
@@ -683,9 +624,9 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         {
             if (e.ResultData.Data != null)
             {
-                DataSet dataSet = (DataSet)e.ResultData.Data;
-                popEmpNo.CodeValue = dataSet.Tables[0].Rows[0]["emp_no"].ToString();
-                popEmpNo.CodeName = dataSet.Tables[0].Rows[0]["name"].ToString();
+                DataSet ds = (DataSet)e.ResultData.Data;
+                popEmpNo.CodeValue = ds.Tables[0].Rows[0]["emp_no"].ToString();
+                popEmpNo.CodeName = ds.Tables[0].Rows[0]["name"].ToString();
             }
         }
 
@@ -697,23 +638,23 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
         #region ■ 7.1 User-defined function group
 
-        private void AddLabelColumn(uniGrid grid, string sColumn, string sCaption)
+        private void AddLabelColumn(string sColumn, string sCaption)
         {
-            grid.DisplayLayout.Bands[0].Columns.Add(sColumn, sCaption);
-            grid.DisplayLayout.Bands[0].Columns[sColumn].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
+            uniGrid1.DisplayLayout.Bands[0].Columns.Add(sColumn, sCaption);
+            uniGrid1.DisplayLayout.Bands[0].Columns[sColumn].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
         }
 
-        private void SetDayOfWeek(uniGrid grid)
+        private void SetDayOfWeek()
         {
             uniGrid1.SSSetColHidden("DATA_29", false);
             uniGrid1.SSSetColHidden("DATA_30", false);
             uniGrid1.SSSetColHidden("DATA_31", false);
 
-            for (int i = 1; i <= 31; i++)
+            for (var i = 1; i <= 31; i++)
             {
+                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
-                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
                 string sDayOfWeek = string.Empty;
 
                 switch (_dayOfWeek)
