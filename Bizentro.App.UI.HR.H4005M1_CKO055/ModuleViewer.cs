@@ -15,6 +15,8 @@ using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 #endregion
 
@@ -112,6 +114,7 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             uniBase.UData.ComboMajorAdd(cboPayCd.Name, "H0005");
             uniBase.UData.ComboMajorAdd(cboWkType.Name, "H0047");
             uniBase.UData.ComboCustomAdd(cboBizAreaCd.Name, " B_BIZ_AREA.BIZ_AREA_CD CODE, B_BIZ_AREA.BIZ_AREA_NM NAME ", string.Format("B_BIZ_AREA INNER JOIN dbo.ufn_AuthBizAreaCD_byUsrID('{0}') AUTH ON B_BIZ_AREA.BIZ_AREA_CD = AUTH.BIZ_AREA_CD", CommonVariable.gUsrID), "1=1");
+            uniBase.UData.ComboCustomAdd("cboEmpWkType", "DISTINCT CODE = WK_TYPE, NAME = MINOR_NM", "B_MINOR A JOIN HCA030T B ON A.MAJOR_CD = 'H0047' AND A.MINOR_CD = B.WK_TYPE", "1=1");
         }
 
         #endregion
@@ -121,8 +124,10 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         public void LoadCustomInfTB19029()
         {
             #region User Define Numeric Format Data Setting  ☆
+
             //base.viewTB19029.ggUserDefined6.DecPoint = 0;
             //base.viewTB19029.ggUserDefined6.Integeral = 15;
+
             #endregion
         }
 
@@ -140,55 +145,49 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
             DsList.E_H4005M1_KODataTable eH4005M1KO = cqtdsList.E_H4005M1_KO;
 
-            uniGrid1.SSSetEdit(eH4005M1KO.TEXT_01Column.ColumnName, "Work Group", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.TEXT_02Column.ColumnName, "Entrance Day", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.TYPEColumn.ColumnName, "Day", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.TOTALColumn.ColumnName, "Total", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.EMP_NOColumn.ColumnName, "Employee ID", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.TEXT_01Column.ColumnName, "Department", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.TEXT_02Column.ColumnName, "Name", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.TYPEColumn.ColumnName, "Type", 72, enumDef.FieldType.Default, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
             for (var i = 1; i <= 31; i++)
             {
                 string sColumnKey = eH4005M1KO.Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].ColumnName;
-                uniGrid1.SSSetEdit(sColumnKey, string.Format("Data {0}", i), 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+                //uniGrid1.SSSetEdit(sColumnKey, string.Format("Data {0}", i), 40, enumDef.FieldType.Default, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+                uniGrid1.SSSetCombo(sColumnKey, string.Format("Data {0}", i), 40, viewDataSet.Tables["cboEmpWkType"], enumDef.FieldType.Default, enumDef.HAlign.Center);
             }
 
             #endregion
 
             #region ■■ 3.1.2 Formatting grid information
 
-            uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.Yes);
+            uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.No);
             uniGrid1.DisplayLayout.Override.HeaderClickAction = HeaderClickAction.Select;
 
             #endregion
 
             #region ■■ 3.1.3 Setting etc grid
 
-            AddLabelColumn("grpEmpNo", "Employee ID");
-            AddLabelColumn("grpName", "Name");
-            AddLabelColumn("grpDept", "Department");
-            AddLabelColumn("grpPayCd", "Payroll ID");
-            AddLabelColumn("grpAttendance", "Attendance Details");
-            AddLabelColumn("grpDate", "Date");
-
             for (var i = 1; i <= 31; i++)
-                AddLabelColumn(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), i.ToString());
+            {
+                string sKey = string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'));
+                string sCaption = i.ToString();
+                uniGrid1.DisplayLayout.Bands[0].Columns.Add(sKey, sCaption).RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
+            }
 
-            uniGrid1.SetMerge("grpEmpNo", 1, 0, 1, 1);
-            uniGrid1.SetMerge("grpDept", 1, 1, 1, 1);
-            uniGrid1.SetMerge(eH4005M1KO.TEXT_01Column.ColumnName, 1, 2, 1, 1);
-            uniGrid1.SetMerge("grpName", 2, 0, 1, 1);
-            uniGrid1.SetMerge("grpPayCd", 2, 1, 1, 1);
-            uniGrid1.SetMerge(eH4005M1KO.TEXT_02Column.ColumnName, 2, 2, 1, 1);
-            uniGrid1.SetMerge("grpAttendance", 3, 0, 32, 1);
-            uniGrid1.SetMerge("grpDate", 3, 1, 1, 1);
-            uniGrid1.SetMerge(eH4005M1KO.TYPEColumn.ColumnName, 3, 2, 1, 1);
+            uniGrid1.SetMerge(eH4005M1KO.TEXT_01Column.ColumnName, 0, 0, 1, 2);
+            uniGrid1.SetMerge(eH4005M1KO.TEXT_02Column.ColumnName, 1, 0, 1, 2);
+            uniGrid1.SetMerge(eH4005M1KO.EMP_NOColumn.ColumnName, 2, 0, 1, 2);
+            uniGrid1.SetMerge(eH4005M1KO.TYPEColumn.ColumnName, 3, 0, 1, 2);
 
             for (var i = 1; i <= 31; i++)
             {
-                uniGrid1.SetMerge(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), i + 3, 1, 1, 1);
-                uniGrid1.SetMerge(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), i + 3, 2, 1, 1);
+                uniGrid1.SetMerge(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), i + 3, 0, 1, 1);
+                uniGrid1.SetMerge(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), i + 3, 1, 1, 1);
             }
 
-            uniGrid1.SetMerge(eH4005M1KO.TOTALColumn.ColumnName, 35, 0, 1, 3);
+            string[] strCols = { "EMP_NO", "TEXT_01", "TEXT_02" };
+            uniGrid1.SetCellHierarchyMerge(strCols, enumDef.VAlign.Middle);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
@@ -432,11 +431,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         #region ■ 5.2 Grid   control event implementation group
 
         #region ■■ 5.2.1 ButtonClicked >>> ClickCellButton
-        /// <summary>
-        /// Cell 내의 버튼을 클릭했을때의 일련작업들을 수행합니다.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void uniGrid1_ClickCellButton(object sender, CellEventArgs e)
         {
 
@@ -444,11 +438,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         #endregion ■■ ButtonClicked >>> ClickCellButton
 
         #region ■■ 5.2.2 Change >>> CellChange
-        /// <summary>
-        /// fpSpread의 Change 이벤트는 UltraGrid의 BeforeExitEditMode 또는 AfterExitEditMode 이벤트로 대체됩니다.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void uniGrid1_BeforeExitEditMode(object sender, Infragistics.Win.UltraWinGrid.BeforeExitEditModeEventArgs e)
         {
 
@@ -489,25 +478,7 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
 
         private void uniGrid1_ClickCell(object sender, ClickCellEventArgs e)
         {
-            if (uniGrid1.ActiveCell.Column.Index > 3)
-            {
-                switch (uniGrid1.ActiveCell.Value)
-                {
-                    default:
-                        uniGrid1.ActiveCell.Value = "1";
-                        break;
-                    case "1":
-                        uniGrid1.ActiveCell.Value = "2";
-                        break;
-                    case "2":
-                        uniGrid1.ActiveCell.Value = "3";
-                        break;
-                    case "3":
-                        uniGrid1.ActiveCell.Value = "";
-                        break;
-                }
-                //uniBase.UMessage.DisplayMessageBox("900014", MessageBoxButtons.OK);
-            }
+
         }
         #endregion ■■ Click >>> ClickCell
 
@@ -637,12 +608,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
         #region ▶ 7. User-defined method part
 
         #region ■ 7.1 User-defined function group
-
-        private void AddLabelColumn(string sColumn, string sCaption)
-        {
-            uniGrid1.DisplayLayout.Bands[0].Columns.Add(sColumn, sCaption);
-            uniGrid1.DisplayLayout.Bands[0].Columns[sColumn].RowLayoutColumnInfo.LabelPosition = LabelPosition.LabelOnly;
-        }
 
         private void SetDayOfWeek()
         {

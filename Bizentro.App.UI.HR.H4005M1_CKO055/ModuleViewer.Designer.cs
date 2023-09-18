@@ -241,8 +241,8 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             this.uniGrid1.TabIndex = 0;
             this.uniGrid1.Text = "uniGrid1";
             this.uniGrid1.UseDynamicFormat = false;
-            this.uniGrid1.AfterExitEditMode += new System.EventHandler(this.uniGrid1_AfterExitEditMode);
-            this.uniGrid1.ClickCell += new Infragistics.Win.UltraWinGrid.ClickCellEventHandler(this.uniGrid1_ClickCell);
+            // this.uniGrid1.AfterExitEditMode += new System.EventHandler(this.uniGrid1_AfterExitEditMode);
+            // this.uniGrid1.ClickCell += new Infragistics.Win.UltraWinGrid.ClickCellEventHandler(this.uniGrid1_ClickCell);
 
             this.uniTBL_MainCondition.AutoFit = false;
             this.uniTBL_MainCondition.AutoFitColumnCount = 4;
