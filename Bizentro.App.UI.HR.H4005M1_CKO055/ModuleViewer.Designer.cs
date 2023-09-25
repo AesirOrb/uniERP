@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Practices.CompositeUI;
+﻿using Microsoft.Practices.CompositeUI;
 using Microsoft.Practices.ObjectBuilder;
 
 namespace Bizentro.App.UI.HR.H4005M1_CKO055

@@ -1,6 +1,4 @@
-﻿#region ● Namespace declaration
-
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
@@ -15,73 +13,28 @@ using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
-using System.Data.SqlClient;
-using System.Runtime.InteropServices;
-
-#endregion
 
 namespace Bizentro.App.UI.HR.H4005M1_CKO055
 {
     [SmartPart]
     public partial class ModuleViewer : ViewBase
     {
-
-        #region ▶ 1. Declaration part
-
-        #region ■ 1.1 Program information
-
-        #endregion
-
-        #region ■ 1.2. Class global constants (common)
-
-        #endregion
-
-        #region ■ 1.3. Class global variables (common)
-
-        #endregion
-
-        #region ■ 1.4 Class global constants (grid)
-
-        #endregion
-
-        #region ■ 1.5 Class global variables (grid)
-
         private DsList cqtdsList = new DsList();
 
-        #endregion
-
-        #endregion
-
-        #region ▶ 2. Initialization part
-
-        #region ■ 2.1 Constructor(common)
-
         public ModuleViewer() => InitializeComponent();
-
-        #endregion
-
-        #region ■ 2.2 Form_Load(common)
 
         protected override void Form_Load()
         {
             uniBase.UData.SetWorkingDataSet(cqtdsList);
             uniBase.UCommon.SetViewType(enumDef.ViewType.T02_Multi);
+            uniBase.UCommon.SetToolBarMulti(enumDef.ToolBitMulti.DeleteRow, false);
             uniBase.UCommon.LoadInfTB19029(enumDef.FormType.Input, enumDef.ModuleInformation.PersonnelPayRollManagement);
             LoadCustomInfTB19029();
         }
 
         protected override void Form_Load_Completed() => dtYearMonth.Focus();
-        //uniBase.UCommon.SetToolBarMulti(enumDef.ToolBitMulti.DeleteRow, false);
-
-        #endregion
-
-        #region ■ 2.3 Initializatize local global variables
 
         protected override void InitLocalVariables() => cqtdsList.Clear();
-
-        #endregion
-
-        #region ■ 2.4 Set local global default variables
 
         protected override void SetLocalDefaultValue()
         {
@@ -105,68 +58,37 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             return;
         }
 
-        #endregion
-
-        #region ■ 2.5 Gathering combo data(GatheringComboData)
-
         protected override void GatheringComboData()
         {
             uniBase.UData.ComboMajorAdd(cboPayCd.Name, "H0005");
             uniBase.UData.ComboMajorAdd(cboWkType.Name, "H0047");
-            uniBase.UData.ComboCustomAdd(cboBizAreaCd.Name, " B_BIZ_AREA.BIZ_AREA_CD CODE, B_BIZ_AREA.BIZ_AREA_NM NAME ", string.Format("B_BIZ_AREA INNER JOIN dbo.ufn_AuthBizAreaCD_byUsrID('{0}') AUTH ON B_BIZ_AREA.BIZ_AREA_CD = AUTH.BIZ_AREA_CD", CommonVariable.gUsrID), "1=1");
-            uniBase.UData.ComboCustomAdd("cboEmpWkType", "DISTINCT CODE = WK_TYPE, NAME = MINOR_NM", "B_MINOR A JOIN HCA030T B ON A.MAJOR_CD = 'H0047' AND A.MINOR_CD = B.WK_TYPE", "1=1");
+            uniBase.UData.ComboCustomAdd(cboBizAreaCd.Name, "A.BIZ_AREA_CD CODE, A.BIZ_AREA_NM NAME", string.Format("B_BIZ_AREA A JOIN dbo.ufn_AuthBizAreaCD_byUsrID('{0}') AUTH ON A.BIZ_AREA_CD = AUTH.BIZ_AREA_CD", CommonVariable.gUsrID), "1=1");
+            //uniBase.UData.ComboCustomAdd("cboEmpWkType", "DISTINCT CODE = WK_TYPE, NAME = MINOR_NM", "B_MINOR A JOIN HCA030T B ON A.MAJOR_CD = 'H0047' AND A.MINOR_CD = B.WK_TYPE", "1=1");
         }
-
-        #endregion
-
-        #region ■ 2.6 Define user defined numeric info
 
         public void LoadCustomInfTB19029()
         {
-            #region User Define Numeric Format Data Setting  ☆
-
             //base.viewTB19029.ggUserDefined6.DecPoint = 0;
             //base.viewTB19029.ggUserDefined6.Integeral = 15;
-
-            #endregion
         }
-
-        #endregion
-
-        #endregion
-
-        #region ▶ 3. Grid method part
-
-        #region ■ 3.1 Initialize Grid (InitSpreadSheet)
 
         private void InitSpreadSheet()
         {
-            #region ■■ 3.1.1 Pre-setting grid information
-
             DsList.E_H4005M1_KODataTable eH4005M1KO = cqtdsList.E_H4005M1_KO;
 
-            uniGrid1.SSSetEdit(eH4005M1KO.EMP_NOColumn.ColumnName, "Employee ID", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.TEXT_01Column.ColumnName, "Department", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.TEXT_01Column.ColumnName, "Department", 100, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4005M1KO.TEXT_02Column.ColumnName, "Name", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4005M1KO.TYPEColumn.ColumnName, "Type", 72, enumDef.FieldType.Default, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.EMP_NOColumn.ColumnName, "Employee ID", 80, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4005M1KO.TYPEColumn.ColumnName, "Type", 80, enumDef.FieldType.Default, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
             for (var i = 1; i <= 31; i++)
             {
                 string sColumnKey = eH4005M1KO.Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].ColumnName;
-                //uniGrid1.SSSetEdit(sColumnKey, string.Format("Data {0}", i), 40, enumDef.FieldType.Default, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-                uniGrid1.SSSetCombo(sColumnKey, string.Format("Data {0}", i), 40, viewDataSet.Tables["cboEmpWkType"], enumDef.FieldType.Default, enumDef.HAlign.Center);
+                uniGrid1.SSSetEdit(sColumnKey, string.Format("Data {0}", i), 40, enumDef.FieldType.Default, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             }
 
-            #endregion
-
-            #region ■■ 3.1.2 Formatting grid information
-
             uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.No);
-            uniGrid1.DisplayLayout.Override.HeaderClickAction = HeaderClickAction.Select;
-
-            #endregion
-
-            #region ■■ 3.1.3 Setting etc grid
+            uniGrid1.DisplayLayout.Override.HeaderClickAction = HeaderClickAction.SortSingle;
 
             for (var i = 1; i <= 31; i++)
             {
@@ -187,133 +109,43 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             }
 
             string[] strCols = { "EMP_NO", "TEXT_01", "TEXT_02" };
-            uniGrid1.SetCellHierarchyMerge(strCols, enumDef.VAlign.Middle);
+            //uniGrid1.SetCellHierarchyMerge(strCols, enumDef.VAlign.Middle);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
-
-            #endregion
-        }
-        #endregion
-
-        #region ■ 3.2 InitData
-
-        private void InitData()
-        {
-            // TO-DO: 컨트롤을 초기화(또는 초기값)할때 할일 
-            // SetDefaultVal과의 차이점은 전자는 Form_Load 시점에 콘트롤에 초기값을 세팅하는것이고
-            // 후자는 특정 시점(조회후 또는 행추가후 등 특정이벤트)에서 초기값을 셋팅한다.
         }
 
-        #endregion
+        private void InitData() { }
 
-        #region ■ 3.3 SetSpreadColor
+        private void SetSpreadColor(int pvStartRow, int pvEndRow) { }
 
-        private void SetSpreadColor(int pvStartRow, int pvEndRow)
-        {
-            // TO-DO: InsertRow후 그리드 컬러 변경
-            //uniGrid1.SSSetProtected(gridCol.LastNum, pvStartRow, pvEndRow);
-        }
-        #endregion
-
-        #region ■ 3.4 InitControlBinding
         protected override void InitControlBinding()
         {
-            // Grid binding with global dataset variable.
             InitSpreadSheet();
             uniGrid1.uniGridSetDataBinding(cqtdsList.E_H4005M1_KO);
         }
-        #endregion
-
-        #endregion
-
-        #region ▶ 4. Toolbar method part
-
-        #region ■ 4.1 Common Fnction group
-
-        #region ■■ 4.1.1 OnFncQuery(old:FncQuery)
 
         protected override bool OnFncQuery() => DBQuery();
 
-        #endregion
-
-        #region ■■ 4.1.2 OnFncSave(old:FncSave)
-
         protected override bool OnFncSave() => DBSave();
-
-        #endregion
-
-        #endregion
-
-        #region ■ 4.2 Single Fnction group
-
-        #region ■■ 4.2.1 OnFncNew(old:FncNew)
 
         protected override bool OnFncNew() => true;
 
-        #endregion
-
-        #region ■■ 4.2.2 OnFncDelete(old:FncDelete)
-
         protected override bool OnFncDelete() => true;
-
-        #endregion
-
-        #region ■■ 4.2.3 OnFncCopy(old:FncCopy)
 
         protected override bool OnFncCopy() => true;
 
-        #endregion
-
-        #region ■■ 4.2.4 OnFncFirst(No implementation)
-
-        #endregion
-
-        #region ■■ 4.2.5 OnFncPrev(old:FncPrev)
-
         protected override bool OnFncPrev() => true;
-
-        #endregion
-
-        #region ■■ 4.2.6 OnFncNext(old:FncNext)
 
         protected override bool OnFncNext() => true;
 
-        #endregion
-
-        #region ■■ 4.2.7 OnFncLast(No implementation)
-
-        #endregion
-
-        #endregion
-
-        #region ■ 4.3 Grid Fnction group
-
-        #region ■■ 4.3.1 OnFncInsertRow(old:FncInsertRow)
         protected override bool OnFncInsertRow() => true;
 
-        #endregion
-
-        #region ■■ 4.3.2 OnFncDeleteRow(old:FncDeleteRow)
         protected override bool OnFncDeleteRow() => true;
 
-        #endregion
-
-        #region ■■ 4.3.3 OnFncCancel(old:FncCancel)
         protected override bool OnFncCancel() => true;
 
-        #endregion
-
-        #region ■■ 4.3.4 OnFncCopyRow(old:FncCopy)
         protected override bool OnFncCopyRow() => true;
-
-        #endregion
-
-        #endregion
-
-        #region ■ 4.4 Db function group
-
-        #region ■■ 4.4.1 DBQuery(Common)
 
         private bool DBQuery()
         {
@@ -356,57 +188,25 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             return true;
         }
 
-        #endregion
-
-        #region ■■ 4.4.2 DBDelete(Single)
-
         private bool DBDelete() => true;
-
-        #endregion
-
-        #region ■■ 4.4.3 DBSave(Common)
 
         private bool DBSave()
         {
-            //TO-DO : code business oriented logic
             uniGrid1.UpdateData();
-
-            //wsMyBizFL.TypedDataSet isettdsTypedDataSet = new wsMyBizFL.TypedDataSet();
 
             try
             {
-                //wsMyBizFL.TypedDataSet.IESaveDTDataTable igettdtTypedDataSet =
-                //    (wsMyBizFL.TypedDataSet.IESaveDTDataTable)this.cstdsTypedDataSet.IESaveDT.GetChanges();
 
-                //using (wsMyBizFL.Service iwsMyBizFL = (wsMyBizFL.Service)uniBase.UConfig.SetWebServiceProxyEnv(new wsMyBizFL.Service()))
-                //{
-                //    isettdsTypedDataSet.IESaveDT.Merge(igettdtTypedDataSet, false, MissingSchemaAction.Ignore);
-                //    iwsMyBizFL.SaveWebMethod(CommonVariable.gStrGlobalCollection, isettdsTypedDataSet);
-                //}
             }
             catch (Exception ex)
             {
                 if (ExceptionControler.AutoProcessException(ex)) throw;
+
                 return false;
-            }
-            finally
-            {
-                //if (isettdsTypedDataSet != null) isettdsTypedDataSet.Dispose();
             }
 
             return true;
-
         }
-
-        #endregion
-
-        #endregion
-
-        #endregion
-
-        #region ▶ 5. Event method part
-
-        #region ■ 5.1 Single control event implementation group
 
         private void popEmpNo_OnExitEditCode(object sender, EventArgs e)
         {
@@ -426,101 +226,27 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             }
         }
 
-        #endregion
+        private void uniGrid1_ClickCellButton(object sender, CellEventArgs e) { }
 
-        #region ■ 5.2 Grid   control event implementation group
+        private void uniGrid1_BeforeExitEditMode(object sender, Infragistics.Win.UltraWinGrid.BeforeExitEditModeEventArgs e) { }
 
-        #region ■■ 5.2.1 ButtonClicked >>> ClickCellButton
-        private void uniGrid1_ClickCellButton(object sender, CellEventArgs e)
-        {
+        private void uniGrid1_AfterExitEditMode(object sender, EventArgs e) { }
 
-        }
-        #endregion ■■ ButtonClicked >>> ClickCellButton
+        private void uniGrid1_AfterSelectChange(object sender, AfterSelectChangeEventArgs e) { }
 
-        #region ■■ 5.2.2 Change >>> CellChange
-        private void uniGrid1_BeforeExitEditMode(object sender, Infragistics.Win.UltraWinGrid.BeforeExitEditModeEventArgs e)
-        {
+        private void uniGrid1_AfterCellActivate(object sender, EventArgs e) { }
 
-        }
+        private void uniGrid1_AfterRowActivate(object sender, EventArgs e) { }
 
-        private void uniGrid1_AfterExitEditMode(object sender, EventArgs e)
-        {
+        private void uniGrid1_CellListSelect(object sender, CellEventArgs e) { }
 
-        }
-        #endregion ■■ Change >>> CellChange
+        private void uniGrid1_ClickCell(object sender, ClickCellEventArgs e) { }
 
-        #region ■■ 5.2.3 Click >>> AfterCellActivate | AfterRowActivate | AfterSelectChange
-        private void uniGrid1_AfterSelectChange(object sender, AfterSelectChangeEventArgs e)
-        {
+        private void uniGrid1_DoubleClickCell(object sender, DoubleClickCellEventArgs e) { }
 
-        }
+        private void uniGrid1_MouseDown(object sender, MouseEventArgs e) { }
 
-        private void uniGrid1_AfterCellActivate(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uniGrid1_AfterRowActivate(object sender, EventArgs e)
-        {
-
-        }
-        #endregion ■■ Click >>> AfterSelectChange
-
-        #region ■■ 5.2.4 ComboSelChange >>> CellListSelect
-
-        private void uniGrid1_CellListSelect(object sender, CellEventArgs e)
-        {
-
-        }
-        #endregion ■■ ComboSelChange >>> CellListSelect
-
-        #region ■■ 5.2.5.1 Click >>> ClickCell
-
-        private void uniGrid1_ClickCell(object sender, ClickCellEventArgs e)
-        {
-
-        }
-        #endregion ■■ Click >>> ClickCell
-
-        #region ■■ 5.2.5.2 DblClick >>> DoubleClickCell
-
-        private void uniGrid1_DoubleClickCell(object sender, DoubleClickCellEventArgs e)
-        {
-
-        }
-        #endregion ■■ DblClick >>> DoubleClickCell
-
-        #region ■■ 5.2.6 MouseDown >>> MouseDown
-
-        private void uniGrid1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-        #endregion ■■ MouseDown >>> MouseDown
-
-        #region ■■ 5.2.7 ScriptLeaveCell >>> BeforeCellDeactivate
-
-        private void uniGrid1_BeforeCellDeactivate(object sender, CancelEventArgs e)
-        {
-
-        }
-        #endregion ■■ ScriptLeaveCell >>> BeforeCellDeactivate
-
-        #endregion
-
-        #region ■ 5.3 TAB    control event implementation group
-
-        #endregion
-
-        #endregion
-
-        #region ▶ 6. Popup method part
-
-        #region ■ 6.1 Common popup implementation group
-
-        #endregion
-
-        #region ■ 6.2 User-defined popup implementation group
+        private void uniGrid1_BeforeCellDeactivate(object sender, CancelEventArgs e) { }
 
         private void popDeptCd_BeforePopupOpen(object sender, AppFramework.UI.Controls.Popup.BeforePopupOpenEventArgs e)
         {
@@ -601,14 +327,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
             }
         }
 
-        #endregion
-
-        #endregion
-
-        #region ▶ 7. User-defined method part
-
-        #region ■ 7.1 User-defined function group
-
         private void SetDayOfWeek()
         {
             uniGrid1.SSSetColHidden("DATA_29", false);
@@ -650,7 +368,6 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
                         uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         break;
                 }
-
                 uniGrid1.setColumnHeader(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
             }
 
@@ -677,10 +394,5 @@ namespace Bizentro.App.UI.HR.H4005M1_CKO055
                     break;
             }
         }
-
-        #endregion
-
-        #endregion
-
     }
 }
