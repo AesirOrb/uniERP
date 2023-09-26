@@ -2,8 +2,8 @@
 
 using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 using Microsoft.Practices.CompositeUI.SmartParts;
@@ -27,27 +27,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         #region ▶ 1. Declaration part
 
         #region ■ 1.1 Program information
-        /// <TemplateVersion>0.0.1.0</TemplateVersion>
-        /// <NameSpace>①namespace</NameSpace>
-        /// <Module>②module name</Module>
-        /// <Class>③class name</Class>
-        /// <Desc>④
-        ///   This part describe the summary information about class 
-        /// </Desc>
-        /// <History>⑤
-        ///   <FirstCreated>
-        ///     <history name="creator" Date="created date">Make …</history>
-        ///   </FirstCreated>
-        ///   <Lastmodified>
-        ///     <history name="modifier"  Date="modified date"> contents </history>
-        ///     <history name="modifier"  Date="modified date"> contents </history>
-        ///     <history name="modifier"  Date="modified date"> contents </history>
-        ///   </Lastmodified>
-        /// </History>
-        /// <Remarks>⑥
-        ///   <remark name="modifier"  Date="modified date">… </remark>
-        ///   <remark name="modifier"  Date="modified date">… </remark>
-        /// </Remarks>
 
         #endregion
 
@@ -120,6 +99,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             uniDateTime date = dtYearMonth;
             DateTime dBServerDateTime = uniBase.UDate.GetDBServerDateTime();
             date.Value = dBServerDateTime.Date;
+            dtYearMonth.uniValue = dBServerDateTime;
             cboPayCd.SelectedIndex = 0;
             uniOpenPopup _uniOpenPopup = popDeptCd;
             uniOpenPopup _uniOpenPopup1 = popDeptCd;
@@ -200,7 +180,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             #region ■■ 3.1.2 Formatting grid information
 
             uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.Yes);
-            uniGrid1.DisplayLayout.Override.HeaderClickAction = HeaderClickAction.Select;
+            uniGrid1.DisplayLayout.Override.HeaderClickAction = HeaderClickAction.SortSingle;
 
             #endregion
 
@@ -276,21 +256,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         #region ■■ 4.1.1 OnFncQuery(old:FncQuery)
 
-        protected override bool OnFncQuery()
-        {
-            //TO-DO : code business oriented logic
-            return DBQuery();
-        }
+        protected override bool OnFncQuery() => DBQuery();
 
         #endregion
 
         #region ■■ 4.1.2 OnFncSave(old:FncSave)
 
-        protected override bool OnFncSave()
-        {
-            //TO-DO : code business oriented logic
-            return DBSave();
-        }
+        protected override bool OnFncSave() => DBSave();
 
         #endregion
 
@@ -300,31 +272,19 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         #region ■■ 4.2.1 OnFncNew(old:FncNew)
 
-        protected override bool OnFncNew()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+        protected override bool OnFncNew() => true;
 
         #endregion
 
         #region ■■ 4.2.2 OnFncDelete(old:FncDelete)
 
-        protected override bool OnFncDelete()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+        protected override bool OnFncDelete() => true;
 
         #endregion
 
         #region ■■ 4.2.3 OnFncCopy(old:FncCopy)
 
-        protected override bool OnFncCopy()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+        protected override bool OnFncCopy() => true;
 
         #endregion
 
@@ -334,21 +294,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         #region ■■ 4.2.5 OnFncPrev(old:FncPrev)
 
-        protected override bool OnFncPrev()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+        protected override bool OnFncPrev() => true;
 
         #endregion
 
         #region ■■ 4.2.6 OnFncNext(old:FncNext)
 
-        protected override bool OnFncNext()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+        protected override bool OnFncNext() => true;
 
         #endregion
 
@@ -361,39 +313,27 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         #region ■ 4.3 Grid Fnction group
 
         #region ■■ 4.3.1 OnFncInsertRow(old:FncInsertRow)
-        protected override bool OnFncInsertRow()
-        {
-            //TO-DO : code business oriented logic
-            //if (this.uniGrid1.ActiveRow != null)
-            //{
-            //    this.uniGrid1.ActiveRow.Cells["DATE_COL"].Value = uniBase.UDate.GetDBServerDateTime();
-            //}
-            return true;
-        }
+
+        protected override bool OnFncInsertRow() => true;
+
         #endregion
 
         #region ■■ 4.3.2 OnFncDeleteRow(old:FncDeleteRow)
-        protected override bool OnFncDeleteRow()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+
+        protected override bool OnFncDeleteRow() => true;
+
         #endregion
 
         #region ■■ 4.3.3 OnFncCancel(old:FncCancel)
-        protected override bool OnFncCancel()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+
+        protected override bool OnFncCancel() => true;
+
         #endregion
 
         #region ■■ 4.3.4 OnFncCopyRow(old:FncCopy)
-        protected override bool OnFncCopyRow()
-        {
-            //TO-DO : code business oriented logic
-            return true;
-        }
+
+        protected override bool OnFncCopyRow() => true;
+
         #endregion
 
         #endregion
@@ -404,6 +344,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private bool DBQuery()
         {
+            GetAttendData();
             try
             {
                 AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055");
@@ -782,6 +723,48 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                     grid.SSSetColHidden("DATA_31", true);
                     break;
             }
+        }
+
+        public void GetAttendData()
+        {
+            var str1 = dtYearMonth.uniValue.AddMonths(-1).AddDays(15).ToString(CommonVariable.CDT_YYYYMMDD);
+            var str2 = dtYearMonth.uniValue.AddDays(14).ToString(CommonVariable.CDT_YYYYMMDD);
+            var pSelect = "A.EMP_NO, C.BUILDID, B.OCPT_TYPE, A.WK_TYPE, A.TAG_TYPE, A.TAG_DATE, A.TAG_TIME";
+            var pFrom = "H_ATTENDANCE_RAW_DATA (NOLOCK) A ";
+            pFrom += "JOIN HAA010T (NOLOCK) B ON A.EMP_NO = B.EMP_NO ";
+            pFrom += "JOIN HORG_MAS (NOLOCK) C ON B.DEPT_CD = C.DEPT ";
+            pFrom += "JOIN HORG_ABS (NOLOCK) D ON C.ORGID = D.ORGID AND D.CURRENTYN = 'Y' ";
+            var pWhere = "TAG_TYPE IN ('1', '2') AND ";
+            pWhere += string.Format("TAG_DATE BETWEEN '{0}' AND '{1}' ", str1, str2);
+            var sql = "SELECT BUILDID, A.* FROM HCA030T A JOIN HORG_MAS (NOLOCK) B ON A.DEPT_CD = B.DEPT JOIN HORG_ABS (NOLOCK) C ON B.ORGID = C.ORGID AND C.CURRENTYN = 'Y'";
+
+            DataSet AttendList = uniBase.UDataAccess.CommonQueryRs(pSelect, pFrom, pWhere);
+            DataSet OfficeHour = uniBase.UDataAccess.CommonQuerySQL(sql);
+
+            AttendList.Tables[0].Merge(SetWorkType(AttendList.Tables[0], OfficeHour.Tables[0]), false);
+        }
+
+        private DataTable SetWorkType(DataTable AttendList, DataTable OfficeHour)
+        {
+            for (var i = 0; i < AttendList.Rows.Count; i++)
+            {
+                if ((string)AttendList.Rows[i]["OCPT_TYPE"] == "10" || (string)AttendList.Rows[i]["OCPT_TYPE"] == "20")
+                {
+                    AttendList.Rows[i]["WK_TYPE"] = "0";
+                }
+                else if ((string)AttendList.Rows[i]["OCPT_TYPE"] == "40")
+                {
+                    for (var j = 0; j < OfficeHour.Rows.Count; j++)
+                    {
+                        if((int)OfficeHour.Rows[j]["BUILDID"] < 0)
+                        {
+                            
+                        }
+                    }
+                }
+            }
+
+            return AttendList;
         }
 
         #endregion

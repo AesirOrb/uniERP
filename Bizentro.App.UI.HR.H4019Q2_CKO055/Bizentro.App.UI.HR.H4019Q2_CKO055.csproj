@@ -97,4 +97,8 @@
       <DependentUpon>DsList.xsd</DependentUpon>
     </None>
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec
+      Command="copy /y $(TargetPath) \\130.1.81.182\BizWebSmart\Default\UI\HR" />
+  </Target>
 </Project>

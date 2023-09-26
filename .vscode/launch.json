@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
+            "name": "Debug",
             "type": "clr",
             "request": "launch",
             "program": "C:\\Users\\Public\\Documents\\Bizentro\\SmartClientViewer\\130.1.81.182\\Bizentro.App.MAIN.Shell.exe",
+            "preLaunchTask": "dotnet: build",
             "requireExactSource": false
         }
     ]
