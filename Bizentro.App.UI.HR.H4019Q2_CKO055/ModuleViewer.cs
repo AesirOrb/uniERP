@@ -746,21 +746,22 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private DataTable SetWorkType(DataTable AttendList, DataTable OfficeHour)
         {
-            for (var i = 0; i < AttendList.Rows.Count; i++)
+            foreach (DataRow oitem in AttendList.Rows)
             {
-                if ((string)AttendList.Rows[i]["OCPT_TYPE"] == "10" || (string)AttendList.Rows[i]["OCPT_TYPE"] == "20")
+                switch (oitem["OCPT_TYPE"].ToString())
                 {
-                    AttendList.Rows[i]["WK_TYPE"] = "0";
-                }
-                else if ((string)AttendList.Rows[i]["OCPT_TYPE"] == "40")
-                {
-                    for (var j = 0; j < OfficeHour.Rows.Count; j++)
-                    {
-                        if((int)OfficeHour.Rows[j]["BUILDID"] < 0)
-                        {
-                            
-                        }
-                    }
+                    case "10":
+                    case "20":
+                    case "30":
+                    case "50":
+                        oitem["WK_TYPE"] = "0";
+                        break;
+
+                    case "40":
+                        foreach (DataRow oitem2 in OfficeHour.Rows)
+                            if (oitem["BUILDID"].ToString().Contains(oitem2["BUILDID"].ToString()))
+                                oitem["WK_TYPE"] = oitem2["WK_TYPE"];
+                        break;
                 }
             }
 
