@@ -15,6 +15,8 @@ using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 #endregion
 
@@ -344,7 +346,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private bool DBQuery()
         {
-            GetAttendData();
             try
             {
                 AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055");
@@ -723,49 +724,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                     grid.SSSetColHidden("DATA_31", true);
                     break;
             }
-        }
-
-        public void GetAttendData()
-        {
-            var str1 = dtYearMonth.uniValue.AddMonths(-1).AddDays(15).ToString(CommonVariable.CDT_YYYYMMDD);
-            var str2 = dtYearMonth.uniValue.AddDays(14).ToString(CommonVariable.CDT_YYYYMMDD);
-            var pSelect = "A.EMP_NO, C.BUILDID, B.OCPT_TYPE, A.WK_TYPE, A.TAG_TYPE, A.TAG_DATE, A.TAG_TIME";
-            var pFrom = "H_ATTENDANCE_RAW_DATA (NOLOCK) A ";
-            pFrom += "JOIN HAA010T (NOLOCK) B ON A.EMP_NO = B.EMP_NO ";
-            pFrom += "JOIN HORG_MAS (NOLOCK) C ON B.DEPT_CD = C.DEPT ";
-            pFrom += "JOIN HORG_ABS (NOLOCK) D ON C.ORGID = D.ORGID AND D.CURRENTYN = 'Y' ";
-            var pWhere = "TAG_TYPE IN ('1', '2') AND ";
-            pWhere += string.Format("TAG_DATE BETWEEN '{0}' AND '{1}' ", str1, str2);
-            var sql = "SELECT BUILDID, A.* FROM HCA030T A JOIN HORG_MAS (NOLOCK) B ON A.DEPT_CD = B.DEPT JOIN HORG_ABS (NOLOCK) C ON B.ORGID = C.ORGID AND C.CURRENTYN = 'Y'";
-
-            DataSet AttendList = uniBase.UDataAccess.CommonQueryRs(pSelect, pFrom, pWhere);
-            DataSet OfficeHour = uniBase.UDataAccess.CommonQuerySQL(sql);
-
-            AttendList.Tables[0].Merge(SetWorkType(AttendList.Tables[0], OfficeHour.Tables[0]), false);
-        }
-
-        private DataTable SetWorkType(DataTable AttendList, DataTable OfficeHour)
-        {
-            foreach (DataRow oitem in AttendList.Rows)
-            {
-                switch (oitem["OCPT_TYPE"].ToString())
-                {
-                    case "10":
-                    case "20":
-                    case "30":
-                    case "50":
-                        oitem["WK_TYPE"] = "0";
-                        break;
-
-                    case "40":
-                        foreach (DataRow oitem2 in OfficeHour.Rows)
-                            if (oitem["BUILDID"].ToString().Contains(oitem2["BUILDID"].ToString()))
-                                oitem["WK_TYPE"] = oitem2["WK_TYPE"];
-                        break;
-                }
-            }
-
-            return AttendList;
         }
 
         #endregion
