@@ -17,6 +17,10 @@ using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Infragistics.Win.FormattedLinkLabel;
+using System.Linq;
+using System.Diagnostics;
+using Bizentro.AppFramework.UI.InfragisticsCAB.WinForms.Commands;
 
 #endregion
 
@@ -173,7 +177,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             for (var i = 1; i <= 31; i++)
             {
-                string sColumnKey = eH4019Q2KO.Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].ColumnName;
+                string sColumnKey = eH4019Q2KO.Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].ColumnName;
                 uniGrid1.SSSetEdit(sColumnKey, string.Format("Data {0}", i), 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             }
 
@@ -201,19 +205,23 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             for (int i = 1, j = 16; i <= 15; i++, j++)
             {
                 uniGrid1.SetMerge(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), j + 4, 0, 1, 1);
-                uniGrid1.SetMerge(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), j + 4, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("D{0}", i.ToString().PadLeft(2, '0')), j + 4, 1, 1, 1);
             }
 
             for (int i = 16, j = 0; i <= 31; i++, j++)
             {
                 uniGrid1.SetMerge(string.Format("grpDate{0}", i.ToString().PadLeft(2, '0')), j + 4, 0, 1, 1);
-                uniGrid1.SetMerge(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), j + 4, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("D{0}", i.ToString().PadLeft(2, '0')), j + 4, 1, 1, 1);
             }
 
             string[] strCols = { "EMP_NO", "TEXT_01", "TEXT_02" };
             uniGrid1.SetCellHierarchyMerge(strCols, enumDef.VAlign.Middle);
             uniGrid1.SetMerge(eH4019Q2KO.TOTALColumn.ColumnName, 35, 0, 1, 2);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
+            uniGrid1.DisplayLayout.Bands[0].Columns["EMP_NO"].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns["TEXT_01"].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns["TEXT_02"].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns["TYPE"].AllowRowFiltering = DefaultableBoolean.True;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
 
@@ -371,8 +379,63 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
                 uniGrid1.BeginUpdate();
 
-                for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 240, 240, 240);
+                foreach (UltraGridRow Row in uniGrid1.Rows)
+                {
+                    string _Type = Row.Cells["TYPE"].Value.ToString();
+
+                    switch (_Type)
+                    {
+                        case "연장시간":
+                            Row.Appearance.BackColor = Color.FromArgb(255, 253, 233, 217);
+                            break;
+
+                        case "야간시간":
+                            Row.Appearance.BackColor = Color.FromArgb(255, 242, 220, 219);
+                            break;
+
+                        case "비고":
+                            Row.Appearance.BackColor = Color.FromArgb(255, 242, 242, 242);
+                            break;
+
+                        default:
+                            Row.Appearance.BackColor = Color.White;
+                            break;
+                    }
+
+                    switch (_Type)
+                    {
+                        case "근로시간":
+                        case "연장시간":
+                        case "야간시간":
+                            TimeSpan total = TimeSpan.Zero;
+
+                            for (var i = 5; i < 36; i++)
+                            {
+                                string input = Row.Cells[i].Value.ToString() == "" || Row.Cells[i].Value.ToString() == null ? "00:00" : Row.Cells[i].Value.ToString();
+                                TimeSpan TimeSpan = new TimeSpan(int.Parse(input.Split(':')[0]), int.Parse(input.Split(':')[1]), 0);
+                                total = total.Add(TimeSpan);
+                            }
+
+                            string value = total.TotalHours.ToString("0").PadLeft(2, '0') + ':' + total.Minutes.ToString().PadLeft(2, '0');
+
+                            Row.Cells["TOTAL"].SetValue(value, false);
+                            break;
+                    }
+
+                    if (_Type == "근로시간")
+                    {
+                        Row.Appearance.BackColor = Color.FromArgb(255, 255, 255, 204);
+
+                        foreach (UltraGridCell Cell in Row.Cells)
+                        {
+                            if (Cell.Column.Index > 3 && Cell.Column.Index < 36 && Cell.Value != null && Cell.Value.ToString() != "08:00")
+                            {
+                                Cell.Appearance.FontData.Bold = DefaultableBoolean.True;
+                                Cell.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
+                            }
+                        }
+                    }
+                }
 
                 uniGrid1.EndUpdate();
 
@@ -659,14 +722,14 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private void SetDayOfWeek(uniGrid grid)
         {
-            grid.SSSetColHidden("DATA_29", false);
-            grid.SSSetColHidden("DATA_30", false);
-            grid.SSSetColHidden("DATA_31", false);
+            grid.SSSetColHidden("D29", false);
+            grid.SSSetColHidden("D30", false);
+            grid.SSSetColHidden("D31", false);
 
             for (int i = 1; i <= 31; i++)
             {
                 grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
-                grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                grid.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 0);
                 DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.AddMonths(i >= 16 ? -1 : 0).ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
                 string sDayOfWeek = string.Empty;
 
@@ -675,7 +738,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                     case DayOfWeek.Sunday:
                         sDayOfWeek = "일";
                         grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
-                        grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
+                        grid.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 255, 0, 0);
                         break;
                     case DayOfWeek.Monday:
                         sDayOfWeek = "월";
@@ -695,11 +758,11 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                     case DayOfWeek.Saturday:
                         sDayOfWeek = "토";
                         grid.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
-                        grid.DisplayLayout.Bands[0].Columns[string.Format("DATA_{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
+                        grid.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.FromArgb(255, 0, 0, 255);
                         break;
                 }
 
-                grid.setColumnHeader(string.Format("DATA_{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
+                grid.setColumnHeader(string.Format("D{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
             }
 
             switch (dtYearMonth.uniValue.AddMonths(-1).Month)
@@ -707,21 +770,21 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 case 2:
                     if (!DateTime.IsLeapYear(dtYearMonth.uniValue.Year))
                     {
-                        grid.SSSetColHidden("DATA_29", true);
-                        grid.SSSetColHidden("DATA_30", true);
-                        grid.SSSetColHidden("DATA_31", true);
+                        grid.SSSetColHidden("D29", true);
+                        grid.SSSetColHidden("D30", true);
+                        grid.SSSetColHidden("D31", true);
                     }
                     else
                     {
-                        grid.SSSetColHidden("DATA_30", true);
-                        grid.SSSetColHidden("DATA_31", true);
+                        grid.SSSetColHidden("D30", true);
+                        grid.SSSetColHidden("D31", true);
                     }
                     break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    grid.SSSetColHidden("DATA_31", true);
+                    grid.SSSetColHidden("D31", true);
                     break;
             }
         }

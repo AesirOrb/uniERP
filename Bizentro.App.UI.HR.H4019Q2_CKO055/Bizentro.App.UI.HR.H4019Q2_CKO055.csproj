@@ -82,23 +82,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DsList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsList.Designer.cs</LastGenOutput>
+    </None>
     <None Include="DsList.Designer.cs">
       <DependentUpon>DsList.xsd</DependentUpon>
     </None>
     <None Include="DsList.xsc">
       <DependentUpon>DsList.xsd</DependentUpon>
     </None>
-    <None Include="DsList.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsList.Designer.cs</LastGenOutput>
-    </None>
     <None Include="DsList.xss">
       <DependentUpon>DsList.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec
-      Command="copy /y $(TargetPath) \\130.1.81.182\BizWebSmart\Default\UI\HR" />
+    <Exec Command="copy /y $(TargetPath) \\130.1.81.182\BizWebSmart\Default\UI\HR" />
   </Target>
 </Project>
