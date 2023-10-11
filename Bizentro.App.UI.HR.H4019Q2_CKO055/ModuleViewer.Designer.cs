@@ -59,6 +59,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+
             this.uniTBL_OuterMost = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.uniTBL_MainData = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.uniGrid1 = new Bizentro.AppFramework.UI.Controls.uniGrid(this.components);
@@ -70,6 +71,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblWkType = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
             this.lblBizAreaCd = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
             this.dtYearMonth = new Bizentro.AppFramework.UI.Controls.uniDateTime(this.components);
+            this.dtStartDate = new Bizentro.AppFramework.UI.Controls.uniDateTime(this.components);
+            this.dtEndDate = new Bizentro.AppFramework.UI.Controls.uniDateTime(this.components);
             this.cboPayCd = new Bizentro.AppFramework.UI.Controls.uniCombo(this.components);
             this.uniTableLayoutPanel1 = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.popDeptCd = new Bizentro.AppFramework.UI.Controls.uniOpenPopup();
@@ -83,9 +86,12 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.chkQuery = new Bizentro.AppFramework.UI.Controls.uniCheckBox(this.components);
             this.uniTBL_OuterMost.SuspendLayout();
             this.uniTBL_MainData.SuspendLayout();
+
             ((System.ComponentModel.ISupportInitialize)this.uniGrid1).BeginInit();
             this.uniTBL_MainCondition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)this.dtYearMonth).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this.dtStartDate).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this.dtEndDate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)this.cboPayCd).BeginInit();
             this.uniTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)this.txtInternalCd).BeginInit();
@@ -93,8 +99,10 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             ((System.ComponentModel.ISupportInitialize)this.cboBizAreaCd).BeginInit();
             this.uniTableLayoutPanel2.SuspendLayout();
             base.SuspendLayout();
+
             this.uniLabel_Path.LabelType = Bizentro.AppFramework.UI.Variables.enumDef.LabelType.PathInfo;
             this.uniLabel_Path.Size = new System.Drawing.Size(500, 14);
+
             this.uniTBL_OuterMost.AutoFit = false;
             this.uniTBL_OuterMost.AutoFitColumnCount = 4;
             this.uniTBL_OuterMost.AutoFitRowCount = 4;
@@ -165,6 +173,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTBL_MainData.TabIndex = 0;
             this.uniTBL_MainData.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTBL_MainData.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
+
             this.uniGrid1.AddEmptyRow = false;
             this.uniGrid1.DirectPaste = false;
             appearance.BackColor = System.Drawing.SystemColors.Window;
@@ -239,6 +248,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniGrid1.TabIndex = 0;
             this.uniGrid1.Text = "uniGrid1";
             this.uniGrid1.UseDynamicFormat = false;
+
             this.uniTBL_MainCondition.AutoFit = false;
             this.uniTBL_MainCondition.AutoFitColumnCount = 4;
             this.uniTBL_MainCondition.AutoFitRowCount = 4;
@@ -255,6 +265,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTBL_MainCondition.Controls.Add(this.lblWkType, 0, 2);
             this.uniTBL_MainCondition.Controls.Add(this.lblBizAreaCd, 2, 2);
             this.uniTBL_MainCondition.Controls.Add(this.dtYearMonth, 1, 0);
+            //this.uniTBL_MainCondition.Controls.Add(this.dtStartDate, 1, 0);
+            //this.uniTBL_MainCondition.Controls.Add(this.dtEndDate, 1, 0);
             this.uniTBL_MainCondition.Controls.Add(this.cboPayCd, 3, 0);
             this.uniTBL_MainCondition.Controls.Add(this.uniTableLayoutPanel1, 1, 1);
             this.uniTBL_MainCondition.Controls.Add(this.popEmpNo, 3, 1);
@@ -287,6 +299,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTBL_MainCondition.TabIndex = 1;
             this.uniTBL_MainCondition.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTBL_MainCondition.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
+
             appearance3.TextHAlignAsString = "Left";
             appearance3.TextVAlignAsString = "Middle";
             this.lblYearMonth.Appearance = appearance3;
@@ -300,6 +313,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblYearMonth.TabIndex = 0;
             this.lblYearMonth.Text = "Year & Month";
             this.lblYearMonth.UseMnemonic = false;
+
             appearance4.TextHAlignAsString = "Left";
             appearance4.TextVAlignAsString = "Middle";
             this.lblPayCd.Appearance = appearance4;
@@ -313,6 +327,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblPayCd.TabIndex = 2;
             this.lblPayCd.Text = "Payroll ID";
             this.lblPayCd.UseMnemonic = false;
+
             appearance5.TextHAlignAsString = "Left";
             appearance5.TextVAlignAsString = "Middle";
             this.lblDeptCd.Appearance = appearance5;
@@ -326,6 +341,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblDeptCd.TabIndex = 4;
             this.lblDeptCd.Text = "Department";
             this.lblDeptCd.UseMnemonic = false;
+
             appearance6.TextHAlignAsString = "Left";
             appearance6.TextVAlignAsString = "Middle";
             this.lblEmpNo.Appearance = appearance6;
@@ -339,6 +355,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblEmpNo.TabIndex = 6;
             this.lblEmpNo.Text = "Employee ID";
             this.lblEmpNo.UseMnemonic = false;
+
             appearance7.TextHAlignAsString = "Left";
             appearance7.TextVAlignAsString = "Middle";
             this.lblWkType.Appearance = appearance7;
@@ -352,6 +369,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblWkType.TabIndex = 8;
             this.lblWkType.Text = "Work Group";
             this.lblWkType.UseMnemonic = false;
+
             appearance8.TextHAlignAsString = "Left";
             appearance8.TextVAlignAsString = "Middle";
             this.lblBizAreaCd.Appearance = appearance8;
@@ -365,6 +383,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.lblBizAreaCd.TabIndex = 10;
             this.lblBizAreaCd.Text = "Business Area";
             this.lblBizAreaCd.UseMnemonic = false;
+
             this.dtYearMonth.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             appearance9.TextHAlignAsString = "Center";
             this.dtYearMonth.Appearance = appearance9;
@@ -387,6 +406,53 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.dtYearMonth.uniALT = "Year & Month";
             this.dtYearMonth.uniValue = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
             this.dtYearMonth.Value = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+
+            this.dtStartDate.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            appearance9.TextHAlignAsString = "Center";
+            this.dtStartDate.Appearance = appearance9;
+            this.dtStartDate.DateTime = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+            this.dtStartDate.DateType = Bizentro.AppFramework.UI.Variables.enumDef.DateType.YYYY_MM;
+            this.dtStartDate.DropDownButtonDisplayStyle = Infragistics.Win.ButtonDisplayStyle.Never;
+            this.dtStartDate.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.NotNull;
+            this.dtStartDate.Location = new System.Drawing.Point(119, 7);
+            this.dtStartDate.LockedField = false;
+            this.dtStartDate.Margin = new System.Windows.Forms.Padding(0);
+            this.dtStartDate.MaxDate = new System.DateTime(9998, 1, 1, 0, 0, 0, 0);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.QueryIfEnterKeyPressed = true;
+            this.dtStartDate.RequiredField = false;
+            this.dtStartDate.Size = new System.Drawing.Size(85, 21);
+            this.dtStartDate.SpinButtonDisplayStyle = Infragistics.Win.ButtonDisplayStyle.Always;
+            this.dtStartDate.Style = Bizentro.AppFramework.UI.Controls.DateTime_Style.YYYYMM;
+            this.dtStartDate.StyleSetName = "Default";
+            this.dtStartDate.TabIndex = 1;
+            this.dtStartDate.uniALT = "Start Date";
+            this.dtStartDate.uniValue = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+            this.dtStartDate.Value = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+
+            this.dtEndDate.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            appearance9.TextHAlignAsString = "Center";
+            this.dtEndDate.Appearance = appearance9;
+            this.dtEndDate.DateTime = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+            this.dtEndDate.DateType = Bizentro.AppFramework.UI.Variables.enumDef.DateType.YYYY_MM;
+            this.dtEndDate.DropDownButtonDisplayStyle = Infragistics.Win.ButtonDisplayStyle.Never;
+            this.dtEndDate.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.NotNull;
+            this.dtEndDate.Location = new System.Drawing.Point(119, 7);
+            this.dtEndDate.LockedField = false;
+            this.dtEndDate.Margin = new System.Windows.Forms.Padding(0);
+            this.dtEndDate.MaxDate = new System.DateTime(9998, 1, 1, 0, 0, 0, 0);
+            this.dtEndDate.Name = "dtEndDate";
+            this.dtEndDate.QueryIfEnterKeyPressed = true;
+            this.dtEndDate.RequiredField = false;
+            this.dtEndDate.Size = new System.Drawing.Size(85, 21);
+            this.dtEndDate.SpinButtonDisplayStyle = Infragistics.Win.ButtonDisplayStyle.Always;
+            this.dtEndDate.Style = Bizentro.AppFramework.UI.Controls.DateTime_Style.YYYYMM;
+            this.dtEndDate.StyleSetName = "Default";
+            this.dtEndDate.TabIndex = 1;
+            this.dtEndDate.uniALT = "End Date";
+            this.dtEndDate.uniValue = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+            this.dtEndDate.Value = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+
             this.cboPayCd.AddEmptyRow = true;
             this.cboPayCd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.cboPayCd.ComboFrom = "";
@@ -407,6 +473,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.cboPayCd.StyleSetName = "Default";
             this.cboPayCd.TabIndex = 3;
             this.cboPayCd.uniALT = "Payroll ID";
+
             this.uniTableLayoutPanel1.AutoFit = false;
             this.uniTableLayoutPanel1.AutoFitColumnCount = 4;
             this.uniTableLayoutPanel1.AutoFitRowCount = 4;
@@ -439,6 +506,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTableLayoutPanel1.TabIndex = 5;
             this.uniTableLayoutPanel1.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTableLayoutPanel1.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
+
             this.popDeptCd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.popDeptCd.AutoPopupCodeParameter = null;
             this.popDeptCd.AutoPopupID = null;
@@ -472,9 +540,10 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.popDeptCd.uniCharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.popDeptCd.UseDynamicFormat = false;
             this.popDeptCd.ValueTextBoxName = null;
-            this.popDeptCd.BeforePopupOpen += new Bizentro.AppFramework.UI.Controls.Popup.BeforePopupOpenEventHandler(this.popDeptCd_BeforePopupOpen);
-            this.popDeptCd.OnExitEditCode += new Bizentro.AppFramework.UI.Controls.Popup.OnExitEditCodeEventHandler(this.popDeptCd_OnExitEditCode);
-            this.popDeptCd.AfterPopupClosed += new Bizentro.AppFramework.UI.Controls.Popup.AfterPopupCloseEventHandler(this.popDeptCd_AfterPopupClosed);
+            this.popDeptCd.BeforePopupOpen += new Bizentro.AppFramework.UI.Controls.Popup.BeforePopupOpenEventHandler(this.PopDeptCd_BeforePopupOpen);
+            this.popDeptCd.OnExitEditCode += new Bizentro.AppFramework.UI.Controls.Popup.OnExitEditCodeEventHandler(this.PopDeptCd_OnExitEditCode);
+            this.popDeptCd.AfterPopupClosed += new Bizentro.AppFramework.UI.Controls.Popup.AfterPopupCloseEventHandler(this.PopDeptCd_AfterPopupClosed);
+
             this.txtInternalCd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             appearance10.TextVAlignAsString = "Bottom";
             this.txtInternalCd.Appearance = appearance10;
@@ -494,6 +563,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.txtInternalCd.uniCharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtInternalCd.UseDynamicFormat = false;
             this.txtInternalCd.Visible = false;
+
             this.popEmpNo.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.popEmpNo.AutoPopupCodeParameter = null;
             this.popEmpNo.AutoPopupID = null;
@@ -527,9 +597,10 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.popEmpNo.uniCharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.popEmpNo.UseDynamicFormat = false;
             this.popEmpNo.ValueTextBoxName = null;
-            this.popEmpNo.BeforePopupOpen += new Bizentro.AppFramework.UI.Controls.Popup.BeforePopupOpenEventHandler(this.popEmpNo_BeforePopupOpen);
-            this.popEmpNo.OnExitEditCode += new Bizentro.AppFramework.UI.Controls.Popup.OnExitEditCodeEventHandler(this.popEmpNo_OnExitEditCode);
-            this.popEmpNo.AfterPopupClosed += new Bizentro.AppFramework.UI.Controls.Popup.AfterPopupCloseEventHandler(this.popEmpNo_AfterPopupClosed);
+            this.popEmpNo.BeforePopupOpen += new Bizentro.AppFramework.UI.Controls.Popup.BeforePopupOpenEventHandler(this.PopEmpNo_BeforePopupOpen);
+            this.popEmpNo.OnExitEditCode += new Bizentro.AppFramework.UI.Controls.Popup.OnExitEditCodeEventHandler(this.PopEmpNo_OnExitEditCode);
+            this.popEmpNo.AfterPopupClosed += new Bizentro.AppFramework.UI.Controls.Popup.AfterPopupCloseEventHandler(this.PopEmpNo_AfterPopupClosed);
+
             this.cboWkType.AddEmptyRow = true;
             this.cboWkType.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.cboWkType.ComboFrom = "";
@@ -550,6 +621,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.cboWkType.StyleSetName = "Default";
             this.cboWkType.TabIndex = 9;
             this.cboWkType.uniALT = "Work Group";
+
             this.cboBizAreaCd.AddEmptyRow = true;
             this.cboBizAreaCd.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             this.cboBizAreaCd.ComboFrom = "";
@@ -570,6 +642,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.cboBizAreaCd.StyleSetName = "Default";
             this.cboBizAreaCd.TabIndex = 11;
             this.cboBizAreaCd.uniALT = "Business Area";
+
             this.uniTBL_MainReference.AutoFit = false;
             this.uniTBL_MainReference.AutoFitColumnCount = 4;
             this.uniTBL_MainReference.AutoFitRowCount = 4;
@@ -601,6 +674,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTBL_MainReference.TabIndex = 2;
             this.uniTBL_MainReference.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTBL_MainReference.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
+
             this.uniTBL_MainBatch.AutoFit = false;
             this.uniTBL_MainBatch.AutoFitColumnCount = 4;
             this.uniTBL_MainBatch.AutoFitRowCount = 4;
@@ -634,6 +708,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTBL_MainBatch.TabIndex = 3;
             this.uniTBL_MainBatch.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTBL_MainBatch.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
+
             this.uniTableLayoutPanel2.AutoFit = false;
             this.uniTableLayoutPanel2.AutoFitColumnCount = 4;
             this.uniTableLayoutPanel2.AutoFitRowCount = 4;
@@ -664,6 +739,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTableLayoutPanel2.TabIndex = 11;
             this.uniTableLayoutPanel2.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTableLayoutPanel2.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
+
             this.chkQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkQuery.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.Default;
             this.chkQuery.Location = new System.Drawing.Point(150, 4);
@@ -674,6 +750,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.chkQuery.Size = new System.Drawing.Size(157, 16);
             this.chkQuery.TabIndex = 12;
             this.chkQuery.uniALT = "";
+
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             base.Controls.Add(this.uniTBL_OuterMost);
             this.MinimumSize = new System.Drawing.Size(0, 0);
@@ -687,6 +764,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             this.uniTBL_MainCondition.ResumeLayout(false);
             this.uniTBL_MainCondition.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)this.dtYearMonth).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this.dtStartDate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this.dtEndDate).EndInit();
             ((System.ComponentModel.ISupportInitialize)this.cboPayCd).EndInit();
             this.uniTableLayoutPanel1.ResumeLayout(false);
             this.uniTableLayoutPanel1.PerformLayout();
@@ -713,6 +792,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         private Bizentro.AppFramework.UI.Controls.uniLabel lblWkType;
         private Bizentro.AppFramework.UI.Controls.uniLabel lblBizAreaCd;
         private Bizentro.AppFramework.UI.Controls.uniDateTime dtYearMonth;
+        private Bizentro.AppFramework.UI.Controls.uniDateTime dtStartDate;
+        private Bizentro.AppFramework.UI.Controls.uniDateTime dtEndDate;
         private Bizentro.AppFramework.UI.Controls.uniCombo cboPayCd;
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel1;
         private Bizentro.AppFramework.UI.Controls.uniOpenPopup popDeptCd;
