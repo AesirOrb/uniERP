@@ -1,6 +1,7 @@
 ﻿#region ● Namespace declaration
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -836,11 +837,70 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
     }
 
+
     class CustomMergedCellEvaluator : IMergedCellEvaluator
     {
         public bool ShouldCellsBeMerged(UltraGridRow row1, UltraGridRow row2, UltraGridColumn column)
         {
             return row1.Cells["EMP_NO"].Value.ToString() == row2.Cells["EMP_NO"].Value.ToString();
         }
+    }
+
+
+    class CustomCreationFilter : IUIElementCreationFilter
+    {
+        #region IUIElementCreationFilter Members
+
+        public void AfterCreateChildElements(UIElement parent)
+        {
+            RowCellAreaUIElement row = parent as RowCellAreaUIElement;
+
+            if (row != null && row.HasChildElements)
+            {
+                List<CellUIElement> remcell = new List<CellUIElement>();
+                CellUIElement cell = (CellUIElement)row.ChildElements[0];
+
+                for (int i = 1; i < row.ChildElements.Count; i++)
+                {
+                    if (!(row.ChildElements[i] is CellUIElement))
+                        continue;
+
+                    if (((CellUIElement)row.ChildElements[i]).Cell.Column.Key == "TEXT_01"
+                     || ((CellUIElement)row.ChildElements[i]).Cell.Column.Key == "TEXT_02"
+                     || ((CellUIElement)row.ChildElements[i]).Cell.Column.Key == "EMP_NO"
+                     || ((CellUIElement)row.ChildElements[i]).Cell.Column.Key == "TYPE"
+                     || ((CellUIElement)row.ChildElements[i]).Cell.Column.Key == "TOTAL"
+                    ) continue;
+
+                    CellUIElement nextCell = (CellUIElement)row.ChildElements[i];
+
+                    string strNextCell = nextCell.Cell.Column.Header.Caption;
+
+                    // if (cell.Cell.Value.ToString() == nextCell.Cell.Value.ToString())
+                    if (strNextCell == "화" && strNextCell == "수" && strNextCell == "목" && strNextCell == "금")
+                    {
+                        Size s = cell.Rect.Size;
+                        s.Width += nextCell.Rect.Width;
+                        cell.Rect = new Rectangle(cell.Rect.Location, s);
+                        nextCell.Rect = new Rectangle(0, 0, 0, 0);
+                        remcell.Add(nextCell);
+                    }
+                    else
+                    {
+                        cell = nextCell;
+                    }
+                }
+                foreach (CellUIElement rc in remcell)
+                    row.ChildElements.Remove(rc);
+            }
+        }
+
+        public bool BeforeCreateChildElements(UIElement parent)
+        {
+            return false;
+            //throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
