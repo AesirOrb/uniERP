@@ -25,7 +25,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DsList : global::System.Data.DataSet {
         
-        private E_H4019Q2_KODataTable tableE_H4019Q2_KO;
+        private E_H4019Q2DataTable tableE_H4019Q2;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -55,8 +55,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["E_H4019Q2_KO"] != null)) {
-                    base.Tables.Add(new E_H4019Q2_KODataTable(ds.Tables["E_H4019Q2_KO"]));
+                if ((ds.Tables["E_H4019Q2"] != null)) {
+                    base.Tables.Add(new E_H4019Q2DataTable(ds.Tables["E_H4019Q2"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -80,9 +80,9 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public E_H4019Q2_KODataTable E_H4019Q2_KO {
+        public E_H4019Q2DataTable E_H4019Q2 {
             get {
-                return this.tableE_H4019Q2_KO;
+                return this.tableE_H4019Q2;
             }
         }
         
@@ -153,8 +153,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["E_H4019Q2_KO"] != null)) {
-                    base.Tables.Add(new E_H4019Q2_KODataTable(ds.Tables["E_H4019Q2_KO"]));
+                if ((ds.Tables["E_H4019Q2"] != null)) {
+                    base.Tables.Add(new E_H4019Q2DataTable(ds.Tables["E_H4019Q2"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -189,10 +189,10 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableE_H4019Q2_KO = ((E_H4019Q2_KODataTable)(base.Tables["E_H4019Q2_KO"]));
+            this.tableE_H4019Q2 = ((E_H4019Q2DataTable)(base.Tables["E_H4019Q2"]));
             if ((initTable == true)) {
-                if ((this.tableE_H4019Q2_KO != null)) {
-                    this.tableE_H4019Q2_KO.InitVars();
+                if ((this.tableE_H4019Q2 != null)) {
+                    this.tableE_H4019Q2.InitVars();
                 }
             }
         }
@@ -205,13 +205,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             this.Namespace = "http://tempuri.org/DsList.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableE_H4019Q2_KO = new E_H4019Q2_KODataTable();
-            base.Tables.Add(this.tableE_H4019Q2_KO);
+            this.tableE_H4019Q2 = new E_H4019Q2DataTable();
+            base.Tables.Add(this.tableE_H4019Q2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeE_H4019Q2_KO() {
+        private bool ShouldSerializeE_H4019Q2() {
             return false;
         }
         
@@ -271,22 +271,26 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void E_H4019Q2_KORowChangeEventHandler(object sender, E_H4019Q2_KORowChangeEvent e);
+        public delegate void E_H4019Q2RowChangeEventHandler(object sender, E_H4019Q2RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class E_H4019Q2_KODataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class E_H4019Q2DataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
             
             private global::System.Data.DataColumn columnEMP_NO;
             
-            private global::System.Data.DataColumn columnTEXT_01;
+            private global::System.Data.DataColumn columnDEPT;
             
-            private global::System.Data.DataColumn columnTEXT_02;
+            private global::System.Data.DataColumn columnNAME;
             
             private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnTOTAL;
+            
+            private global::System.Data.DataColumn columnD00;
             
             private global::System.Data.DataColumn columnD01;
             
@@ -350,12 +354,46 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             
             private global::System.Data.DataColumn columnD31;
             
-            private global::System.Data.DataColumn columnTOTAL;
+            private global::System.Data.DataColumn columnD32;
+            
+            private global::System.Data.DataColumn columnD33;
+            
+            private global::System.Data.DataColumn columnD34;
+            
+            private global::System.Data.DataColumn columnD35;
+            
+            private global::System.Data.DataColumn columnD36;
+            
+            private global::System.Data.DataColumn columnD37;
+            
+            private global::System.Data.DataColumn columnD38;
+            
+            private global::System.Data.DataColumn columnD39;
+            
+            private global::System.Data.DataColumn columnD40;
+            
+            private global::System.Data.DataColumn columnD41;
+            
+            private global::System.Data.DataColumn columnD42;
+            
+            private global::System.Data.DataColumn columnD43;
+            
+            private global::System.Data.DataColumn columnD44;
+            
+            private global::System.Data.DataColumn columnD45;
+            
+            private global::System.Data.DataColumn columnD46;
+            
+            private global::System.Data.DataColumn columnD47;
+            
+            private global::System.Data.DataColumn columnD48;
+            
+            private global::System.Data.DataColumn columnD49;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public E_H4019Q2_KODataTable() {
-                this.TableName = "E_H4019Q2_KO";
+            public E_H4019Q2DataTable() {
+                this.TableName = "E_H4019Q2";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -363,7 +401,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal E_H4019Q2_KODataTable(global::System.Data.DataTable table) {
+            internal E_H4019Q2DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -380,7 +418,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected E_H4019Q2_KODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected E_H4019Q2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -395,17 +433,17 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TEXT_01Column {
+            public global::System.Data.DataColumn DEPTColumn {
                 get {
-                    return this.columnTEXT_01;
+                    return this.columnDEPT;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TEXT_02Column {
+            public global::System.Data.DataColumn NAMEColumn {
                 get {
-                    return this.columnTEXT_02;
+                    return this.columnNAME;
                 }
             }
             
@@ -414,6 +452,22 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             public global::System.Data.DataColumn TYPEColumn {
                 get {
                     return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TOTALColumn {
+                get {
+                    return this.columnTOTAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D00Column {
+                get {
+                    return this.columnD00;
                 }
             }
             
@@ -667,9 +721,145 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TOTALColumn {
+            public global::System.Data.DataColumn D32Column {
                 get {
-                    return this.columnTOTAL;
+                    return this.columnD32;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D33Column {
+                get {
+                    return this.columnD33;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D34Column {
+                get {
+                    return this.columnD34;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D35Column {
+                get {
+                    return this.columnD35;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D36Column {
+                get {
+                    return this.columnD36;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D37Column {
+                get {
+                    return this.columnD37;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D38Column {
+                get {
+                    return this.columnD38;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D39Column {
+                get {
+                    return this.columnD39;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D40Column {
+                get {
+                    return this.columnD40;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D41Column {
+                get {
+                    return this.columnD41;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D42Column {
+                get {
+                    return this.columnD42;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D43Column {
+                get {
+                    return this.columnD43;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D44Column {
+                get {
+                    return this.columnD44;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D45Column {
+                get {
+                    return this.columnD45;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D46Column {
+                get {
+                    return this.columnD46;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D47Column {
+                get {
+                    return this.columnD47;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D48Column {
+                get {
+                    return this.columnD48;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D49Column {
+                get {
+                    return this.columnD49;
                 }
             }
             
@@ -684,37 +874,39 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public E_H4019Q2_KORow this[int index] {
+            public E_H4019Q2Row this[int index] {
                 get {
-                    return ((E_H4019Q2_KORow)(this.Rows[index]));
+                    return ((E_H4019Q2Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event E_H4019Q2_KORowChangeEventHandler E_H4019Q2_KORowChanging;
+            public event E_H4019Q2RowChangeEventHandler E_H4019Q2RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event E_H4019Q2_KORowChangeEventHandler E_H4019Q2_KORowChanged;
+            public event E_H4019Q2RowChangeEventHandler E_H4019Q2RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event E_H4019Q2_KORowChangeEventHandler E_H4019Q2_KORowDeleting;
+            public event E_H4019Q2RowChangeEventHandler E_H4019Q2RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event E_H4019Q2_KORowChangeEventHandler E_H4019Q2_KORowDeleted;
+            public event E_H4019Q2RowChangeEventHandler E_H4019Q2RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddE_H4019Q2_KORow(E_H4019Q2_KORow row) {
+            public void AddE_H4019Q2Row(E_H4019Q2Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public E_H4019Q2_KORow AddE_H4019Q2_KORow(
+            public E_H4019Q2Row AddE_H4019Q2Row(
                         string EMP_NO, 
-                        string TEXT_01, 
-                        string TEXT_02, 
+                        string DEPT, 
+                        string NAME, 
                         string TYPE, 
+                        string TOTAL, 
+                        string D00, 
                         string D01, 
                         string D02, 
                         string D03, 
@@ -746,13 +938,32 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
                         string D29, 
                         string D30, 
                         string D31, 
-                        string TOTAL) {
-                E_H4019Q2_KORow rowE_H4019Q2_KORow = ((E_H4019Q2_KORow)(this.NewRow()));
+                        string D32, 
+                        string D33, 
+                        string D34, 
+                        string D35, 
+                        string D36, 
+                        string D37, 
+                        string D38, 
+                        string D39, 
+                        string D40, 
+                        string D41, 
+                        string D42, 
+                        string D43, 
+                        string D44, 
+                        string D45, 
+                        string D46, 
+                        string D47, 
+                        string D48, 
+                        string D49) {
+                E_H4019Q2Row rowE_H4019Q2Row = ((E_H4019Q2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EMP_NO,
-                        TEXT_01,
-                        TEXT_02,
+                        DEPT,
+                        NAME,
                         TYPE,
+                        TOTAL,
+                        D00,
                         D01,
                         D02,
                         D03,
@@ -784,10 +995,27 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
                         D29,
                         D30,
                         D31,
-                        TOTAL};
-                rowE_H4019Q2_KORow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowE_H4019Q2_KORow);
-                return rowE_H4019Q2_KORow;
+                        D32,
+                        D33,
+                        D34,
+                        D35,
+                        D36,
+                        D37,
+                        D38,
+                        D39,
+                        D40,
+                        D41,
+                        D42,
+                        D43,
+                        D44,
+                        D45,
+                        D46,
+                        D47,
+                        D48,
+                        D49};
+                rowE_H4019Q2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowE_H4019Q2Row);
+                return rowE_H4019Q2Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -799,7 +1027,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                E_H4019Q2_KODataTable cln = ((E_H4019Q2_KODataTable)(base.Clone()));
+                E_H4019Q2DataTable cln = ((E_H4019Q2DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -807,16 +1035,18 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new E_H4019Q2_KODataTable();
+                return new E_H4019Q2DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnEMP_NO = base.Columns["EMP_NO"];
-                this.columnTEXT_01 = base.Columns["TEXT_01"];
-                this.columnTEXT_02 = base.Columns["TEXT_02"];
+                this.columnDEPT = base.Columns["DEPT"];
+                this.columnNAME = base.Columns["NAME"];
                 this.columnTYPE = base.Columns["TYPE"];
+                this.columnTOTAL = base.Columns["TOTAL"];
+                this.columnD00 = base.Columns["D00"];
                 this.columnD01 = base.Columns["D01"];
                 this.columnD02 = base.Columns["D02"];
                 this.columnD03 = base.Columns["D03"];
@@ -848,7 +1078,24 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
                 this.columnD29 = base.Columns["D29"];
                 this.columnD30 = base.Columns["D30"];
                 this.columnD31 = base.Columns["D31"];
-                this.columnTOTAL = base.Columns["TOTAL"];
+                this.columnD32 = base.Columns["D32"];
+                this.columnD33 = base.Columns["D33"];
+                this.columnD34 = base.Columns["D34"];
+                this.columnD35 = base.Columns["D35"];
+                this.columnD36 = base.Columns["D36"];
+                this.columnD37 = base.Columns["D37"];
+                this.columnD38 = base.Columns["D38"];
+                this.columnD39 = base.Columns["D39"];
+                this.columnD40 = base.Columns["D40"];
+                this.columnD41 = base.Columns["D41"];
+                this.columnD42 = base.Columns["D42"];
+                this.columnD43 = base.Columns["D43"];
+                this.columnD44 = base.Columns["D44"];
+                this.columnD45 = base.Columns["D45"];
+                this.columnD46 = base.Columns["D46"];
+                this.columnD47 = base.Columns["D47"];
+                this.columnD48 = base.Columns["D48"];
+                this.columnD49 = base.Columns["D49"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -856,12 +1103,16 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             private void InitClass() {
                 this.columnEMP_NO = new global::System.Data.DataColumn("EMP_NO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEMP_NO);
-                this.columnTEXT_01 = new global::System.Data.DataColumn("TEXT_01", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTEXT_01);
-                this.columnTEXT_02 = new global::System.Data.DataColumn("TEXT_02", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTEXT_02);
+                this.columnDEPT = new global::System.Data.DataColumn("DEPT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPT);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
                 this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTYPE);
+                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOTAL);
+                this.columnD00 = new global::System.Data.DataColumn("D00", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD00);
                 this.columnD01 = new global::System.Data.DataColumn("D01", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnD01);
                 this.columnD02 = new global::System.Data.DataColumn("D02", typeof(string), null, global::System.Data.MappingType.Element);
@@ -924,34 +1175,68 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
                 base.Columns.Add(this.columnD30);
                 this.columnD31 = new global::System.Data.DataColumn("D31", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnD31);
-                this.columnTOTAL = new global::System.Data.DataColumn("TOTAL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTOTAL);
+                this.columnD32 = new global::System.Data.DataColumn("D32", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD32);
+                this.columnD33 = new global::System.Data.DataColumn("D33", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD33);
+                this.columnD34 = new global::System.Data.DataColumn("D34", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD34);
+                this.columnD35 = new global::System.Data.DataColumn("D35", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD35);
+                this.columnD36 = new global::System.Data.DataColumn("D36", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD36);
+                this.columnD37 = new global::System.Data.DataColumn("D37", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD37);
+                this.columnD38 = new global::System.Data.DataColumn("D38", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD38);
+                this.columnD39 = new global::System.Data.DataColumn("D39", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD39);
+                this.columnD40 = new global::System.Data.DataColumn("D40", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD40);
+                this.columnD41 = new global::System.Data.DataColumn("D41", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD41);
+                this.columnD42 = new global::System.Data.DataColumn("D42", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD42);
+                this.columnD43 = new global::System.Data.DataColumn("D43", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD43);
+                this.columnD44 = new global::System.Data.DataColumn("D44", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD44);
+                this.columnD45 = new global::System.Data.DataColumn("D45", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD45);
+                this.columnD46 = new global::System.Data.DataColumn("D46", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD46);
+                this.columnD47 = new global::System.Data.DataColumn("D47", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD47);
+                this.columnD48 = new global::System.Data.DataColumn("D48", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD48);
+                this.columnD49 = new global::System.Data.DataColumn("D49", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD49);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public E_H4019Q2_KORow NewE_H4019Q2_KORow() {
-                return ((E_H4019Q2_KORow)(this.NewRow()));
+            public E_H4019Q2Row NewE_H4019Q2Row() {
+                return ((E_H4019Q2Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new E_H4019Q2_KORow(builder);
+                return new E_H4019Q2Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(E_H4019Q2_KORow);
+                return typeof(E_H4019Q2Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.E_H4019Q2_KORowChanged != null)) {
-                    this.E_H4019Q2_KORowChanged(this, new E_H4019Q2_KORowChangeEvent(((E_H4019Q2_KORow)(e.Row)), e.Action));
+                if ((this.E_H4019Q2RowChanged != null)) {
+                    this.E_H4019Q2RowChanged(this, new E_H4019Q2RowChangeEvent(((E_H4019Q2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -959,8 +1244,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.E_H4019Q2_KORowChanging != null)) {
-                    this.E_H4019Q2_KORowChanging(this, new E_H4019Q2_KORowChangeEvent(((E_H4019Q2_KORow)(e.Row)), e.Action));
+                if ((this.E_H4019Q2RowChanging != null)) {
+                    this.E_H4019Q2RowChanging(this, new E_H4019Q2RowChangeEvent(((E_H4019Q2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -968,8 +1253,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.E_H4019Q2_KORowDeleted != null)) {
-                    this.E_H4019Q2_KORowDeleted(this, new E_H4019Q2_KORowChangeEvent(((E_H4019Q2_KORow)(e.Row)), e.Action));
+                if ((this.E_H4019Q2RowDeleted != null)) {
+                    this.E_H4019Q2RowDeleted(this, new E_H4019Q2RowChangeEvent(((E_H4019Q2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -977,14 +1262,14 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.E_H4019Q2_KORowDeleting != null)) {
-                    this.E_H4019Q2_KORowDeleting(this, new E_H4019Q2_KORowChangeEvent(((E_H4019Q2_KORow)(e.Row)), e.Action));
+                if ((this.E_H4019Q2RowDeleting != null)) {
+                    this.E_H4019Q2RowDeleting(this, new E_H4019Q2RowChangeEvent(((E_H4019Q2Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveE_H4019Q2_KORow(E_H4019Q2_KORow row) {
+            public void RemoveE_H4019Q2Row(E_H4019Q2Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -1011,7 +1296,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "E_H4019Q2_KODataTable";
+                attribute2.FixedValue = "E_H4019Q2DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1055,15 +1340,15 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class E_H4019Q2_KORow : global::System.Data.DataRow {
+        public partial class E_H4019Q2Row : global::System.Data.DataRow {
             
-            private E_H4019Q2_KODataTable tableE_H4019Q2_KO;
+            private E_H4019Q2DataTable tableE_H4019Q2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal E_H4019Q2_KORow(global::System.Data.DataRowBuilder rb) : 
+            internal E_H4019Q2Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableE_H4019Q2_KO = ((E_H4019Q2_KODataTable)(this.Table));
+                this.tableE_H4019Q2 = ((E_H4019Q2DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1071,46 +1356,46 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             public string EMP_NO {
                 get {
                     try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.EMP_NOColumn]));
+                        return ((string)(this[this.tableE_H4019Q2.EMP_NOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'EMP_NO\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'EMP_NO\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableE_H4019Q2_KO.EMP_NOColumn] = value;
+                    this[this.tableE_H4019Q2.EMP_NOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TEXT_01 {
+            public string DEPT {
                 get {
                     try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.TEXT_01Column]));
+                        return ((string)(this[this.tableE_H4019Q2.DEPTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'TEXT_01\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'DEPT\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableE_H4019Q2_KO.TEXT_01Column] = value;
+                    this[this.tableE_H4019Q2.DEPTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TEXT_02 {
+            public string NAME {
                 get {
                     try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.TEXT_02Column]));
+                        return ((string)(this[this.tableE_H4019Q2.NAMEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'TEXT_02\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'NAME\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableE_H4019Q2_KO.TEXT_02Column] = value;
+                    this[this.tableE_H4019Q2.NAMEColumn] = value;
                 }
             }
             
@@ -1119,510 +1404,14 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             public string TYPE {
                 get {
                     try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.TYPEColumn]));
+                        return ((string)(this[this.tableE_H4019Q2.TYPEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'TYPE\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'TYPE\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableE_H4019Q2_KO.TYPEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D01 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D01Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D01\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D01Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D02 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D02Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D02\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D02Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D03 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D03Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D03\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D03Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D04 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D04Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D04\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D04Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D05 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D05Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D05\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D05Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D06 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D06Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D06\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D06Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D07 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D07Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D07\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D07Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D08 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D08Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D08\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D08Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D09 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D09Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D09\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D09Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D10 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D10Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D10\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D10Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D11 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D11Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D11\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D11Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D12 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D12Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D12\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D12Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D13 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D13Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D13\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D13Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D14 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D14Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D14\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D14Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D15 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D15Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D15\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D15Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D16 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D16Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D16\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D16Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D17 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D17Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D17\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D17Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D18 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D18Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D18\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D18Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D19 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D19Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D19\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D19Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D20 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D20Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D20\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D20Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D21 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D21Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D21\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D21Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D22 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D22Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D22\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D22Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D23 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D23Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D23\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D23Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D24 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D24Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D24\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D24Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D25 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D25Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D25\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D25Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D26 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D26Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D26\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D26Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D27 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D27Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D27\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D27Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D28 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D28Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D28\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D28Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D29 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D29Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D29\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D29Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D30 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D30Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D30\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D30Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string D31 {
-                get {
-                    try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.D31Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'D31\' 열의 값이 DBNull입니다.", e);
-                    }
-                }
-                set {
-                    this[this.tableE_H4019Q2_KO.D31Column] = value;
+                    this[this.tableE_H4019Q2.TYPEColumn] = value;
                 }
             }
             
@@ -1631,447 +1420,1475 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
             public string TOTAL {
                 get {
                     try {
-                        return ((string)(this[this.tableE_H4019Q2_KO.TOTALColumn]));
+                        return ((string)(this[this.tableE_H4019Q2.TOTALColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2_KO\' 테이블의 \'TOTAL\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'TOTAL\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableE_H4019Q2_KO.TOTALColumn] = value;
+                    this[this.tableE_H4019Q2.TOTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D00 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D00Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D00\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D00Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D01 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D01Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D01\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D01Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D02 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D02Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D02\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D02Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D03 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D03Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D03\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D03Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D04 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D04Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D04\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D04Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D05 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D05Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D05\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D06 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D06Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D06\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D06Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D07 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D07Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D07\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D07Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D08 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D08Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D08\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D08Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D09 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D09Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D09\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D09Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D10 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D10\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D11 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D11Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D11\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D11Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D12 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D12Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D12\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D12Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D13 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D13Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D13\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D13Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D14 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D14Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D14\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D14Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D15 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D15Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D15\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D15Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D16 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D16Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D16\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D16Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D17 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D17Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D17\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D17Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D18 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D18Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D18\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D18Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D19 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D19Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D19\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D19Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D20 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D20Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D20\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D20Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D21 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D21Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D21\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D21Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D22 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D22Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D22\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D22Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D23 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D23Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D23\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D23Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D24 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D24Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D24\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D24Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D25 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D25Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D25\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D25Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D26 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D26Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D26\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D26Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D27 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D27Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D27\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D27Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D28 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D28Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D28\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D28Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D29 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D29Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D29\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D29Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D30 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D30Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D30\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D30Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D31 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D31Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D31\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D31Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D32 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D32Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D32\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D32Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D33 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D33Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D33\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D33Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D34 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D34Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D34\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D34Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D35 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D35Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D35\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D35Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D36 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D36Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D36\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D36Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D37 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D37Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D37\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D37Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D38 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D38Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D38\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D38Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D39 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D39Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D39\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D39Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D40 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D40Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D40\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D40Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D41 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D41Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D41\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D41Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D42 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D42Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D42\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D42Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D43 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D43Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D43\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D43Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D44 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D44Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D44\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D44Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D45 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D45Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D45\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D45Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D46 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D46Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D46\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D46Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D47 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D47Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D47\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D47Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D48 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D48Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D48\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D48Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string D49 {
+                get {
+                    try {
+                        return ((string)(this[this.tableE_H4019Q2.D49Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'E_H4019Q2\' 테이블의 \'D49\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tableE_H4019Q2.D49Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEMP_NONull() {
-                return this.IsNull(this.tableE_H4019Q2_KO.EMP_NOColumn);
+                return this.IsNull(this.tableE_H4019Q2.EMP_NOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEMP_NONull() {
-                this[this.tableE_H4019Q2_KO.EMP_NOColumn] = global::System.Convert.DBNull;
+                this[this.tableE_H4019Q2.EMP_NOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTEXT_01Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.TEXT_01Column);
+            public bool IsDEPTNull() {
+                return this.IsNull(this.tableE_H4019Q2.DEPTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTEXT_01Null() {
-                this[this.tableE_H4019Q2_KO.TEXT_01Column] = global::System.Convert.DBNull;
+            public void SetDEPTNull() {
+                this[this.tableE_H4019Q2.DEPTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTEXT_02Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.TEXT_02Column);
+            public bool IsNAMENull() {
+                return this.IsNull(this.tableE_H4019Q2.NAMEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTEXT_02Null() {
-                this[this.tableE_H4019Q2_KO.TEXT_02Column] = global::System.Convert.DBNull;
+            public void SetNAMENull() {
+                this[this.tableE_H4019Q2.NAMEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTYPENull() {
-                return this.IsNull(this.tableE_H4019Q2_KO.TYPEColumn);
+                return this.IsNull(this.tableE_H4019Q2.TYPEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTYPENull() {
-                this[this.tableE_H4019Q2_KO.TYPEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD01Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D01Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD01Null() {
-                this[this.tableE_H4019Q2_KO.D01Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD02Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D02Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD02Null() {
-                this[this.tableE_H4019Q2_KO.D02Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD03Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D03Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD03Null() {
-                this[this.tableE_H4019Q2_KO.D03Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD04Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D04Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD04Null() {
-                this[this.tableE_H4019Q2_KO.D04Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD05Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D05Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD05Null() {
-                this[this.tableE_H4019Q2_KO.D05Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD06Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D06Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD06Null() {
-                this[this.tableE_H4019Q2_KO.D06Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD07Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D07Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD07Null() {
-                this[this.tableE_H4019Q2_KO.D07Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD08Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D08Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD08Null() {
-                this[this.tableE_H4019Q2_KO.D08Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD09Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D09Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD09Null() {
-                this[this.tableE_H4019Q2_KO.D09Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD10Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D10Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD10Null() {
-                this[this.tableE_H4019Q2_KO.D10Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD11Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D11Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD11Null() {
-                this[this.tableE_H4019Q2_KO.D11Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD12Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D12Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD12Null() {
-                this[this.tableE_H4019Q2_KO.D12Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD13Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D13Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD13Null() {
-                this[this.tableE_H4019Q2_KO.D13Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD14Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D14Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD14Null() {
-                this[this.tableE_H4019Q2_KO.D14Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD15Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D15Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD15Null() {
-                this[this.tableE_H4019Q2_KO.D15Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD16Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D16Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD16Null() {
-                this[this.tableE_H4019Q2_KO.D16Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD17Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D17Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD17Null() {
-                this[this.tableE_H4019Q2_KO.D17Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD18Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D18Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD18Null() {
-                this[this.tableE_H4019Q2_KO.D18Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD19Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D19Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD19Null() {
-                this[this.tableE_H4019Q2_KO.D19Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD20Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D20Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD20Null() {
-                this[this.tableE_H4019Q2_KO.D20Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD21Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D21Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD21Null() {
-                this[this.tableE_H4019Q2_KO.D21Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD22Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D22Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD22Null() {
-                this[this.tableE_H4019Q2_KO.D22Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD23Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D23Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD23Null() {
-                this[this.tableE_H4019Q2_KO.D23Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD24Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D24Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD24Null() {
-                this[this.tableE_H4019Q2_KO.D24Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD25Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D25Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD25Null() {
-                this[this.tableE_H4019Q2_KO.D25Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD26Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D26Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD26Null() {
-                this[this.tableE_H4019Q2_KO.D26Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD27Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D27Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD27Null() {
-                this[this.tableE_H4019Q2_KO.D27Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD28Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D28Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD28Null() {
-                this[this.tableE_H4019Q2_KO.D28Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD29Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D29Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD29Null() {
-                this[this.tableE_H4019Q2_KO.D29Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD30Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D30Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD30Null() {
-                this[this.tableE_H4019Q2_KO.D30Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsD31Null() {
-                return this.IsNull(this.tableE_H4019Q2_KO.D31Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetD31Null() {
-                this[this.tableE_H4019Q2_KO.D31Column] = global::System.Convert.DBNull;
+                this[this.tableE_H4019Q2.TYPEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTOTALNull() {
-                return this.IsNull(this.tableE_H4019Q2_KO.TOTALColumn);
+                return this.IsNull(this.tableE_H4019Q2.TOTALColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTOTALNull() {
-                this[this.tableE_H4019Q2_KO.TOTALColumn] = global::System.Convert.DBNull;
+                this[this.tableE_H4019Q2.TOTALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD00Null() {
+                return this.IsNull(this.tableE_H4019Q2.D00Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD00Null() {
+                this[this.tableE_H4019Q2.D00Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD01Null() {
+                return this.IsNull(this.tableE_H4019Q2.D01Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD01Null() {
+                this[this.tableE_H4019Q2.D01Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD02Null() {
+                return this.IsNull(this.tableE_H4019Q2.D02Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD02Null() {
+                this[this.tableE_H4019Q2.D02Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD03Null() {
+                return this.IsNull(this.tableE_H4019Q2.D03Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD03Null() {
+                this[this.tableE_H4019Q2.D03Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD04Null() {
+                return this.IsNull(this.tableE_H4019Q2.D04Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD04Null() {
+                this[this.tableE_H4019Q2.D04Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD05Null() {
+                return this.IsNull(this.tableE_H4019Q2.D05Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD05Null() {
+                this[this.tableE_H4019Q2.D05Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD06Null() {
+                return this.IsNull(this.tableE_H4019Q2.D06Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD06Null() {
+                this[this.tableE_H4019Q2.D06Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD07Null() {
+                return this.IsNull(this.tableE_H4019Q2.D07Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD07Null() {
+                this[this.tableE_H4019Q2.D07Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD08Null() {
+                return this.IsNull(this.tableE_H4019Q2.D08Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD08Null() {
+                this[this.tableE_H4019Q2.D08Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD09Null() {
+                return this.IsNull(this.tableE_H4019Q2.D09Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD09Null() {
+                this[this.tableE_H4019Q2.D09Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD10Null() {
+                return this.IsNull(this.tableE_H4019Q2.D10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD10Null() {
+                this[this.tableE_H4019Q2.D10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD11Null() {
+                return this.IsNull(this.tableE_H4019Q2.D11Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD11Null() {
+                this[this.tableE_H4019Q2.D11Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD12Null() {
+                return this.IsNull(this.tableE_H4019Q2.D12Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD12Null() {
+                this[this.tableE_H4019Q2.D12Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD13Null() {
+                return this.IsNull(this.tableE_H4019Q2.D13Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD13Null() {
+                this[this.tableE_H4019Q2.D13Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD14Null() {
+                return this.IsNull(this.tableE_H4019Q2.D14Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD14Null() {
+                this[this.tableE_H4019Q2.D14Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD15Null() {
+                return this.IsNull(this.tableE_H4019Q2.D15Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD15Null() {
+                this[this.tableE_H4019Q2.D15Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD16Null() {
+                return this.IsNull(this.tableE_H4019Q2.D16Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD16Null() {
+                this[this.tableE_H4019Q2.D16Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD17Null() {
+                return this.IsNull(this.tableE_H4019Q2.D17Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD17Null() {
+                this[this.tableE_H4019Q2.D17Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD18Null() {
+                return this.IsNull(this.tableE_H4019Q2.D18Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD18Null() {
+                this[this.tableE_H4019Q2.D18Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD19Null() {
+                return this.IsNull(this.tableE_H4019Q2.D19Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD19Null() {
+                this[this.tableE_H4019Q2.D19Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD20Null() {
+                return this.IsNull(this.tableE_H4019Q2.D20Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD20Null() {
+                this[this.tableE_H4019Q2.D20Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD21Null() {
+                return this.IsNull(this.tableE_H4019Q2.D21Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD21Null() {
+                this[this.tableE_H4019Q2.D21Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD22Null() {
+                return this.IsNull(this.tableE_H4019Q2.D22Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD22Null() {
+                this[this.tableE_H4019Q2.D22Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD23Null() {
+                return this.IsNull(this.tableE_H4019Q2.D23Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD23Null() {
+                this[this.tableE_H4019Q2.D23Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD24Null() {
+                return this.IsNull(this.tableE_H4019Q2.D24Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD24Null() {
+                this[this.tableE_H4019Q2.D24Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD25Null() {
+                return this.IsNull(this.tableE_H4019Q2.D25Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD25Null() {
+                this[this.tableE_H4019Q2.D25Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD26Null() {
+                return this.IsNull(this.tableE_H4019Q2.D26Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD26Null() {
+                this[this.tableE_H4019Q2.D26Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD27Null() {
+                return this.IsNull(this.tableE_H4019Q2.D27Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD27Null() {
+                this[this.tableE_H4019Q2.D27Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD28Null() {
+                return this.IsNull(this.tableE_H4019Q2.D28Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD28Null() {
+                this[this.tableE_H4019Q2.D28Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD29Null() {
+                return this.IsNull(this.tableE_H4019Q2.D29Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD29Null() {
+                this[this.tableE_H4019Q2.D29Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD30Null() {
+                return this.IsNull(this.tableE_H4019Q2.D30Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD30Null() {
+                this[this.tableE_H4019Q2.D30Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD31Null() {
+                return this.IsNull(this.tableE_H4019Q2.D31Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD31Null() {
+                this[this.tableE_H4019Q2.D31Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD32Null() {
+                return this.IsNull(this.tableE_H4019Q2.D32Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD32Null() {
+                this[this.tableE_H4019Q2.D32Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD33Null() {
+                return this.IsNull(this.tableE_H4019Q2.D33Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD33Null() {
+                this[this.tableE_H4019Q2.D33Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD34Null() {
+                return this.IsNull(this.tableE_H4019Q2.D34Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD34Null() {
+                this[this.tableE_H4019Q2.D34Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD35Null() {
+                return this.IsNull(this.tableE_H4019Q2.D35Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD35Null() {
+                this[this.tableE_H4019Q2.D35Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD36Null() {
+                return this.IsNull(this.tableE_H4019Q2.D36Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD36Null() {
+                this[this.tableE_H4019Q2.D36Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD37Null() {
+                return this.IsNull(this.tableE_H4019Q2.D37Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD37Null() {
+                this[this.tableE_H4019Q2.D37Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD38Null() {
+                return this.IsNull(this.tableE_H4019Q2.D38Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD38Null() {
+                this[this.tableE_H4019Q2.D38Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD39Null() {
+                return this.IsNull(this.tableE_H4019Q2.D39Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD39Null() {
+                this[this.tableE_H4019Q2.D39Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD40Null() {
+                return this.IsNull(this.tableE_H4019Q2.D40Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD40Null() {
+                this[this.tableE_H4019Q2.D40Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD41Null() {
+                return this.IsNull(this.tableE_H4019Q2.D41Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD41Null() {
+                this[this.tableE_H4019Q2.D41Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD42Null() {
+                return this.IsNull(this.tableE_H4019Q2.D42Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD42Null() {
+                this[this.tableE_H4019Q2.D42Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD43Null() {
+                return this.IsNull(this.tableE_H4019Q2.D43Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD43Null() {
+                this[this.tableE_H4019Q2.D43Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD44Null() {
+                return this.IsNull(this.tableE_H4019Q2.D44Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD44Null() {
+                this[this.tableE_H4019Q2.D44Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD45Null() {
+                return this.IsNull(this.tableE_H4019Q2.D45Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD45Null() {
+                this[this.tableE_H4019Q2.D45Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD46Null() {
+                return this.IsNull(this.tableE_H4019Q2.D46Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD46Null() {
+                this[this.tableE_H4019Q2.D46Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD47Null() {
+                return this.IsNull(this.tableE_H4019Q2.D47Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD47Null() {
+                this[this.tableE_H4019Q2.D47Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD48Null() {
+                return this.IsNull(this.tableE_H4019Q2.D48Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD48Null() {
+                this[this.tableE_H4019Q2.D48Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD49Null() {
+                return this.IsNull(this.tableE_H4019Q2.D49Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD49Null() {
+                this[this.tableE_H4019Q2.D49Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -2079,22 +2896,22 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class E_H4019Q2_KORowChangeEvent : global::System.EventArgs {
+        public class E_H4019Q2RowChangeEvent : global::System.EventArgs {
             
-            private E_H4019Q2_KORow eventRow;
+            private E_H4019Q2Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public E_H4019Q2_KORowChangeEvent(E_H4019Q2_KORow row, global::System.Data.DataRowAction action) {
+            public E_H4019Q2RowChangeEvent(E_H4019Q2Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public E_H4019Q2_KORow Row {
+            public E_H4019Q2Row Row {
                 get {
                     return this.eventRow;
                 }
