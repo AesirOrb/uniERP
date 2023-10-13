@@ -16,6 +16,7 @@ using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
+using System.Linq;
 
 #endregion
 
@@ -40,7 +41,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         #endregion
 
         #region ■ 1.4 Class global constants (grid)
-
 
         #endregion
 
@@ -193,7 +193,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             for (var i = 0; i < 50; i++)
             {
-                AddLabelColumn(string.Format("DayName{0}", i.ToString().PadLeft(2, '0')), i.ToString().PadLeft(2, '0'));
+                AddLabelColumn(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), i.ToString().PadLeft(2, '0'));
             }
 
             uniGrid1.SetMerge(eH4019Q2.DEPTColumn.ColumnName, 0, 0, 1, 2);
@@ -204,7 +204,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             for (int i = 0, j = 4; i < 50; i++, j++)
             {
                 uniGrid1.SetMerge(string.Format("D{0}", i.ToString().PadLeft(2, '0')), j, 0, 1, 1);
-                uniGrid1.SetMerge(string.Format("DayName{0}", i.ToString().PadLeft(2, '0')), j, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), j, 1, 1, 1);
             }
 
             uniGrid1.SetMerge(eH4019Q2.TOTALColumn.ColumnName, 54, 0, 1, 2);
@@ -345,18 +345,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         {
             try
             {
-                AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand("dbo.usp_H_H4019Q2_CKO055");
-
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@FROM", SqlDbType.NVarChar, 10, dtYearMonth.uniFromValue.ToString(CommonVariable.CDT_YYYY_MM_DD));
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@TO", SqlDbType.NVarChar, 10, dtYearMonth.uniToValue.ToString(CommonVariable.CDT_YYYY_MM_DD));
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@DEPT_CD", SqlDbType.NVarChar, 10, popDeptCd.CodeValue);
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 10, txtInternalCd.Text);
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 10, popEmpNo.CodeValue);
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
-                uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 10, CommonVariable.gUsrID);
-
-                DataSet ds = uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
+                DataSet ds = GetGridData("dbo.usp_H_H4019Q2_CKO055");
 
                 if (ds.Tables[0].Rows.Count < 0)
                 {
@@ -369,9 +358,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
                 uniGrid1.BeginUpdate();
 
-                UpdateGrid();
-
-                //uniGrid1.CreationFilter = new CustomCreationFilter();
+                SetGridFormat();
 
                 uniGrid1.EndUpdate();
 
@@ -404,21 +391,11 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         private bool DBSave()
         {
-            //TO-DO : code business oriented logic
             uniGrid1.UpdateData();
-
-            //wsMyBizFL.TypedDataSet isettdsTypedDataSet = new wsMyBizFL.TypedDataSet();
 
             try
             {
-                //wsMyBizFL.TypedDataSet.IESaveDTDataTable igettdtTypedDataSet =
-                //    (wsMyBizFL.TypedDataSet.IESaveDTDataTable)this.cstdsTypedDataSet.IESaveDT.GetChanges();
 
-                //using (wsMyBizFL.Service iwsMyBizFL = (wsMyBizFL.Service)uniBase.UConfig.SetWebServiceProxyEnv(new wsMyBizFL.Service()))
-                //{
-                //    isettdsTypedDataSet.IESaveDT.Merge(igettdtTypedDataSet, false, MissingSchemaAction.Ignore);
-                //    iwsMyBizFL.SaveWebMethod(CommonVariable.gStrGlobalCollection, isettdsTypedDataSet);
-                //}
             }
             catch (Exception ex)
             {
@@ -427,7 +404,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             }
             finally
             {
-                //if (isettdsTypedDataSet != null) isettdsTypedDataSet.Dispose();
+
             }
 
             return true;
@@ -638,6 +615,23 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
         #region ▶ 7. User-defined method part
 
+        private DataSet GetGridData(string storedProc)
+        {
+            AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand(storedProc);
+
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@FROM", SqlDbType.NVarChar, 10, dtYearMonth.uniFromValue.ToString(CommonVariable.CDT_YYYY_MM_DD));
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@TO", SqlDbType.NVarChar, 10, dtYearMonth.uniToValue.ToString(CommonVariable.CDT_YYYY_MM_DD));
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@DEPT_CD", SqlDbType.NVarChar, 10, popDeptCd.CodeValue);
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 10, txtInternalCd.Text);
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 10, popEmpNo.CodeValue);
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@WK_TYPE", SqlDbType.NVarChar, 1, cboWkType.SelectedItem == null ? string.Empty : cboWkType.SelectedItem.DataValue.ToString());
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 10, CommonVariable.gUsrID);
+
+            return uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
+        }
+
+
         #region ■ 7.1 User-defined function group
 
         private void AddLabelColumn(string sColumn, string sCaption)
@@ -654,16 +648,16 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             for (var i = 0; i < 50; i++)
             {
                 uniGrid1.SSSetColHidden(string.Format("D{0}", i.ToString().PadLeft(2, '0')), true);
-                uniGrid1.SSSetColHidden(string.Format("DayName{0}", i.ToString().PadLeft(2, '0')), true);
+                uniGrid1.SSSetColHidden(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), true);
             }
 
             for (var i = 0; i < days; i++)
             {
                 uniGrid1.SSSetColHidden(string.Format("D{0}", i.ToString().PadLeft(2, '0')), false);
-                uniGrid1.SSSetColHidden(string.Format("DayName{0}", i.ToString().PadLeft(2, '0')), false);
+                uniGrid1.SSSetColHidden(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), false);
                 uniGrid1.setColumnHeader(string.Format("D{0}", i.ToString().PadLeft(2, '0')), dtYearMonth.uniFromValue.AddDays(i).Day.ToString().PadLeft(2, '0'));
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
-                uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayName{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
+                uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
 
                 DayOfWeek _dayOfWeek = dtYearMonth.uniFromValue.AddDays(i).DayOfWeek;
                 string sDayOfWeek = string.Empty;
@@ -693,7 +687,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         break;
                 }
 
-                uniGrid1.setColumnHeader(string.Format("DayName{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
+                uniGrid1.setColumnHeader(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
             }
 
             DataSet dsCalendar = GetCalendar();
@@ -708,12 +702,12 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 {
                     case "S":
                         uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Blue;
-                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayName{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Blue;
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Blue;
                         break;
 
                     case "H":
                         uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Red;
-                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayName{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Red;
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Red;
                         break;
                 }
 
@@ -730,21 +724,22 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 + "' AND '"
                 + dtYearMonth.uniToValue.ToString(CommonVariable.CDT_YYYY_MM_DD)
                 + "'";
+
             DataSet dsCalendar = uniBase.UDataAccess.CommonQueryRs(sSelect, sFrom, sWhere);
 
             return dsCalendar;
         }
 
-        private void UpdateGrid()
+        private void SetGridFormat()
         {
             int days = (dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1;
             days = days <= 50 ? days : 50;
 
             foreach (UltraGridRow Row in uniGrid1.Rows)
             {
-                string _sType = Row.Cells["TYPE"].Value.ToString();
+                string strType = Row.Cells["TYPE"].Value.ToString();
 
-                switch (_sType)
+                switch (strType)
                 {
                     case "연장시간":
                     case "휴일근로":
@@ -765,7 +760,11 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         break;
                 }
 
-                switch (_sType)
+                Row.Cells["DEPT"].Appearance.BackColor = Color.White;
+                Row.Cells["NAME"].Appearance.BackColor = Color.White;
+                Row.Cells["EMP_NO"].Appearance.BackColor = Color.White;
+
+                switch (strType)
                 {
                     case "근로시간":
                     case "연장시간":
@@ -788,7 +787,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                         break;
                 }
 
-                if (_sType == "근로시간")
+                if (strType == "근로시간")
                 {
                     foreach (UltraGridCell Cell in Row.Cells)
                     {
