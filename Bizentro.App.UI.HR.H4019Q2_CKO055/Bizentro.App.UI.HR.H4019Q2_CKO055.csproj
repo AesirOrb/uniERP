@@ -85,10 +85,7 @@
     <None Include="DsList.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsList.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DsList.Designer.cs">
-      <DependentUpon>DsList.xsd</DependentUpon>
+      <LastGenOutput>DsList.cs</LastGenOutput>
     </None>
     <None Include="DsList.xsc">
       <DependentUpon>DsList.xsd</DependentUpon>

@@ -218,46 +218,6 @@
                 msprop:Generator_ColumnPropNameInRow="D39"
                 msprop:Generator_ColumnPropNameInTable="D39Column"
                 msprop:Generator_UserColumnName="D39" type="xs:string" minOccurs="0" />
-              <xs:element name="D40" msprop:Generator_ColumnVarNameInTable="columnD40"
-                msprop:Generator_ColumnPropNameInRow="D40"
-                msprop:Generator_ColumnPropNameInTable="D40Column"
-                msprop:Generator_UserColumnName="D40" type="xs:string" minOccurs="0" />
-              <xs:element name="D41" msprop:Generator_ColumnVarNameInTable="columnD41"
-                msprop:Generator_ColumnPropNameInRow="D41"
-                msprop:Generator_ColumnPropNameInTable="D41Column"
-                msprop:Generator_UserColumnName="D41" type="xs:string" minOccurs="0" />
-              <xs:element name="D42" msprop:Generator_ColumnVarNameInTable="columnD42"
-                msprop:Generator_ColumnPropNameInRow="D42"
-                msprop:Generator_ColumnPropNameInTable="D42Column"
-                msprop:Generator_UserColumnName="D42" type="xs:string" minOccurs="0" />
-              <xs:element name="D43" msprop:Generator_ColumnVarNameInTable="columnD43"
-                msprop:Generator_ColumnPropNameInRow="D43"
-                msprop:Generator_ColumnPropNameInTable="D43Column"
-                msprop:Generator_UserColumnName="D43" type="xs:string" minOccurs="0" />
-              <xs:element name="D44" msprop:Generator_ColumnVarNameInTable="columnD44"
-                msprop:Generator_ColumnPropNameInRow="D44"
-                msprop:Generator_ColumnPropNameInTable="D44Column"
-                msprop:Generator_UserColumnName="D44" type="xs:string" minOccurs="0" />
-              <xs:element name="D45" msprop:Generator_ColumnVarNameInTable="columnD45"
-                msprop:Generator_ColumnPropNameInRow="D45"
-                msprop:Generator_ColumnPropNameInTable="D45Column"
-                msprop:Generator_UserColumnName="D45" type="xs:string" minOccurs="0" />
-              <xs:element name="D46" msprop:Generator_ColumnVarNameInTable="columnD46"
-                msprop:Generator_ColumnPropNameInRow="D46"
-                msprop:Generator_ColumnPropNameInTable="D46Column"
-                msprop:Generator_UserColumnName="D46" type="xs:string" minOccurs="0" />
-              <xs:element name="D47" msprop:Generator_ColumnVarNameInTable="columnD47"
-                msprop:Generator_ColumnPropNameInRow="D47"
-                msprop:Generator_ColumnPropNameInTable="D47Column"
-                msprop:Generator_UserColumnName="D47" type="xs:string" minOccurs="0" />
-              <xs:element name="D48" msprop:Generator_ColumnVarNameInTable="columnD48"
-                msprop:Generator_ColumnPropNameInRow="D48"
-                msprop:Generator_ColumnPropNameInTable="D48Column"
-                msprop:Generator_UserColumnName="D48" type="xs:string" minOccurs="0" />
-              <xs:element name="D49" msprop:Generator_ColumnVarNameInTable="columnD49"
-                msprop:Generator_ColumnPropNameInRow="D49"
-                msprop:Generator_ColumnPropNameInTable="D49Column"
-                msprop:Generator_UserColumnName="D49" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

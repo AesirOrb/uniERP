@@ -16,7 +16,6 @@ using Bizentro.AppFramework.UI.Controls;
 using Bizentro.AppFramework.UI.Module;
 using Bizentro.AppFramework.UI.Variables;
 using Bizentro.AppFramework.UI.Common.Exceptions;
-using System.Linq;
 
 #endregion
 
@@ -103,20 +102,15 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             cboPayCd.SelectedIndex = 0;
             uniOpenPopup _uniOpenPopup = popDeptCd;
             uniOpenPopup _uniOpenPopup1 = popDeptCd;
-            uniTextBox _uniTextBox = txtInternalCd;
-            string empty = string.Empty;
-            string str = empty;
-            _uniTextBox.Text = empty;
-            string str1 = str;
-            str = str1;
-            _uniOpenPopup1.CodeName = str1;
-            _uniOpenPopup.CodeValue = str;
             uniOpenPopup _uniOpenPopup2 = popEmpNo;
             uniOpenPopup _uniOpenPopup3 = popEmpNo;
-            string empty1 = string.Empty;
-            str = empty1;
-            _uniOpenPopup3.CodeName = empty1;
-            _uniOpenPopup2.CodeValue = str;
+            uniTextBox _uniTextBox = txtInternalCd;
+            string empty = string.Empty;
+            _uniTextBox.Text = empty;
+            _uniOpenPopup.CodeValue = empty;
+            _uniOpenPopup1.CodeName = empty;
+            _uniOpenPopup2.CodeValue = empty;
+            _uniOpenPopup3.CodeName = empty;
             cboWkType.SelectedIndex = 0;
             cboBizAreaCd.SelectedIndex = 0;
             SetDayOfWeek();
@@ -168,7 +162,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             uniGrid1.SSSetEdit(eH4019Q2.TYPEColumn.ColumnName, "구분", 64, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4019Q2.TOTALColumn.ColumnName, "합계", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < eH4019Q2.Columns.Count - 5; i++)
             {
                 string sColumnKey = string.Format("D{0}", i.ToString().PadLeft(2, '0'));
                 uniGrid1.SSSetEdit(sColumnKey, sColumnKey, 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
@@ -191,7 +185,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
 
             #region ■■ 3.1.3 Setting etc grid
 
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < eH4019Q2.Columns.Count - 5; i++)
             {
                 AddLabelColumn(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), i.ToString().PadLeft(2, '0'));
             }
@@ -201,13 +195,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             uniGrid1.SetMerge(eH4019Q2.EMP_NOColumn.ColumnName, 2, 0, 1, 2);
             uniGrid1.SetMerge(eH4019Q2.TYPEColumn.ColumnName, 3, 0, 1, 2);
 
-            for (int i = 0, j = 4; i < 50; i++, j++)
+            for (int i = 0, j = 4; i < eH4019Q2.Columns.Count - 5; i++, j++)
             {
                 uniGrid1.SetMerge(string.Format("D{0}", i.ToString().PadLeft(2, '0')), j, 0, 1, 1);
                 uniGrid1.SetMerge(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), j, 1, 1, 1);
             }
 
-            uniGrid1.SetMerge(eH4019Q2.TOTALColumn.ColumnName, 54, 0, 1, 2);
+            uniGrid1.SetMerge(eH4019Q2.TOTALColumn.ColumnName, eH4019Q2.Columns.Count - 1, 0, 1, 2);
 
             uniGrid1.DisplayLayout.Bands[0].Columns[eH4019Q2.DEPTColumn.ColumnName].MergedCellStyle = MergedCellStyle.Always;
             uniGrid1.DisplayLayout.Bands[0].Columns[eH4019Q2.DEPTColumn.ColumnName].MergedCellEvaluator = new CustomMergedCellEvaluator();
@@ -345,6 +339,13 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         {
             try
             {
+                if ((dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1 > 40)
+                {
+                    uniBase.UMessage.DisplayMessageBox("970025", MessageBoxButtons.OK, "조회 기간", "40일");
+                    dtYearMonth.Focus();
+                    return false;
+                }
+
                 DataSet ds = GetGridData("dbo.usp_H_H4019Q2_CKO055");
 
                 if (ds.Tables[0].Rows.Count < 0)
@@ -400,6 +401,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
             catch (Exception ex)
             {
                 if (ExceptionControler.AutoProcessException(ex)) throw;
+
                 return false;
             }
             finally
@@ -643,9 +645,8 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         private void SetDayOfWeek()
         {
             int days = (dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1;
-            days = days <= 50 ? days : 50;
 
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < 40; i++)
             {
                 uniGrid1.SSSetColHidden(string.Format("D{0}", i.ToString().PadLeft(2, '0')), true);
                 uniGrid1.SSSetColHidden(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), true);
@@ -733,7 +734,6 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
         private void SetGridFormat()
         {
             int days = (dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1;
-            days = days <= 50 ? days : 50;
 
             foreach (UltraGridRow Row in uniGrid1.Rows)
             {
@@ -774,7 +774,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                     case "야간시간":
                         TimeSpan total = TimeSpan.Zero;
 
-                        for (var i = 4; i < days + 4; i++)
+                        for (var i = 4; i < days + 5; i++)
                         {
                             string input = Row.Cells[i].Value.ToString() == "" || Row.Cells[i].Value.ToString() == null ? "00:00" : Row.Cells[i].Value.ToString();
                             TimeSpan TimeSpan = new TimeSpan(int.Parse(input.Split(':')[0]), int.Parse(input.Split(':')[1]), 0);
@@ -791,7 +791,7 @@ namespace Bizentro.App.UI.HR.H4019Q2_CKO055
                 {
                     foreach (UltraGridCell Cell in Row.Cells)
                     {
-                        if (Cell.Column.Index > 4 && Cell.Column.Index < days + 4 && Cell.Value != null && Cell.Value.ToString() != "08:00")
+                        if (Cell.Value != null && Cell.Value.ToString() != "08:00" && Cell.Column.Index > 4 && Cell.Column.Index < days + 5)
                         {
                             Cell.Appearance.FontData.Bold = DefaultableBoolean.True;
                             Cell.Appearance.ForeColor = Color.Red;
