@@ -751,7 +751,9 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("grpDate{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
             }
 
-            foreach (DataRow row in GetCalendar().Tables[0].Rows)
+            DataSet Calendar = GetCalendar();
+
+            foreach (DataRow row in Calendar.Tables[0].Rows)
             {
                 DateTime _sDate = (DateTime)row["DATE"];
                 string _sDay = _sDate.ToString(CommonVariable.CDT_DD).PadLeft(2, '0');
@@ -812,7 +814,7 @@ namespace Bizentro.App.UI.HR.H4019Q1_CKO055
             string sWhere = "BIZ_AREA_CD = 'UB00' AND DATE BETWEEN '"
                 + dtYearMonth.uniValue.Date.ToString(CommonVariable.CDT_YYYY_MM_DD)
                 + "' AND '"
-                + dtYearMonth.uniValue.AddMonths(1).Date.ToString(CommonVariable.CDT_YYYY_MM_DD)
+                + dtYearMonth.uniValue.AddMonths(1).AddDays(-1).Date.ToString(CommonVariable.CDT_YYYY_MM_DD)
                 + "'";
             DataSet dsCalendar = uniBase.UDataAccess.CommonQueryRs(sSelect, sFrom, sWhere);
 

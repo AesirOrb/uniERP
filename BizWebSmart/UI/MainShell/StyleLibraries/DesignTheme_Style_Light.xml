@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DesignTheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.bizentro.com">
+	<Form BackgroundImage="" BackColor="242,245,253"/>
+	<ConditionTable Opacity="80" BackColor="228, 236, 248">
+		<TableBorder BorderType="1 1 1 1" Opacity="80" BackColor="76, 119, 198"/>
+	</ConditionTable>
+	<Grid RequiredColor="252, 226, 165" DefaultColor="255, 255, 255" LockColor="228, 229, 250" />
+  <SpreadSheet BorderColor="0, 0, 0" BorderStyle="Hair" DefaultRowHeight="32" DefaultColumnWidth="240">
+    <HeaderInfo BackColor="203, 225, 248" FontColor="62, 62, 62" FontBold="true" FontSize ="24"/>
+    <CellInfo RequiredColor="252, 249, 185" DefaultColor="255, 255, 255" LockColor="242, 242, 242" FontColor="62, 62, 62" />
+	</SpreadSheet>
+</DesignTheme>

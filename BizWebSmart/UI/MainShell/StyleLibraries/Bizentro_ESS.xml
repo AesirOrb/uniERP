@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<styleLibrary office2007ColorScheme="Black" office2007CustomBlendColor="167, 196, 31">
+  <annotation>
+    <lastModified>2008-06-10T00:51:33</lastModified>
+  </annotation>
+  <colorCategories>
+    <colorCategory name="HotTracked" />
+    <colorCategory name="ForeColor" />
+  </colorCategories>
+  <styleSets defaultStyleSet="Default">
+    <styleSet name="Default" viewStyle="Office2007">
+      <componentStyles>
+        <componentStyle name="Inbox Button">
+          <properties>
+            <property name="BackColor" colorCategory="{Default}">246, 250, 226</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="Inbox GroupBox">
+          <properties>
+            <property name="BackColor" colorCategory="{Default}">246, 250, 226</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="Inbox ListView">
+          <properties>
+            <property name="BorderStyle" colorCategory="{Default}">FixedSingle</property>
+            <property name="Font" colorCategory="{Default}">Microsoft Sans Serif, 8.25pt</property>
+            <property name="View" colorCategory="{Default}">Details</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="Inbox MonthCalendar">
+          <properties>
+            <property name="BackColor" colorCategory="{Default}">White</property>
+            <property name="Font" colorCategory="{Default}">Microsoft Sans Serif, 8.25pt</property>
+            <property name="ForeColor" colorCategory="{Default}">93, 110, 17</property>
+            <property name="TitleBackColor" colorCategory="{Default}">238, 246, 200</property>
+            <property name="TitleForeColor" colorCategory="{Default}">93, 110, 17</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="Inbox Panel">
+          <properties>
+            <property name="BackColor" colorCategory="{Default}">246, 250, 226</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="Inbox UserControl">
+          <properties>
+            <property name="BackColor" colorCategory="{Default}">246, 250, 226</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="UltraButton" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True" />
+        <componentStyle name="UltraCalculator" useFlatMode="True" />
+        <componentStyle name="UltraCalculatorDropDown" buttonStyle="FlatBorderless" viewStyle="Standard" />
+        <componentStyle name="UltraColorPicker" buttonStyle="FlatBorderless" viewStyle="Standard" />
+        <componentStyle name="UltraCombo" buttonStyle="FlatBorderless" viewStyle="Standard" />
+        <componentStyle name="UltraComboEditor" buttonStyle="FlatBorderless" viewStyle="Standard" />
+        <componentStyle name="UltraCurrencyEditor" viewStyle="Standard" />
+        <componentStyle name="UltraDateTimeEditor" buttonStyle="FlatBorderless" viewStyle="Standard" useOsThemes="True" />
+        <componentStyle name="UltraDayView" useFlatMode="True" />
+        <componentStyle name="UltraDockManager" useFlatMode="True">
+          <properties>
+            <property name="GroupPaneTabStyle" colorCategory="{Default}">Flat</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="UltraDropDown" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True" />
+        <componentStyle name="UltraDropDownButton" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True" />
+        <componentStyle name="UltraExplorerBar" useFlatMode="True" />
+        <componentStyle name="UltraFontNameEditor" buttonStyle="FlatBorderless" viewStyle="Standard" />
+        <componentStyle name="UltraGrid" useOsThemes="False" useFlatMode="True" />
+        <componentStyle name="UltraListView" useFlatMode="True" />
+        <componentStyle name="UltraMaskedEdit" viewStyle="Standard" />
+        <componentStyle name="UltraNumericEditor" buttonStyle="FlatBorderless" viewStyle="Standard" useOsThemes="True" />
+        <componentStyle name="UltraScrollBar" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True" />
+        <componentStyle name="UltraTabbedMdiManager" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True">
+          <properties>
+            <property name="HotTrack" colorCategory="{Default}">True</property>
+            <property name="TabStyle" colorCategory="{Default}">Flat</property>
+            <property name="ViewStyle" colorCategory="{Default}">Standard</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="UltraTabControl" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True">
+          <properties>
+            <property name="Style" colorCategory="{Default}">Flat</property>
+            <property name="UseHotTracking" colorCategory="{Default}">True</property>
+            <property name="ViewStyle" colorCategory="{Default}">Standard</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="UltraTabStripControl" buttonStyle="FlatBorderless" useOsThemes="False" useFlatMode="True">
+          <properties>
+            <property name="Style" colorCategory="{Default}">Flat</property>
+            <property name="UseHotTracking" colorCategory="{Default}">True</property>
+            <property name="ViewStyle" colorCategory="{Default}">Standard</property>
+          </properties>
+        </componentStyle>
+        <componentStyle name="UltraToolbarsManager" useOsThemes="False" useFlatMode="True" />
+        <componentStyle name="UltraTree" buttonStyle="FlatBorderless" useFlatMode="True" />
+      </componentStyles>
+      <styles>
+        <style role="ApplicationMenuButton">
+          <states>
+            <state name="Normal" imageBackgroundStyle="Centered">
+              <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuwgAAAKJUE5HDQoaCgAAAA1JSERSAAAAIAAAACAIBgAAAHN6evQAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAIJElEQVRYR8WXa1AUVxbH9cOMrqAh6kbjGhdDGRNTJhNJSjcbeQjCSiSiQHygsQmIkSoE0WiMoqxRRHlowfB+PzSijoBaCJFleDoojxlQHpYgL0UUFAYBkYH893TjjDAziLVftqv+c/t23zvnd84993T3RAATJk6cOOFtj3U5zwSzJk8wUSj+1PtTMfT5855BvQUzeLLrtzvlC3UhSxE35iri/tX1Nv/H2p7A/Yxz7G0a1Pd9oIjzud/fGXC/Dz41PfCukGP/rWfwLGiH63/a4JTRCuZSI+xjKmB5Ij/VcKfIZLz/HReADOuFtg/FRT8dQgwpvG0Ap5te4MS9Xhy53Y0DpZ3YU9QBN/FjbMskgNQmMOdqwMSXgwkvgsWhDLHATSQYC+SNAKefDAming41xD4bglKRTxQIbumHX10vjlZ1w6u8Cz9LnmJn7hO4ZD0Ck9YMJqUWTIIUTMQNOEUUYZOwEKZHsj20QYwJQJ4zrNcjjbPn0e2DED54CX9ahmNVzzmAvQTgTgDbWYD0FgK4SwCyVwCF2JFYAtezUrgmSOPUIbQCkHETkoZxDqCDAB6+Aqh+BVBMAHnDAI6jACQUgWEA9/OV2HGmFML00lMjITQA2GQjdbIAJ9s0IxD1KgJ+9X3YVdKF9ZmPYXSmGUsi6mGR1AgHEeUAFwHlEgwDeBCAS2w+Aq5JMQTYKCG0AYhZ40r5q0FEPFbgUG0fNuQ9g3l6G5Ymt2BR+H3MPVmDd7wq8e4vpVgTValKQufIIuxIuAXnqFz4kfGWl4N4BjRoBfCsH+BCr655G4Nx5yVwoWMInlV92HRDDus/OmAieoQvE5qxMKQe7x+vhu6BCvB2SqDjlAmjIzlgwgrxY3guQnLuoKLjOdrJXaW6AYaFGBWB7bf7xB51A/i5cTTEVMvjSMqU0djho49ieLtTgcLWfkTI5AimWuBf2AHLqHrM3H0DPId08K0T8FNYAefxSMPK86eAdBTA9/ld+j/c6sa2ij641fRjF4F41iu4dmVsCXQtfLBHmKWCGOvEzK8M/PUXwbeKhr3XVfTTQDKGJ1pEl/RUEaCQetjldsJBIgdT2gNnaS8H4yzrhWNZD74RSmDuHj8mQEFjL/LrumF2vBj8db+Dbx6GTzYnwsY7C1PMfJAja0IfzabQo4skJ+0r7mZUACtSH6VaZTyBTfZT2Od1YkNhFzYWybmW7RvFVL4RYNKeMvC254K3KY3CH49JpsGY9m0EZm9MpuidRB4BqB+pzQPeKoClZ1qkRhdaYZ7WhlUEsjqzHdZZHVzL9r8KKYfZGyLAc6O1ZzLBtz0HvkUE/rIiGNNtYjB36zlMtfRDrhaAsDqFWAWwOLIBhvFNWHbmAb5JeQgWxkTUCmNql1N/sX8JBzBIM7SJ55wN/sZL4K8e9n7qqnDMWp8I/W0iTLPyh5gA1OeF3x96DTD/1D18HFoPFkQQ24glBGNIW4xtv6C+wW8SDmCAALSJt/ky+DbJ3NpPMRNi+toY/O2H3/GR22W8szqAywH1eeENeA3w3rEqrpjoB96FQdA9fCSso/1dx7ULqD/nQAFW7IzHCwLQJr4tJZ5lJCabBpHBSFr7JOi7iLBoTyb0rANxXdqkMS9sJAAVEane4duY+dsdzPKp4grLHN8arp3tU413PXNhSgA9BKBN/FXRmGQSRKEPw1/t4zHP8TwWul+B4GAOpq85jSwCUJ8XOhKA514s5u8uxeR9Uuj8KsNUqmrTDlZgKknn1wpM3pENEwKgMqpVrHFdi1DMtI3jQr/ANQ2L913HV0cLMWNtEK6WN2nME44C+PG6N89FDJ5rAbiMdi8Gz+PmcEvllbf1MowI4DFVQW3StQzFjHWxmLPlLD78KRWfUugNvfPxz4ASghIi5+5jjXku5YNxql3A3yAS8CiLeVuukLFr4DlmvRbbd6D9vfww6FGhVZznZHz+9ktYtPsavjiUi3+cvAnTsEoYOMZqzLn1HCAADxUAW5epgEj5a5Kokp0d3s92KSRq2crGZrjJMYTl1qKW0lldxgezOM9Z4wIvMZb5FsNYKINl/F1sCcrWGB/UwAHojwYwFTL8FUJuK/FXRnAFhWvZ/ooQTDL2xzK3eJTRk1FdgYUPuLCzni/zlcA4WAqL2FpYRkhxtVk+avx1qsNs+DWehuwF3ZUhUh3zENrLwZhC1YxtdcyFXIJNswqna77YEJiFPNqL6nK5eBfLTgx7bhFbAztRM4QVHRrjfqke4rzXCjBjbYyA1rOTTSil2PV9zz4Bszck4f1NyQR0HLYBWUinfaUuIb2s7i/uwInqHlygp476/aP1nPfeY74RsTeofjMfMClQit3Tf3e+iPkul2Dgmo4FbulU54NgsDUcB4uakEiPuPHEjmP+aFWF/o0A7E0qocxCj6v4mNWuDC65Pt2bhc/2Z3NJ9uWRAnzimQ697wLxIYFsTizG/sImxNH6KuV3T45tIhnMA8Wwu/KQNS4m6b3xpXTkzc8P5DCUVJ1LDufB8N/5XFFZelyCr/1uYfnpMpiEVmBldDWdl1DFy8Q8p3gqQtGYy8TgA9p6Aq8MrDl/nzWs4fm4EVAOWOor0f/av0S8/FQZjCizWaNmkXe4DLdKrsd3KU1Yl9aK9dfasVksh6PkBbaVKZRG2baBpHoLfqvvAm1fMGZRVSYWcbWp35JR63ONsLnYAtv0R/Ra3g6HnC4whb1wLhlQN+yhHvL/GUA5ce2lh/p2l9sYMnyKDIu3FvSInW72i13KFOz6xrHVjSTQ5oS2a6pCxJ78v/RfNKzccpYo1NYAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+            </state>
+            <state name="HotTracked" imageBackgroundStyle="Centered">
+              <imageBackground>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+            </state>
+            <state name="Pressed" imageBackgroundStyle="Centered">
+              <imageBackground>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+            </state>
+          </states>
+        </style>
+        <style role="Base">
+          <states>
+            <state name="Normal" fontName="맑은 고딕" themedElementAlpha="Transparent">
+              <resources>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+            <state name="Selected" fontName="맑은 고딕" />
+            <state name="HotTracked" fontName="맑은 고딕" />
+            <state name="Pressed" fontName="맑은 고딕" />
+          </states>
+        </style>
+        <style role="Button" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>Button_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ComboDropDownButton" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button_combo</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>Button_combo_hover</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="DayViewControlArea">
+          <states>
+            <state name="Normal" backColor="249, 252, 237" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="DockSlidingGroupHeaderHorizontal">
+          <states>
+            <state name="Normal" foreColor="White" />
+          </states>
+        </style>
+        <style role="DropDownButton">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button_combo</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>Button_combo_hover</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ExpansionIndicator">
+          <states>
+            <state name="Normal">
+              <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAAwEAAAKJUE5HDQoaCgAAAA1JSERSAAAACwAAAAsIBgAAAKmsdyYAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgUlEQVQoU2NkAIIrL8v+g2hk8OffJxS+geQMRrBCGPj778f/X38+wfG3X0/+f/pxHYwza4T/wxXjU/ju20mEYkIKURTjshqkCIbBzrjwPAOnO2EKX37ZDXEGTDGyZ5BNBClEUUxIIYpiWPBgMxHDZJBifAqffloLcTMIgBiEMEgdAFO8dsFPJD8KAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+            </state>
+            <state name="Expanded">
+              <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAAwEAAAKJUE5HDQoaCgAAAA1JSERSAAAACwAAAAsIBgAAAKmsdyYAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgUlEQVQoU2NkAIIrL8v+g2hk8OffJxS+geQMRrBCGPj778f/X38+wfG3X0/+f/pxHYwza4T/wxXjU/ju20mEYkIKURTjshqkCIbBzrjwPAOnO2EKX37ZDXEGTDGyZ5BNBClEUUxIIYpiWPBgMxHDZJBifAqffloLcTMIgBiEMEgdAFO8dsFPJD8KAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+            </state>
+          </states>
+        </style>
+        <style role="ExplorerBarControlArea" borderStyle="None" />
+        <style role="ExplorerBarGroupHeader">
+          <states>
+            <state name="Normal" borderColor="Transparent" />
+            <state name="HotTracked">
+              <resources>
+                <name>GridRowOffice2K7Black_Selected</name>
+              </resources>
+            </state>
+            <state name="Active">
+              <resources>
+                <name>GridRowOffice2K7Black_Active</name>
+              </resources>
+            </state>
+            <state name="EditMode">
+              <resources>
+                <name>GridRowOffice2K7Black_Active</name>
+              </resources>
+            </state>
+            <state name="Expanded">
+              <resources>
+                <name>GridRowOffice2K7Black_Active</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ExplorerBarGroupItemAreaInner">
+          <states>
+            <state name="Normal" backColor="249, 252, 237" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ExplorerBarGroupItemAreaOuter">
+          <states>
+            <state name="Normal" backColor="249, 252, 237" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ExplorerBarItem">
+          <states>
+            <state name="HotTracked" backColor="206, 230, 100" backGradientStyle="None" backHatchStyle="None">
+              <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAATQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAcgAAABYIBgAAABy4yDEAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAy0lEQVRoQ+2TuwrCQBBF9f8bv0awsLEQbCwEGxHBRjQYlWTzWJPNlbW4/3DhDpxh6nOY+blcYObRN5BDerQN/J8xr2lKRtgBQ6Ypwug6YMgxtTC6DhhySBWMrgOGjGMJo+uAIfuhgNF1wJDdcIPRdcCQzfcKo+uAIUO8wOg6YMg6nmB0HTBk1R9hdB0w5Kc7wOg6YMh3t4fRdcCQr3YHo+uAIctmC6PrgCGfzQZG1wFDFmENo+uAIR9hBaPrgCHv9RJG1wFD5sNoO/gBSL8WB2j0cZIAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+              <resources>
+                <name>ProgressBarFill_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="GridAddNewBox">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>BackgroundAndBorder</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="GridAddNewBoxButton">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="GridAddNewBoxPrompt">
+          <states>
+            <state name="Normal" foreColor="87, 103, 16" />
+          </states>
+        </style>
+        <style role="GridBandHeader">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="GridCaption">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="GridCardCaption">
+          <states>
+            <state name="Normal" backColor="244, 249, 220" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="GridCell">
+          <states>
+            <state name="Normal" borderColor="222, 238, 151" />
+            <state name="EditMode" backColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>GridCellOffice2K7Black_EditMode</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="GridColumnHeader">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_Normal</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="GridControlArea" borderStyle="Solid" buttonStyle="Flat">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="GridGroupByBoxPrompt">
+          <states>
+            <state name="Normal" backColor="Transparent" foreColor="140, 165, 26" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="GridRow">
+          <states>
+            <state name="Normal" borderColor="222, 238, 151" />
+            <state name="Selected">
+              <resources>
+                <name>GridRowOffice2K7Black_Selected</name>
+              </resources>
+            </state>
+            <state name="Active">
+              <resources>
+                <name>GridRowOffice2K7Black_Active</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="GridRowSelector">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" borderColor="222, 238, 151" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="GroupPaneTabItemAreaHorizontalBottom">
+          <states>
+            <state name="Normal" backColor="141, 167, 26" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ListViewColumnHeader" borderStyle="None">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ListViewGroupHeader">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ListViewItem">
+          <states>
+            <state name="HotTracked" fontBold="False">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_Normal</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ProgressBarFill">
+          <states>
+            <state name="Normal" foreColor="White">
+              <resources>
+                <name>ProgressBarFill_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScheduleCurrentDay">
+          <states>
+            <state name="Normal" borderColor="208, 231, 106" />
+          </states>
+        </style>
+        <style role="ScheduleCurrentDayHeader">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>GridRowOffice2K7Black_Active</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScheduleDay">
+          <states>
+            <state name="Selected" backColor="243, 249, 218" backGradientStyle="None" backHatchStyle="None" />
+            <state name="AlternateItem" backColor="227, 241, 166" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ScheduleDayHeader">
+          <states>
+            <state name="Normal" imageBackgroundStyle="Stretched">
+              <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA/wAAAAKJUE5HDQoaCgAAAA1JSERSAAAALAAAABIIBgAAACD0PNwAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAfUlEQVRIS9XWSwoCQRRD0bj/VYkgiCLiQFFEBw79t1Z1dU9itnEfnB08kkzqeLVIV8aLSfQbTibRdziYRF3bmUSftjWJ3v3GJHr1K5PoWRcm0a1MTaJ7mZlEjzo3SX54mR/mSEqskxIcvOLo2j7VzJHxc8z44ci8PGdecvwBY+jiYm9W6BcAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>ScheduleDayHeader_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScheduleMonthHeader">
+          <states>
+            <state name="Normal" backColor="236, 245, 194" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ScrollBarArrowDown">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>ScrollBarTrackVerticalOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>ScrollBarArrowDownOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="Pressed">
+              <resources>
+                <name>ScrollBarArrowDownOffice2k7Black_Pressed</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarArrowLeft">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>ScrollBarTrackHorizontalOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>ScrollBarArrowLeftOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="Pressed">
+              <resources>
+                <name>ScrollBarArrowLeftOffice2k7Black_Pressed</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarArrowRight">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>ScrollBarTrackHorizontalOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>ScrollBarArrowRightOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="Pressed">
+              <resources>
+                <name>ScrollBarArrowRightOffice2k7Black_Pressed</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarArrowUp">
+          <states>
+            <state name="Normal" backColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>ScrollBarTrackVerticalOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>ScrollBarArrowUpOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="Pressed">
+              <resources>
+                <name>ScrollBarArrowUpOffice2k7Black_Pressed</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarArrowVertical">
+          <states>
+            <state name="Normal" backColor="204, 229, 92" backGradientStyle="None" backHatchStyle="None" />
+            <state name="HotTracked" backColor="135, 160, 25" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ScrollBarButton">
+          <states>
+            <state name="Normal" backColor="Transparent" foreColor="230, 242, 177" borderColor="Transparent" imageBackgroundStyle="Centered" backGradientStyle="None" backHatchStyle="None" />
+            <state name="HotTracked" backColor="Transparent" foreColor="53, 63, 9" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ScrollBarThumbHorizontal">
+          <states>
+            <state name="Normal" backColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>ScrollBarThumbHorizontalOffice2k7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="HotTracked" backColor="Transparent" borderColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>ScrollBarThumbHorizontalOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="Pressed" backColor="Transparent" borderColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>ScrollBarThumbHorizontalOffice2k7Black_Pressed</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarThumbVertical">
+          <states>
+            <state name="Normal" backColor="Transparent" borderColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>ScrollBarThumbVerticalOffice2k7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="HotTracked" backColor="Transparent" borderColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>ScrollBarThumbVerticalOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="Pressed" backColor="Transparent" borderColor="Transparent" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="2, 2, 2, 2">
+              <resources>
+                <name>ScrollBarThumbVerticalOffice2k7Black_Pressed</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarTrackHorizontal">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>ScrollBarTrackHorizontalOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ScrollBarTrackVertical">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>ScrollBarTrackVerticalOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TabControlClientAreaHorizontal">
+          <states>
+            <state name="Normal" backColor="White" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="TabControlClientAreaVertical">
+          <states>
+            <state name="Normal" backColor="197, 199, 203" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="TabItemAreaHorizontalTop">
+          <states>
+            <state name="Normal" backColor="141, 167, 26" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="TabItemAreaVertical">
+          <states>
+            <state name="Normal" backColor="141, 167, 26" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="TabItemHorizontalBottom">
+          <states>
+            <state name="Normal" borderColor="Transparent">
+              <resources>
+                <name>TabControlTabItemHorizontalBottomOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="Selected">
+              <resources>
+                <name>TabControlTabItemHorizontalBottomOffice2k7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+            <state name="HotTracked" borderColor="Transparent">
+              <resources>
+                <name>TabControlTabItemHorizontalBottomOffice2k7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="HotTrackSelected">
+              <resources>
+                <name>TabControlTabItemHorizontalBottomOffice2k7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TabItemHorizontalTop">
+          <states>
+            <state name="Normal" borderColor="Transparent">
+              <resources>
+                <name>TabControlTabItemHorizontalTopOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="Selected">
+              <resources>
+                <name>TabControlTabItemHorizontalTopOffice2K7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>TabControlTabItemHorizontalTopOffice2K7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="HotTrackSelected">
+              <resources>
+                <name>TabControlTabItemHorizontalTopOffice2K7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TabItemVerticalLeft">
+          <states>
+            <state name="Normal" borderColor="Transparent">
+              <resources>
+                <name>TabControlTabItemVerticalLeftOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="Selected">
+              <resources>
+                <name>TabControlTabItemVerticalLeftOffice2K7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>TabControlTabItemVerticalLeftOffice2K7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="HotTrackSelected">
+              <resources>
+                <name>TabControlTabItemVerticalLeftOffice2K7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TabItemVerticalRight">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>TabControlTabItemVerticalRightOffice2K7Black_Normal</name>
+              </resources>
+            </state>
+            <state name="Selected">
+              <resources>
+                <name>TabControlTabItemVerticalRightOffice2K7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>TabControlTabItemVerticalRightOffice2K7Black_HotTracked</name>
+              </resources>
+            </state>
+            <state name="HotTrackSelected">
+              <resources>
+                <name>TabControlTabItemVerticalRightOffice2K7Black_Selected</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ToolbarItemButton">
+          <states>
+            <state name="HotTracked">
+              <resources>
+                <name>Button_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ToolbarItemPopupColorPicker">
+          <states>
+            <state name="HotTracked">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ToolbarItemPopupControlContainer">
+          <states>
+            <state name="HotTracked">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ToolbarItemPopupMenu">
+          <states>
+            <state name="HotTracked" backColor="Transparent" backGradientStyle="None" backHatchStyle="None">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="ToolbarItemStateButton">
+          <states>
+            <state name="HotTracked">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TreeCell">
+          <states>
+            <state name="Normal" borderColor="222, 238, 151" />
+          </states>
+        </style>
+        <style role="TreeColumnHeader">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_Normal</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TreeNode">
+          <states>
+            <state name="HotTracked" fontBold="False">
+              <resources>
+                <name>GridColumnHeaderOffice2K7_Normal</name>
+                <name>ForeColor</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="TreeNodeExpansionIndicator">
+          <states>
+            <state name="Normal">
+              <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAAwEAAAKJUE5HDQoaCgAAAA1JSERSAAAACwAAAAsIBgAAAKmsdyYAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgUlEQVQoU2NkAIIrL8v+g2hk8OffJxS+geQMRrBCGPj778f/X38+wfG3X0/+f/pxHYwza4T/wxXjU/ju20mEYkIKURTjshqkCIbBzrjwPAOnO2EKX37ZDXEGTDGyZ5BNBClEUUxIIYpiWPBgMxHDZJBifAqffloLcTMIgBiEMEgdAFO8dsFPJD8KAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+            </state>
+          </states>
+        </style>
+        <style role="UltraButton" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>Button_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="UltraCalculator">
+          <states>
+            <state name="Normal" backColor="249, 252, 237" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraCalculatorButton" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button</name>
+              </resources>
+            </state>
+            <state name="HotTracked">
+              <resources>
+                <name>Button_HotTracked</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="UltraCalculatorButtonBase" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal" backColor="White" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraCalculatorDropDown" borderStyle="Solid">
+          <states>
+            <state name="Normal" backColor="244, 249, 220" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraCalculatorEditArea" borderStyle="Solid" />
+        <style role="UltraColorPicker" borderStyle="Solid">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraComboEditor" borderStyle="Solid" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal" backColor="244, 249, 220" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraComboEditPortion" borderStyle="Solid" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal" backColor="244, 249, 220" borderColor="191, 222, 51" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraCurrencyEditor" borderStyle="Solid">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraDateTimeEditor" borderStyle="Solid">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraDropDownButtonMainButton">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="UltraDropDownButtonSplitButton">
+          <states>
+            <state name="Normal">
+              <resources>
+                <name>Button</name>
+              </resources>
+            </state>
+          </states>
+        </style>
+        <style role="UltraFontNameEditor" borderStyle="Solid" buttonStyle="FlatBorderless">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraMaskedEdit" borderStyle="Solid">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraNumericEditor" borderStyle="Solid">
+          <states>
+            <state name="Normal" backColor="242, 248, 215" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="UltraProgressBar" borderStyle="Rounded1">
+          <states>
+            <state name="Normal" borderColor="0, 0, 0, 0" />
+          </states>
+        </style>
+        <style role="UnpinnedTabAreaTop">
+          <states>
+            <state name="Normal" backColor="141, 167, 26" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+        <style role="ValueListItem">
+          <states>
+            <state name="Selected" backColor="234, 214, 115" backGradientStyle="None" backHatchStyle="None" />
+          </states>
+        </style>
+      </styles>
+      <sharedObjects>
+        <sharedObject name="ScrollBar">
+          <properties>
+            <property name="MinimumThumbHeight" colorCategory="{Default}">30</property>
+            <property name="MinimumThumbWidth" colorCategory="{Default}">30</property>
+          </properties>
+        </sharedObject>
+      </sharedObjects>
+    </styleSet>
+    <styleSet name="Ribbon">
+      <styles>
+        <style role="Base">
+          <states>
+            <state name="Normal" themedElementAlpha="Transparent" />
+          </states>
+        </style>
+      </styles>
+    </styleSet>
+  </styleSets>
+  <resources>
+    <resource name="BackgroundAndBorder" backColor="242, 248, 215" borderColor="191, 222, 51" backGradientStyle="None" backHatchStyle="None" />
+    <resource name="Button" colorCategory="{None}" foreColor="75, 75, 75" borderColor="Transparent" fontName="맑은 고딕" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAGwIAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABYIBgAAANp9XIgAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsQAAALEAGtI711AAABhElEQVRIS62Vu0oDURCGRxEfzcrWd1HwUniBmIARiRcimAgqKCJKKitLEbQwxrgm62Zv2Us2MVErEX9nFrTRSmbhK8/375k5c84QADqqnIP+8b1/fvysGh0e+WWYGB8bor3TCi4ur2C126qIU9y0c3wCr9PB/ZOliun5EDcV9w8RJV0YLVsVOwghbiqU9hD3nmHYjipuHEPctLK9g6Q/wKPjqhJ0EoibMuub6A1e0HA8VcJuD+Km+dU19F/f0OQATbpcFXHTbHYFAw7Q3kHy3Ie4aXopi4SbfGs0VPGjGOKmyYVlSENuanVVWn4b4uaADKRe1YdHVUL+aXHT1OJyOmhVLpEmDg+auGkmk0PMR6rWMFXxggjiprlcPg2oN59UccMI4qYFPqtSorppqeJyicRN2cIWIt6BYfFlp4jDOxA35YulNKBpu6q43ANx00Z5Pw0wXV8VhwPETdsHR+l13fIDVdwwhripzK/OdfUuHTZNxClukkf/4KyC/7B7fIpv/lov7i+3fvRP8rl7GwAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="Button_combo" foreColor="Transparent" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA0AAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABMIBgAAAHal5vEAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAATklEQVQ4T2P88vPOfwZKAcgQSjEDpQaAfTJqCEZEYA2TrdcU/+PC2MIQZ8BiMwRXJOCNHWSD8MUiwSgGGUQoGRA0hJABo4kNe44fZgELAMITd0b7ghbwAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="Button_combo_hover" colorCategory="HotTracked" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAXAEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABMIBgAAAHal5vEAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA2klEQVQ4T52Tqw7CQBBFp0HwM0j+EYnFogiO4AgOHFgcgYSQEgKl79KWdneY2SJ4tIjZ5Kidc8U8LDRPgfRZVgtAqwKL1BbDPoXkmCc7MexTSIZZuBHDPqgyxdRbiWGfQu6Y3BZi2AdVxBhfZmLYp5AIo/Pkg26njU1817JPIQEG9uiHupC6OvahzB10tr1a3oOaatiH8uGiu+83wkH//tmnEA+9w0AM+xQSoH8cimHfNDY8jcWYxlYjnop5jZiW7ToXUy2bWfulmGrt+QD9tRhzgFpr5HMWQ/4TixY+F6heQA4AAAAASUVORK5CYIILAAA=</imageBackground>
+    </resource>
+    <resource name="Button_HotTracked" colorCategory="HotTracked" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAKAIAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABYIBgAAANp9XIgAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpklEQVRIS63VvS+DURTH8dvY7P4DL0k3E7NVrAaLSmgkmDDWYtCVUUNCYiFhwyCh4i0ar61GE1qt6lMt9bSqVY0c53eIhUWcJ/mm0/3cpM8993EYfrIRD+H3rw+9l76XOGpqfyyvaxp3mEx4lOzELFUrWdVgwjb3oSGqvlpSpRhRCx5sY531UrWcpNfChWowYZvUcRe9lRJUzp+oBhO2SQY6qPJyTaWnA9VgwjaJ/TaqPF/Sy4Of21LKLyZsE99t5f8+SMXMOrem1LqYsE1su5nK9jE9WytUUAoWTNgmuuXkOZgh69TFdSvlEhO2iW42yKBZZz1fm2Cjf8YWTNi8QT3Zt3Nknbu5PqXcYsLmDRopn1yQqUuHBlWCBRO2ifmdVEgtyr2RCY8oNSombDlFeOvZyBjnUWpMTDlFNzstVLxfpccrLzehlFdM2DLJxewG5WJTlItO6sQWTJnk5GG7XBNPcR83rZRPTNjm7qiTSrk9fuvzfLR0ggUTtsFQle2AVEgtqQUPtkkHB/gOWubL6Vw1mLDlQ50JD/P5/3vpYD8jn/22HvYHX3y7CQBpv98AAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+    </resource>
+    <resource name="ForeColor" colorCategory="ForeColor" foreColor="102, 121, 19" />
+    <resource name="gradient_bg" backColor="White" borderColor="Transparent" backColor2="186, 220, 35" backGradientStyle="Vertical" borderColor2="Transparent" />
+    <resource name="GridCellOffice2K7Black_EditMode" backColor="Transparent" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAARQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGQAAAB8IBgAAABKwZn4AAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAw0lEQVRIS+2WQQrCMBBFk4LgRvAWPYZ48YorEcS9VxBqFaGtpp1p/iDFpQOJq/mQRcLwp/M7i+dd1LO/7ALdN+zI455C3hW8KNb71bLcSoOmO/F7eDDRyKkEP/jC393aI+Ehh/pwZfi7uj3wSCFHD/GFvzTJKWuiStfisrhUCaiKbbssLlUCqmLbLotLlYCq+L/blZIcv8ecuQuE9xpqVQS/Fs8EGVm1aroz4yHVRJgAH/5h4UoAHlCMifCTUh34CWxHTcN3krAOOR2LAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="GridColumnHeaderOffice2K7_HotTracked" colorCategory="HotTracked" backColor="Transparent" borderColor="226, 200, 69" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAAgEAAAKJUE5HDQoaCgAAAA1JSERSAAAAPwAAABMIBgAAACcx1ZIAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgElEQVRYR+XDOQrCAABE0fG0FkIKwUJsJI3YiIVgIVik8EDuS9wJZE88wXiQ/+B1fsnGomq/kanVftamVvNemVrNa2lq1c+FqVU/5qZWdZ+ZWlU8NbXK28TUKq+hqVVcxqZWcR6ZWvlpaGrlx4GplR36pla2D0ytdNcztdJt19R/CmCWG4WRrLMAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="GridColumnHeaderOffice2K7_Normal" backColor="251, 253, 243" borderColor="222, 238, 151" imageBackgroundStyle="Stretched" fontBold="True" backColor2="230, 242, 177" backGradientStyle="Vertical" imageBackgroundStretchMargins="2, 2, 2, 2" />
+    <resource name="GridRowOffice2K7Black_Active" colorCategory="HotTracked" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAARAEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGQAAAB8IBgAAABKwZn4AAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAwklEQVRIS73WzQoBYRjF8eMuKaWULKSUUkphIWVhZWFhZWFjYeU2fIxvJkLeMcz4vIDjvYnjqd/6LP9P5OsPCfV9vQHV8DF9quF96VENr3OXanidOlTD89imGh6HFtXw2DephtBtUA3BrkY1BNsK1XAZRakGM4pRDWYcpxrMJEE1eNMk1eA5Karh6qSphussQzX48yzV4C9yVMNtmacabqsC1exI0Y5o4b4uUQ33TZlqtidV2xOt/5QxdOu28Vp/eSR+932Qb5Zg7HUAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="GridRowOffice2K7Black_Selected" colorCategory="HotTracked" foreColor="Black" imageBackgroundStyle="Stretched">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA/wAAAAKJUE5HDQoaCgAAAA1JSERSAAAACwAAABQIBgAAAFssx2gAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAfUlEQVQ4T5XSOwoCQRCE4fL+hxIxEEwMDMRAA8FAdNfnzszOjpR9hN+GLys6qZp9W7botfowpVb7CDNq49WUpnIxpSmfTammkynV4WhKw21u6t/wIj4zSt3SlFK/MqV8X5tSfm5Mqby2plTeO1MaP3tTUfch6mZiz13smfkBVMQWMHIuk8wAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ProgressBarFill_Normal" backColor="Transparent" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="0, 1, 0, 1">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAGgEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABcIBgAAAAL2z9kAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAmElEQVQ4T6XUQQqCUACE4ekObZ9Pb1Yg1CIKXHQCjxEFEhFBRK2CCCSCQDB72Bl8dorJrtAMfNt/Ob1Z2ieUvT9zKlC3CRVw7ZQKOD+hAi8/pgKVH1GBZxNTgbIZUtEFBl3gf1icDRVYXgwVWF0NFcjygAqsbwEV2NwtFdg+LBXYFZYK7MuQChyqkAocXUQFTnVEBX6vrPgCQJ7MlfS+duUAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScheduleDayHeader_HotTracked" colorCategory="HotTracked" imageBackgroundStyle="Stretched">
+      <imageBackground>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowDownOffice2k7Black_HotTracked" colorCategory="HotTracked" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAHQIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABm0lEQVQ4T62TyUrDQBiARwTxIoIUXCp604snj76EL+BTiI8g9CSiIIgULxYFEY0LVVyroiJaK1gXBIsWl9amadNkkiYm+Z2Z0hGpIUUa+C6ZmW/++Ze6xcl2iMYNNNDfiFqa65FlA7Jt5Pkp2EGxOwP19TQgRCXLUx2g5y/BtjA49hc4jvWDbZB/ZUy+rufOYX3GD/Q8k0SFbjC1JGBxHzTpDIryNRSVezAIWDzgsLXCDRj4iVxis3O/JIb6COrnFuDsMYnqimy+ZaiZXY4mnXhLlPRGKRoSqi7HGEpqjYMze+wCQ3lwj6Q2ktQqJCK9nhQLcZb4P3OiEAnNQVTocoU+lSbXU6JJpxAO+itQ02GWr6olev4CZgOtnML7EvxLQkWBER9QQfWSjxXeK7SxKPLbPEch6zh7xErvnpNaSVivkAphMcJuzSeDHPl1jjUeFg/JDJkuJSaRKCmBPGmTsM2QEhOc3Ms0lERCpSQ01kb6Ywfo/DDIgJnaM4O2eRlaWhMnwDJEqJjiocEmWBgvTXO1REKdMDrsY1P8DS/If1mVEru4AAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowDownOffice2k7Black_Normal" backColor="Transparent" foreColor="Transparent" imageBackgroundStyle="Centered" backGradientStyle="None" backHatchStyle="None">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAFwEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAlUlEQVQ4T2PsXyn1f8uyTwyCoswMf/8wMDAxMRAEbOyMYPVP7v9mcPThYWAAGeLsz/M/JIX/f2AC///gJMI4MlPgf1ad8H+/WL7/IP2jhvD/Jxgmjz4s/k8IEzQEFDvXXzfgxCB5ogwBKTzzNA4Dw6KfaENAGg7et4Jj5PRDkiEgjRsuKGIkQJINwZaCRw3BzNU0CRMAAy0g0iKgYDEAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowDownOffice2k7Black_Pressed" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAANgIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABtElEQVQ4T7WTS0sCURSAR1pErbKMiKBtu1atglb9DyEQXIkEBUZRtHJTglLR06QiojdEDyiiVSQUlGUo5qvS0rEZHV9Zi9M9BxsQEyVq4FvM3Hu/e+Y8FOuWZrBtS1x7WzWnUlZxlT4KBccFQp9cV0cNx6HEoK2HxPMyZOOX8C45IJdyMx6IjHiRx55fd0Iu7QUpvA6j+gbA8yQZMzRCij+B+KOVyVYg+bpH74jgnyDEwCTEn5YgFTmAjHAOn9lnOlcgSUb2QQxO00YpvAGp6CHjCN68JkLwmdglCxVI8LbHeUiEVkF62SF494iM4DOzb1uQjp3CRyZYIpK/kAh+C/jO2sqCv/qR9v0cCUrE4Bxc7baWBBOPyS0rwXIfzLcUEfMYqXoVS6TQGliNTTLR+z74lQRFxj4VoKBY4i2RE1bC717BsJGIUy/DuwbZ+gwr8zbrZs9/S6hX5ljnLjJs8OrQykTudKzxhinad+m2dCTYlWJgim2cJcLXapmXGw2QyDXEhtJeKOntUdJBnB+E5oY/JrB3vsE9GJ0U3mSzZC6c4u7OWujXKMlcKeMDjaBT19EUfwEPEjxq+XPfcwAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowLeftOffice2k7Black_HotTracked" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAJAIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABoklEQVQ4T63USS8DYRgH8PEROKkSB1/Cl3Hi5MzNgThIRCSWiCARWyQisUYcmgqCSFBLkDZaLY11Ojpm7zKP9/2PlmkjJTXJL5nDzH+eZWYqFgY9JJR7tLdU0uKQh3bn62BrthZ8U6VN9VZTW3MlCWtjXjKSR5TNaGBn0w47802WnRez1CBtTHhJOF6up5R+R5roB106AFM+dSjXZKk3kDLikDZfwLZt4vcjxFJDpL5sgpbYBSN5Aub7JZ2vO9eUDFGe14nLV/R2SDoT22tEiKlcsYqjkDYfoagS5WmFOPXVB7q0Tw+Bpq8Q+YwsLQxp3hLD5+RqpzDkNdj5Y0iuLVeIzmYghrpBuh0iOT5NhSHq8wba48z3C+AbzFdSGMKD/iVEjs+42vlVJfzJnBTph+T9JOS2ozwusdXvgCEHoKidXEjipoe4t+iwIzaOFfPKlKdV0MRtsLMp90xyIWKoiw24ixLhPpAiAyxoFHiQE7YM+ZC5fg/K5sN1+dyE89Y620hpEchYIhjsmh320QodrVW0NFKDsv6Ktxn2N5DA/yfl+gAV+nd9n+e5qgAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowLeftOffice2k7Black_Normal" foreColor="Transparent" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAABQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAg0lEQVQ4T2PsXyn1n4FS4ODN859SzBCZKfCfUswQkyP4n1LMEJsn+J8Q3nBBEa8agoYcvG/1nyJDzjyN+0+RIddfN/ynyJBHHxb/p9gQUEBTxRCQQRR5BznKiQrY9Crh/4QwKIrxqWGomij2n1LM0DZP8j+lmGHfPf3/lGIGUHlCKQYA8fczk7TLFgkAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowLeftOffice2k7Black_Pressed" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAASwIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAByUlEQVQ4T63Uy2sTURgF8HQtVDQUdFH6b7hz7c4WFYrUFiNdWLIQXAipj4UggSJtQFEqKrF0EcWNUaG4UttSjOYlNCHvZDLJZPKYTCbJJC183nvyIiGKmg78VgNnzv3uvTPmsJ0mw6jPubPH6KbpBK3cmvhnt5dO0tUL42S4azZSWXhFdcUFuuqDhhZsC1OzGoODutCi56Ba+EL3bxjJwBto8idSks+hLGxAJfsO+Lta4SvoZS80tBAcNotoj5CK9J5KiSegpOygiq9By30kn3OKffXzX4TEH1GJUZLPoJzehMT2GYRoua3ekiv7pDOHjXx/k2LMRlwpsQ58TqJ7rhtSkZxUK+5AZ24HDfnPIXLw3u9D2rPpCymErSS4ZkD0zLMWdhoMyYcedIeuSR+Ia1ajvSaDITzoSEKkn+a+5QxvEhlo8u08CYzovgxZ/3Xo7I4csLCBPwU18xb4WemeEyynHZL+fom4jGcBsr5FbDFvJgfvQOdM6ap/eIjgmmYDnqb0j1kQPVco470GPAhhgWWolfZaIfzyZf1LxNv0iTykAoOzE38MSuolqOIbKEbXaNXCQkwXjxO/jf9zi19YT9GuY5IM/H8yql9/Ozd7zPXoBAAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowRightOffice2k7Black_HotTracked" colorCategory="HotTracked" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAJQIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABo0lEQVQ4T6XUyUrDYBQF4PgIurIOuPAlfBlXunKtOxeKC0FEcEBEBakjiGAdEBdSsUVEUOuAiqWt81BNW2uGJmmb639PjRoKDjTwQSDJ4Q5JyuYHPCSVerQ1l9PCoIeCc7WwOV0DG97feXsqqbWpnKSV0WrKvO5RPqeBnc8W2Llv8uK8mKle0Np4NUn7vjqy9BvSZD/oyR0w0ocFyjmZagSszB1kjWewbZv4eYSYapjU53XQEkFI302KCg/IeDvFdfZriBJfJeZUxCEvFx2USYdENWdg6VeQNR6hqBLlaYmY+rIBTshDqFG0dQSmFoUstyTwnFzt/BRyvd3gCnHacoXoYgZyuAuSl4PwvRIOOV6tIz21C8bbCfAGPyv5S4gaXysthAP+FMKbYMlYHzjtpO9nSXlcBC0RAN4YK2rHCUlEuolxSOpqiFLXY+J8CpSnZdDkLbDzlnsmTogc7hQD7qREtBeSsX4RNAJfYT4R5vsKmenz0OvtBPFwXT42UXhrC9uwtBjkTBky4p6A+Gil9pYKWhyuQln/xWuP+utJ4v9Jqd4BeeCAAepGQN0AAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowRightOffice2k7Black_Normal" foreColor="Transparent" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAADwEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAjUlEQVQ4T2PsXyn1n4FS4ODN859SzBCZKfCfUswQkyP4n1LMEJsn+B8bfvRhMVZxbGrxGnL9dQNRBhE05MzTOIIGEWXIwftWeA0i2pANFxRxGkS0IbgiACROlCH4DCDKEEIGgA1JrxL+jw2D0gkuOXRxhqqJYv8pxQxt8yT/U4oZ9t3T/08pZgCVJ5RiADCfO9PFjJdFAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowRightOffice2k7Black_Pressed" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAARwIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABxUlEQVQ4T6XUzUsbQRzG8XgWLCqCHsR/w1vPvdVSBSm+oOJFpAg9FLTVgyCClFawVBQV9aRFD9oKpae2WkrTGqOiwdfouklck91sNnEThaczj0k0IqjNwue08N3fDDObM9VfAke2z6OHuXjRmI++l0X39qqlAA1P8+DobC1EWJnAqeEk23RT3PIkbSMR3aOzU+WCfUzR4Hd0txXCISewtK8wDkYorExSxD9H8l0s+IPs8ArFrS06T4Q4PSORwCfo3g9kHI5TWBmHqU7DOl4QX/xGt0f2B6ALxsEwyYjm6YLpmxWhL5RecmQDtnAeP8mcJLTXD0n3DlEqoi7XiEnnKRZaotS+ncW1u0e8i+WZkeTeZESC271QnE9IddXR1UlkxD1flt50K/AZUiK6eznJXSInWz3ZRWTg5sjOtUl+P4YiqMvPKLWcwPpzaJvtpHsHyfTNkDwr6XPC5SQjR3+qIMmIz1UPv7sZgbVW0jyvKXWmbHP15ojirBAbXIGjv9WkumrhW2midGyzQ0zWgZj+6yIiL59/tQVymgw7bxAUeHb235NxOEam+pFCu+/wtl1EGisfQN7G/7nFo73F+DlVCof8n2TrH16qQCN3Iwz2AAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowUpOffice2k7Black_HotTracked" colorCategory="HotTracked" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAIQIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABn0lEQVQ4T62TS0sCURTHbwTRJoIQehi1q02rln2JvkCfIvoIgauIgiBC2iQFETU9sOhpRUWUGWgPgqSkh+Y4Oo539E6OpztncERt0kUDv82ce//nf8+jYXm6E/whRoYGm0lbayPJ60B0ndT8FFoggXtGBvqaCDFEVme6IJu6Bj1PoaB/Q6GQL6Ez/q+IZsWzyUvYnHOCcR9F/EIvaGoEqHgIqnQBOfkWcsoDMA4Vjywwlg4Co888iY73ykRY5gkyXztAE6fc1Q0/fIdk4vsWqnRWW0SJbZluuNWsHECU6IYFjR9gAqY82jv5H5HoOlpXpXOe8QoJ+/oh/bGCZGJedJlLh7Dwv9ZEqRDxCz38oEm5SLA+Ea/bCZWUnNQhMu9qBzvM59QQcY05oBZ/i3yuWbNiDJaB/L5oofA4TZxg6+0L+18iOCu8zVT0YdZUxG0hvy3g4FHxmO+QZtNi7kSJCvxJ25xdRApPWSRfZ8EUEqpFPBMdfMj2wNgfhC+Ypr4gxpgXMQqq0TDkmQhVWzwy3AJLk+Y214vP0w3jow7c4h+vwngtHIrsPAAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowUpOffice2k7Black_Normal" foreColor="Transparent" imageBackgroundStyle="Centered">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAEwEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkUlEQVQ4T2PsXyn1f9OSTwwSMiwMIMDMzMjAyARm4gRcPEwMwuLMDFfO/GBw9OFhYAAZ4ujL8z8yUwCMY3IE/8fm4cfpVcL/qyaK/feL5fsP0j9qiOB/ksPk0YfFGAFNkiHXXzf8h2HkGCPakDNP4/6jY5hBRBly8L7Vf1wYZBBBQzZcUPxPCBM0ZDTFDqIMCAD8LyedvUG83gAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarArrowUpOffice2k7Black_Pressed" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAOQIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABt0lEQVQ4T7WTS0sCURSAR1pErbKUiKBtu1atglb9jyAQXIkEBUVRtHJTglJRaRYVEb0hekARrSKhoCxDMc1KLR+NNr5rcTr3pANKg7OogW8x9/Hdc889R7FuboLFbYFra63mVMoqTu6nUHCcP/jFdbbXcByTDGjr4SOwDNnEJeQEB+RTbuSByMQvCtgL807Ip70ghNZhTN8AbD9JxgfUkIqeQOLZhrIVSL7t0T+Df5wk4v4pSLwsQSp8ABn+HL6yAdpXIkmG9yH+NEMLhdAGpCKHyBG8e40E7zPiIfMyJOy0Zyt8BFdBeN0hou5REd5nwrEtSMdO4TPzJBHJX0j4RzNeyUJJFoJrhO+sFSL3fUTMY6Ccsat+pn2/R1IuudptgSIlEkyuLMmBtRnKESORI7EZGkEKuk4liaFPBZX4kXglcoJPWKwVdiIj7NSLRF1DOD+Lz7yN1ez5bwnVigUrdwFZhDeHViR8p8PCG6Foc8KtdCSsKuP+aVw4R4Suu0VebzRAItcwNqW9VNLbo6SNrH8Y1DfRY4LVThG2hkUnhDaxl0ylXdzVUQv9GiWZ5TIxqAZddx118TcAgjU+B5QVQwAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarThumbHorizontalOffice2k7Black_HotTracked" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA8QEAAAKJUE5HDQoaCgAAAA1JSERSAAAAHQAAABEIBgAAACFRp3QAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABb0lEQVRIS92VyUrDUBSG8wQuXNmq+FA+gSvBJ3DhQtBtQRQccCFOWESoU9FFUTEiigiiqLRaLGq1tkmHTE1Sm997UqFSa9osQsALH1lcyHfOf25yOc6PNTLUich0EJebfZ5DHvJx0flu6NINLOvzmyp7eoOhxLEzFwRHHVbKaWj5U+ilK9CGoTzCUJN/YmopuIHeX9EzdjP8Wm9NaigJKLkYtMI56/oahnzvDBXlAlN7thsj6eFKT10qZ7agCgcoFy9QZh07oUu3rLj2oQIpGZLGFn9K3yNQsnvQxJOa2IkWRTUWbCfHxuW/VBN55OKjEJMhFF+WIL1tOCJ/7MINqnBknxeratbj/cfSs+adCg/jKKRm7IidaBV/476S3YcqHjeX0lxJTLN1ggpzQykdZmcgyqTG75mStB2ExBjckH+aQul1uS4NTwRYlAvs++Q9RZfv7IjXJwPgBvo7sBrq8vyGod/t9mwQw4PslvFjfQHRK87jhWU0HQAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarThumbHorizontalOffice2k7Black_Normal" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <image>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA1QAAAAKJUE5HDQoaCgAAAA1JSERSAAAACAAAAAgIBgAAAMQPvosAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsQAAALEAGtI711AAAAPklEQVQoU2P+//8/w7t/gv9PHtzeiI1mACnIq50EpLDTxCkIy+8Hm4CNBptAuYL4kglgK7DRYCtyoL7ARgMA3EyuF0nTQRoAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</image>
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAABgIAAAKJUE5HDQoaCgAAAA1JSERSAAAAHQAAABEIBgAAACFRp3QAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABhElEQVRIS8WVOUsDQRiG9weYRPQnKQgKSjCFKQQVG23txR9gJYIoCIJaWCgKHnjggSJYaCGISIw5yGGSzW6yZ/YIr/NNYoK1E114WKZ65n2/2R1J+o+nb6QL/eG/g3xSeCKEgnEOr64xjI7h1y2UjCtEpkMNac0rMgpw/DJD+TWur+InFbZuhCKfNDoVguVmYLop2F6uuQHahDgcX+ZBqE3ycanpJqE7Mf6mDYjmOwylbUudBJO+wXDiXCwaCmF7eVZxtS0lmVZ7aYrfmVwsFML2snzOraRl6x6f+jGKxiVK5o1wFOsBFfuZj60llc075LR9Jj5hn8+ZcGTzFqr9yKTptrRkXiNT3eHivH4onKJxAUpLNbeSUq3pyhYXZ7Vd4VCD1KbJDmxLSn+khLqGlLrB5JsdYJuN7ogfVC6NznSjoJ8iXl5CXFnGh7IinISyiqS6zub6BPJJk3M9eC0tsEr3OkZOO+BJY/IiZud7IdENMxAJYCga7DiDYwEMjwfxH7ep9AXdFZgt5i/rygAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarThumbHorizontalOffice2k7Black_Pressed" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA5QEAAAKJUE5HDQoaCgAAAA1JSERSAAAAHQAAABEIBgAAACFRp3QAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABY0lEQVRIS92VO0sDQRRGt7fQGPw91naCWFiIELFKRCIiNlqoRQQbBRUflYqIjVjYKYKoCIYQSQwiQRPZbJ6b3c26j2SLz7ljIdGUEwMOHJhqDt+9c2ckqRNrfLgb88FerM71tR3ykE9anPKjppzANVOof6TRsLNoOLJQPLcEr16GpV5jOeyHRAmtyhUM+QBm4Yzv7eot404Ybi2JuvnMxeTjUrN4Di27CyN3xPdW+YJxKQxHj4HElLhJWn1bh/6+h1ruGGb+VCi2egNHj8JzlB/S1zVomS1W5n0uFglVjdpFd6U56V9L1fQK5IdBKLERFJIhlFIzQtEym6yCh6yvie+k/1S6wUeyZdJcdAj5xwAvsUjUdISN5DYcI/67vNRXElNvRVJ8CqPysgRbu28tJbFolPgYislJ/tjwkZmd8KGQCIIuUzvRsjvs/MiXdKC/C9MBX9t/GJIthPwIjfagE7+p9AmZxVALdh5+gAAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarThumbVerticalOffice2k7Black_HotTracked" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA9wEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAAB0IBgAAAEyvh4EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABdUlEQVRIS+2Vu0oDQRiFN9hYBbHSWPgIlj6IT2DrM1gIWtgEBMELFoIipBCiYtBCRFREEUWUKIkGgzGa226y1+wk2RxnfrKRsDEINhY78BW7zH9mmDn/nIDEx/TUIMbH+qWBYJ/UcCA5jvjbeyiqI93GmTS/qgRoZnQpBGYk0Gw6Xpwamh0w/s1gyqfYWwmhvdTNzigV1+0c6tUsalYazEwRVvmqxSUV6vkY1PdN2PojRJ1XhATe+K5ewPQnwiydtDEKh1CzESivi7Dks+4itAMuYGtxVNU7Qs/vt9E+tlFOL6OUnPVFWufin4nvE9HF1Lm86ahvKteE8IZLJbMBORVGMTHzc+/4It6X7R+dSett/dsV89iwtXvyhyWfE8IbLvS+Ps/18kkDNjeZiAizdAyjcEAIc7m4Aj3M1oClXMAoHkHP7UL/jBKioBueyBAJaGsPFFzMSHYgJnejklnHVnjo+4pFFsfWRiiMfktkYRiTE0ES+QK0KroIAHCiyQAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarThumbVerticalOffice2k7Black_Normal" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="2, 2, 2, 2">
+      <image>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA0wAAAAKJUE5HDQoaCgAAAA1JSERSAAAACAAAAAgIBgAAAMQPvosAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsQAAALEAGtI711AAAAPElEQVQoU2PMrZ3wn5GBiQEEXnz6C6ZBgJOVkYGXEyj+//9/vJgBZEJe7SQwDsvvh+P4kgn/c4BiQ8IEANJLnu4/FXSLAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</image>
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAABwIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAAB0IBgAAAEyvh4EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABhUlEQVRIS+2VyUrDUBSG0wq6cQafSEHQhRRd2J26c+0L+ACuRBAFQaguXCgqDjjggCK40IUgIrWmLR1M0yZpcpM2Q/m990qLxVYFl+bCT0I457uHk8P5AwI9/SPt6OlrESqeIASD7Mv3p7UtILD4lOgKuxE9wKMHQu2QyTncCqHS4XhMRSoVlpOiSsJ04jBtEYb9DLV0j2h+DkPjHahdxyBexeLJtqeg7OZQcrNUaWilB5p0B8W6Rd68xpuxj7i6wp/D4c56CKvC8TQKydPkDK+A3f6RfIUcOaWJh0hq6xCVJWT0nWYQlVdRBRD7BbJ5CYkcI2vsIa1vUkgEr8oifd/6F5Dqn/lTT3zI14n1e+L35Df7xJ+TRnNS4JuebXlix7jH5MgZ3/IZfRup4gYS6ipiykKzRa3TTS9RQIImRzlALz9SwEENkNTWIKrLiBXmG0MkclJnF8ztWDUF64ablmxe8KpYnGQc4UmexeDYJwdkXhya6OIanfpZ4eluTM70gjkns9F326WGrqZ6UGMAAAAASUVORK5CYIILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+    </resource>
+    <resource name="ScrollBarThumbVerticalOffice2k7Black_Pressed" colorCategory="HotTracked">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA8wEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAAB0IBgAAAEyvh4EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcUlEQVRIS2NkAILkUP7/ijIsDBzsTCAu0eDB098MUxZ/YARrqM0W+v/17aH/v3++/v/7x6v/v78/+//r+xMw/vHpMhx//3jh/7f3J/5/fb33/9s7Hf/rcoT/w23sqRAFG/Dz8w2ghiv/v3848//bu2Ng/PHJEihe/P/9w5n/39xq/v/ySi6QPes/SB+qIUAXQAw49//b2yNg20D4/YNpUDwVbPvLq4X/n12IB7I7MQ0BOR1kM0jj5+fr/396ugKMX10rgeMXV3L+PzsX+f/J6YBRQ6DhMhomo+lkNO+MkPLkKLB43ENB8fjt4f+vb/b///xyK7hs/fhkERiDyhAYfn4x6f/TM8G4y9ifX+78//xi4/+PT5f9//BoDrCEnw7GoIIZhmEG4Cyof3y+BrQZVLfM/v/u/qT/7+5NBGOQBmwYo8oA1YCfnq2CewfkJRgGKcaGX1zO/l+UJIiovEB1cVO+MDjxEIvLUgX/e9pzgw0BAB1oOEeJt4dlAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</imageBackground>
+    </resource>
+    <resource name="ScrollBarTrackHorizontalOffice2K7Black_Normal" imageBackgroundStyle="Stretched">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA1gAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAABEIBgAAADttR/oAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVElEQVQ4T2PsXyn1n4FS4ODN859SzBCZKfCfUswQkyP4n1LMEJsn+J9SPGoIZhgOtzBJrxL+TylmqJoo9p9SzNA2T/I/pZhh3z39/5RiBlB5QikGAP8VGgJ7K9Z6AAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="ScrollBarTrackVerticalOffice2K7Black_Normal" borderColor="Transparent" imageBackgroundStyle="Stretched">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA9AAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEQAAAAoIBgAAAFJ8taIAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAcklEQVQoU2PsXyn1f9OSTwwSMiwMIMDMzMjAyARm4gRcPEwMwuLMDFfO/GBw9OFhYAAZ4ujL8z8yUwCMY3IE/8fm4cfpVcL/qyaK/feL5fsP0j9qiOD/kRAmzv48/0NS+P8HJvD/D04ijEHpKatOGJ5OAJdqKkQnC83jAAAAAElFTkSuQmCCCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemHorizontalBottomOffice2k7Black_HotTracked" colorCategory="HotTracked" backColor="Transparent" foreColor="White" borderColor="Transparent" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="5, 0, 5, 3">
+      <imageBackground>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemHorizontalBottomOffice2K7Black_Normal" backColor="141, 167, 26" foreColor="249, 252, 237" borderColor="Transparent" backColorAlpha="Opaque" backGradientStyle="None" backHatchStyle="None" />
+    <resource name="TabControlTabItemHorizontalBottomOffice2k7Black_Selected" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="6, 0, 5, 3">
+      <imageBackground>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</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemHorizontalTopOffice2K7Black_HotTracked" colorCategory="HotTracked" backColor="Transparent" foreColor="White" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="4, 3, 4, 0">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAASQQAAAKJUE5HDQoaCgAAAA1JSERSAAAAVgAAABYIBgAAAFoOa5sAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADx0lEQVRYR+2Z2U8TQRzHB5Wo8VHxAXsRXjxiVDxC4hEVDzzAIxqiMRp9MMaY+KAPRv8JX/TN+9YIeCKnQKGlQIFyexbacj+akJioP+c7u1uWsj22bSLqNvlkpr+dmZ357m9m5zebcvVKGi1cMItlWlJZ2vx5DL8ZM+eINGXGXDmdzfOpIh/fLyW+akmvRUlvEQ3++jku2h3/FmCenu9seOwHY4XX0qnfsYn66taR37VTP427yf8vEocW0BBaFl1PJ9ZTaiNvzXLyObdEYCu/ppOGbeT7G9A7LlE+jFYNOeStXUmfKjKIeWtXUH/9em0cG/gTkAlXJtSuriPnffwpTgeCY0l0XFG06LNnEeuvz6Y++2pOVgTWyGVQTgG2GKlby5caFbHWS1a5hO6vNd5wWkllsRwwTNev1UtkFvMULBV4a8ITvcwyXj+UyG1K99OqF8mWSJtT60Yfl6SNhKKXkko6+l27iOHF87HcRp8rM4JgjQBqm5KH/UtV5n+JWgMtfWCDltCUC7uH3MVW6nxrpa4SG3W/M4hXA+jX/toqlj0hbOVdEzUXWajlhZVaXxrEqwEctO6xmW8EsokFGvdS2W0TVd83kfOZhVzPDeLVwPHUTFX3TLKwTXlUestE5XdM9J6LW/vITHaDuDSAc5beXKQImy/+AHgulgWobqBfAzhnyQ0urGMjXwqa9gmPhai4AGHhuQb6NYCGEBaRGRd2vxC0QgbuXPPQbKBTg+oHZuGUQlge2gphISqMAAWwzhro1wD6YUlF0MUCzQeC0x/eCkGxZah/YqBHA+gGp8Tslzy2+aBYTxVR0ZiTbxsM9GkA3ZTlwOfcTGyACwsD1lXsw7CHa5xmNBVaKBb+ZL8RAwiv5U6KUzQhrLJ3RccQgSGCcBcjTRS0o5BIW+p2kpNHlDnRN735qWOBQ2IJhZYipIWwcGOIihuFhnNtr6baPNyGmDgaHW+sBHAOoVUW9tiw8XKhxFYX99e6t9qO8ajBmNVECnHxgAAcEl6LWd9nXyW9vDDNMEB8TegNAbZQUOZD2QQ40VFOxLRSnAqFs2udoCXTFqlfyjX0PxT1+JDX0kFtw4PHA4CWOJMVwo72XKKR7gs03HlOouOMYMhzSqLtBA22HhMMtByRcB8W4OUn4IGGRL5MHgX4AQ/A+aRA+Tbm2sH/q2jYTn7O5E85OeLt6hN2LZTr0iegSe0Fv1fJ93Xl8uu5wf4o/QrwcB7bTYCZK3AfkingaQENthyVaDsuGPKcpKH204LhjrOCka7zgtHuizTWe1m09xvGKfEcqDQXeQAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemHorizontalTopOffice2K7Black_Normal" backColor="141, 167, 26" foreColor="White" backGradientStyle="None" backHatchStyle="None" />
+    <resource name="TabControlTabItemHorizontalTopOffice2K7Black_Selected" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="5, 4, 5, 0">
+      <imageBackground>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</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemVerticalLeftOffice2K7Black_HotTracked" colorCategory="HotTracked" backColor="Transparent" foreColor="252, 249, 237" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="3, 2, 0, 2">
+      <imageBackground>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemVerticalLeftOffice2K7Black_Normal" backColor="141, 167, 26" foreColor="249, 252, 237" borderColor="Transparent" backGradientStyle="None" backHatchStyle="None" />
+    <resource name="TabControlTabItemVerticalLeftOffice2K7Black_Selected" backColor="Transparent" borderColor="Transparent" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="3, 5, 0, 5">
+      <imageBackground>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAfQMAAAKJUE5HDQoaCgAAAA1JSERSAAAAFgAAADYIBgAAAMMYaQ0AAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC+0lEQVRYR+1YO2/TUBS+AcrAAAti4LEwMSFGRlj4EfwLRsTGjEC0AzsSK0sFQkJAoaShpEAJbekrpAmtkiZ1ksavOE51OOfce203TQClDiKUSEeOZfvz5++ee16Jm/dOwbnzR8XFSxfEyWNXxMjhE0IAiJ/+Eom9l9UzicSIOHLouBB3Hp2GrDEKVScNlpcF01uCupvB8/dg2FNQsV9DxXqFR2X4f8t+w8bX7AlpdI82vFdM5C6D4aTAaxvQajfAaX1XVsBjAexWXlmOX2x5q/jyZWg0F9G+os3DdvMLkpmFmvuRCZatlyDSG9fx5m8BsN1a43PTWwGzucQP1t3PwUNVZxqJTCHjt8yYQDat51Ayn6E9gWJjnE1kSjeQ2UbfwPT5u4BNBEYTK8ZdBtVS9GJcdz/xZ7L2EcYEXLZehIx7A+c7pFhADTMoRwhcdd6xFLyA8QMnlWfEzviPAj/lheuxeOi3Xk75sHa95cD1pM9KzWvuB7WYKZRlMnA/9uNOr5CbIjbgrcjOO9jA/qCkYOCqim5xajx0wE2/wlL4OxToY5RiYMCe0jh2xiGwyfmOgr2UZJ+xIpRieIDLyisGwLjVrqG7EfA61xGxafx7wJRY54LkqgO9Tq5B1YQJlgN90y9jnKgHjIltd8Z/H7DFVVGMjCtKCgtcn4CpMOy2QfqWYriAt9ErYme8iRr/B+ad1ynFelzuNjBgihXRxYuNcRS4GGzrvampr52nGR9wYIpuoRQ6wpHG1DbINpe61IVIi0vdKrUK1PtNB52q7rlVBvl3ganbly6nG/eaM6OkSKoxgxw/RJJpN41la7Z7lKCBVUvGwGnUmBpKaskU8GLlNtcRVBC2d2xMTUWVnvTu+wWwK4FpaKJ7PSoDRDJ/jS+4fkm1CzU+em1sH7AKpdKAglT4QsqJsqihfpBmG3oyo+cb5CXiwfhZyFbH+FMC3dCNyJV62wxIbaWryeFIiscN8jwNgoZNY4/PwOTaVZgv3wIqYPZjq8Z9KNQfwg++yOuvlFdkCQAAAABJRU5ErkJgggsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemVerticalRightOffice2K7Black_HotTracked" colorCategory="HotTracked" backColor="Transparent" foreColor="252, 249, 237" imageBackgroundStyle="Stretched" backGradientStyle="None" backHatchStyle="None" imageBackgroundStretchMargins="0, 5, 3, 5">
+      <imageBackground>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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</imageBackground>
+    </resource>
+    <resource name="TabControlTabItemVerticalRightOffice2K7Black_Normal" backColor="141, 167, 26" foreColor="249, 252, 237" borderColor="Transparent" backColorAlpha="Opaque" backGradientStyle="None" backHatchStyle="None" />
+    <resource name="TabControlTabItemVerticalRightOffice2K7Black_Selected" imageBackgroundStyle="Stretched" imageBackgroundStretchMargins="0, 5, 4, 5">
+      <imageBackground>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</imageBackground>
+    </resource>
+  </resources>
+</styleLibrary>

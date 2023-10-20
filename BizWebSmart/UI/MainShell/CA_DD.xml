@@ -1,0 +1,2673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="CA_DD" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="CA_DD">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="key" type="xs:string" minOccurs="0" />
+                <xs:element name="EN" type="xs:string" minOccurs="0" />
+                <xs:element name="KO" type="xs:string" minOccurs="0" />
+                <xs:element name="CN" type="xs:string" minOccurs="0" />
+                <xs:element name="JP" type="xs:string" minOccurs="0" />
+                <xs:element name="VN" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <CA_DD>
+    <key>Common_OK</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>确定</CN>
+    <JP>確認</JP>
+    <VN>xác nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>Common_Cancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig</key>
+    <EN>Login Config</EN>
+    <KO>로그인 설정</KO>
+    <CN>登录配置</CN>
+    <JP>ログイン設定</JP>
+    <VN>Cài đặt đăng nhập </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_btnOK</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>确定</CN>
+    <JP>確認</JP>
+    <VN>xác nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_btnVerify</key>
+    <EN>Verify</EN>
+    <KO>검증</KO>
+    <CN>验证</CN>
+    <JP>検証</JP>
+    <VN>kiểm chứng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_chkSecureConnect</key>
+    <EN>Use SSL</EN>
+    <KO>SSL 사용</KO>
+    <CN>使用SSL</CN>
+    <JP>SSL使用</JP>
+    <VN>Sử dụng SSL</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_chkRunMode</key>
+    <EN>Run as Admin</EN>
+    <KO>관리자 권한 실행</KO>
+    <CN>运行管理员权限</CN>
+    <JP>管理者として実行</JP>
+    <VN>Chạy như quản trị</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_IPToolTip</key>
+    <EN>ex)xxx.xxx.xxx.xxx(Description)</EN>
+    <KO>예)xxx.xxx.xxx.xxx(명칭)</KO>
+    <CN>例如)xxx.xxx.xxx.xxx(姓名)</CN>
+    <JP>例)xxx.xxx.xxx.xxx(名称)</JP>
+    <VN>ex)xxx.xxx.xxx.xxx(tên gọi)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message01</key>
+    <EN>1st time</EN>
+    <KO>제1차</KO>
+    <CN>第1次</CN>
+    <JP>第1次</JP>
+    <VN>Lần thứ 1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message02</key>
+    <EN>2nd times</EN>
+    <KO>제2차</KO>
+    <CN>第2次</CN>
+    <JP>第2次</JP>
+    <VN>Lần thứ 2</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message03</key>
+    <EN>%1 times</EN>
+    <KO>제%1차</KO>
+    <CN>第%1次</CN>
+    <JP>第%1次</JP>
+    <VN>Lần thứ %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message04</key>
+    <EN>the Server - %1 Trying</EN>
+    <KO>상태: 서버로 연결중 - %1 시도</KO>
+    <CN>状态：正在连接到服务器－%1尝试</CN>
+    <JP>状態:サーバーに接続中-%回目</JP>
+    <VN>Trạng thái:đang kết nối máy chủ - thử %1 </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message35</key>
+    <EN>Will you continue to process it</EN>
+    <KO>계속 진행하시겠습니까?</KO>
+    <CN>你要继续吗？</CN>
+    <JP>継続しますか？</JP>
+    <VN>Tiếp tục thực hiện không?</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message05</key>
+    <EN>STATUS: Ready</EN>
+    <KO>상태: 준비완료</KO>
+    <CN>状态：就绪</CN>
+    <JP>状態:準備完了</JP>
+    <VN>trạng thái: chuẩn bị xong</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message06</key>
+    <EN>STATUS: Connection to the Server failed</EN>
+    <KO>상태: 서버 접속이 실패하였습니다.</KO>
+    <CN>状态：连接到服务器失败</CN>
+    <JP>状態:サーバー接続が失敗しました。</JP>
+    <VN>trạng thái: đăng nhập máy chủ không thành công </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message07</key>
+    <EN>Client Can not connect to server!%1</EN>
+    <KO>클라이언트가 서버를 접속할수 없습니다!%1</KO>
+    <CN>不能连接到服务器！%1</CN>
+    <JP>クライアントがサーバーに接続できません! %1</JP>
+    <VN>Máy khách không vào được máy chủ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_Message08</key>
+    <EN>Verified successfully.</EN>
+    <KO>검증 성공.</KO>
+    <CN>验证成功！</CN>
+    <JP>検証成功</JP>
+    <VN>kiểm chứng thành công</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_stbBizentroConfig</key>
+    <EN>Status</EN>
+    <KO>상태</KO>
+    <CN>状态</CN>
+    <JP>状態</JP>
+    <VN>Trạng thái</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblLoginConfig</key>
+    <EN>Login Configuration</EN>
+    <KO>로그인 설정</KO>
+    <CN>登录设置</CN>
+    <JP>ログイン設定</JP>
+    <VN>Cài đặt đăng nhập </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblServerIP</key>
+    <EN>Server IP</EN>
+    <KO>서버 IP</KO>
+    <CN>服务器IP</CN>
+    <JP>サーバーIP</JP>
+    <VN>IP máy chủ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblCompany</key>
+    <EN>Company</EN>
+    <KO>회사</KO>
+    <CN>公司</CN>
+    <JP>会社</JP>
+    <VN>Công ty</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblDatabase</key>
+    <EN>Database</EN>
+    <KO>데이터베이스</KO>
+    <CN>数据库</CN>
+    <JP>データベース</JP>
+    <VN>Cơ sở dữ liệu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblSecureConnect</key>
+    <EN>Secure Connect</EN>
+    <KO>보안 연결</KO>
+    <CN>安全连接</CN>
+    <JP>セキュリティ連結</JP>
+    <VN>an toàn Connect</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblRunMode</key>
+    <EN>Run Mode</EN>
+    <KO>실행 모드</KO>
+    <CN>运行模式</CN>
+    <JP>実行モード</JP>
+    <VN>Chạy chế độ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblPlatform</key>
+    <EN>Platform</EN>
+    <KO>플랫폼</KO>
+    <CN>平台</CN>
+    <JP>Platform</JP>
+    <VN>nền tảng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblDevelopOption</key>
+    <EN>Developer Options</EN>
+    <KO>개발자 옵션</KO>
+    <CN>开发者选项</CN>
+    <JP>開発者Option</JP>
+    <VN>lựa chọn người phát triển</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmConfig_lblConnectInfo</key>
+    <EN>Connection Information</EN>
+    <KO>연결정보</KO>
+    <CN>连接信息</CN>
+    <JP>連結情報</JP>
+    <VN>Thông tin liên kết</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired</key>
+    <EN>The password was expired</EN>
+    <KO>비밀번호가 만료되었습니다.</KO>
+    <CN>密码过期</CN>
+    <JP>パスワードが満了されました。</JP>
+    <VN>Mã số bí mật đã hết hạn.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_lblChangePassword</key>
+    <EN>Change Password</EN>
+    <KO>비밀번호 변경</KO>
+    <CN>更改密码</CN>
+    <JP>パスワード変更</JP>
+    <VN>Thay đổi mã số bí mật</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_btnOK</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>确定</CN>
+    <JP>確認</JP>
+    <VN>xác nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message01</key>
+    <EN>Please input old password.</EN>
+    <KO>기존 비밀번호를 입력하십시오.</KO>
+    <CN>请输入原密码！</CN>
+    <JP>既存パスワードを入力してください。</JP>
+    <VN>Nhập mã số bí mật cũ.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message02</key>
+    <EN>The Password could not be empty.</EN>
+    <KO>비밀번호는 빈값을 사용할 수 없습니다.</KO>
+    <CN>密码不能为空！</CN>
+    <JP>パスワードは空値を使用できません。</JP>
+    <VN>Mã số bí mật không để trống.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message03</key>
+    <EN>The [Confirm Password] did not match the [New Password].</EN>
+    <KO>[신규 비밀번호 재확인]은 [신규 비밀번호]와 동일하게 입력해 주십시오.</KO>
+    <CN>两次输入的密码不一致！.</CN>
+    <JP>[新規パスワード再確認]は[新規パスワード]と同一に入力してください。</JP>
+    <VN>[Xác nhận lại mã số bí mật mới] đăng nhập giống với [mã số bí mật mới].</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message04</key>
+    <EN>The [New password] and [Old password] should be different.</EN>
+    <KO>[신규 비밀번호]와 [기존 비밀번호]를 다르게 입력해 주십시오.</KO>
+    <CN>新密码不能和旧密码相同！.</CN>
+    <JP>[新規パスワード]と[既存パスワード]は異なる必要があります。</JP>
+    <VN>Nhập mã số bí mật mới khác với mã số bí mật đã có.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message05</key>
+    <EN>The ID and password should be different.</EN>
+    <KO>비밀번호에 ID가 포함되어 있으면 안됩니다.</KO>
+    <CN>密码不能和用户ID相同！.</CN>
+    <JP>パスワードにIDが含まれないようにしてください。</JP>
+    <VN>ID không được có trong mã số bí mật.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message06</key>
+    <EN>The Passwords should contain a mixture of characters and numbers.</EN>
+    <KO>비밀번호는 영문자와 숫자를 혼용하여야 합니다.</KO>
+    <CN>密码必需同时包含字母和数字.</CN>
+    <JP>パスワードは半角英数字を混用する必要があります。</JP>
+    <VN>Mã số bí mật gồm chữ và số.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message07</key>
+    <EN>Passwords are required to be a minimum of 6 characters.</EN>
+    <KO>비밀번호는 6자리 이상이어야 합니다.</KO>
+    <CN>密码的长度必需大于等于6.</CN>
+    <JP>パスワードは6桁以上である必要があります。</JP>
+    <VN>Mã số bí mật phải có 6 ký tự trở lên.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message08</key>
+    <EN>Do not repeat more than 3 same character or numerical digits.</EN>
+    <KO>동일 문자열이나 숫자열을 3번 이상 반복해서 입력 하면 안됩니다.</KO>
+    <CN>密码中不能包含超过3个重复的字母或数字.</CN>
+    <JP>同一の文字列や数字列を3回以上、繰り返して入力してはいけません。</JP>
+    <VN>Không được lặp lại từ 3 lần trở lên chữ và số giống nhau.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message09</key>
+    <EN>Do not input serial character or numerical digits.</EN>
+    <KO>연속된 문자열이나 숫자를 입력하면 안됩니다.</KO>
+    <CN>密码中不能包含超过3个连续的字母或数字.</CN>
+    <JP>連続文字列や数字列を入力してはいけません。</JP>
+    <VN>Không được nhập chữ hoặc số liền nhau.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_Message10</key>
+    <EN>This password exists in your password history.</EN>
+    <KO>해당 비밀번호는 비밀번호 이력에 존재합니다.</KO>
+    <CN>该密码存在于密码历史记录中。</CN>
+    <JP>このパスワードは、パスワード履歴に存在します。</JP>
+    <VN>Mật khẩu này tồn tại trong lịch sử mật khẩu.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_lblNewPassword</key>
+    <EN>New Password</EN>
+    <KO>신규 비밀번호</KO>
+    <CN>输入新密码</CN>
+    <JP>新規パスワード</JP>
+    <VN>Mã số bí mật mới</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_lblConfirmPassword</key>
+    <EN>Confirm Password</EN>
+    <KO>신규 비밀번호 재확인</KO>
+    <CN>确认新密码</CN>
+    <JP>新規パスワード再確認</JP>
+    <VN>Xác nhận lại mã số bí mật mới</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_lblPasswordExpired</key>
+    <EN>The password was expired, please set a new password.</EN>
+    <KO>비밀번호가 만료되었습니다, 신규 비밀번호를 설정하십시오.</KO>
+    <CN>密码已经过期，请重新设置密码。</CN>
+    <JP>パスワードが満了されました。新規パスワードを設定してください。</JP>
+    <VN>Mã số bí mật được hoàn thành, Cài đặt mã số bí mật mới.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_lblPasswordExpired_1</key>
+    <EN>This is your first login time. Please change the password.</EN>
+    <KO>최초 로그인 입니다. 비밀번호를 변경해 주십시오.</KO>
+    <CN>第一次登录，请重新设置密码。</CN>
+    <JP>最初のログインです。パスワードを変更してください。</JP>
+    <VN>Đây là lần đăng nhập đầu tiên. Hãy thay đổi mã số bí mật.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmPasswordExpired_lblOldPassword</key>
+    <EN>Old Password</EN>
+    <KO>기존 비밀번호</KO>
+    <CN>输入原密码</CN>
+    <JP>既存パスワード</JP>
+    <VN>Mã số bí mật cũ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetPassword</key>
+    <EN>Set Password</EN>
+    <KO>비밀번호 설정</KO>
+    <CN>设置密码</CN>
+    <JP>パスワード設定</JP>
+    <VN>Cài đặt mã số bí mật</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetPassword_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>Hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetPassword_btnOK</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>确定</CN>
+    <JP>確認</JP>
+    <VN>Xác nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetPassword_lblNewPassword</key>
+    <EN>New Password</EN>
+    <KO>신규 비밀번호</KO>
+    <CN>输入新密码</CN>
+    <JP>新規パスワード</JP>
+    <VN>Mã số bí mật mới</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetPassword_lblConfirmPassword</key>
+    <EN>Confirm Password</EN>
+    <KO>신규 비밀번호 재확인</KO>
+    <CN>确认新密码</CN>
+    <JP>新規パスワード再確認</JP>
+    <VN>Xác nhận lại mã số bí mật</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetPassword_ultraLabel3</key>
+    <EN>The password is blank, please set a new password.</EN>
+    <KO>현재 비밀번호는 빈값입니다. 신규 비밀번호를 설정하십시오.</KO>
+    <CN>当前密码为空，请设置一个新的密码。</CN>
+    <JP>現在パスワードは空値です。新規パスワードを設定してください。</JP>
+    <VN>Không có mã số bí mật hiện tại. Lựa chọn mã số bí mật mới.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetTimeOut</key>
+    <EN>Set Timeout</EN>
+    <KO>타임아웃 설정</KO>
+    <CN>超时设置</CN>
+    <JP>TimeOut 設定</JP>
+    <VN>Cài đặt thời gian thoát ra </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetTimeOut_btnOK</key>
+    <EN>Save</EN>
+    <KO>저장</KO>
+    <CN>保存</CN>
+    <JP>保存</JP>
+    <VN>Lưu lại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetTimeOut_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>Hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetTimeOut_Label1</key>
+    <EN>Please input time out(Minute)</EN>
+    <KO>타임아웃 시간설정(분).</KO>
+    <CN>请输入超时的时间(分钟)</CN>
+    <JP>TimeOut 時間設定(分).</JP>
+    <VN>Cài đặt thời gian thoát ra(phút)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSetTimeOut_Label2</key>
+    <EN>The time out must be between %1 and %2</EN>
+    <KO>타암아웃제한시간은 %1에서 %2사이의 값 입니다.</KO>
+    <CN>超时时间必需介于 %1 和 %2 之间。</CN>
+    <JP>TimeOut 制限時間は%1から%2の間の値です。</JP>
+    <VN>Thời gian thoát ra giới hạn trong khoảng %1 đến %2 </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI</key>
+    <EN>Sync Client UI</EN>
+    <KO>클라이언트UI 동기화</KO>
+    <CN>同步客户端UI</CN>
+    <JP>クライアントUI 同期化</JP>
+    <VN>Đồng bộ máy khách UI</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>Hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_btnDetail</key>
+    <EN>Detail</EN>
+    <KO>상세정보</KO>
+    <CN>详细信息</CN>
+    <JP>詳細情報</JP>
+    <VN>Thông tin chi tiết</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_btnSync</key>
+    <EN>Sync</EN>
+    <KO>동기화</KO>
+    <CN>同步</CN>
+    <JP>同期化</JP>
+    <VN>Đồng bộ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_Message01</key>
+    <EN>Please click Sync to start.</EN>
+    <KO>동기화 를 클릭하여 시작하십시오.</KO>
+    <CN>请点击 同步 开始操作.</CN>
+    <JP>同期化をクリックして始めてください。</JP>
+    <VN>Nhấn đồng bộ để bắt đầu.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_Message02</key>
+    <EN>Do you want to cancel?</EN>
+    <KO>취소하시겠습니까?</KO>
+    <CN>你想要取消吗？</CN>
+    <JP>取消しますか？</JP>
+    <VN>Có hủy bỏ không?</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_Message03</key>
+    <EN>Syncing file...</EN>
+    <KO>동기화 작업중입니다...</KO>
+    <CN>正在同步文件...</CN>
+    <JP>同期化作業中です…</JP>
+    <VN>Đang thực hiện đồng bộ...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_Message04</key>
+    <EN>%1 Success</EN>
+    <KO>%1 성공</KO>
+    <CN>%1 成功！</CN>
+    <JP>%1成功</JP>
+    <VN>%1 thành công</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_Message05</key>
+    <EN>%1 Fault</EN>
+    <KO>%1 실패</KO>
+    <CN>%1 失败！</CN>
+    <JP>%1失敗</JP>
+    <VN>%1 thất bại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_Message06</key>
+    <EN>Sync is successful</EN>
+    <KO>동기화 작업 성공</KO>
+    <CN>同步文件成功！</CN>
+    <JP>同期化作業成功</JP>
+    <VN>Thực hiện đồng bộ thành công</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_optFilter_All</key>
+    <EN>Show All</EN>
+    <KO>모두 보기</KO>
+    <CN>显示全部</CN>
+    <JP>全て表示</JP>
+    <VN>Xem toàn bộ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_optFilter_Correct</key>
+    <EN>Show Correct</EN>
+    <KO>성공한 정보만 보기</KO>
+    <CN>显示正确信息</CN>
+    <JP>成功した情報のみ表示</JP>
+    <VN>Chỉ xem thông tin thành công</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmSyncUI_optFilter_Incorrect</key>
+    <EN>Show Incorrect</EN>
+    <KO>실패한 정보만 보기</KO>
+    <CN>显示错误信息</CN>
+    <JP>失敗した情報のみ表示</JP>
+    <VN>Chỉ xem thông tin không thành công</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin</key>
+    <EN>Login</EN>
+    <KO>로그인</KO>
+    <CN>登录</CN>
+    <JP>ログイン</JP>
+    <VN>Đăng nhập</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_btnApply</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>确定</CN>
+    <JP>確認</JP>
+    <VN>Xác nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>Hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_btnConfig</key>
+    <EN>Config</EN>
+    <KO>설정</KO>
+    <CN>设置</CN>
+    <JP>設定</JP>
+    <VN>Cài đặt</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_cboLanguage_ToolTip</key>
+    <EN>select language</EN>
+    <KO>언어 선택</KO>
+    <CN>选择语言</CN>
+    <JP>言語選択</JP>
+    <VN>Chọn ngôn ngữ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_cboStartApp_ToolTip</key>
+    <EN>select start application</EN>
+    <KO>시작 프로그램 선택</KO>
+    <CN>选择开始的程序</CN>
+    <JP>開始プログラム選択</JP>
+    <VN>Chọn chương trình bắt đầu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_chkRememberID_ToolTip</key>
+    <EN>Remember ID</EN>
+    <KO>ID 기억하기</KO>
+    <CN>记住ID</CN>
+    <JP>ID記憶</JP>
+    <VN>Ghi nhớ ID</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_01</key>
+    <EN>Please input User ID</EN>
+    <KO>ID를 입력 하십시오.</KO>
+    <CN>请输入用户ID！</CN>
+    <JP>IDを入力してください。</JP>
+    <VN>Hãy nhập ID.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_02</key>
+    <EN>Please select the start application.</EN>
+    <KO>시작 프로그램을 선택하십시오.</KO>
+    <CN>请选择需要启动的程序</CN>
+    <JP>開始プログラムを選択してください。</JP>
+    <VN>Chọn chương trình bắt đầu.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_03</key>
+    <EN>Can not connect to the remote server, config the ip address please.</EN>
+    <KO>서버로 접속할수가 없습니다. IP를 설정하십시오.</KO>
+    <CN>无法连接到服务器，请设置IP地址！</CN>
+    <JP>サーバーに接続できません　IPを設定してください。</JP>
+    <VN>Không vào được máy chủ. Hãy cài đặt IP.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_04</key>
+    <EN>Please select company and database.</EN>
+    <KO>회사 및 데이터베이스를 선택하십시오.</KO>
+    <CN>请选择公司和数据库！</CN>
+    <JP>会社およびデータベースを選択してください。</JP>
+    <VN>Lựa chọn công ty và cơ sở dữ liệu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_05</key>
+    <EN>The user can not login again.</EN>
+    <KO>사용자는 중복 로그인 할 수 없습니다.</KO>
+    <CN>用户不能在本机重复登录！</CN>
+    <JP>ユーザーは重複ログインできません。</JP>
+    <VN>Người sử dụng không thể đăng nhập lại.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_06</key>
+    <EN>Cancel...</EN>
+    <KO>취소...</KO>
+    <CN>取消...</CN>
+    <JP>取消し…</JP>
+    <VN>Hủy bỏ...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_07</key>
+    <EN>User cancel</EN>
+    <KO>사용자 취소</KO>
+    <CN>用户取消</CN>
+    <JP>ユーザー取消し</JP>
+    <VN>Người sử dụng hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_08</key>
+    <EN>You are using the trial %1 license, it will be expired after %2 days.</EN>
+    <KO>현재 사용중인 %1는 평가판이며, %2일 후 만료됩니다.</KO>
+    <CN>你当前用的%1是试用版，将会在%2天后到期。</CN>
+    <JP>現在使用中の%1は評価版であり、%2日後に満了予定です。</JP>
+    <VN>Bạn đang sử dụng %1 bản dùng thử, sẽ hết hạn sau %2 ngày</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_09</key>
+    <EN>Connecting remote server %1 ...</EN>
+    <KO>%1 서버로 접속중...</KO>
+    <CN>连接到服务器 %1 ...</CN>
+    <JP>%1サーバーに接続中…</JP>
+    <VN>Đang kết nối với máy chủ %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_10</key>
+    <EN>Authenticate user...</EN>
+    <KO>사용자 인증...</KO>
+    <CN>验证用户...</CN>
+    <JP>ユーザー認証…</JP>
+    <VN>Chứng nhận người sử dụng...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_11</key>
+    <EN>Load menu information...</EN>
+    <KO>메뉴 정보 로딩중...</KO>
+    <CN>加载菜单数据...</CN>
+    <JP>メニュー情報 Loading中…</JP>
+    <VN>Đang tải thông tin thực đơn</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_12</key>
+    <EN>Load main program...</EN>
+    <KO>Main 프로그램 로딩중...</KO>
+    <CN>加载主程序...</CN>
+    <JP>MainプログラムLoading中…</JP>
+    <VN>Đang tải chương trình chính...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_13</key>
+    <EN>Time out</EN>
+    <KO>타임 아웃</KO>
+    <CN>超时！</CN>
+    <JP>TimeOut</JP>
+    <VN>Thời gian thoát ra</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_14</key>
+    <EN>Local information not match the server %1 select the company and database information.</EN>
+    <KO>로컬 정보와 서버정보가 불일치합니다. %1 회사 및 데이터베이스를 선택하십시오.</KO>
+    <CN>本地信息与服务器信息不匹配 %1 请选择公司和数据库信息</CN>
+    <JP>Local 情報とサーバー情報が一致していません。%1会社およびデータベースを選択してください。</JP>
+    <VN>Thông tin nội bộ và thông tin máy chủ không đồng nhất. %1 Hãy lựa chọn công ty và cơ sở dữ liệu </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_15</key>
+    <EN>Try again</EN>
+    <KO>다시 시도하십시오</KO>
+    <CN>验证失败，请重试！</CN>
+    <JP>再度お試しください。</JP>
+    <VN>hãy thử lại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_16</key>
+    <EN>The trial lisence has expired, please contact system administrator.</EN>
+    <KO>평가 판 라이선스가 만료 되었습니다. 관리자에게 문의 하십시오.</KO>
+    <CN>您的试用版已经到期，请联系系统管理员</CN>
+    <JP>評価版 Licenseが満了しました。管理者にお問い合わせください。</JP>
+    <VN>Đã hết hạn cho phép. Hãy hỏi quản lý.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_17</key>
+    <EN>The server and client program should be synchronized.%1Client will be updated to the latest version automatically(S:%2,C:%3).</EN>
+    <KO>서버와 클라이언트간에 동기화가 되지 않았습니다.%1최신 모듈로 갱신 하십시오.(S:%2,C:%3).</KO>
+    <CN>客户端版本错误。%1系统会自动升级到最新的客户端。(S:%2,C:%3).</CN>
+    <JP>サーバーとクライアントの間でまだ同期化作業が行われていません。%1最新モジュールに更新してください。(S:%2,C:%3).</JP>
+    <VN>Không đồng bộ được máy chủ và máy khách. Hãy làm mới bằng module mới nhất.(S:%2,C:%3).</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_18</key>
+    <EN>Server is not responsible, contact admin please.</EN>
+    <KO>서버가 응답하지 않습니다.</KO>
+    <CN>服务器没有响应，请联系管理员。</CN>
+    <JP>サーバーからの応答がありません。</JP>
+    <VN>Máy chủ không đáp ứng.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_19</key>
+    <EN>License server is not responsible, contact admin or try again please.</EN>
+    <KO>서버가 응답하지 않습니다.</KO>
+    <CN>无法获取认证信息，请联系管理员或稍后重试。</CN>
+    <JP>サーバーからの応答がありません。</JP>
+    <VN>Máy chủ không đáp ứng.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_20</key>
+    <EN>Please input Password.</EN>
+    <KO>비밀번호를 입력 하십시오.</KO>
+    <CN>请输入密码!</CN>
+    <JP>パスワードを入力してください。</JP>
+    <VN>Hãy nhập mã số bí mật.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_21</key>
+    <EN>Server information is changed, the re-run.</EN>
+    <KO>접속 정보가 변경 되어 재실행 됩니다.</KO>
+    <CN>服务器信息发生变化时，重新运行。</CN>
+    <JP>サーバー情報が変更され、再実行されます。</JP>
+    <VN>Thông tin máy chủ được thay đổi, chạy lại.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_Message_22</key>
+    <EN>The server and client program should be synchronized.%1It will be re-run after the Update.(Server:%2,Client:%3)</EN>
+    <KO>서버와 클라이언트간에 동기화가 되지 않았습니다.%1Update 후 재실행 됩니다.(서버:%2,로컬:%3)</KO>
+    <CN>客户端版本错误。%1这将是更新后重新运行。(Server:%2,Client:%3)</CN>
+    <JP>サーバーとクライアントプログラムは同期する必要があります。％1更新後に再実行されます（サーバー：％2、クライアント：％3）</JP>
+    <VN>Không đồng bộ được máy chủ và máy khách.%1Nó sẽ được chạy lại sau khi Update.(Server:%2,Client:%3)</VN>
+  </CA_DD>
+
+  <!-- 여기는 접속자 목록 DD 시작 입니다 --> 
+  
+  <CA_DD>
+    <key>frmShowACL</key>
+    <EN>{0} Access User List</EN>
+    <KO>{0} 접속자 목록</KO>
+    <CN>{0} 访问用户列表</CN>
+    <JP>{0} 接続者目録</JP>
+    <VN>{0} Truy cập danh sách thành viên</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_btnRefresh</key>
+    <EN>Refresh</EN>
+    <KO>새로고침</KO>
+    <CN>刷新</CN>
+    <JP>リロード</JP>
+    <VN>Làm mới</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_btnCancel</key>
+    <EN>Close</EN>
+    <KO>닫기</KO>
+    <CN>关</CN>
+    <JP>閉じる</JP>
+    <VN>Gần</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_DBComment</key>
+    <EN>DB Comment</EN>
+    <KO>데이터베이스</KO>
+    <CN>数据库名</CN>
+    <JP>データベース</JP>
+    <VN>tên cơ sở dữ liệu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_UserID</key>
+    <EN>User ID</EN>
+    <KO>사용자ID</KO>
+    <CN>用户帐号</CN>
+    <JP>ユーザーID</JP>
+    <VN>ID người dùng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_LoginDate</key>
+    <EN>Login Date</EN>
+    <KO>로그인 시간</KO>
+    <CN>登录时间</CN>
+    <JP>ログイン時間</JP>
+    <VN>Hiện ĐĂNG NHẬP</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_RefreshLoginDate</key>
+    <EN>Refresh Date</EN>
+    <KO>새로고침시간</KO>
+    <CN>刷新时</CN>
+    <JP>リロード時間</JP>
+    <VN>Làm mới thời gian</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_ClientIP</key>
+    <EN>Client IP</EN>
+    <KO>사용자IP</KO>
+    <CN>客户端IP</CN>
+    <JP>ユーザーIP</JP>
+    <VN>khách hàng chỉ IP</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_CLIENT_ID</key>
+    <EN>Client PC</EN>
+    <KO>사용자PC</KO>
+    <CN>客户端PC</CN>
+    <JP>ユーザーPC</JP>
+    <VN>khách hàng chỉ PC</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_UserState</key>
+    <EN>State</EN>
+    <KO>상태</KO>
+    <CN>状态</CN>
+    <JP>状態</JP>
+    <VN>tiểu bang</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_ClientUID</key>
+    <EN>Client UID</EN>
+    <KO>사용자UID</KO>
+    <CN>客户端UID</CN>
+    <JP>ユーザーUID</JP>
+    <VN>khách hàng chỉ UID</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmShowACL_ultraGrid1_ClientVersion</key>
+    <EN>Client Version</EN>
+    <KO>사용 버전</KO>
+    <CN>客户端版本</CN>
+    <JP>使用バージョン</JP>
+    <VN>Version khách hàng</VN>
+  </CA_DD>
+  
+  <!-- 여기는 메시지 회신창 DD 끝 입니다 -->
+
+  <CA_DD>
+    <key>ShellForm__dockWorkspace</key>
+    <EN>Menu</EN>
+    <KO>메뉴</KO>
+    <CN>菜单</CN>
+    <JP>メニュー</JP>
+    <VN>Thực đơn</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ShellForm_uniTabControl1_Business</key>
+    <EN>Business</EN>
+    <KO>업무</KO>
+    <CN>业务</CN>
+    <JP>業務</JP>
+    <VN>Business</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ShellForm_uniTabControl1_Favorite</key>
+    <EN>Favorite</EN>
+    <KO>즐겨찾기</KO>
+    <CN>收藏夹</CN>
+    <JP>お気に入り</JP>
+    <VN>Favorite</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ShellForm_uniTabControl1_Recent</key>
+    <EN>Recent</EN>
+    <KO>최근사용</KO>
+    <CN>最近任务</CN>
+    <JP>最近使用</JP>
+    <VN>Recent</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ShellForm_uniTabControl1_ToDo</key>
+    <EN>To Do</EN>
+    <KO>할일</KO>
+    <CN>去做</CN>
+    <JP>スケージュール</JP>
+    <VN>Làm</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ShellForm_uniTabControl1_ShowSiteMenu</key>
+    <EN>Site Menu</EN>
+    <KO>사이트 메뉴</KO>
+    <CN>站点菜单</CN>
+    <JP>Siteメニュー</JP>
+    <VN>Site Menu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_txtPWD_ToolTip</key>
+    <EN>input password</EN>
+    <KO>비밀번호 입력</KO>
+    <CN>输入密码</CN>
+    <JP>パスワード入力</JP>
+    <VN>Nhập mã số bí mật</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmBizentroLogin_txtUID_ToolTip</key>
+    <EN>input user ID</EN>
+    <KO>사용자 ID 입력</KO>
+    <CN>输入用户ID</CN>
+    <JP>ユーザーID入力</JP>
+    <VN>Nhập ID người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch</key>
+    <EN>Watch</EN>
+    <KO>시스템 정보</KO>
+    <CN>系统信息</CN>
+    <JP>システム情報</JP>
+    <VN>Thông tin hệ thống</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_eBar_Group0</key>
+    <EN>Online User</EN>
+    <KO>온라인 사용자</KO>
+    <CN>在线用户</CN>
+    <JP>オンラインユーザー</JP>
+    <VN>Người sử dụng trực tuyến</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_grpServerInformation</key>
+    <EN>Server Information</EN>
+    <KO>서버 정보</KO>
+    <CN>服务器信息</CN>
+    <JP>サーバー情報</JP>
+    <VN>Thông tin máy chủ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_grpUserInformation</key>
+    <EN>User Information</EN>
+    <KO>사용자 정보</KO>
+    <CN>用户信息</CN>
+    <JP>ユーザー情報</JP>
+    <VN>Thông tin người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_loginOffToolStripMenuItem</key>
+    <EN>Logout</EN>
+    <KO>로그아웃</KO>
+    <CN>注销</CN>
+    <JP>ログアウト</JP>
+    <VN>Thoát ra</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_loginOnToolStripMenuItem</key>
+    <EN>Login</EN>
+    <KO>로그인</KO>
+    <CN>登录</CN>
+    <JP>ログイン</JP>
+    <VN>Đăng nhập</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_Message01</key>
+    <EN>Close all of %1 program if you want show login page.</EN>
+    <KO>로그인 화면을 보시려면 먼저 실행중인 %1 를 모두 종료하십시오.</KO>
+    <CN>显示登录界面前请退出所有的 %1 程序。</CN>
+    <JP>ログイン画面を表示させるためには、先に実行中の%1を全て終了してください。</JP>
+    <VN>Đóng tất cả %1 chương trình đang chạy nếu bạn muốn xem màn hình đăng nhập.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_Message02</key>
+    <EN>UserID:%1Database:%2AppKind:%3Company:%4IP:%5</EN>
+    <KO>사용자ID:%1데이터베이스:%2프로그램:%3회사:%4IP:%5</KO>
+    <CN>用户ID:%1数据库:%2App:%3公司:%4IP:%5</CN>
+    <JP>ユーザーID:%1データベース:%2プログラム:%3会社:%4IP:%5</JP>
+    <VN>ID người sử dụng:%1Cơ sở dữ liệu:%2Chương trình:%3Công ty:%4IP:%5</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_Message03</key>
+    <EN>Do you want to quit the program?</EN>
+    <KO>종료하시겠습니까?</KO>
+    <CN>确实要退出程序吗？</CN>
+    <JP>終了しますか？</JP>
+    <VN>Bạn có muốn thoát khỏi chương trình?</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_quitToolStripMenuItem</key>
+    <EN>Quit</EN>
+    <KO>종료</KO>
+    <CN>退出</CN>
+    <JP>終了</JP>
+    <VN>Thoát ra</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_runMainToolStripMenuItem</key>
+    <EN>Load %1</EN>
+    <KO>%1 실행</KO>
+    <CN>加载 %1</CN>
+    <JP>%1実行</JP>
+    <VN>Thực hiện %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_runMainToolStripMenuItemRunAsAdmin</key>
+    <EN>Load %1 - Run as Admin</EN>
+    <KO>%1 실행 - 관리자 권한</KO>
+    <CN>加载 %1 - 运行管理员权限</CN>
+    <JP>負荷%1 - 管理者として実行</JP>
+    <VN>Thực hiện %1 - Chạy như quản trị</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_runMainToolStripMenuItem_x86</key>
+    <EN>Load %1(x86)</EN>
+    <KO>%1 실행(x86)</KO>
+    <CN>加载 %1(x86)</CN>
+    <JP>%1実行(x86)</JP>
+    <VN>Thực hiện %1(x86)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_runMainToolStripMenuItemRunAsAdmin_x86</key>
+    <EN>Load %1(x86) - Run as Admin</EN>
+    <KO>%1 실행(x86) - 관리자 권한</KO>
+    <CN>加载 %1(x86) - 运行管理员权限</CN>
+    <JP>%1（x86）をロード - 管理者として実行</JP>
+    <VN>Thực hiện %1(x86) - Chạy như quản trị</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_showLoginToolStripMenuItem</key>
+    <EN>Show Watch</EN>
+    <KO>Watch화면 보기</KO>
+    <CN>显示Watch</CN>
+    <JP>Watch画面見る</JP>
+    <VN>Xem giao diện Watch</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_showLoginToolStripMenuItem1</key>
+    <EN>Show Login</EN>
+    <KO>로그인 화면 보기</KO>
+    <CN>显示Login </CN>
+    <JP>ログイン画面表示</JP>
+    <VN>Xem giao diện đăng nhập</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_toolStripMenuItemSync</key>
+    <EN>Sync Client UI</EN>
+    <KO>클라이언트 UI 동기화</KO>
+    <CN>同步客户端UI</CN>
+    <JP>クライアントUI 同期化</JP>
+    <VN>Đồng bộ máy khách UI</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_idleConfigToolStripMenuItem</key>
+    <EN>Config Timeout</EN>
+    <KO>Timeout 설정</KO>
+    <CN>超时设置</CN>
+    <JP>Timeout設定</JP>
+    <VN>Cài đặt thời gian thoát ra</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraLabel1</key>
+    <EN>Company</EN>
+    <KO>회사</KO>
+    <CN>公司</CN>
+    <JP>会社</JP>
+    <VN>Công ty</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraLabel2</key>
+    <EN>Server IP</EN>
+    <KO>서버IP</KO>
+    <CN>服务器IP</CN>
+    <JP>サーバーIP</JP>
+    <VN>IP máy chủ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraLabel3</key>
+    <EN>Database</EN>
+    <KO>데이터 베이스</KO>
+    <CN>数据库</CN>
+    <JP>データベース</JP>
+    <VN>Cơ sở dữ liệu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraLabel4</key>
+    <EN>User ID</EN>
+    <KO>사용자계정</KO>
+    <CN>用户ID</CN>
+    <JP>ユーザーアカウント</JP>
+    <VN>Tài khoản người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraLabel6</key>
+    <EN>Client IP</EN>
+    <KO>클라이언트 IP</KO>
+    <CN>客户端 IP</CN>
+    <JP>クライアントIP</JP>
+    <VN>IP máy khách</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraLabel7</key>
+    <EN>Login Time</EN>
+    <KO>로그인시간</KO>
+    <CN>登录时间</CN>
+    <JP>ログイン時間</JP>
+    <VN>Thời gian đăng nhập</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraTabControl1_Tab1</key>
+    <EN>Login Information</EN>
+    <KO>로그인 정보</KO>
+    <CN>登录信息</CN>
+    <JP>ログイン情報</JP>
+    <VN>Thông tin đăng nhập</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraTabControl1_Tab2</key>
+    <EN>Online User</EN>
+    <KO>온라인 유저</KO>
+    <CN>在线用户</CN>
+    <JP>オンラインユーザー</JP>
+    <VN>Người sử dụng trực tuyến</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmWatch_ultraTabControl1_Tab3</key>
+    <EN>Actived %1</EN>
+    <KO>활성화된 %1</KO>
+    <CN>活动 %1</CN>
+    <JP>活性化された%1</JP>
+    <VN>Hoạt tính hóa %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmHistoryLoginInfo_UltraLabel1</key>
+    <EN>The window will be closed after %1 seconds.</EN>
+    <KO> %1초 후에 이 창문은 자동으로 사라 집니다.</KO>
+    <CN>此页面会在几秒钟后自动关闭。</CN>
+    <JP>%1秒後にこのWindowは自動的に消えます。</JP>
+    <VN>Cửa sổ sẽ đóng lại sau %1 giây.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmHistoryLoginInfo_UltraLabel2</key>
+    <EN>Last access IP : %1</EN>
+    <KO>최근 접속 IP : %1</KO>
+    <CN>最后一次连接IP : %1</CN>
+    <JP>最近接続IP:%1</JP>
+    <VN>IP đăng nhập lần cuối cùng: %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmHistoryLoginInfo_UltraLabel3</key>
+    <EN>Last access time : %1</EN>
+    <KO>최근 접속 시간 : %1 </KO>
+    <CN>最后一次连接时间 : %1 </CN>
+    <JP>最近接続時刻:%1</JP>
+    <VN>Thời gian đăng nhập lần cuối cùng: %1 </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmHistoryLoginInfo_UltraLabel4</key>
+    <EN>This application is authorized to the following %1 employees.</EN>
+    <KO>%1 임직원을 위한 시스템으로 인가된 분만 사용할 수 있습니다.</KO>
+    <CN>此程序授权给员工%1使用。</CN>
+    <JP>%1社員のためのシステムであるため、認可された方のみ使用できます。</JP>
+    <VN>Chỉ có người được phép mới có thể sử dụng hệ thống cho %1 nhân viên</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmHistoryLoginInfo_UltraLabel5</key>
+    <EN>Unauthorized access or use of this application may subject violators to criminal.</EN>
+    <KO>불법 사용 시 법적 제재를 받을 수 있습니다.</KO>
+    <CN>未经授权使用此应用程序将被追究法律责任。</CN>
+    <JP>不法使用された場合、法的制裁を受ける恐れがあります。</JP>
+    <VN>Khi sử dụng trái luật có thể bị phạt.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>NonContractCompany</key>
+    <EN>The %1 are into non-maintenance state, a situation that needs to functional complementation patches.</EN>
+    <KO>%1 은(는) 유지보수 미체결 상태이며, 기능보완패치가 필요한 상황입니다.</KO>
+    <CN>%1 因未签订维持保修协议状态, 需要功能完善补丁.</CN>
+    <JP>%1は維持保守未締結状態であり、機能補完Patchを必要としています。</JP>
+    <VN>The %1 are into non-maintenance state, a situation that needs to functional complementation patches.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmHistoryLoginInfo_btnContinue</key>
+    <EN>Continue</EN>
+    <KO>닫기</KO>
+    <CN>继续</CN>
+    <JP>閉じる</JP>
+    <VN>Đóng lại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_16</key>
+    <EN>The password is not match.</EN>
+    <KO>잘못된 비밀번호 입니다.</KO>
+    <CN>密码错误</CN>
+    <JP>正しくないパスワードです。</JP>
+    <VN>Mã số bí mật không đúng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_17</key>
+    <EN>The user does not found.</EN>
+    <KO>사용자를 찾을 수가 없습니다.</KO>
+    <CN>用户没找到。</CN>
+    <JP>ユーザーが見つかりませんでした。</JP>
+    <VN>Không tìm thấy người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_18</key>
+    <EN>The license is violated.</EN>
+    <KO>라이선스 오류.</KO>
+    <CN>许可信息错误。</CN>
+    <JP>Licenseエラー</JP>
+    <VN>Giấy phép sai.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_19</key>
+    <EN>Concurrent connections exceed the limit.</EN>
+    <KO>최대 연결수를 초과하였습니다.</KO>
+    <CN>当前的连接数超过限制。</CN>
+    <JP>最大連結数を超えています。</JP>
+    <VN>Đã vượt quá số lần kết nối cho phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_20</key>
+    <EN>The user&amp;apos;s count exceed the limit.</EN>
+    <KO>최대 유저수를 초과하였습니다.</KO>
+    <CN>用户数超过限制。</CN>
+    <JP>最大ユーザー数を超えています。</JP>
+    <VN>Đã vượt quá số người sử dụng cho phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_21</key>
+    <EN>Duplicated Login</EN>
+    <KO>중복 로그인</KO>
+    <CN>重复登录</CN>
+    <JP>重複ログイン</JP>
+    <VN>Đăng nhập lại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_22</key>
+    <EN>Invalid license file.</EN>
+    <KO>잘못된 라이선스 파일입니다.</KO>
+    <CN>无效的许可文件。</CN>
+    <JP>正しくないLicenseファイルです。</JP>
+    <VN>Là file sai giấy phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_23</key>
+    <EN>License information is modified.</EN>
+    <KO>라이선스 정보가 비정상적으로 수정되었습니다.</KO>
+    <CN>许可信息被非正常修改。</CN>
+    <JP>License情報が正しくない方法で修正されました。</JP>
+    <VN>Thông tin giấy phép được sửa không chính thức.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_24</key>
+    <EN>The trial date is expired.</EN>
+    <KO>평가판 시용기간이 만료되었습니다.</KO>
+    <CN>试用期已到。</CN>
+    <JP>評価版試用期間が満了されました。</JP>
+    <VN>Thời gian dùng thử đã hết.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_25</key>
+    <EN>Unapproved Modules</EN>
+    <KO>발급받지 안은 모듈입니다.</KO>
+    <CN>未许可的模块。</CN>
+    <JP>発行されたことがないモジュールです。</JP>
+    <VN>Modul không được cấp</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_26</key>
+    <EN>The user account is locked because of the consecutive failed login attempts.
+Please Contact system administrator.</EN>
+    <KO>지정한 로그인 시도횟수를 초과하여 해당 계정에 대해서 접근이 거부되었습니다.
+시스템 관리자에게 문의 하십시오.</KO>
+    <CN>当前用户由于密码认证失败次数超过上限，已经被锁定，请和管理员联系。</CN>
+    <JP>指定したログイン回数限度を超えているため、該当するアカウントのアクセスが拒否されました。システム管理者にお問い合わせください。</JP>
+    <VN>Tài khoản người sử dụng bị khóa do vượt quá số lần đăng nhập cho phép.
+Hãy hỏi người quản lý hệ thống.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message_27</key>
+    <EN>The system installed date is invalid.</EN>
+    <KO>라이선스 설치 날짜에 이상이 있습니다.</KO>
+    <CN>无效的系统安装日期。</CN>
+    <JP>Licenseインストール日付に異常があります。</JP>
+    <VN>Có bất thường với ngày cài đặt giấy phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message01</key>
+    <EN>Can not load company data.</EN>
+    <KO>회사정보를 가져올수 없습니다.</KO>
+    <CN>无法加载公司数据。</CN>
+    <JP>会社情報をロードできません。</JP>
+    <VN>Không tải được thông tin công ty.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message02</key>
+    <EN>STATUS: Connected to the Server.</EN>
+    <KO>상태: 서버로 접속되었습니다.</KO>
+    <CN>状态：已连接到服务器。</CN>
+    <JP>状態:サーバーに接続されました。</JP>
+    <VN>Trạng thái: Đã kết nối được với máy chủ. </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message03</key>
+    <EN>STATUS: Cannot connect to the server. Please try again.</EN>
+    <KO>상태: 서버로 접속할수가 없습니다. 다시 시도하십시오.</KO>
+    <CN>无法连接到服务器，请重试。</CN>
+    <JP>状態:サーバーに接続できません　再度お試しください。</JP>
+    <VN>Không thể kết nối với máy chủ. Hãy thử lại.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message04</key>
+    <EN>Load menu data faulte.</EN>
+    <KO>메뉴정보 로딩이 실패하였습니다.</KO>
+    <CN>加载菜单数据失败！</CN>
+    <JP>メニュー情報 Loadingに失敗しました。</JP>
+    <VN>Không tải được thông tin thực đơn.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message05</key>
+    <EN>Login faulte. The error information is: %1</EN>
+    <KO>로그인 실패. 메세지: %1</KO>
+    <CN>登录失败，错误信息：%1</CN>
+    <JP>ログイン失敗、 メッセージ:%1</JP>
+    <VN>Đăng nhập thất bại. Message: %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message06</key>
+    <EN>The detail information is: %1</EN>
+    <KO>상세 정보: %1</KO>
+    <CN>详细信息：%1 </CN>
+    <JP>詳細情報:%1</JP>
+    <VN>Thông tin chi tiết: %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message07</key>
+    <EN>Cannot find the user data.</EN>
+    <KO>유저가 존재하지 않습니다.</KO>
+    <CN>用户不存在。</CN>
+    <JP>ユーザーが存在していません。</JP>
+    <VN>Không tìm thấy dữ liệu người sử dụng.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message08</key>
+    <EN>The password is wrong.</EN>
+    <KO>비밀번호가 틀렸습니다.</KO>
+    <CN>密码错误。</CN>
+    <JP>パスワードが間違っています。</JP>
+    <VN>Sai mã số bí mật.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message09</key>
+    <EN>Get the user data faulte.</EN>
+    <KO>유저정보를 가져올 수 없습니다.</KO>
+    <CN>无法获取用户数据。</CN>
+    <JP>ユーザー情報をロードできません。</JP>
+    <VN>Không thây thông tin người sử dụng.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message10</key>
+    <EN>Cannot connect to the server. Please input correct server IP again.</EN>
+    <KO>서버로 접속할수 없습니다. 정확한 IP 를 입력하십시오.</KO>
+    <CN>无法连接到服务器，请输入正确的IP地址。</CN>
+    <JP>サーバーに接続できません　正確なIPを入力してください。</JP>
+    <VN>Không đăng nhập được vào máy chủ. Hãy nhập chính xác IP.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message11</key>
+    <EN>Cannot set the password.%1</EN>
+    <KO>비밀번호 설정 실패. %1</KO>
+    <CN>密码设置失败。%1</CN>
+    <JP>パスワード設定失敗 %1</JP>
+    <VN>Cài đặt mã số bí mật không thành công. %1</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message12</key>
+    <EN>There is unapproved module exist.[%1]</EN>
+    <KO>허가받지 않은 모듈이 존재 합니다.[%1]</KO>
+    <CN>不能使用未授权的模块。[%1]</CN>
+    <JP>許可されていないモジュールが存在しています。[%1]</JP>
+    <VN>Có modul không được cấp phép.[%1]</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>BizentroClientManager_Message13</key>
+    <EN>Can not login because the enrolled user count exceed the license info user count.</EN>
+    <KO>사용자 테이블에 등록된 유저수가 구매하신 라이선스 유저수를 초과했습니다.</KO>
+    <CN>注册的用户数超过授权，不能继续登录。</CN>
+    <JP>ユーザーTableに登録されたユーザー数が、購入されたLicenseのユーザー数を超過しました。</JP>
+    <VN>Số lượng người sử dụng đã đăng ký vào danh sách đã bị vượt quá số lượng cho phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginProcess_ProcessLocalIP</key>
+    <EN>Connecting remote server %1 ...</EN>
+    <KO>%1 서버로 접속중...</KO>
+    <CN>连接到服务器 %1 ...</CN>
+    <JP>%1サーバーに接続中…</JP>
+    <VN>Đang kết nối với máy chủ %1...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginProcess_ProcessVerifyPwd</key>
+    <EN>Authenticate user...</EN>
+    <KO>유저 인증...</KO>
+    <CN>验证用户...</CN>
+    <JP>ユーザー認証…</JP>
+    <VN>Chứng nhận người sử dụng...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginProcess_ProcessGetBizDatas</key>
+    <EN>Load menu information...</EN>
+    <KO>메뉴 정보 로딩중...</KO>
+    <CN>加载菜单数据...</CN>
+    <JP>メニュー情報 Loading中…</JP>
+    <VN>Đang tải thông tin thực đơn...</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessLocalIP</key>
+    <EN>Server is not responsible, contact admin please.</EN>
+    <KO>서버가 응답하지 않습니다.</KO>
+    <CN>服务器没有响应，请联系管理员。</CN>
+    <JP>サーバーからの応答がありません。</JP>
+    <VN>Máy chủ không đáp ứng, hãy hỏi người quản lý.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessVerifyPwd</key>
+    <EN>The password is not match.(Attempts : %1)</EN>
+    <KO>잘못된 비밀번호 입니다.(시도 횟수 : %1)</KO>
+    <CN>密码错误。(尝试：%1)</CN>
+    <JP>正しくないパスワードです。(%1:回目)</JP>
+    <VN>Mã số bí mật sai. (số lần thử : %1)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessUserExpired</key>
+    <EN>The valid date for the user was expired.</EN>
+    <KO>사용자 유효기간이 만료되었습니다.</KO>
+    <CN>用户有效期间已到期</CN>
+    <JP>ユーザー有効期間が満了されました.</JP>
+    <VN>Thời gian có hiệu lực của người sử dụng đã hết.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessUserNotFound</key>
+    <EN>Can not find the user data.</EN>
+    <KO>유저가 존재하지 않습니다.</KO>
+    <CN>用户不存在。</CN>
+    <JP>ユーザーが存在していません。</JP>
+    <VN>Không thấy dữ liệu người sử dụng.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessUserCountCheck</key>
+    <EN>Can not login because the enrolled user count exceed the license info user count.</EN>
+    <KO>사용자 테이블에 등록된 유저수가 구매하신 라이선스 유저수를 초과했습니다.</KO>
+    <CN>注册的用户数超过授权，不能继续登录。</CN>
+    <JP>ユーザーTableに登録されたユーザー数が、購入されたLicenseのユーザー数を超過しました。</JP>
+    <VN>Số lượng người sử dụng đã đăng ký vào danh sách đã bị vượt quá số lượng cho phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessIsUserLoginCheck</key>
+    <EN>Can not login because %1 has logged on the other PC that IP is %2.</EN>
+    <KO>(%1) 사용자는 다른 PC(IP:%2)에서 사용중이므로 로그인할 수 없습니다.</KO>
+    <CN>%1已经在IP为%2的计算机登录，不能继续登录。</CN>
+    <JP>(%1)ユーザーは別のPC(IP:%2)から既にログイン中であるため、ログイン出来ません。</JP>
+    <VN>Người sử dụng (%1)không thể đăng nhập do đang sử dụng PC(IP:%2)khác. </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessConnectingCountCheck</key>
+    <EN>Concurrent connections exceed the limit.</EN>
+    <KO>최대 연결수를 초과하였습니다.</KO>
+    <CN>当前的连接数超过限制。</CN>
+    <JP>最大連結数を超えています。</JP>
+    <VN>Đã vượt quá số lần kết nối cho phép.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessRegistModule</key>
+    <EN>There is unapproved module exist.[%1]</EN>
+    <KO>허가받지 않은 모듈이 존재 합니다.[%1]</KO>
+    <CN>不能使用未授权的模块。[%1]</CN>
+    <JP>許可されていないモジュールが存在しています。[%1]</JP>
+    <VN>Có modul không được cấp phép.[%1]</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessPwdAttemps</key>
+    <EN>The user account is locked because of the consecutive failed login attempts.
+Please Contact system administrator.</EN>
+    <KO>지정한 로그인 시도횟수를 초과하여 해당 계정에 대해서 접근이 거부되었습니다.
+시스템 관리자에게 문의 하십시오.</KO>
+    <CN>当前用户由于密码认证失败次数超过上限，已经被锁定，请和管理员联系。</CN>
+    <JP>指定したログイン回数限度を超えているため、該当するアカウントのアクセスが拒否されました。システム管理者にお問い合わせください。</JP>
+    <VN>Tài khoản của người sử dụng bị khóa do đăng nhập vượt quá số lần quy định.
+Hãy hỏi người quản lý hệ thống.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessGetBizDatas</key>
+    <EN>Load menu data faulte.</EN>
+    <KO>메뉴정보 로딩이 실패하였습니다.</KO>
+    <CN>加载菜单数据失败！</CN>
+    <JP>メニュー情報 Loadingに失敗しました。</JP>
+    <VN>Tải thông tin thực đơn không thành công.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessUserDefineAccessIPCheck</key>
+    <EN>[%1] The user has access to in the IP can not be connected. Current Access IP : [%2]</EN>
+    <KO>[%1] 사용자가 접속이 불가한 IP에서 접근 하였습니다. 현재 접속 IP : [%2]</KO>
+    <CN>[%1] 的用户可访问在IP不能连接。目前连接IP : [%2]</CN>
+    <JP>[%1]ユーザーが接続できないIPからアクセスしました。 現在接続IP:[%2]</JP>
+    <VN>[%1] The user has access to in the IP can not be connected. Current Access IP : [%2]</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessUserDefineAccessIPRangeCheck</key>
+    <EN>[%1] The user has access to in the IP can not be connected. Current Access IP : [%2]</EN>
+    <KO>[%1] 사용자가 접속이 불가한 IP에서 접근 하였습니다. 현재 접속 IP : [%2]</KO>
+    <CN>[%1] 的用户可访问在IP不能连接。目前连接IP : [%2]</CN>
+    <JP>[%1]ユーザーが接続できないIPからアクセスしました。 現在接続IP:[%2]</JP>
+    <VN>[%1] The user has access to in the IP can not be connected. Current Access IP : [%2]</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_ProcessCompanyAccessIPRangeCheck</key>
+    <EN>The connection is made accessible in a non-IP by company policy. Current Access IP : [%2]</EN>
+    <KO>회사 정책에 의해 접속이 불가한 IP에서 접근 하였습니다. 현재 접속 IP : [%2]</KO>
+    <CN>该连接由公司策略进行访问在非IP。目前连接IP : [%2]</CN>
+    <JP>会社政策により接続遮断されたIPからアクセスしています。現在接続IP:[%2]</JP>
+    <VN>The connection is made accessible in a non-IP by company policy. Current Access IP : [%2]</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>LoginError_AvailableAccessIP</key>
+    <EN>Available Access IP : %3</EN>
+    <KO>접속 가능 IP : %3</KO>
+    <CN>可接入IP : %3</CN>
+    <JP>接続可能IP:%3</JP>
+    <VN>Available Access IP : %3</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>EMailAccoutNotExists</key>
+    <EN>E-Mail account has not been set.
+Please contact the administrator.</EN>
+    <KO>E-Mail 계정이 설정되어 있지 않습니다.
+관리자에게 문의 하십시오.</KO>
+    <CN>电子邮件帐号尚未确定。请联系管理员。</CN>
+    <JP>E-Mailアカウントが設定されていません。管理者にお問い合わせください。</JP>
+    <VN>Tài khoản E-Mail đã không được thiết lập.
+Xin vui lòng liên hệ với quản trị viên.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>SuccessfulMailDelivery</key>
+    <EN>E-Mail accounts registered(%1) a temporary password has been sent.</EN>
+    <KO>등록된 E-Mail 계정(%1)으로 임시 비밀번호가 발송 되었습니다.</KO>
+    <CN>电子邮件帐户注册(%1)临时密码已发送。</CN>
+    <JP>登録された E-Mail アカウント(%1)に臨時パスワードが送信されました。</JP>
+    <VN>Tài khoản E-Mail đăng ký(%1) một mật khẩu tạm thời đã được gửi đi.</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>FailureMailDelivery</key>
+    <EN>Send mail to the following reasons: failure. Please contact the administrator.
+Reason:% 1</EN>
+    <KO>다음과 같은 이유로 메일 발송에 실패 하였습니다. 관리자에게 문의 하십시오.
+이유 : %1</KO>
+    <CN>发送邮件到以下原因：失败。请联系管理员。
+原因：％1</CN>
+    <JP>次のような理由でメール送信に失敗しました。管理者にお問い合わせください。理由:%1</JP>
+    <VN>Gửi thư đến lý do sau đây: thất bại. Xin vui lòng liên hệ với quản trị viên.
+Lý do: 1%</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>THEME_FILE_NOT_FOUND</key>
+    <EN>Theme file not found. Theme loading failed.(file name:%1)</EN>
+    <KO>테마 파일을 찾을 수 없습니다. 테마 로딩에 실패했습니다.(파일명:%1)</KO>
+    <CN>找不到主题文件。 主题加载失败。(文件路径:%1)</CN>
+    <JP>テーマファイルが見つかりませんでした。テーマLoadingに失敗しました。(ファイル名:%1)</JP>
+    <VN>Theme file not found. Theme loading failed.(file name:%1)</VN>
+  </CA_DD>
+  
+  <!-- 여기는 메시지 수신창 DD 시작 입니다 -->  
+  <CA_DD>
+    <key>frmReceiveMessage</key>
+    <EN>Message Received</EN>
+    <KO>쪽지 수신</KO>
+    <CN>收到的消息</CN>
+    <JP>メッセージ受信</JP>
+    <VN>Tin nhắn nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReceiveMessage_lblSendUser</key>
+    <EN>Send User</EN>
+    <KO>보낸 사람</KO>
+    <CN>发送者</CN>
+    <JP>送信者</JP>
+    <VN>Người gửi</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReceiveMessage_lblSendDept</key>
+    <EN>Department</EN>
+    <KO>부서</KO>
+    <CN>部门</CN>
+    <JP>部署</JP>
+    <VN>Bộ phận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReceiveMessage_lblSendDate</key>
+    <EN>Send Date</EN>
+    <KO>보낸 일자</KO>
+    <CN>发送日期</CN>
+    <JP>送信日付</JP>
+    <VN>Ngày gửi</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReceiveMessage_btnReply</key>
+    <EN>Reply</EN>
+    <KO>회신</KO>
+    <CN>回复</CN>
+    <JP>回信</JP>
+    <VN>Trả lời</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReceiveMessage_btnDelete</key>
+    <EN>Delete</EN>
+    <KO>삭제</KO>
+    <CN>删除</CN>
+    <JP>削除</JP>
+    <VN>Xóa</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReceiveMessage_btnConfirm</key>
+    <EN>Confirm</EN>
+    <KO>확인</KO>
+    <CN>确认</CN>
+    <JP>確認</JP>
+    <VN>Xác nhận</VN>
+  </CA_DD>
+  <!-- 여기는 메시지 수신창 DD 끝 입니다 -->
+
+  <!-- 여기는 메시지 회신창 DD 시작 입니다 -->
+  <CA_DD>
+    <key>frmReplyMessage</key>
+    <EN>Message Reply</EN>
+    <KO>회신</KO>
+    <CN>留言回复</CN>
+    <JP>回信</JP>
+    <VN>Trả lời</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_SendUser</key>
+    <EN>Send User</EN>
+    <KO>보낸 사람</KO>
+    <CN>发送者</CN>
+    <JP>送信者</JP>
+    <VN>Người gửi</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_ReciveContents</key>
+    <EN>Recive Contents</EN>
+    <KO>받은 내용</KO>
+    <CN>的内容</CN>
+    <JP>受信内容</JP>
+    <VN>Nội dung nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_lblReceiveUser</key>
+    <EN>Receive User</EN>
+    <KO>받는 사람</KO>
+    <CN>接受者</CN>
+    <JP>受信者</JP>
+    <VN>Người nhận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_lblReceiveDept</key>
+    <EN>Department</EN>
+    <KO>부서</KO>
+    <CN>部门</CN>
+    <JP>部署</JP>
+    <VN>Bộ phận</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_btnSend</key>
+    <EN>Send</EN>
+    <KO>보내기</KO>
+    <CN>发送</CN>
+    <JP>送信</JP>
+    <VN>Gửi</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>Hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReplyMessage_Message_Contents</key>
+    <EN>Please input contents.</EN>
+    <KO>내용을 입력 하십시오.</KO>
+    <CN>请输入内容。</CN>
+    <JP>内容を入力してください。</JP>
+    <VN>Hãy nhập nội dung.</VN>
+  </CA_DD>
+  <!-- 여기는 메시지 보내기 DD 끝 입니다 -->
+
+  <!-- 여기는 재접속 비밀번호 입력창 DD 시작 입니다 -->
+  <CA_DD>
+    <key>frmReconnectPassword_lblCaptionAppTimeout</key>
+    <EN>Application Timeout</EN>
+    <KO>응용프로그램 타임아웃</KO>
+    <CN>应用程序超时</CN>
+    <JP>応用プログラムTimeOut</JP>
+    <VN>Vượt qua thời gian chương trình ứng dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReconnectPassword_lblCaptionSuspend</key>
+    <EN>Lock - Windows power saving</EN>
+    <KO>잠금 - Windows 절전 모드</KO>
+    <CN>锁 - Windows 电源节能</CN>
+    <JP>ロック-Windows節電モード</JP>
+    <VN>Khóa - Windows tiết kiệm năng lượng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReconnectPassword_lblCaptionSessionLock</key>
+    <EN>Lock - Screensaver, Windows locks</EN>
+    <KO>잠금 - 화면보호기, Windows 잠금</KO>
+    <CN>锁 - 屏幕保护程序, Windows 锁</CN>
+    <JP>ロック-スクリーンセーバー、Windowsロック</JP>
+    <VN>Khóa - Screensaver, Windows Khóa</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReconnectPassword_lblCaptionToolbar</key>
+    <EN>Lock - Toolbar</EN>
+    <KO>잠금 - 툴바</KO>
+    <CN>锁 - Toolbar</CN>
+    <JP>ロック-Toolbar</JP>
+    <VN>Khóa - Toolbar</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReconnectPassword_lblUserPassword</key>
+    <EN>User Password</EN>
+    <KO>사용자 비밀번호</KO>
+    <CN>用户密码</CN>
+    <JP>ユーザーパスワード</JP>
+    <VN>Mã số bí mật người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReconnectPassword_ExitApplication</key>
+    <EN>Exceeded the number of invalid password. Automatic shutdown.(%1)</EN>
+    <KO>비밀번호 오류 횟수 초과. 자동 종료합니다.(%1)</KO>
+    <CN>超出的无效密码的次数。自动关机功能。(%1)</CN>
+    <JP>パスワード入力回数上限エラー 自動的に終了します (%1)</JP>
+    <VN>Vượt quá số lần sai mã số bí mật. Tự động kết thúc.(%1)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmReconnectPassword_DeleteAccount</key>
+    <EN>The current account has been deleted account access. Exit the program.(%1)</EN>
+    <KO>현재 접속된 계정은 삭제된 계정입니다. 프로그램을 종료합니다.(%1)</KO>
+    <CN>经常账户已被删除帐户的访问. 退出程序.(%1)</CN>
+    <JP>現在接続中のアカウントは削除されたアカウントです。プログラムを終了します。(%1)</JP>
+    <VN>Tài khoản vãng lai đã bị xóa tài khoản truy cập. Thoát khỏi chương trình.(%1)</VN>
+  </CA_DD>
+  <!-- 여기는 재접속 비밀번호 입력창 DD 끝 입니다 -->
+
+  <!-- 여기는 법인정보 변경 DD 시작 입니다 -->
+
+  <CA_DD>
+    <key>lblCurrentConnectionInformation</key>
+    <EN>Current Connection Information</EN>
+    <KO>현재접속정보</KO>
+    <CN>当前连接的信息</CN>
+    <JP>現在接続情報</JP>
+    <VN>Current Connection Information</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblSwitchCompanyInformation</key>
+    <EN>Switch Company Information</EN>
+    <KO>법인전환정보</KO>
+    <CN>更换公司信息</CN>
+    <JP>法人転換情報</JP>
+    <VN>Switch Company Information</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblServerIP</key>
+    <EN>Server IP(Domain)</EN>
+    <KO>서버 IP(Domain)</KO>
+    <CN>服务器IP(域名)</CN>
+    <JP>サーバーIP(Domain)</JP>
+    <VN>Server IP(Domain)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblDBComment</key>
+    <EN>DB Comment</EN>
+    <KO>DB 설명</KO>
+    <CN>DB说明</CN>
+    <JP>DB説明</JP>
+    <VN>DB Comment</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblUserID</key>
+    <EN>User ID</EN>
+    <KO>사용자 ID</KO>
+    <CN>用户ID</CN>
+    <JP>ユーザーID</JP>
+    <VN>User ID</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblUserName</key>
+    <EN>User Name</EN>
+    <KO>사용자명</KO>
+    <CN>用户名</CN>
+    <JP>ユーザー名</JP>
+    <VN>User Name</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblPassword</key>
+    <EN>Password</EN>
+    <KO>비밀번호</KO>
+    <CN>密码</CN>
+    <JP>パスワード</JP>
+    <VN>Password</VN>
+  </CA_DD>
+  <!-- 여기는 법인정보 변경 DD 끝 입니다 -->
+
+
+  <!-- 여기는 메뉴찾기 DD 시작 입니다 -->
+  <CA_DD>
+    <key>frmGoSearch</key>
+    <EN>Find Menu</EN>
+    <KO>메뉴찾기</KO>
+    <CN>查找菜单</CN>
+    <JP>メニュー検索</JP>
+    <VN>Tìm đơn</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmGoSearch_btnGO</key>
+    <EN>Go</EN>
+    <KO>가기</KO>
+    <CN>走</CN>
+    <JP>移動</JP>
+    <VN>Đi</VN>
+  </CA_DD>
+  <!-- 여기는 메뉴찾기 DD 끝 입니다 -->
+
+
+  <!-- 여기는 찾기 DD 시작 입니다 -->
+  <CA_DD>
+    <key>frmFind</key>
+    <EN>Find</EN>
+    <KO>찾기</KO>
+    <CN>找</CN>
+    <JP>検索</JP>
+    <VN>Tìm thấy</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_lblFindWhat</key>
+    <EN>Find What</EN>
+    <KO>찾을 단어</KO>
+    <CN>找什么</CN>
+    <JP>検索単語</JP>
+    <VN>Tìm gì</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_lblFindArea</key>
+    <EN>Find Area</EN>
+    <KO>찾을 영역</KO>
+    <CN>查找区</CN>
+    <JP>検索領域</JP>
+    <VN>Tìm Area</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_chkCase</key>
+    <EN>Match Case</EN>
+    <KO>대소문자 구분</KO>
+    <CN>相符</CN>
+    <JP>大小文字区分</JP>
+    <VN>Trường hợp trận đấu</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_chkWord</key>
+    <EN>Match Whole Word</EN>
+    <KO>단어 단위로</KO>
+    <CN>全字匹配</CN>
+    <JP>単語単位に</JP>
+    <VN>Match Tổng số Lời</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_btnFind</key>
+    <EN>&amp;Find</EN>
+    <KO>찾기</KO>
+    <CN>找</CN>
+    <JP>検索</JP>
+    <VN>Tìm thấy</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_btnFindNext</key>
+    <EN>Find &amp;Next</EN>
+    <KO>다음 찾기</KO>
+    <CN>找下一个</CN>
+    <JP>次を検索</JP>
+    <VN>Tìm tiếp theo</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_cmbFindArea_All</key>
+    <EN>All</EN>
+    <KO>전체</KO>
+    <CN>所有</CN>
+    <JP>全体</JP>
+    <VN>Toàn bộ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_cmbFindArea_SingleArea</key>
+    <EN>Single Area</EN>
+    <KO>싱글 영역</KO>
+    <CN>单区域</CN>
+    <JP>Single領域</JP>
+    <VN>Diện tích Độc thân</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>frmFind_cmbFindArea_GridArea</key>
+    <EN>Grid Area</EN>
+    <KO>그리드 영역</KO>
+    <CN>网格区域</CN>
+    <JP>Grid 領域</JP>
+    <VN>Diện tích lưới</VN>
+  </CA_DD>
+  <!-- 여기는 찾기 DD 끝 입니다 -->
+  <!-- 여기는 UNI Progress Bar DD 시작 입니다 -->
+  <CA_DD>
+    <key>UNIAttachFileProgressBar_Title</key>
+    <EN>File Progress Bar</EN>
+    <KO>파일 진행 창</KO>
+    <CN>文件进度条</CN>
+    <JP>ファイル進行ウィンドウ</JP>
+    <VN>thanh tiến trình tập tin</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>UNIAttachFileProgressBar_lblFileName</key>
+    <EN>File Name</EN>
+    <KO>파일명</KO>
+    <CN>文件名</CN>
+    <JP>ファイル名</JP>
+    <VN>Tên tệp</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>UNIAttachFileProgressBar_lblCurrentFile</key>
+    <EN>Current File</EN>
+    <KO>현재 파일</KO>
+    <CN>当前文件</CN>
+    <JP>現在ファイル</JP>
+    <VN>Tệp hiện tại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>UNIAttachFileProgressBar_lblTotalFile</key>
+    <EN>Total File</EN>
+    <KO>전체 파일</KO>
+    <CN>总文件</CN>
+    <JP>全体ファイル</JP>
+    <VN>Tổng số tệp</VN>
+  </CA_DD>
+  <!-- 여기는 UNI Progress Bar DD  끝 입니다 -->
+  <CA_DD>
+    <key>lblCompanyCode</key>
+    <EN>Company Code</EN>
+    <KO>회사코드</KO>
+    <CN>公司代码</CN>
+    <JP>会社コード</JP>
+    <VN>Mã công ty</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblCompanyName</key>
+    <EN>Company Name</EN>
+    <KO>회사명</KO>
+    <CN>公司名称</CN>
+    <JP>会社名</JP>
+    <VN>Tên công ty</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblCompanyInfo</key>
+    <EN>Company Information</EN>
+    <KO>회사 정보</KO>
+    <CN>客户公司信息</CN>
+    <JP>会社情報</JP>
+    <VN>Thông tin công ty</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblEvalLicensed</key>
+    <EN>Evaluation/Registered</EN>
+    <KO>평가/정식판</KO>
+    <CN>试用/注册</CN>
+    <JP>評価/正式版</JP>
+    <VN>Tạm thời/đã đăng ký</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblLicenseType</key>
+    <EN>License Type</EN>
+    <KO>정품 구분</KO>
+    <CN>许可证类型</CN>
+    <JP>正品区分</JP>
+    <VN>Loại giấy phép</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>optEvaluation</key>
+    <EN>Evaluation</EN>
+    <KO>평가판</KO>
+    <CN>试用</CN>
+    <JP>評価版</JP>
+    <VN>Tạm thời</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>optRegistered</key>
+    <EN>Registered</EN>
+    <KO>정식판</KO>
+    <CN>注册</CN>
+    <JP>正式版</JP>
+    <VN>Đã đăng ký</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblExpiredDate</key>
+    <EN>Expired Date</EN>
+    <KO>만료일</KO>
+    <CN>期满日</CN>
+    <JP>満了日</JP>
+    <VN>Ngày hết hạn</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblExpiredDayCount</key>
+    <EN>Expired Day Count</EN>
+    <KO>만료기간(일 단위)</KO>
+    <CN>期满期间(单位:天)</CN>
+    <JP>満了期間(日単位)</JP>
+    <VN>Thời gian hết hạn(tính theo ngày)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblTrialTerm</key>
+    <EN>Trial Term</EN>
+    <KO>평가판기간</KO>
+    <CN>试用期间</CN>
+    <JP>評価版期間</JP>
+    <VN>Thời gian sử dụng tạm thời </VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblAppKind</key>
+    <EN>Application Kind</EN>
+    <KO>App 종류</KO>
+    <CN>Application Kind</CN>
+    <JP>App種類</JP>
+    <VN>Loại chương trình</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblUserMethod</key>
+    <EN>User Method</EN>
+    <KO>유저 방식</KO>
+    <CN>用户方式</CN>
+    <JP>ユーザー方式</JP>
+    <VN>Phương thức người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblUserCount</key>
+    <EN>User Count</EN>
+    <KO>사용자 수</KO>
+    <CN>用户数</CN>
+    <JP>ユーザー数</JP>
+    <VN>Số lượng người sử dụng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>lblModuleInfo</key>
+    <EN>Module Information</EN>
+    <KO>모듈 정보</KO>
+    <CN>模块信息</CN>
+    <JP>モジュール情報</JP>
+    <VN>Thông tin Module</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ESSAppKindName</key>
+    <EN>ESS</EN>
+    <KO>대사우</KO>
+    <CN>ESS</CN>
+    <JP>Employee Self Service</JP>
+    <VN>ESS</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ERPAppKindName</key>
+    <EN>ERP</EN>
+    <KO>ERP</KO>
+    <CN>ERP</CN>
+    <JP>ERP</JP>
+    <VN>ERP</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>ProcurementAppKindName</key>
+    <EN>Procurement</EN>
+    <KO>Procurement</KO>
+    <CN>Procurement</CN>
+    <JP>Procurement</JP>
+    <VN>Procurement</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>StarNetAppKindName</key>
+    <EN>StarNet</EN>
+    <KO>StarNet</KO>
+    <CN>StarNet</CN>
+    <JP>StarNet</JP>
+    <VN>StarNet</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>StarSCMAppKindName</key>
+    <EN>StarSCM</EN>
+    <KO>StarSCM</KO>
+    <CN>StarSCM</CN>
+    <JP>StarSCM</JP>
+    <VN>StarSCM</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MobileAppKindName</key>
+    <EN>Mobile</EN>
+    <KO>Mobile</KO>
+    <CN>Mobile</CN>
+    <JP>Mobile</JP>
+    <VN>Mobile</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>PRMAppKindName</key>
+    <EN>PRM</EN>
+    <KO>PRM</KO>
+    <CN>PRM</CN>
+    <JP>PRM</JP>
+    <VN>PRM</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>SMAppKindName</key>
+    <EN>UNISM</EN>
+    <KO>UNISM</KO>
+    <CN>UNISM</CN>
+    <JP>UNISM</JP>
+    <VN>UNISM</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>UserMethodNamed</key>
+    <EN>Named</EN>
+    <KO>Named</KO>
+    <CN>命名式</CN>
+    <JP>Named</JP>
+    <VN>Named</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>UserMethodConcurrent</key>
+    <EN>Concurrent</EN>
+    <KO>Concurrent</KO>
+    <CN>同时在线式</CN>
+    <JP>Concurrent</JP>
+    <VN>Concurrent</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>UserMethodMixed</key>
+    <EN>Mixed</EN>
+    <KO>Mixed</KO>
+    <CN>混合式</CN>
+    <JP>Mixed</JP>
+    <VN>Mixed</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleA</key>
+    <EN>A(Account)</EN>
+    <KO>A(회계)</KO>
+    <CN>A(会计)</CN>
+    <JP>A(会計)</JP>
+    <VN>A(Account)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleB</key>
+    <EN>B(BA)</EN>
+    <KO>B(기준)</KO>
+    <CN>B(BA)</CN>
+    <JP>B(基準)</JP>
+    <VN>B(BA)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleC</key>
+    <EN>C(Cost)</EN>
+    <KO>C(원가)</KO>
+    <CN>C(成本)</CN>
+    <JP>C(原価)</JP>
+    <VN>C(Cost)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleE</key>
+    <EN>E(ESS)</EN>
+    <KO>E(ESS)</KO>
+    <CN>E(ESS)</CN>
+    <JP>E(ESS)</JP>
+    <VN>E(ESS)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleH</key>
+    <EN>H(Humman Resource)</EN>
+    <KO>H(인사)</KO>
+    <CN>H(人事)</CN>
+    <JP>H(人事)</JP>
+    <VN>H(Humman Resource)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleI</key>
+    <EN>I(Inventory)</EN>
+    <KO>I(재고)</KO>
+    <CN>I(库存)</CN>
+    <JP>I(在庫)</JP>
+    <VN>I(Inventory)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleM</key>
+    <EN>M(Purchase)</EN>
+    <KO>M(구매)</KO>
+    <CN>M(采购)</CN>
+    <JP>M(購買)</JP>
+    <VN>M(Purchase)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleQ</key>
+    <EN>Q(Quality)</EN>
+    <KO>Q(품질)</KO>
+    <CN>Q(品质)</CN>
+    <JP>Q(品質)</JP>
+    <VN>Q(Quality)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleS</key>
+    <EN>S(Sales)</EN>
+    <KO>S(영업)</KO>
+    <CN>S(销售)</CN>
+    <JP>S(営業)</JP>
+    <VN>S(Sales)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleV</key>
+    <EN>V(EIS)</EN>
+    <KO>V(EIS)</KO>
+    <CN>V(EIS)</CN>
+    <JP>V(EIS)</JP>
+    <VN>V(EIS)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleJ</key>
+    <EN>J(SCM)</EN>
+    <KO>J(SCM)</KO>
+    <CN>J(SCM)</CN>
+    <JP>J(SCM)</JP>
+    <VN>J(SCM)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleP</key>
+    <EN>P(Production)</EN>
+    <KO>P(생산)</KO>
+    <CN>P(生产)</CN>
+    <JP>P(生産)</JP>
+    <VN>P(Production)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleZ</key>
+    <EN>Z(System)</EN>
+    <KO>Z(시스템)</KO>
+    <CN>Z(系统)</CN>
+    <JP>Z(システム)</JP>
+    <VN>Z(System)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleK</key>
+    <EN>K(Multi Compnay)</EN>
+    <KO>K(멀티컴퍼티)</KO>
+    <CN>K(Multi Compnay)</CN>
+    <JP>K(マルチカンパニー)</JP>
+    <VN>K(Multi Compnay)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleU</key>
+    <EN>U(Procurement)</EN>
+    <KO>U(Procurement)</KO>
+    <CN>U(采购-Procurement)</CN>
+    <JP>U(Procurement)</JP>
+    <VN>U(Procurement)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleW</key>
+    <EN>W(TAX)</EN>
+    <KO>W(세무회계)</KO>
+    <CN>W(税务)</CN>
+    <JP>W(税務会計)</JP>
+    <VN>W(TAX)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleY</key>
+    <EN>Y(Project Mgt.)</EN>
+    <KO>Y(프로젝트관리)</KO>
+    <CN>Y(项目管理)</CN>
+    <JP>Y(Project管理)</JP>
+    <VN>Y(Project Mgt.)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleG</key>
+    <EN>G(Profit Loss Management)</EN>
+    <KO>G(경영손익)</KO>
+    <CN>G(损益管理)</CN>
+    <JP>G(経営損益)</JP>
+    <VN>G(Profit Loss Management)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleCFS</key>
+    <EN>CFS(Consolidation Finance)</EN>
+    <KO>CFS(연결회계)</KO>
+    <CN>CFS(合并财务)</CN>
+    <JP>CFS(連結会計)</JP>
+    <VN>CFS(Consolidation Finance)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleFTA</key>
+    <EN>FTA(Free Trade Agreement)</EN>
+    <KO>FTA(자유무역협정)</KO>
+    <CN>FTA(自由贸易协定)</CN>
+    <JP>FTA(自由貿易協定)</JP>
+    <VN>FTA(Free Trade Agreement)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleGLB</key>
+    <EN>GLB(Global)</EN>
+    <KO>GLB(글로벌)</KO>
+    <CN>GLB(星网)</CN>
+    <JP>GLB(グローバル)</JP>
+    <VN>GLB(Global)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSTN</key>
+    <EN>STN(StarNet)</EN>
+    <KO>STN(StarNet)</KO>
+    <CN>STN(StarNet)</CN>
+    <JP>STN(StarNet)</JP>
+    <VN>STN(StarNet)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleStarSCM</key>
+    <EN>STN(StarSCM)</EN>
+    <KO>STN(StarSCM)</KO>
+    <CN>STN(StarSCM)</CN>
+    <JP>STN(StarSCM)</JP>
+    <VN>STN(StarSCM)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleMO</key>
+    <EN>MO(Mobile)</EN>
+    <KO>MO(모바일)</KO>
+    <CN>MO(移动)</CN>
+    <JP>MO(Mobile)</JP>
+    <VN>MO(Mobile)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleAN</key>
+    <EN>AN(Branch)</EN>
+    <KO>AN(브랜치)</KO>
+    <CN>AN(支)</CN>
+    <JP>AN(Branch)</JP>
+    <VN>AN(Branch)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModulePRM</key>
+    <EN>PRM(Partner Relationship Management)</EN>
+    <KO>PRM(파트너 관계 관리)</KO>
+    <CN>PRM(合作伙伴关系管理)</CN>
+    <JP>PRM(Partner関係管理)</JP>
+    <VN>PRM(Quản lý quan hệ đối tác)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSMEI</key>
+    <EN>SMEI(SM Executive Information)</EN>
+    <KO>SMEI(SM 경영자 정보)</KO>
+    <CN>SMEI(SM 主任资料)</CN>
+    <JP>SMEI(SM経営者情報)</JP>
+    <VN>SMEI(SM Thông tin người kinh doanh)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSMMO</key>
+    <EN>SMMO(SM Mobile)</EN>
+    <KO>SMMO(SM 모바일)</KO>
+    <CN>SMMO(SM 移动)</CN>
+    <JP>SMMO(SM Mobile)</JP>
+    <VN>SMMO(Di chuyển SM)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSMBP</key>
+    <EN>SMBP(Smart Management)</EN>
+    <KO>SMBP(스마트 관리)</KO>
+    <CN>SMBP(智能管理)</CN>
+    <JP>SMBP(Smart管理)</JP>
+    <VN>SMBP(Quản lý thông minh)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSMES</key>
+    <EN>SMES(SM Electronic Settlement)</EN>
+    <KO>SMES(SM 전자 결재)</KO>
+    <CN>SMES(SM Electronic Settlement)</CN>
+    <JP>SMES(SM電子決裁)</JP>
+    <VN>SMES(Phê duyệt điện tử SM)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleFPP</key>
+    <EN>FPP(Factory Planning Plus)</EN>
+    <KO>FPP(Factory Planning Plus)</KO>
+    <CN>FPP(Factory Planning Plus)</CN>
+    <JP>FPP(Factory Planning Plus)</JP>
+    <VN>FPP(Factory Planning Plus)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleCMS</key>
+    <EN>CMS(e-Finance)</EN>
+    <KO>CMS(전자금융)</KO>
+    <CN>CMS(e-Finance)</CN>
+    <JP>CMS(電子金融)</JP>
+    <VN>CMS(e-Finance)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleCLO</key>
+    <EN>CLO(CELLO)</EN>
+    <KO>CLO(첼로)</KO>
+    <CN>CLO(CELLO)</CN>
+    <JP>CLO(チェロ)</JP>
+    <VN>CLO(CELLO)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleOCM</key>
+    <EN>OCM([MES]Outsourcing Cost Management)</EN>
+    <KO>OCM([MES]외주비관리)</KO>
+    <CN>OCM([MES]外包成本管理)</CN>
+    <JP>OCM([MES]Outsourcing Cost Management)</JP>
+    <VN>OCM([MES]Quản lý Chi phí gia công phần mềm)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleOPM</key>
+    <EN>OPM([MES]Outsourcing Process Management)</EN>
+    <KO>OPM([MES]외주관리)</KO>
+    <CN>OPM([MES]外包流程管理)</CN>
+    <JP>OPM([MES]Outsourcing Process Management)</JP>
+    <VN>OPM([MES]Quản lý Process Outsourcing)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModulePIM</key>
+    <EN>PIM([MES]Production Information Management)</EN>
+    <KO>PIM([MES]생산관리)</KO>
+    <CN>PIM([MES]生产信息管理)</CN>
+    <JP>PIM([MES]Production Information Management)</JP>
+    <VN>PIM([MES]Quản lý thông tin sản xuất)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModulePPM</key>
+    <EN>PPM([MES]Production Process Management)</EN>
+    <KO>PPM([MES]공정관리)</KO>
+    <CN>PPM([MES]生产过程管理)</CN>
+    <JP>PPM([MES]Production Process Management)</JP>
+    <VN>PPM([MES]Quy trình quản lý sản xuất)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModulePQM</key>
+    <EN>PQM([MES]Production Quality Management)</EN>
+    <KO>PQM([MES]품질관리)</KO>
+    <CN>PQM([MES]生产质量管理)</CN>
+    <JP>PQM([MES]Production Quality Management)</JP>
+    <VN>PQM([MES]Quản lý chất lượng sản xuất)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSPC</key>
+    <EN>SPC([MES]Statistical Process Control)</EN>
+    <KO>SPC([MES]통계적 공정 관리)</KO>
+    <CN>SPC([MES]统计过程控制)</CN>
+    <JP>SPC([MES]Statistical Process Control)</JP>
+    <VN>SPC([MES]Quy trình kiểm soát thống kê)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSQFM</key>
+    <EN>SQFM([MES]Facilities Management)</EN>
+    <KO>SQFM([MES]설비 보전 관리)</KO>
+    <CN>SQFM([MES]设备管理)</CN>
+    <JP>SQFM([MES]Facilities Management)</JP>
+    <VN>SQFM([MES]Quản lý thiết bị)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSQMD</key>
+    <EN>SQMD([MES]MolD Management)</EN>
+    <KO>SQMD([MES]금형 관리)</KO>
+    <CN>SQMD([MES]模具管理)</CN>
+    <JP>SQMD([MES]MolD Management)</JP>
+    <VN>SQMD([MES]Cũng LD Management)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSQMM</key>
+    <EN>SQMM([MES]Matreials Management)</EN>
+    <KO>SQMM([MES]자재 관리)</KO>
+    <CN>SQMM([MES]材料管理)</CN>
+    <JP>SQMM([MES]Matreials Management)</JP>
+    <VN>SQMM([MES]Quản lý vật tư)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSQPM</key>
+    <EN>SQPM([MES]Process Management)</EN>
+    <KO>SQPM([MES]공정 관리)</KO>
+    <CN>SQPM([MES]流程管理)</CN>
+    <JP>SQPM([MES]Process Management)</JP>
+    <VN>SQPM([MES]Quản lý quy trình)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleSQQM</key>
+    <EN>SQQM([MES]Quality Management)</EN>
+    <KO>SQQM([MES]품질 관리)</KO>
+    <CN>SQQM([MES]品质管理)</CN>
+    <JP>SQQM([MES]Quality Management)</JP>
+    <VN>SQQM([MES]quản lý chất lượng)</VN>
+  </CA_DD>  
+  <CA_DD>
+    <key>chkModulePEA</key>
+    <EN>PEA(Public Enterprise Budget)</EN>
+    <KO>PEA(공공예산)</KO>
+    <CN>PEA(公共企业预算)</CN>
+    <JP>PEA(公共予算)</JP>
+    <VN>PEA(Ngân sách doanh nghiệp công cộng)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModulePEH</key>
+    <EN>PEH(Evaluation)</EN>
+    <KO>PEH(평가관리)</KO>
+    <CN>PEH(考评管理)</CN>
+    <JP>PEH(評価管理)</JP>
+    <VN>PEH(Đánh giá)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>chkModuleBPS</key>
+    <EN>BPS(Business Planning Simulation)</EN>
+    <KO>BPS(경영계획)</KO>
+    <CN>BPS(經營計劃)</CN>
+    <JP>BPS(Business Planning Simulation)</JP>
+    <VN>BPS(Lập kế hoạch Kinh doanh)</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnOK</key>
+    <EN>OK</EN>
+    <KO>확인</KO>
+    <CN>确认</CN>
+    <JP>確認</JP>
+    <VN>được</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnCancel</key>
+    <EN>Cancel</EN>
+    <KO>취소</KO>
+    <CN>取消</CN>
+    <JP>取消し</JP>
+    <VN>hủy bỏ</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnYes</key>
+    <EN>Yes</EN>
+    <KO>예</KO>
+    <CN>是</CN>
+    <JP>はい</JP>
+    <VN>Vâng</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnNo</key>
+    <EN>No</EN>
+    <KO>아니오</KO>
+    <CN>没有</CN>
+    <JP>いいえ</JP>
+    <VN>Không</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnRetry</key>
+    <EN>Retry</EN>
+    <KO>다시 시도</KO>
+    <CN>重试</CN>
+    <JP>リトライ</JP>
+    <VN>Thử lại</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnAbort</key>
+    <EN>Abort</EN>
+    <KO>중단</KO>
+    <CN>退出</CN>
+    <JP>アボート</JP>
+    <VN>Abort</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnIgnore</key>
+    <EN>Ignore</EN>
+    <KO>무시</KO>
+    <CN>忽视</CN>
+    <JP>無視します</JP>
+    <VN>Bỏ qua</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnDetail</key>
+    <EN>Detail</EN>
+    <KO>상세</KO>
+    <CN>详情</CN>
+    <JP>詳細</JP>
+    <VN>Chi tiết</VN>
+  </CA_DD>
+  <CA_DD>
+    <key>MessageBoxForm_btnErrorLog</key>
+    <EN>Screen Shot</EN>
+    <KO>화면 캡쳐</KO>
+    <CN>屏幕快照</CN>
+    <JP>画面 Capture</JP>
+    <VN>Screen Shot</VN>
+  </CA_DD>
+</NewDataSet>

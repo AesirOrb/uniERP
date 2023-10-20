@@ -1,0 +1,8 @@
+﻿<SolutionProfile xmlns="http://schemas.microsoft.com/pag/cab-profile/2.0">
+  <Section Name="Apps">
+    <Modules>
+      <ModuleInfo AssemblyFile="Bizentro.App.MAIN.TreeMenuModule.dll" />
+      <ModuleInfo AssemblyFile="Bizentro.AppFramework.AssemblyLoadingIntercepter.dll" />
+    </Modules>
+  </Section>
+</SolutionProfile>
