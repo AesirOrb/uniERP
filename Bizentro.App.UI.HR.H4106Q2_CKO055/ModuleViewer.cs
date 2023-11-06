@@ -18,7 +18,7 @@ using Bizentro.AppFramework.UI.Common.Exceptions;
 
 #endregion
 
-namespace Bizentro.App.UI.HR.H4106Q1_CKO055
+namespace Bizentro.App.UI.HR.H4106Q2_CKO055
 {
     [SmartPart]
     public partial class ModuleViewer : ViewBase
@@ -95,7 +95,9 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         protected override void SetLocalDefaultValue()
         {
             // Assign default value to controls
-            dtYearMonth.Value = uniBase.UDate.GetDBServerDateTime();
+            DateTime CurrentDate = uniBase.UDate.GetDBServerDateTime();
+            dtYearMonth.uniDateTimeF.DateTime = new DateTime(CurrentDate.Year, CurrentDate.AddMonths(-1).Month, 16);
+            dtYearMonth.uniDateTimeT.DateTime = new DateTime(CurrentDate.Year, CurrentDate.Month, 15);
             uniOpenPopup _uniOpenPopup = popDeptCd;
             uniOpenPopup _uniOpenPopup1 = popDeptCd;
             uniOpenPopup _uniOpenPopup2 = popEmpNo;
@@ -147,18 +149,18 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         private void InitSpreadSheet()
         {
             #region ■■ 3.1.1 Pre-setting grid information
-            DsList.E_H4106Q1DataTable eH4106Q1 = cqtdsList.E_H4106Q1;
+            DsList.E_H4106Q2DataTable eH4106Q2 = cqtdsList.E_H4106Q2;
 
-            uniGrid1.SSSetEdit(eH4106Q1.DEPTColumn.ColumnName, "부서", 128, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4106Q1.NAMEColumn.ColumnName, "이름", 60, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4106Q1.EMP_NOColumn.ColumnName, "사번", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            uniGrid1.SSSetEdit(eH4106Q1.TYPEColumn.ColumnName, "구분", 64, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            //uniGrid1.SSSetEdit(eH4106Q1.TOTALColumn.ColumnName, "합계", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4106Q2.DEPTColumn.ColumnName, "부서", 128, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4106Q2.NAMEColumn.ColumnName, "이름", 60, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4106Q2.EMP_NOColumn.ColumnName, "사번", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4106Q2.TYPEColumn.ColumnName, "구분", 64, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4106Q2.TOTALColumn.ColumnName, "합계", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
-            for (var i = 1; i <= 31; i++)
+            for (var i = 0; i < eH4106Q2.Columns.Count - 5; i++)
             {
                 string sColumnKey = string.Format("D{0}", i.ToString().PadLeft(2, '0'));
-                uniGrid1.SSSetEdit(sColumnKey, i.ToString(), 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+                uniGrid1.SSSetEdit(sColumnKey, sColumnKey, 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             }
 
             #endregion
@@ -167,10 +169,10 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
 
             uniGrid1.InitializeGrid(enumDef.IsOutlookGroupBy.No, enumDef.IsSearch.Yes);
             uniGrid1.DisplayLayout.Bands[0].Override.AllowRowFiltering = DefaultableBoolean.False;
-            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.DEPTColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
-            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.NAMEColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
-            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.EMP_NOColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
-            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.TYPEColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q2.DEPTColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q2.NAMEColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q2.EMP_NOColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
+            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q2.TYPEColumn.ColumnName].AllowRowFiltering = DefaultableBoolean.True;
             uniGrid1.DisplayLayout.Override.DefaultRowHeight = 20;
             uniGrid1.DisplayLayout.Override.RowSizing = RowSizing.Fixed;
 
@@ -178,28 +180,28 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
 
             #region ■■ 3.1.3 Setting etc grid
 
-            for (var i = 1; i <= 31; i++)
+            for (var i = 0; i < eH4106Q2.Columns.Count - 5; i++)
             {
                 AddLabelColumn(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), i.ToString().PadLeft(2, '0'));
             }
 
-            uniGrid1.SetMerge(eH4106Q1.DEPTColumn.ColumnName, 0, 0, 1, 2);
-            uniGrid1.SetMerge(eH4106Q1.NAMEColumn.ColumnName, 1, 0, 1, 2);
-            uniGrid1.SetMerge(eH4106Q1.EMP_NOColumn.ColumnName, 2, 0, 1, 2);
-            uniGrid1.SetMerge(eH4106Q1.TYPEColumn.ColumnName, 3, 0, 1, 2);
+            uniGrid1.SetMerge(eH4106Q2.DEPTColumn.ColumnName, 0, 0, 1, 2);
+            uniGrid1.SetMerge(eH4106Q2.NAMEColumn.ColumnName, 1, 0, 1, 2);
+            uniGrid1.SetMerge(eH4106Q2.EMP_NOColumn.ColumnName, 2, 0, 1, 2);
+            uniGrid1.SetMerge(eH4106Q2.TYPEColumn.ColumnName, 3, 0, 1, 2);
 
-            for (var i = 1; i <= 31; i++)
+            for (int i = 0, j = 4; i < eH4106Q2.Columns.Count - 5; i++, j++)
             {
-                uniGrid1.SetMerge(string.Format("D{0}", i.ToString().PadLeft(2, '0')), 3 + i, 0, 1, 1);
-                uniGrid1.SetMerge(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), 3 + i, 1, 1, 1);
+                uniGrid1.SetMerge(string.Format("D{0}", i.ToString().PadLeft(2, '0')), j, 0, 1, 1);
+                uniGrid1.SetMerge(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), j, 1, 1, 1);
             }
 
-            //uniGrid1.SetMerge(eH4106Q1.TOTALColumn.ColumnName, eH4106Q1.Columns.Count - 1, 0, 1, 2);
+            uniGrid1.SetMerge(eH4106Q2.TOTALColumn.ColumnName, eH4106Q2.Columns.Count - 1, 0, 1, 2);
 
-            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.DEPTColumn.ColumnName].MergedCellStyle = MergedCellStyle.Always;
-            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.DEPTColumn.ColumnName].MergedCellEvaluator = new CustomMergedCellEvaluator();
-            uniGrid1.SetCellMerge(eH4106Q1.NAMEColumn.ColumnName, enumDef.VAlign.Middle);
-            uniGrid1.SetCellMerge(eH4106Q1.EMP_NOColumn.ColumnName, enumDef.VAlign.Middle);
+            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q2.DEPTColumn.ColumnName].MergedCellStyle = MergedCellStyle.Always;
+            uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q2.DEPTColumn.ColumnName].MergedCellEvaluator = new CustomMergedCellEvaluator();
+            uniGrid1.SetCellMerge(eH4106Q2.NAMEColumn.ColumnName, enumDef.VAlign.Middle);
+            uniGrid1.SetCellMerge(eH4106Q2.EMP_NOColumn.ColumnName, enumDef.VAlign.Middle);
 
             #endregion
         }
@@ -230,7 +232,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         {
             // Grid binding with global dataset variable.
             InitSpreadSheet();
-            uniGrid1.uniGridSetDataBinding(cqtdsList.E_H4106Q1);
+            uniGrid1.uniGridSetDataBinding(cqtdsList.E_H4106Q2);
         }
         #endregion
 
@@ -324,7 +326,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
 
         #endregion
 
-        #region ■ 4.4 Db function group 
+        #region ■ 4.4 Db function group
 
         #region ■■ 4.4.1 DBQuery(Common)
 
@@ -332,7 +334,14 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         {
             try
             {
-                DataSet ds = GetGridData("dbo.usp_H_H4106Q1_CKO055");
+                if ((dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1 > 40)
+                {
+                    uniBase.UMessage.DisplayMessageBox("970025", MessageBoxButtons.OK, "조회 기간", "40일");
+                    dtYearMonth.Focus();
+                    return false;
+                }
+
+                DataSet ds = GetGridData("dbo.usp_H_H4106Q2_CKO055");
 
                 if (ds.Tables[0].Rows.Count < 0)
                 {
@@ -341,7 +350,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
                     return false;
                 }
 
-                cqtdsList.E_H4106Q1.Merge(ds.Tables[0], false, MissingSchemaAction.Ignore);
+                cqtdsList.E_H4106Q2.Merge(ds.Tables[0], false, MissingSchemaAction.Ignore);
 
                 uniGrid1.BeginUpdate();
 
@@ -520,7 +529,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         {
             string[] codeValue = new string[] { popDeptCd.CodeValue, popDeptCd.CodeName, null, null };
             UDateClass uDate = uniBase.UDate;
-            DateTime firstDay = dtYearMonth.uniValue;
+            DateTime firstDay = dtYearMonth.uniFromValue;
             firstDay = uDate.GetFirstDay(firstDay.Date);
             firstDay = firstDay.Date;
             codeValue[2] = firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD);
@@ -561,7 +570,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         {
             string[] codeValue = new string[] { popEmpNo.CodeValue, popEmpNo.CodeName, null, null, null, null, null, null };
             UDateClass uDate = uniBase.UDate;
-            DateTime firstDay = dtYearMonth.uniValue;
+            DateTime firstDay = dtYearMonth.uniFromValue;
             firstDay = uDate.GetFirstDay(firstDay.Date);
             firstDay = firstDay.Date;
             codeValue[2] = firstDay.ToString(CommonVariable.CDT_YYYY_MM_DD);
@@ -608,7 +617,8 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         {
             AppFramework.DataBridge.uniCommand storedProcCommand = uniBase.UDatabase.GetStoredProcCommand(storedProc);
 
-            uniBase.UDatabase.AddInParameter(storedProcCommand, "@YYYYMM", SqlDbType.NVarChar, 10, dtYearMonth.uniValue.ToString(CommonVariable.CDT_YYYYMM));
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@FROM", SqlDbType.NVarChar, 10, dtYearMonth.uniFromValue.ToString(CommonVariable.CDT_YYYY_MM_DD));
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@TO", SqlDbType.NVarChar, 10, dtYearMonth.uniToValue.ToString(CommonVariable.CDT_YYYY_MM_DD));
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@BIZ_AREA_CD", SqlDbType.NVarChar, 10, cboBizAreaCd.SelectedItem == null ? string.Empty : cboBizAreaCd.SelectedItem.DataValue.ToString());
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@DEPT_CD", SqlDbType.NVarChar, 10, popDeptCd.CodeValue);
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 10, txtInternalCd.Text);
@@ -629,63 +639,23 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
 
         private void SetDayOfWeek()
         {
-            uniGrid1.SSSetColHidden("D29", false);
-            uniGrid1.SSSetColHidden("D30", false);
-            uniGrid1.SSSetColHidden("D31", false);
+            int days = (dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1;
 
-            switch (dtYearMonth.uniValue.Month)
+            for (var i = 0; i < 40; i++)
             {
-                case 2:
-                    if (!DateTime.IsLeapYear(dtYearMonth.uniValue.Year))
-                    {
-                        uniGrid1.SSSetColHidden("D29", true);
-                        uniGrid1.SSSetColHidden("D30", true);
-                        uniGrid1.SSSetColHidden("D31", true);
-                    }
-                    else
-                    {
-                        uniGrid1.SSSetColHidden("D30", true);
-                        uniGrid1.SSSetColHidden("D31", true);
-                    }
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    uniGrid1.SSSetColHidden("D31", true);
-                    break;
+                uniGrid1.SSSetColHidden(string.Format("D{0}", i.ToString().PadLeft(2, '0')), true);
+                uniGrid1.SSSetColHidden(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), true);
             }
 
-            for (int i = 1; i <= 31; i++)
+            for (var i = 0; i < days; i++)
             {
+                uniGrid1.SSSetColHidden(string.Format("D{0}", i.ToString().PadLeft(2, '0')), false);
+                uniGrid1.SSSetColHidden(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), false);
+                uniGrid1.setColumnHeader(string.Format("D{0}", i.ToString().PadLeft(2, '0')), dtYearMonth.uniFromValue.AddDays(i).Day.ToString().PadLeft(2, '0'));
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
-            }
-            DataSet Calendar = GetCalendar();
 
-            foreach (DataRow row in Calendar.Tables[0].Rows)
-            {
-                DateTime _sDate = (DateTime)row["DATE"];
-                string _sDay = _sDate.ToString(CommonVariable.CDT_DD).PadLeft(2, '0');
-                string _sHoliType = row["HOLI_TYPE"].ToString();
-
-                switch (_sHoliType)
-                {
-                    case "S":
-                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", _sDay)].Header.Appearance.ForeColor = Color.Blue;
-                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", _sDay)].Header.Appearance.ForeColor = Color.Blue;
-                        break;
-
-                    case "H":
-                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", _sDay)].Header.Appearance.ForeColor = Color.Red;
-                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", _sDay)].Header.Appearance.ForeColor = Color.Red;
-                        break;
-                }
-            }
-
-            for (int i = 1; i <= 31; i++)
-            {
-                DayOfWeek _dayOfWeek = Convert.ToDateTime(dtYearMonth.uniValue.ToString("yyyy-MM-01")).AddDays(i - 1).DayOfWeek;
+                DayOfWeek _dayOfWeek = dtYearMonth.uniFromValue.AddDays(i).DayOfWeek;
                 string sDayOfWeek = string.Empty;
 
                 switch (_dayOfWeek)
@@ -715,6 +685,30 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
 
                 uniGrid1.setColumnHeader(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
             }
+
+            DataSet dsCalendar = GetCalendar();
+
+            int index = 0;
+
+            foreach (DataRow row in dsCalendar.Tables[0].Rows)
+            {
+                string _sHoliType = row["HOLI_TYPE"].ToString();
+
+                switch (_sHoliType)
+                {
+                    case "S":
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Blue;
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Blue;
+                        break;
+
+                    case "H":
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Red;
+                        uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", index.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Red;
+                        break;
+                }
+
+                ++index;
+            }
         }
 
         public DataSet GetCalendar()
@@ -722,9 +716,9 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             string sSelect = "DATE, WEEK_DAY, HOLI_TYPE";
             string sFrom = "HCA020T";
             string sWhere = "BIZ_AREA_CD = 'UB00' AND DATE BETWEEN '"
-                + dtYearMonth.uniValue.Date.ToString(CommonVariable.CDT_YYYY_MM_DD)
+                + dtYearMonth.uniFromValue.Date.ToString(CommonVariable.CDT_YYYY_MM_DD)
                 + "' AND '"
-                + dtYearMonth.uniValue.AddMonths(1).AddDays(-1).Date.ToString(CommonVariable.CDT_YYYY_MM_DD)
+                + dtYearMonth.uniToValue.ToString(CommonVariable.CDT_YYYY_MM_DD)
                 + "'";
 
             DataSet dsCalendar = uniBase.UDataAccess.CommonQueryRs(sSelect, sFrom, sWhere);

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.CompositeUI;
 using Microsoft.Practices.ObjectBuilder;
 
-namespace Bizentro.App.UI.HR.H4106Q1_CKO055
+namespace Bizentro.App.UI.HR.H4106Q2_CKO055
 {
     public class ModuleInitializer : Bizentro.AppFramework.UI.Module.Module
     {
@@ -61,7 +61,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             this.uniTBL_MainData = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.uniTBL_MainBatch = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.lblYearMonth = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
-            this.dtYearMonth = new Bizentro.AppFramework.UI.Controls.uniDateTime(this.components);
+            this.dtYearMonth = new Bizentro.AppFramework.UI.Controls.uniDateTerm();
             this.lblDeptCd = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
             this.popDeptCd = new Bizentro.AppFramework.UI.Controls.uniOpenPopup();
             this.txtInternalCd = new Bizentro.AppFramework.UI.Controls.uniTextBox(this.components);
@@ -77,7 +77,6 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             this.uniTBL_MainCondition.SuspendLayout();
             this.uniTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)this.uniGrid1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.dtYearMonth).BeginInit();
             ((System.ComponentModel.ISupportInitialize)this.txtInternalCd).BeginInit();
             ((System.ComponentModel.ISupportInitialize)this.cboBizAreaCd).BeginInit();
             base.SuspendLayout();
@@ -308,26 +307,20 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             this.lblYearMonth.UseMnemonic = false;
 
             this.dtYearMonth.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtYearMonth.Appearance = appearance4;
-            this.dtYearMonth.DateTime = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
-            this.dtYearMonth.DateType = Bizentro.AppFramework.UI.Variables.enumDef.DateType.YYYY_MM;
-            this.dtYearMonth.DropDownButtonDisplayStyle = Infragistics.Win.ButtonDisplayStyle.Never;
-            this.dtYearMonth.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.NotNull;
+            this.dtYearMonth.DateType = Bizentro.AppFramework.UI.Variables.enumDef.DateType.YYYY_MM_DD;
+            this.dtYearMonth.FieldTypeFrom = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.NotNull;
+            this.dtYearMonth.FieldTypeTo = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.NotNull;
             this.dtYearMonth.Location = new System.Drawing.Point(0, 0);
-            this.dtYearMonth.LockedField = false;
             this.dtYearMonth.Margin = new System.Windows.Forms.Padding(0);
-            this.dtYearMonth.MaxDate = new System.DateTime(2030, 1, 1, 0, 0, 0, 0);
             this.dtYearMonth.Name = "dtYearMonth";
-            this.dtYearMonth.QueryIfEnterKeyPressed = true;
-            this.dtYearMonth.RequiredField = false;
             this.dtYearMonth.Size = new System.Drawing.Size(80, 21);
-            this.dtYearMonth.SpinButtonDisplayStyle = Infragistics.Win.ButtonDisplayStyle.Always;
-            this.dtYearMonth.Style = Bizentro.AppFramework.UI.Controls.DateTime_Style.YYYYMM;
-            this.dtYearMonth.StyleSetName = "Default";
+            this.dtYearMonth.Style = Bizentro.AppFramework.UI.Controls.DateTime_Style.Default;
             this.dtYearMonth.TabIndex = 1;
-            this.dtYearMonth.uniALT = "Year & Month";
-            this.dtYearMonth.uniValue = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
-            this.dtYearMonth.Value = new System.DateTime(2015, 4, 1, 0, 0, 0, 0);
+            this.dtYearMonth.uniFromALT = "조회일자 (To)";
+            this.dtYearMonth.uniFromValue = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dtYearMonth.uniTabSameValue = false;
+            this.dtYearMonth.uniToALT = "조회일자 (From)";
+            this.dtYearMonth.uniToValue = new System.DateTime(2023, 1, 31, 0, 0, 0, 0);
 
             this.lblBizAreaCd.Appearance = appearance3;
             this.lblBizAreaCd.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -514,7 +507,6 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             ((System.ComponentModel.ISupportInitialize)this.uniGrid1).EndInit();
             this.uniTBL_MainCondition.ResumeLayout(false);
             this.uniTBL_MainCondition.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)this.dtYearMonth).EndInit();
             this.uniTableLayoutPanel1.ResumeLayout(false);
             this.uniTableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)this.txtInternalCd).EndInit();
@@ -534,7 +526,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
         private Bizentro.AppFramework.UI.Controls.uniLabel lblDeptCd;
         private Bizentro.AppFramework.UI.Controls.uniLabel lblEmpNo;
         private Bizentro.AppFramework.UI.Controls.uniLabel lblBizAreaCd;
-        private Bizentro.AppFramework.UI.Controls.uniDateTime dtYearMonth;
+        private Bizentro.AppFramework.UI.Controls.uniDateTerm dtYearMonth;
         private Bizentro.AppFramework.UI.Controls.uniCombo cboBizAreaCd;
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel1;
         private Bizentro.AppFramework.UI.Controls.uniOpenPopup popDeptCd;
