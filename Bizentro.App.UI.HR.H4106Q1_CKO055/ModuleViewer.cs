@@ -153,7 +153,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             uniGrid1.SSSetEdit(eH4106Q1.NAMEColumn.ColumnName, "이름", 60, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4106Q1.EMP_NOColumn.ColumnName, "사번", 72, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             uniGrid1.SSSetEdit(eH4106Q1.TYPEColumn.ColumnName, "구분", 64, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
-            //uniGrid1.SSSetEdit(eH4106Q1.TOTALColumn.ColumnName, "합계", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+            uniGrid1.SSSetEdit(eH4106Q1.TOTALColumn.ColumnName, "합계", 50, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
 
             for (var i = 1; i <= 31; i++)
             {
@@ -194,7 +194,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
                 uniGrid1.SetMerge(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), 3 + i, 1, 1, 1);
             }
 
-            //uniGrid1.SetMerge(eH4106Q1.TOTALColumn.ColumnName, eH4106Q1.Columns.Count - 1, 0, 1, 2);
+            uniGrid1.SetMerge(eH4106Q1.TOTALColumn.ColumnName, eH4106Q1.Columns.Count - 1, 0, 1, 2);
 
             uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.DEPTColumn.ColumnName].MergedCellStyle = MergedCellStyle.Always;
             uniGrid1.DisplayLayout.Bands[0].Columns[eH4106Q1.DEPTColumn.ColumnName].MergedCellEvaluator = new CustomMergedCellEvaluator();
@@ -345,8 +345,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
 
                 uniGrid1.BeginUpdate();
 
-                for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 240, 240, 240);
+                SetGridFormat();
 
                 uniGrid1.EndUpdate();
 
@@ -632,6 +631,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
             uniGrid1.SSSetColHidden("D29", false);
             uniGrid1.SSSetColHidden("D30", false);
             uniGrid1.SSSetColHidden("D31", false);
+            uniGrid1.SSSetColHidden("TOTAL", true);
 
             switch (dtYearMonth.uniValue.Month)
             {
@@ -661,6 +661,7 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
             }
+
             DataSet Calendar = GetCalendar();
 
             foreach (DataRow row in Calendar.Tables[0].Rows)
@@ -714,6 +715,53 @@ namespace Bizentro.App.UI.HR.H4106Q1_CKO055
                 }
 
                 uniGrid1.setColumnHeader(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), sDayOfWeek);
+            }
+        }
+
+        private void SetGridFormat()
+        {
+            for (int i = 0, j = 1; i < uniGrid1.Rows.Count; i++, j++)
+            {
+                if (uniGrid1.Rows[i].Cells["TYPE"].Value.ToString() == "출근시간")
+                {
+                    for (var k = 4; k < 36; k++)
+                    {
+                        string value1 = uniGrid1.Rows[i].Cells[k].Value.ToString();
+                        string value2 = uniGrid1.Rows[j].Cells[k].Value.ToString();
+
+                        if (value1 == "" && value2 != "")
+                        {
+                            uniGrid1.Rows[i].Cells[k].Appearance.BackColor = Color.FromArgb(128, 255, 96, 96);
+                            uniGrid1.Rows[i].Cells[k].SetValue("누락", false);
+                        }
+
+                        if (value1 != "" && value2 == "")
+                        {
+                            uniGrid1.Rows[j].Cells[k].Appearance.BackColor = Color.FromArgb(128, 255, 96, 96);
+                            uniGrid1.Rows[j].Cells[k].SetValue("누락", false);
+                        }
+                    }
+                }
+            }
+
+            foreach (UltraGridRow Row in uniGrid1.Rows)
+            {
+                string strType = Row.Cells["TYPE"].Value.ToString();
+
+                switch (strType)
+                {
+                    case "비고":
+                        Row.Appearance.BackColor = Color.FromArgb(255, 242, 242, 242);
+                        break;
+
+                    default:
+                        Row.Appearance.BackColor = Color.FromArgb(255, 255, 255, 255);
+                        break;
+                }
+
+                Row.Cells["DEPT"].Appearance.BackColor = Color.White;
+                Row.Cells["NAME"].Appearance.BackColor = Color.White;
+                Row.Cells["EMP_NO"].Appearance.BackColor = Color.White;
             }
         }
 

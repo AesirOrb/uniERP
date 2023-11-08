@@ -60,17 +60,24 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             this.uniTBL_MainCondition = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.uniTBL_MainData = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
             this.uniTBL_MainBatch = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
+            this.uniGrid1 = new Bizentro.AppFramework.UI.Controls.uniGrid(this.components);
+
             this.lblYearMonth = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
             this.dtYearMonth = new Bizentro.AppFramework.UI.Controls.uniDateTerm();
-            this.lblDeptCd = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
-            this.popDeptCd = new Bizentro.AppFramework.UI.Controls.uniOpenPopup();
-            this.txtInternalCd = new Bizentro.AppFramework.UI.Controls.uniTextBox(this.components);
-            this.lblEmpNo = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
-            this.popEmpNo = new Bizentro.AppFramework.UI.Controls.uniOpenPopup();
+
             this.lblBizAreaCd = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
             this.cboBizAreaCd = new Bizentro.AppFramework.UI.Controls.uniCombo(this.components);
+
+            this.lblDeptCd = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
             this.uniTableLayoutPanel1 = new Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel(this.components);
-            this.uniGrid1 = new Bizentro.AppFramework.UI.Controls.uniGrid(this.components);
+            this.popDeptCd = new Bizentro.AppFramework.UI.Controls.uniOpenPopup();
+            this.txtInternalCd = new Bizentro.AppFramework.UI.Controls.uniTextBox(this.components);
+
+            this.lblEmpNo = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
+            this.popEmpNo = new Bizentro.AppFramework.UI.Controls.uniOpenPopup();
+
+            this.lblFormat = new Bizentro.AppFramework.UI.Controls.uniLabel(this.components);
+            this.chkFormat = new Bizentro.AppFramework.UI.Controls.uniCheckBox(this.components);
 
             this.uniTBL_OuterMost.SuspendLayout();
             this.uniTBL_MainData.SuspendLayout();
@@ -154,6 +161,8 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             this.uniTBL_MainCondition.Controls.Add(this.uniTableLayoutPanel1, 1, 1);
             this.uniTBL_MainCondition.Controls.Add(this.lblEmpNo, 2, 1);
             this.uniTBL_MainCondition.Controls.Add(this.popEmpNo, 3, 1);
+            this.uniTBL_MainCondition.Controls.Add(this.lblFormat, 0, 2);
+            this.uniTBL_MainCondition.Controls.Add(this.chkFormat, 1, 2);
             this.uniTBL_MainCondition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uniTBL_MainCondition.EasyBaseBatchType = Bizentro.AppFramework.UI.Controls.EasyBaseTBType.NONE;
             this.uniTBL_MainCondition.Location = new System.Drawing.Point(0, 0);
@@ -161,10 +170,11 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             this.uniTBL_MainCondition.Name = "uniTBL_MainCondition";
             this.uniTBL_MainCondition.Padding = new System.Windows.Forms.Padding(0);
             this.uniTBL_MainCondition.PanelType = Bizentro.AppFramework.UI.Variables.enumDef.PanelType.Condition;
-            this.uniTBL_MainCondition.RowCount = 2;
-            this.uniTBL_MainCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50f));
-            this.uniTBL_MainCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50f));
-            this.uniTBL_MainCondition.Size = new System.Drawing.Size(851, 46);
+            this.uniTBL_MainCondition.RowCount = 3;
+            this.uniTBL_MainCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23f));
+            this.uniTBL_MainCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23f));
+            this.uniTBL_MainCondition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23f));
+            this.uniTBL_MainCondition.Size = new System.Drawing.Size(851, 69);
             this.uniTBL_MainCondition.TabIndex = 1;
             this.uniTBL_MainCondition.BizentroTableLayout = Bizentro.AppFramework.UI.Controls.BizentroTableLayOutStyle.DefaultTableLayout;
             this.uniTBL_MainCondition.uniLR_SPACE_TYPE = Bizentro.AppFramework.UI.Controls.LR_SPACE_TYPE.LR_SPACE_TYPE_00;
@@ -495,6 +505,29 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             this.popEmpNo.OnExitEditCode += new Bizentro.AppFramework.UI.Controls.Popup.OnExitEditCodeEventHandler(this.PopEmpNo_OnExitEditCode);
             this.popEmpNo.AfterPopupClosed += new Bizentro.AppFramework.UI.Controls.Popup.AfterPopupCloseEventHandler(this.PopEmpNo_AfterPopupClosed);
 
+            this.lblFormat.Appearance = appearance3;
+            this.lblFormat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFormat.LabelType = Bizentro.AppFramework.UI.Variables.enumDef.LabelType.Title;
+            this.lblFormat.Location = new System.Drawing.Point(0, 0);
+            this.lblFormat.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lblFormat.Name = "lblFormat";
+            this.lblFormat.Size = new System.Drawing.Size(80, 21);
+            this.lblFormat.StyleSetName = "Default";
+            this.lblFormat.TabIndex = 6;
+            this.lblFormat.Text = "숫자 형식으로 보기";
+            this.lblFormat.UseMnemonic = false;
+
+            this.chkFormat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkFormat.FieldType = Bizentro.AppFramework.UI.Variables.enumDef.FieldType.Default;
+            this.chkFormat.Location = new System.Drawing.Point(0, 0);
+            this.chkFormat.LockedField = false;
+            this.chkFormat.Margin = new System.Windows.Forms.Padding(0);
+            this.chkFormat.Name = "chkFormat";
+            this.chkFormat.RequiredField = false;
+            this.chkFormat.Size = new System.Drawing.Size(30, 16);
+            this.chkFormat.TabIndex = 12;
+            this.chkFormat.uniALT = "";
+
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             base.Controls.Add(this.uniTBL_OuterMost);
             this.MinimumSize = new System.Drawing.Size(0, 0);
@@ -522,15 +555,22 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTBL_MainReference;
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTBL_MainBatch;
         private Bizentro.AppFramework.UI.Controls.uniGrid uniGrid1;
+
         private Bizentro.AppFramework.UI.Controls.uniLabel lblYearMonth;
-        private Bizentro.AppFramework.UI.Controls.uniLabel lblDeptCd;
-        private Bizentro.AppFramework.UI.Controls.uniLabel lblEmpNo;
-        private Bizentro.AppFramework.UI.Controls.uniLabel lblBizAreaCd;
         private Bizentro.AppFramework.UI.Controls.uniDateTerm dtYearMonth;
+
+        private Bizentro.AppFramework.UI.Controls.uniLabel lblBizAreaCd;
         private Bizentro.AppFramework.UI.Controls.uniCombo cboBizAreaCd;
+
+        private Bizentro.AppFramework.UI.Controls.uniLabel lblDeptCd;
         private Bizentro.AppFramework.UI.Controls.uniTableLayoutPanel uniTableLayoutPanel1;
         private Bizentro.AppFramework.UI.Controls.uniOpenPopup popDeptCd;
-        private Bizentro.AppFramework.UI.Controls.uniOpenPopup popEmpNo;
         private Bizentro.AppFramework.UI.Controls.uniTextBox txtInternalCd;
+
+        private Bizentro.AppFramework.UI.Controls.uniLabel lblEmpNo;
+        private Bizentro.AppFramework.UI.Controls.uniOpenPopup popEmpNo;
+
+        private Bizentro.AppFramework.UI.Controls.uniLabel lblFormat;
+        private Bizentro.AppFramework.UI.Controls.uniCheckBox chkFormat;
     }
 }

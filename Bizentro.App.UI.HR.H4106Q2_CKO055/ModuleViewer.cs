@@ -160,7 +160,7 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             for (var i = 0; i < eH4106Q2.Columns.Count - 5; i++)
             {
                 string sColumnKey = string.Format("D{0}", i.ToString().PadLeft(2, '0'));
-                uniGrid1.SSSetEdit(sColumnKey, sColumnKey, 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
+                uniGrid1.SSSetEdit(sColumnKey, i.ToString(), 40, enumDef.FieldType.ReadOnly, enumDef.CharCase.Default, false, enumDef.HAlign.Center);
             }
 
             #endregion
@@ -354,8 +354,7 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
 
                 uniGrid1.BeginUpdate();
 
-                for (int i = 0; i < uniGrid1.Rows.Count; i++)
-                    uniGrid1.Rows[i].Appearance.BackColor = uniGrid1.Rows[i].Cells["TYPE"].Value as string != "비고" ? Color.White : Color.FromArgb(255, 240, 240, 240);
+                SetGridFormat();
 
                 uniGrid1.EndUpdate();
 
@@ -623,6 +622,7 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@DEPT_CD", SqlDbType.NVarChar, 10, popDeptCd.CodeValue);
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@INTERNAL_CD", SqlDbType.NVarChar, 10, txtInternalCd.Text);
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@EMP_NO", SqlDbType.NVarChar, 10, popEmpNo.CodeValue);
+            uniBase.UDatabase.AddInParameter(storedProcCommand, "@FORMAT", SqlDbType.NVarChar, 10, chkFormat.Checked);
             uniBase.UDatabase.AddInParameter(storedProcCommand, "@USER_ID", SqlDbType.NVarChar, 10, CommonVariable.gUsrID);
 
             return uniBase.UDatabase.ExecuteDataSet(storedProcCommand);
@@ -651,7 +651,7 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             {
                 uniGrid1.SSSetColHidden(string.Format("D{0}", i.ToString().PadLeft(2, '0')), false);
                 uniGrid1.SSSetColHidden(string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0')), false);
-                uniGrid1.setColumnHeader(string.Format("D{0}", i.ToString().PadLeft(2, '0')), dtYearMonth.uniFromValue.AddDays(i).Day.ToString().PadLeft(2, '0'));
+                uniGrid1.setColumnHeader(string.Format("D{0}", i.ToString().PadLeft(2, '0')), dtYearMonth.uniFromValue.AddDays(i).Day.ToString());
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("D{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
                 uniGrid1.DisplayLayout.Bands[0].Columns[string.Format("DayOfWeek{0}", i.ToString().PadLeft(2, '0'))].Header.Appearance.ForeColor = Color.Black;
 
@@ -711,7 +711,120 @@ namespace Bizentro.App.UI.HR.H4106Q2_CKO055
             }
         }
 
-        public DataSet GetCalendar()
+        private void SetGridFormat()
+        {
+            int days = (dtYearMonth.uniToValue - dtYearMonth.uniFromValue).Days + 1;
+
+            for (int i = 0, j = 1; i < uniGrid1.Rows.Count; i++, j++)
+            {
+                if (uniGrid1.Rows[i].Cells["TYPE"].Value.ToString() == "출근시간")
+                {
+                    for (var k = 4; k < days + 5; k++)
+                    {
+                        string value1 = uniGrid1.Rows[i].Cells[k].Value.ToString();
+                        string value2 = uniGrid1.Rows[j].Cells[k].Value.ToString();
+
+                        if (value1 == "" && value2 != "")
+                        {
+                            uniGrid1.Rows[i].Cells[k].Appearance.BackColor = Color.FromArgb(128, 255, 96, 96);
+                            uniGrid1.Rows[i].Cells[k].SetValue("누락", false);
+                        }
+
+                        if (value1 != "" && value2 == "")
+                        {
+                            uniGrid1.Rows[j].Cells[k].Appearance.BackColor = Color.FromArgb(128, 255, 96, 96);
+                            uniGrid1.Rows[j].Cells[k].SetValue("누락", false);
+                        }
+                    }
+                }
+            }
+
+            foreach (UltraGridRow Row in uniGrid1.Rows)
+            {
+                string strType = Row.Cells["TYPE"].Value.ToString();
+
+                switch (strType)
+                {
+                    default:
+                        Row.Appearance.BackColor = Color.FromArgb(255, 255, 255, 255);
+                        break;
+
+                    case "근로시간":
+                        Row.Appearance.BackColor = Color.FromArgb(255, 255, 255, 255);
+                        foreach (UltraGridCell Cell in Row.Cells)
+                        {
+                            if (Cell.Value != null &&
+                                Cell.Value.ToString() != "08:00" &&
+                                Cell.Value.ToString() != "8.00" &&
+                                Cell.Column.Index > 4 &&
+                                Cell.Column.Index < days + 5)
+                            {
+                                Cell.Appearance.ForeColor = Color.Red;
+                                Cell.Appearance.FontData.Bold = DefaultableBoolean.True;
+                            }
+                        }
+                        break;
+
+                    case "연장근로":
+                    case "휴일근로":
+                        Row.Appearance.BackColor = Color.FromArgb(255, 255, 255, 204);
+                        break;
+
+                    case "휴일연장":
+                        Row.Appearance.BackColor = Color.FromArgb(255, 253, 233, 217);
+                        break;
+
+                    case "야간근로":
+                    case "인정시간":
+                        Row.Appearance.BackColor = Color.FromArgb(255, 242, 220, 220);
+                        break;
+
+                    case "비고":
+                        Row.Appearance.BackColor = Color.FromArgb(255, 242, 242, 242);
+                        break;
+                }
+
+                Row.Cells["DEPT"].Appearance.BackColor = Color.White;
+                Row.Cells["NAME"].Appearance.BackColor = Color.White;
+                Row.Cells["EMP_NO"].Appearance.BackColor = Color.White;
+
+                if (strType != "출근시간" && strType != "퇴근시간" && strType != "비고")
+                {
+                    string value;
+
+                    if (chkFormat.Checked)
+                    {
+                        double total = 0;
+
+                        for (var i = 4; i < days + 5; i++)
+                        {
+                            string str = Row.Cells[i].Value.ToString();
+                            double input = str == "" || str == null ? 0 : double.Parse(str.Split('.')[0]) + double.Parse(str.Split('.')[1]) / 100;
+                            total += input;
+                        }
+
+                        value = total.ToString("0.00");
+                    }
+                    else
+                    {
+                        TimeSpan total = TimeSpan.Zero;
+
+                        for (var i = 4; i < days + 5; i++)
+                        {
+                            string str = Row.Cells[i].Value.ToString() == "" || Row.Cells[i].Value.ToString() == null ? "00:00" : Row.Cells[i].Value.ToString();
+                            TimeSpan input = new TimeSpan(int.Parse(str.Split(':')[0]), int.Parse(str.Split(':')[1]), 0);
+                            total += input;
+                        }
+
+                        value = (total.Days * 24 + total.Hours).ToString("0").PadLeft(2, '0') + ':' + total.Minutes.ToString().PadLeft(2, '0');
+                    }
+
+                    Row.Cells["TOTAL"].SetValue(value, false);
+                }
+            }
+        }
+
+        private DataSet GetCalendar()
         {
             string sSelect = "DATE, WEEK_DAY, HOLI_TYPE";
             string sFrom = "HCA020T";
